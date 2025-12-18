@@ -33,30 +33,10 @@ export const metadata = {
     },
 };
 
-export default function USHome() {
+export default function AfHomepage() {
     return (
         <>
-            {/* <script
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
-          new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
-          "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,"script","dataLayer","GTM-TNKJQBP");`,
-        }}
-      /> */}
-            {/* Google Analytics */}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3GVZ3J32T"></script>
-            {/* <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag("js", new Date());
-          gtag("config", "G-B3GVZ3J32T");
-        `,
-        }}
-      /> */}
+
             <style
                 dangerouslySetInnerHTML={{
                     __html:
@@ -91,7 +71,7 @@ export default function USHome() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Game Development in the USA
+                                                        Bingo Games Nigeria
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -99,8 +79,7 @@ export default function USHome() {
                                                         alt="Poker Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Create exceptional games intended for the American market.
-                                                        Custom mobile, casino, and multiplayer game development powered by top-tier innovation.
+                                                        Developing an interactive and customizable Bingo game for Nigerian players. Our Bingo games are interactive, customizable and available on a multitude of cross-platform devices to give players the best possible user experience.
 
                                                     </div>
                                                 </div>
@@ -116,7 +95,7 @@ export default function USHome() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Slot Games in the USA
+                                                        Keno Game Nigeria
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -124,8 +103,7 @@ export default function USHome() {
                                                         alt="Rummy Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Top-Notch Slot Game Development for the US Gaming Industry.
-                                                        Profoundly engaging themes, impeccable mechanics, and safe real-money integrations.
+                                                        Delivering multiple options for developing-quality Keno games for the Nigerian marketplace. Our Keno game options include safe, reliable, fast and aesthetically pleasing game images in Web and Mobile versions.
 
                                                     </div>
                                                 </div>
@@ -141,7 +119,7 @@ export default function USHome() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Fish Tables Game in the USA
+                                                        SportsBook Software Nigeria
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -149,8 +127,7 @@ export default function USHome() {
                                                         alt="Ludo Game"
                                                     />
                                                     <div className="hero__description">
-                                                        High-velocity Fish Table Game Development for US Operators.
-                                                        Quick gameplay, mesmerizing graphics, and fool-proof anti-fraud protection.
+                                                        A comprehensive online betting service providing all the tools required for a successful betting environment. A comprehensive real-time odds service, multi-sport betting coverage and a smooth, automatic system for all sportsbook operations.
                                                     </div>
                                                 </div>
                                                 <div className="col-md-5 d-none d-md-block">
@@ -161,30 +138,33 @@ export default function USHome() {
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div className="carousel-item">
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Casino Games in the USA
+
+                                                        Slot Games in Bangladesh
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
-                                                        src="/assets/images/live-casino.webp"
-                                                        alt="Multi Game Platform"
+                                                        src="/assets/images/ludo.webp"
+                                                        alt="Ludo Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Complete Casino Game Development for US iGaming Brands.
-                                                        RNG-certified games, cross-platform builds, and flexible gaming ecosystems.
+                                                        Game Development of Slot with Modern Mechanic that is Best in Bangladesh.
+                                                        More than just good graphics, players will also be able to enjoy entering different worlds through the story—and being comfortable playing on any ‍‌‍‍‌‍‌‍‍‌device they choose.
                                                     </div>
                                                 </div>
                                                 <div className="col-md-5 d-none d-md-block">
                                                     <img
-                                                        src="/assets/images/live-casino.webp"
-                                                        alt="Multi Game Platform"
+                                                        src="/assets/images/ludo.webp"
+                                                        alt="Ludo Game"
                                                     />
                                                 </div>
                                             </div>
                                         </div>
+
 
                                     </div>
                                     <div
@@ -404,20 +384,21 @@ export default function USHome() {
             >
                 <div className="container">
                     <h1 className="sub_title text-center">
-                        <span className="yellow">Mobzway – Leading Online Gaming Software </span>{" "}
-                        <span className="black">Development Company in the USA</span>
+                        <span className="yellow">Mobzway – Online Gaming Software  </span>{" "}
+                        <span className="black">Development Company in Nigeria</span>
                     </h1>
                     <p
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway is a gaming software development company that is recognized and trusted globally for its performance-oriented solutions specifically for the US gaming and entertainment industry. Our proficient staff does the trick in developing custom game platforms like Poker, Rummy, Teen Patti, Ludo, Roulette, Blackjack, Slots, Fish Tables, and Casino systems from scratch for Android, iOS, and HTML5.
+                        Mobzway is the premier developer of online gaming software in Africa, focused on developing unique gaming solutions that meet the needs of the African marketplace, specifically within Nigeria. Our development team has a proven history of providing players with engaging mobile and web-based gaming products including Bingo, Keno, Sportsbook and Card Games, available for Android, iOS and HTML5 devices.
+                        Mobzway has successfully launched over 500 games around the world while servicing over 300 satisfied global customers, with an impressive 97% client retention ratio. Thus, we are an established and top-tier business partner for any gaming operator – both in Nigeria and internationally.
+
 
                     </p>
-                    <p className="content" style={{ color: "#000", fontSize: 17 }}>
-                        With a robust global footprint and demonstrated expertise, we have done over 500 gaming products’ launches, served 300+ overseas clients, and have a remarkable 97% client retention rate, thus becoming one of the most trustworthy partners for gaming brands in the USA.
-
-                    </p>
+                    {/* <p className="content" style={{ color: "#000", fontSize: 17 }}>
+            With a successful history and experience in the gaming industry, Mobzway Technologies has accomplished the feat of rolling out more than 500 games, catering to the needs of over 300 happy clients worldwide, and maintaining a client retention rate of 97%, which is the reason why we are a technology partner UK and international iGaming operators can rely ‍‌‍‍‌‍‌‍‍‌on.
+          </p> */}
                 </div>
             </section>
             <section className="product-sec">
@@ -436,7 +417,7 @@ export default function USHome() {
                           <p>Poker</p>
                       </div> */}
                                         <img
-                                            src="/assets/images/Products/us/game-1.jpg"
+                                            src="/assets/images/game-icon/poker.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -477,7 +458,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-2.jpg"
+                                            src="/assets/images/game-icon/rummy.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -492,7 +473,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-3.jpg"
+                                            src="/assets/images/game-icon/ludo.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -507,7 +488,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-4.jpg"
+                                            src="/assets/images/game-icon/teenpatti.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -522,7 +503,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-5.jpg"
+                                            src="/assets/images/game-icon/callbreak.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -537,7 +518,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-6.jpg"
+                                            src="/assets/images/game-icon/tambola.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -552,7 +533,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-7.jpg"
+                                            src="/assets/images/game-icon/snake.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -567,7 +548,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-8.jpg"
+                                            src="/assets/images/game-icon/livecasino.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -582,7 +563,7 @@ export default function USHome() {
                                 <a href="javascript:void(0)" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
-                                            src="/assets/images/Products/us/game-9.jpg"
+                                            src="/assets/images/game-icon/aviator.webp"
                                             width={1600}
                                             height={900}
                                             className=""
@@ -592,8 +573,171 @@ export default function USHome() {
                                 </a>
                             </div>
                         </div>
-                       
-                       
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/andar.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/blackjack.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/baccrat.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/tiger.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/roulete.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/slots.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/sicbo.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-md-0 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/keno.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-md-0 mb-3">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/triple.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-md-0">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/ball.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-md-0">
+                            <div className="overflow-hidden w-100 game_icon_sec">
+                                <a href="javascript:void(0)" className="d-block">
+                                    <div className="overflow-hidden w-100">
+                                        <img
+                                            src="/assets/images/game-icon/virtual.webp"
+                                            width={1600}
+                                            height={900}
+                                            className=""
+                                            alt="poker bg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -750,26 +894,27 @@ export default function USHome() {
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Mobzway is known as a globally recognized provider of gaming software development solutions, whose innovative and state-of-the-art technology allows for seamless integration of superior, scalable and high-performance gaming experiences for operators and startups in the U.S. market.
+                                Mobzway's know-how in providing customized gaming solutions has put them on the stage of one of the top gaming software developers in the world.
 
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Mobzway has everything you need from licensing support to complete in-house development of your game content. Our goal is to allow you to concentrate on marketing your company's growth and building a loyal player base by removing the technological challenges. Our commitment to our customers is to build products that exceed their expectations according to an agreed upon delivery schedule.
+                                We take care of every single detail of the game production process from start to finish including the in-house development, content integration, and even the technical issues, leaving you with the marketing and player base expansion to do.
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 35 }}
                             >
-                                Mobzway has expertise in most of the growing gaming segments within the U.S. marketplace, including but not limited to: Slot Machines, Fish Games, Custom Gaming Solutions, and Full Casino Game Platforms.
+                                Our team of experts is versed in the making of in-demand games like Ludo, Poker-style games, Rummy-style games, Teen Patti, and others that fall into the category of skill and entertainment games for the web, Android, iOS, and HTML5 platforms.
+
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                To get started, all we require from you is the concept of the game and your preferred features; in return we will take your idea and turn it into a revenue-generating product in accordance with our mutual contractual commitments.
+                                We only ask for the game concept and basic specifications from the clients. Our professionals then innovate your imagination into a fully functional and ready-to-market game within the stipulated period.
 
                             </div>
 
@@ -777,7 +922,7 @@ export default function USHome() {
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                If you would like to know how Mobzway can assist with business planning, company set up and growing your customer base in the U.S., please contact us so we can discuss your project further.
+                                Wondering how Mobzway would be able to assist you in your game design, business establishment, and player growth in Nigeria and other countries?
 
                             </div>
 
@@ -880,8 +1025,8 @@ export default function USHome() {
                                     data-aos-once="true"
                                 >
                                     <h2 className="sub_title">
-                                        <span className="yellow">Why Should </span>{" "}
-                                        <span className="black">You Choose Us?</span>
+                                        <span className="yellow">Why </span>{" "}
+                                        <span className="black">Choose Us?</span>
                                     </h2>
                                 </div>
                                 <ul
@@ -890,22 +1035,35 @@ export default function USHome() {
                                     data-aos-duration={1000}
                                 >
                                     <li>
-                                        We offer expert-crafted gaming products that are made by the industry veterans who have extensive knowledge of both US and global gaming markets.
+                                        Product designed by experienced gaming professionals who know the industry well.
+
                                     </li>
                                     <li>
-                                        Top-tier developers and architects are the ones who guarantee the premium quality, high performance, and smooth gameplay to all categories of games.
+                                        Experienced programmers aimed at developing high-quality games that are reliable and engaging.
+
                                     </li>
                                     <li>
-                                        Cross-platform compatibility is offered for the games that are created for Web, Mobile, PC, and Mac thus ensuring the maximum player base.
+                                        Cross-platform solutions supporting Web, Mobile, PC, and Mac
+
                                     </li>
-                                    <li>Seamless integration of payment gateway that works with the major US and international payment systems.</li>
-                                    <li>Localized game experiences are offered along with the support for regional languages and personalized options for players.</li>
+                                    <li>Easy integration with popular and Nigeria-supporting payment systems
+
+                                    </li>
+                                    <li>Products with support in English and Nigerian languages offered to Nigerian players
+                                    </li>
                                     <li>
-                                        24/7 dedicated support and monitoring are in place to ensure 99.99% uptime and thus, uninterrupted gaming operations are guaranteed.
+                                        Monitoring and Support Services 24×7 for availability of up to 99.99 percent
+
                                     </li>
-                                    <li>We provide cost-effective and faster time-to-market solutions that allow you to launch your gaming business efficiently.</li>
-                                    <li>Enterprise-level security is given which is strong enough to protect against fraud, hacking, and system vulnerabilities.</li>
-                                    <li>Free strategic consultation is provided to US-based operators to steer them on growth, compliance, and long-term success.</li>
+                                    <li>Cost-effective and time-efficient gaming development solutions
+
+                                    </li>
+                                    <li>Enhanced safety features to prevent fraud, hacking, and cyber attacks
+
+                                    </li>
+                                    <li>Free Business Consultation to enhance Nigerian gamblers and startups
+                                    </li>
+
                                 </ul>
                                 <div className="btn_outer">
                                     <button

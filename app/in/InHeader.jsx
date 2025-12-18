@@ -1,19 +1,14 @@
 "use client";
 import React, { useEffect } from 'react'
-import Typewriter from './Typewriter'
+
 // import AOS from 'aos';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Typewriter from '../components/Typewriter';
 // import WOW from "wowjs";
-import { menuData } from "./menuData";
 
-
-export default function Header() {
+export default function InHeader() {
     const pathname = usePathname();
-
-    const country = pathname.split("/")[1] || "in";
-
-    const menu = menuData[country] || menuData.in;
 
 
     // if (
@@ -55,8 +50,6 @@ export default function Header() {
 
         }
     }, []);
-
-
 
     const handleMenuToggle = () => {
         document.querySelector(".responsive-nav span")?.classList.toggle("one");
@@ -194,29 +187,264 @@ export default function Header() {
                     </div>
                     <div className="left_nav mt-3">
                         <ul id="menu-header-menu" className="d-flex desktop_menu">
-
-                            {menu.map((item, i) => (
-                                <li key={i} className={item.children ? "has_child" : ""}>
-                                    {item.path ? (
-                                        <Link href={`/${country}${item.path}`}>{item.label}</Link>
-                                    ) : (
-                                        <a href="#">{item.label}</a>
-                                    )}
-
-                                    {item.children && (
+                            <li
+                                id="menu-item-7178"
+                                className="menu-item menu-item-type-custom menu-item-object-custom menu-item-7178"
+                            >
+                                <Link href="/poker-software/">Poker</Link>
+                            </li>
+                            <li id="" className="menu-item">
+                                <Link href="/rummy-software/">Rummy</Link>
+                            </li>
+                            <li id="" className="menu-item">
+                                <Link href="/ludo-game-development/">Ludo</Link>
+                            </li>
+                            <li id="" className="menu-item">
+                                <Link href="/teen-patti-software/">Teen Patti</Link>
+                            </li>
+                            <li id="" className="menu-item">
+                                <Link href="/casino-software/">Casino</Link>
+                            </li>
+                            <li className="has_child menu-item  menu-item-74 d-none d-lg-inline">
+                                <a href="#">More Solutions</a>
+                                <ul className="sub-menu">
+                                    <li id="menu-item-75" className="menu-item">
+                                        <Link href="/poker-game-development/">
+                                            Poker Game Development
+                                        </Link>
                                         <ul className="sub-menu">
-                                            {item.children.map((child, j) => (
-                                                <li key={j}>
-                                                    <Link href={`/${country}${child.path}`}>
-                                                        {child.label}
-                                                    </Link>
-                                                </li>
-                                            ))}
+                                            <li id="menu-item-76" className="menu-item">
+                                                <Link href="/texas-holdem-poker/">
+                                                    Texas Holdem Poker
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-77" className="menu-item">
+                                                <Link href="/omaha-poker-game-development/">
+                                                    Omaha Poker Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-78" className="menu-item">
+                                                <Link href="/ofc-poker-game-development/">
+                                                    OFC Poker Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-79" className="menu-item">
+                                                <Link href="/seven-stud-poker/">
+                                                    Seven Stud Poker
+                                                </Link>
+                                            </li>
                                         </ul>
-                                    )}
-                                </li>
-                            ))}
-
+                                    </li>
+                                    <li id="menu-item-7408" className="menu-item">
+                                        <Link href="/casino-game-development/">
+                                            Casino Game Development
+                                        </Link>
+                                        <ul className="sub-menu">
+                                            <li id="menu-item-83" className="menu-item">
+                                                <Link href="/blackjack-game-development/">
+                                                    Blackjack Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-82" className="menu-item">
+                                                <Link href="/baccarat-game-development/">
+                                                    Baccarat Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-85" className="menu-item">
+                                                <Link href="/roulette-game-development/">
+                                                    Roulette Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-86" className="menu-item">
+                                                <Link href="/slot-game-development/">
+                                                    Slot Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-81" className="menu-item">
+                                                <Link href="/andar-bahar-game-development/">
+                                                    Andar Bahar Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-87" className="menu-item">
+                                                <Link href="/triple-chance-game-development/">
+                                                    Triple Chance Game Development
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-90" className="menu-item">
+                                                <Link href="/bingo-software/">Bingo Software</Link>
+                                            </li>
+                                            <li id="menu-item-84" className="menu-item">
+                                                <Link href="/keno-game-development/">
+                                                    Keno Game Development
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-91" className="menu-item">
+                                        <Link href="/rummy-game-development/">
+                                            Rummy Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-92" className="menu-item">
+                                        <Link href="/teen-patti-game-development/">
+                                            Teen Patti Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-7182" className="menu-item">
+                                        <Link href="/live-casino-software/">
+                                            Live Casino Solution
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-93" className="menu-item">
+                                        <Link href="/pool-game-development/">
+                                            Pool Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-95" className="menu-item">
+                                        <Link href="/card-game-development/">
+                                            Card Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-96" className="menu-item  menu-item-96">
+                                        <a href="#">White Label Solution</a>
+                                        <ul className="sub-menu">
+                                            <li id="menu-item-98" className="menu-item">
+                                                <Link href="/white-label-casino-software/">
+                                                    White Label Casino Software
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-99" className="menu-item">
+                                                <Link href="/white-label-poker-software/">
+                                                    White Label Poker Software
+                                                </Link>
+                                            </li>
+                                            <li id="menu-item-97" className="menu-item">
+                                                <Link href="/igaming-software-provider/">
+                                                    iGaming Software Provider
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-75" className="menu-item d-lg-none d-block">
+                                <Link href="/poker-game-development/">
+                                    Poker Game Development
+                                </Link>
+                                <ul className="sub-menu">
+                                    <li id="menu-item-76" className="menu-item">
+                                        <Link href="/texas-holdem-poker/">
+                                            Texas Holdem Poker
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-77" className="menu-item">
+                                        <Link href="/omaha-poker-game-development/">
+                                            Omaha Poker Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-78" className="menu-item">
+                                        <Link href="/ofc-poker-game-development/">
+                                            OFC Poker Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-79" className="menu-item">
+                                        <Link href="/seven-stud-poker/">Seven Stud Poker</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-7408" className="menu-item d-lg-none d-block">
+                                <Link href="/casino-game-development/">
+                                    Casino Game Development
+                                </Link>
+                                <ul className="sub-menu">
+                                    <li id="menu-item-83" className="menu-item">
+                                        <Link href="/blackjack-game-development/">
+                                            Blackjack Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-82" className="menu-item">
+                                        <Link href="/baccarat-game-development/">
+                                            Baccarat Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-85" className="menu-item">
+                                        <Link href="/roulette-game-development/">
+                                            Roulette Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-86" className="menu-item">
+                                        <Link href="/slot-game-development/">
+                                            Slot Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-81" className="menu-item">
+                                        <Link href="/andar-bahar-game-development/">
+                                            Andar Bahar Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-87" className="menu-item">
+                                        <Link href="/triple-chance-game-development/">
+                                            Triple Chance Game Development
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-90" className="menu-item">
+                                        <Link href="/bingo-software/">Bingo Software</Link>
+                                    </li>
+                                    <li id="menu-item-84" className="menu-item">
+                                        <Link href="/keno-game-development/">
+                                            Keno Game Development
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-91" className="menu-item d-lg-none d-block">
+                                <Link href="/rummy-game-development/">
+                                    Rummy Game Development
+                                </Link>
+                            </li>
+                            <li id="menu-item-92" className="menu-item d-lg-none d-block">
+                                <Link href="/teen-patti-game-development/">
+                                    Teen Patti Game Development
+                                </Link>
+                            </li>
+                            <li id="menu-item-7182" className="menu-item d-lg-none d-block">
+                                <Link href="/live-casino-software/">
+                                    Live Casino Solution
+                                </Link>
+                            </li>
+                            <li id="menu-item-93" className="menu-item d-lg-none d-block">
+                                <Link href="/pool-game-development/">
+                                    Pool Game Development
+                                </Link>
+                            </li>
+                            <li id="menu-item-95" className="menu-item d-lg-none d-block">
+                                <Link href="/card-game-development/">
+                                    Card Game Development
+                                </Link>
+                            </li>
+                            <li
+                                id="menu-item-96"
+                                className="menu-item  menu-item-96 d-lg-none d-block"
+                            >
+                                <a href="#">White Label Solution</a>
+                                <ul className="sub-menu">
+                                    <li id="menu-item-98" className="menu-item">
+                                        <Link href="/white-label-casino-software/">
+                                            White Label Casino Software
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-99" className="menu-item">
+                                        <Link href="/white-label-poker-software/">
+                                            White Label Poker Software
+                                        </Link>
+                                    </li>
+                                    <li id="menu-item-97" className="menu-item">
+                                        <Link href="/igaming-software-provider/">
+                                            iGaming Software Provider
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </li>
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
                                     href="/our-games/"
@@ -248,7 +476,6 @@ export default function Header() {
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </a>
                             </li>
-                            
                             {/* <li id="menu-item-7296"
                           class="contact_btn_list_wrapper menu-item menu-item-type-custom menu-item-object-custom d-block d-md-none mt-3">
                           <a href="tel:+91-7878-044-044" class="contact_btn"><i class="fas fa-phone-alt"></i> 7878 044 044 CALL US NOW !</a>

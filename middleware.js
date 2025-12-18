@@ -1,34 +1,122 @@
+// import { NextResponse } from "next/server";
+
+// export function middleware(request) {
+//   const pathname = request.nextUrl.pathname;
+
+//   // Country detection (Vercel Edge)
+//   const country =
+//     request.headers.get("x-vercel-ip-country") ||
+//     request.headers.get("x-vercel-country") ||
+//     "IN";
+
+//   console.log(country, 'country');
+
+
+//   const map = {
+//     // Asia
+//     IN: "/in",
+//     BD: "/bd",
+
+//     // USA
+//     US: "/us",
+
+//     // UK
+//     GB: "/uk",
+
+//     // Europe
+//     DE: "/eu",
+//     FR: "/eu",
+//     IT: "/eu",
+//     ES: "/eu",
+//     NL: "/eu",
+
+//     // Africa
+//     NG: "/af",
+//     ZA: "/af",
+//     KE: "/af",
+//     EG: "/af",
+
+//   };
+
+//   const target = map[country] || "/in";
+
+//   // ✅ ONLY redirect from ROOT
+//   if (pathname === "/") {
+//     return NextResponse.redirect(new URL(target, request.url));
+//   }
+
+//   // ❌ Do NOT force redirect on /in /us /bd
+//   return NextResponse.next();
+// }
+
+// export const config = {
+//   matcher: ["/", "/eu/:path*", "/af/:path*", "/uk/:path*"],
+// };
+
+
+
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const pathname = request.nextUrl.pathname;
+  const { pathname } = request.nextUrl;
 
-  // Country detection (Vercel Edge)
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/assets") ||
+    pathname.startsWith("/favicon") ||
+    pathname.match(/\.(png|jpg|jpeg|webp|svg|ico)$/)
+  ) {
+    return NextResponse.next();
+  }
+
+
+  if (
+    pathname.startsWith("/in") ||
+    pathname.startsWith("/bd") ||
+    pathname.startsWith("/us") ||
+    pathname.startsWith("/uk") ||
+    pathname.startsWith("/eu") ||
+    pathname.startsWith("/af")
+  ) {
+    return NextResponse.next();
+  }
+
+  // 🌍 Country detect
   const country =
     request.headers.get("x-vercel-ip-country") ||
     request.headers.get("x-vercel-country") ||
     "IN";
 
-    console.log(country, 'country');
-    
-
   const map = {
-    IN: "/in",
-    US: "/us",
-    BD: "/bd",
+    IN: "in",
+    BD: "bd",
+    US: "us",
+    GB: "uk",
+    DE: "eu",
+    FR: "eu",
+    IT: "eu",
+    ES: "eu",
+    NL: "eu",
+    NG: "af",
+    ZA: "af",
+    KE: "af",
+    EG: "af",
   };
 
-  const target = map[country] || "/in";
+  const prefix = map[country] || "in";
 
-  // ✅ ONLY redirect from ROOT
+  // ✅ ROOT
   if (pathname === "/") {
-    return NextResponse.redirect(new URL(target, request.url));
+    return NextResponse.redirect(new URL(`/${prefix}`, request.url));
   }
 
-  // ❌ Do NOT force redirect on /in /us /bd
-  return NextResponse.next();
+  // ✅ ANDAR KE PAGES
+  return NextResponse.redirect(
+    new URL(`/${prefix}${pathname}`, request.url)
+  );
 }
 
 export const config = {
-  matcher: ["/"],
+  matcher: ["/((?!_next|favicon1.png).*)"],
 };
+
