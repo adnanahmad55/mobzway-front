@@ -1,6 +1,7 @@
 import React from 'react'
-import BannerForm from '../components/BannerForm'
 import Script from 'next/script';
+import BannerForm from '../components/BannerForm';
+
 
 
 export const metadata = {

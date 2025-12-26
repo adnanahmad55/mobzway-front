@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BannerForm from "../components/BannerForm";
+import { headers } from "next/headers"; 
 
 export const metadata = {
     title: "Mobzway - Online Gaming Software Development Company",
@@ -34,6 +35,19 @@ export const metadata = {
 };
 
 export default function AfHomepage() {
+
+    let country = "Unknown";
+
+    try {
+        const headersList = headers();
+        country =
+            headersList.get("x-vercel-ip-country") ||
+            headersList.get("cf-ipcountry") ||
+            "Unknown";
+    } catch (e) {
+        console.log("Headers not available in dev");
+    }
+
     return (
         <>
 
@@ -71,7 +85,7 @@ export default function AfHomepage() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Bingo Games Nigeria
+                                                        Bingo Games {country}
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -79,7 +93,7 @@ export default function AfHomepage() {
                                                         alt="Poker Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Developing an interactive and customizable Bingo game for Nigerian players. Our Bingo games are interactive, customizable and available on a multitude of cross-platform devices to give players the best possible user experience.
+                                                        Developing an interactive and customizable Bingo game for {country} players. Our Bingo games are interactive, customizable and available on a multitude of cross-platform devices to give players the best possible user experience.
 
                                                     </div>
                                                 </div>
@@ -95,7 +109,7 @@ export default function AfHomepage() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Keno Game Nigeria
+                                                        Keno Game {country}
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -103,7 +117,7 @@ export default function AfHomepage() {
                                                         alt="Rummy Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Delivering multiple options for developing-quality Keno games for the Nigerian marketplace. Our Keno game options include safe, reliable, fast and aesthetically pleasing game images in Web and Mobile versions.
+                                                        Delivering multiple options for developing-quality Keno games for the {country}n marketplace. Our Keno game options include safe, reliable, fast and aesthetically pleasing game images in Web and Mobile versions.
 
                                                     </div>
                                                 </div>
@@ -119,7 +133,7 @@ export default function AfHomepage() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        SportsBook Software Nigeria
+                                                        SportsBook Software {country}
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -128,32 +142,6 @@ export default function AfHomepage() {
                                                     />
                                                     <div className="hero__description">
                                                         A comprehensive online betting service providing all the tools required for a successful betting environment. A comprehensive real-time odds service, multi-sport betting coverage and a smooth, automatic system for all sportsbook operations.
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-5 d-none d-md-block">
-                                                    <img
-                                                        src="/assets/images/ludo.webp"
-                                                        alt="Ludo Game"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="carousel-item">
-                                            <div className="row">
-                                                <div className="col-md-7">
-                                                    <h2 data-hk="s40-1-12" className="hero__title">
-
-                                                        Slot Games in Bangladesh
-                                                    </h2>
-                                                    <img
-                                                        className="d-block d-md-none mb-3 w-100"
-                                                        src="/assets/images/ludo.webp"
-                                                        alt="Ludo Game"
-                                                    />
-                                                    <div className="hero__description">
-                                                        Game Development of Slot with Modern Mechanic that is Best in Bangladesh.
-                                                        More than just good graphics, players will also be able to enjoy entering different worlds through the story—and being comfortable playing on any ‍‌‍‍‌‍‌‍‍‌device they choose.
                                                     </div>
                                                 </div>
                                                 <div className="col-md-5 d-none d-md-block">
@@ -219,34 +207,7 @@ export default function AfHomepage() {
                                                     data-slide-to={2}
                                                     aria-label="Slide 3"
                                                 />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={3}
-                                                    aria-label="Slide 4"
-                                                />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={4}
-                                                    aria-label="Slide 5"
-                                                />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={5}
-                                                    aria-label="Slide 6"
-                                                />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={6}
-                                                    aria-label="Slide 7"
-                                                />
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -385,14 +346,14 @@ export default function AfHomepage() {
                 <div className="container">
                     <h1 className="sub_title text-center">
                         <span className="yellow">Mobzway – Online Gaming Software  </span>{" "}
-                        <span className="black">Development Company in Nigeria</span>
+                        <span className="black">Development Company in {country}</span>
                     </h1>
                     <p
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway is the premier developer of online gaming software in Africa, focused on developing unique gaming solutions that meet the needs of the African marketplace, specifically within Nigeria. Our development team has a proven history of providing players with engaging mobile and web-based gaming products including Bingo, Keno, Sportsbook and Card Games, available for Android, iOS and HTML5 devices.
-                        Mobzway has successfully launched over 500 games around the world while servicing over 300 satisfied global customers, with an impressive 97% client retention ratio. Thus, we are an established and top-tier business partner for any gaming operator – both in Nigeria and internationally.
+                        Mobzway is the premier developer of online gaming software in Africa, focused on developing unique gaming solutions that meet the needs of the African marketplace, specifically within {country}. Our development team has a proven history of providing players with engaging mobile and web-based gaming products including Bingo, Keno, Sportsbook and Card Games, available for Android, iOS and HTML5 devices.
+                        Mobzway has successfully launched over 500 games around the world while servicing over 300 satisfied global customers, with an impressive 97% client retention ratio. Thus, we are an established and top-tier business partner for any gaming operator – both in {country} and internationally.
 
 
                     </p>
@@ -922,7 +883,7 @@ export default function AfHomepage() {
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Wondering how Mobzway would be able to assist you in your game design, business establishment, and player growth in Nigeria and other countries?
+                                Wondering how Mobzway would be able to assist you in your game design, business establishment, and player growth in {country} and other countries?
 
                             </div>
 
@@ -1046,10 +1007,10 @@ export default function AfHomepage() {
                                         Cross-platform solutions supporting Web, Mobile, PC, and Mac
 
                                     </li>
-                                    <li>Easy integration with popular and Nigeria-supporting payment systems
+                                    <li>Easy integration with popular and {country}-supporting payment systems
 
                                     </li>
-                                    <li>Products with support in English and Nigerian languages offered to Nigerian players
+                                    <li>Products with support in English and {country}n languages offered to {country}n players
                                     </li>
                                     <li>
                                         Monitoring and Support Services 24×7 for availability of up to 99.99 percent
@@ -1061,7 +1022,7 @@ export default function AfHomepage() {
                                     <li>Enhanced safety features to prevent fraud, hacking, and cyber attacks
 
                                     </li>
-                                    <li>Free Business Consultation to enhance Nigerian gamblers and startups
+                                    <li>Free Business Consultation to enhance {country}n gamblers and startups
                                     </li>
 
                                 </ul>

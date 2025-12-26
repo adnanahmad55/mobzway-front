@@ -91,7 +91,7 @@ export default function IndiaHome() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Poker Game
+                                                        Custom Game Development
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -99,10 +99,8 @@ export default function IndiaHome() {
                                                         alt="Poker Game"
                                                     />
                                                     <div className="hero__description">
-                                                        We develop engaging poker software solutions that let
-                                                        users strategize, bluff, participate in tournaments, and
-                                                        feel the excitement of beating competitors at the online
-                                                        table.
+                                                        Design and build high-performance games, customized for the Indian market.
+                                                        We design experiences from mobile to multiplayer, using the latest technologies.
                                                     </div>
                                                 </div>
                                                 <div className="col-md-5 d-none d-md-block">
@@ -117,7 +115,7 @@ export default function IndiaHome() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Rummy Game
+                                                        Developer for hire
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -125,9 +123,8 @@ export default function IndiaHome() {
                                                         alt="Rummy Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Add the excitement of Rummy to the online world. We
-                                                        provide engaging Rummy game software development that
-                                                        allow players to win using melding.
+                                                        Hire India's top game developers for your next big project.
+                                                        Skilled, reliable, and cost-efficient talent dedicated to delivering world-class gaming solutions.
                                                     </div>
                                                 </div>
                                                 <div className="col-md-5 d-none d-md-block">
@@ -138,138 +135,8 @@ export default function IndiaHome() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="carousel-item">
-                                            <div className="row">
-                                                <div className="col-md-7">
-                                                    <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Ludo Game
-                                                    </h2>
-                                                    <img
-                                                        className="d-block d-md-none mb-3 w-100"
-                                                        src="/assets/images/ludo.webp"
-                                                        alt="Ludo Game"
-                                                    />
-                                                    <div className="hero__description">
-                                                        Recreate the magic of this traditional game for
-                                                        families. We create Ludo game software specifically for
-                                                        playing online, maintaining the excitement of
-                                                        competitiveness
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-5 d-none d-md-block">
-                                                    <img
-                                                        src="/assets/images/ludo.webp"
-                                                        alt="Ludo Game"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <div className="row">
-                                                <div className="col-md-7">
-                                                    <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Multi Game Platform
-                                                    </h2>
-                                                    <img
-                                                        className="d-block d-md-none mb-3 w-100"
-                                                        src="/assets/images/multipleGamePlatform.webp"
-                                                        alt="Multi Game Platform"
-                                                    />
-                                                    <div className="hero__description">
-                                                        Go beyond single titles! We create reliable multi-game
-                                                        platforms that easily integrate a wide range of casino
-                                                        games. With a user-friendly interface that lets
-                                                        customers move between table classics, thrilling slots,
-                                                        and more
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-5 d-none d-md-block">
-                                                    <img
-                                                        src="/assets/images/multipleGamePlatform.webp"
-                                                        alt="Multi Game Platform"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <div className="row">
-                                                <div className="col-md-7">
-                                                    <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Skill Games
-                                                    </h2>
-                                                    <img
-                                                        className="d-block d-md-none mb-3 w-100"
-                                                        src="/assets/images/skill-game.webp"
-                                                        alt="Skill Games"
-                                                    />
-                                                    <div className="hero__description">
-                                                        Challenge accepted! We develop engaging skill-based
-                                                        games that go beyond pure luck. These games test
-                                                        players' reflexes, strategy, and knowledge, offering a
-                                                        unique and rewarding gameplay experience.
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-5 d-none d-md-block">
-                                                    <img
-                                                        src="/assets/images/skill-game.webp"
-                                                        alt="Skill Games"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <div className="row">
-                                                <div className="col-md-7">
-                                                    <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Live Casino
-                                                    </h2>
-                                                    <img
-                                                        className="d-block d-md-none mb-3 w-100"
-                                                        src="/assets/images/live-casino.webp"
-                                                        alt="Live Casino"
-                                                    />
-                                                    <div className="hero__description">
-                                                        Bring the excitement of a real-world casino into the
-                                                        virtual world with Live Casino. We create innovative
-                                                        Live Casino experiences where players can engage in
-                                                        real-time interaction with real dealers, bringing the
-                                                        fun of classic games like Blackjack and Roulette right
-                                                        to their screens.
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-5 d-none d-md-block">
-                                                    <img
-                                                        src="/assets/images/live-casino.webp"
-                                                        alt="Live Casino"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <div className="row">
-                                                <div className="col-md-7">
-                                                    <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Aviator &amp; Crash
-                                                    </h2>
-                                                    <img
-                                                        className="d-block d-md-none mb-3 w-100"
-                                                        src="/assets/images/aviator.webp"
-                                                        alt="Aviator & Crash"
-                                                    />
-                                                    <div className="hero__description">
-                                                        Prepare yourself for an adrenaline rush! We create
-                                                        modern games like Aviator and Crash, which give players
-                                                        a high-risk, high-reward gameplay experience.
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-5 d-none d-md-block">
-                                                    <img
-                                                        src="/assets/images/aviator.webp"
-                                                        alt="Aviator & Crash"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
+
+
                                     </div>
                                     <div
                                         className="row justify-content-between align-items-center d-md-flex d-none pt-0 pt-md-3"
@@ -316,41 +183,7 @@ export default function IndiaHome() {
                                                     data-slide-to={1}
                                                     aria-label="Slide 2"
                                                 />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={2}
-                                                    aria-label="Slide 3"
-                                                />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={3}
-                                                    aria-label="Slide 4"
-                                                />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={4}
-                                                    aria-label="Slide 5"
-                                                />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={5}
-                                                    aria-label="Slide 6"
-                                                />
-                                                <button
-                                                    className="heroSlide-dots"
-                                                    type="button"
-                                                    data-target="#heroSlide4_1"
-                                                    data-slide-to={6}
-                                                    aria-label="Slide 7"
-                                                />
+                                                
                                             </div>
                                         </div>
                                     </div>
