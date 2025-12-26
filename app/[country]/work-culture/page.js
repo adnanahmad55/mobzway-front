@@ -1,5 +1,6 @@
 "use client";
-import "../../public/assets/css/stylebook.css";
+// import "../../public/assets/css/stylebook.css";
+import "../../../public/assets/css/stylebook.css"
 
 import React, { useEffect } from 'react'
 
@@ -103,11 +104,11 @@ export default function WorkCulture() {
     return (
         <>
             {/*?php include 'header.php' ?*/}
-            <link
+            {/* <link
                 rel="stylesheet"
                 type="text/css"
                 href="<?=  $baseurl ?>/assets/css/stylebook.css"
-            />
+            /> */}
             <style
                 dangerouslySetInnerHTML={{
                     __html:
