@@ -1,52 +1,94 @@
+"use client";
 import Image from "next/image";
 import BannerForm from "../components/BannerForm";
-import { headers } from "next/headers"; 
+// import { headers } from "next/headers";
+import { useEffect, useState } from "react";
 
-export const metadata = {
-    title: "Mobzway - Online Gaming Software Development Company",
-    description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-    keywords: "Gaming Software Development, Gaming Software Developers, Gaming Software Providers",
-    openGraph: {
-        title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-        description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-        url: "https://www.mobzway.com/",
-        siteName: "Mobzway Technologies",
-        images: [
-            {
-                url: "https://www.mobzway.com/assets/images/homepage_banner.avif",
-                width: 815,
-                height: 821,
-                alt: "mobzway",
-                type: "image/jpg",
-            },
-        ],
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-        description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-        site: "@mobzway",
-        creator: "@mobzway",
-        images: ["https://www.mobzway.com/assets/images/homepage_banner.avif"],
-    },
-    alternates: {
-        canonical: "https://www.mobzway.com/",
-    },
-};
+// export const metadata = {
+//     title: "Mobzway - Online Gaming Software Development Company",
+//     description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
+//     keywords: "Gaming Software Development, Gaming Software Developers, Gaming Software Providers",
+//     openGraph: {
+//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
+//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
+//         url: "https://www.mobzway.com/",
+//         siteName: "Mobzway Technologies",
+//         images: [
+//             {
+//                 url: "https://www.mobzway.com/assets/images/homepage_banner.avif",
+//                 width: 815,
+//                 height: 821,
+//                 alt: "mobzway",
+//                 type: "image/jpg",
+//             },
+//         ],
+//     },
+//     twitter: {
+//         card: "summary_large_image",
+//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
+//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
+//         site: "@mobzway",
+//         creator: "@mobzway",
+//         images: ["https://www.mobzway.com/assets/images/homepage_banner.avif"],
+//     },
+//     alternates: {
+//         canonical: "https://www.mobzway.com/",
+//     },
+// };
 
 export default function AfHomepage() {
 
-    let country = "Unknown";
+    // let country = "Unknown";
 
+    // try {
+    //     const headersList = headers();
+    //     country =
+    //         headersList.get("x-vercel-ip-country") ||
+    //         headersList.get("cf-ipcountry") ||
+    //         "Unknown";
+    // } catch (e) {
+    //     console.log("Headers not available in dev");
+    // }
+
+    const [country, setCountry] = useState("India");
+
+    const getCountryByIP = async () => {
     try {
-        const headersList = headers();
-        country =
-            headersList.get("x-vercel-ip-country") ||
-            headersList.get("cf-ipcountry") ||
-            "Unknown";
-    } catch (e) {
-        console.log("Headers not available in dev");
+      const res = await fetch("https://ipapi.co/json/");
+      const data = await res.json();
+      setCountry(data.country_name || "Unknown");
+    } catch (err) {
+      setCountry("Unknown");
     }
+  };
+
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      getCountryByIP();
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+
+        try {
+          const res = await fetch(
+            `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
+          );
+          const data = await res.json();
+          setCountry(data.countryName || "Unknown");
+        } catch {
+          getCountryByIP();
+        }
+      },
+      () => {
+        
+        getCountryByIP();
+      }
+    );
+  }, []);
+
 
     return (
         <>
@@ -207,7 +249,7 @@ export default function AfHomepage() {
                                                     data-slide-to={2}
                                                     aria-label="Slide 3"
                                                 />
-                                                
+
                                             </div>
                                         </div>
                                     </div>
