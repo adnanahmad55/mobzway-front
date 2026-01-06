@@ -4,42 +4,33 @@ export async function GET(request) {
   try {
     const ip =
       request.headers.get("x-forwarded-for")?.split(",")[0] ||
-      request.ip ||
-      "";
+      request.headers.get("x-real-ip");
 
     let country = null;
 
-    // 🔁 API 1 — ipapi.co
+    // 🥇 BEST — ipwho.is (IP ke saath)
     try {
-      const res1 = await fetch("https://ipapi.co/json/");
-      const data1 = await res1.json();
-      console.log(data1, 'data1');
-      
-      if (data1?.country) country = data1.country_code;
+      const res = await fetch(`https://ipwho.is/${ip}`);
+      const data = await res.json();
+      if (data?.success && data?.country_code) {
+        country = data.country_code;
+      }
     } catch {}
 
-    // 🔁 API 2 — ipwho.is
+    // 🥈 fallback
     if (!country) {
       try {
-        const res2 = await fetch("https://ipwho.is/");
-        const data2 = await res2.json();
-        if (data2?.country_code) country = data2.country_code;
-      } catch {}
-    }
-
-    // 🔁 API 3 — ip-api.com
-    if (!country) {
-      try {
-        const res3 = await fetch("http://ip-api.com/json/");
-        const data3 = await res3.json();
-        if (data3?.countryCode) country = data3.countryCode;
+        const res = await fetch(`http://ip-api.com/json/${ip}`);
+        const data = await res.json();
+        if (data?.countryCode) country = data.countryCode;
       } catch {}
     }
 
     return NextResponse.json({
       country: country || "IN",
+      ip,
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ country: "IN" });
   }
 }

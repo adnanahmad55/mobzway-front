@@ -4,7 +4,6 @@
 
 
 "use client";
-
 import { useEffect } from "react";
 
 export default function Home() {
@@ -15,8 +14,8 @@ export default function Home() {
         const { country } = await res.json();
 
         const asiaCountries = [
-          "PK", "NP", "LK", "BT", "MM", "TH", "MY", "SG",
-          "ID", "PH", "VN", "KH", "LA", "CN", "JP", "KR"
+          "PK","NP","LK","BT","MM","TH","MY","SG",
+          "ID","PH","VN","KH","LA","CN","JP","KR"
         ];
 
         let prefix = "in";
@@ -26,8 +25,8 @@ export default function Home() {
         else if (asiaCountries.includes(country)) prefix = "asia";
         else if (country === "US") prefix = "us";
         else if (country === "GB") prefix = "uk";
-        else if (["DE", "FR", "IT", "ES", "NL"].includes(country)) prefix = "eu";
-        else if (["NG", "ZA", "KE", "EG"].includes(country)) prefix = "af";
+        else if (["DE","FR","IT","ES","NL"].includes(country)) prefix = "eu";
+        else if (["NG","ZA","KE","EG"].includes(country)) prefix = "af";
 
         window.location.replace(`/${prefix}`);
       } catch {
