@@ -59,7 +59,7 @@ export default function RequestQoute() {
             product,
             contact_type: activeItem,
             Source_URL: window.location.href,
-            lead_source: extractDomain(window.location.href)
+            lead_source: window.location.href
         };
 
         try {

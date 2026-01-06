@@ -594,19 +594,19 @@ function checkMandatory1742164000001858039() {
 }
 
 
-function tooltipShow1742164000001858039(el) {
-    var tooltip = el.nextElementSibling;
-    var tooltipDisplay = tooltip.style.display;
-    if (tooltipDisplay == 'none') {
-        var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
-        for (i = 0; i < allTooltip.length; i++) {
-            allTooltip[i].style.display = 'none';
-        }
-        tooltip.style.display = 'block';
-    } else {
-        tooltip.style.display = 'none';
-    }
-}
+// function tooltipShow1742164000001858039(el) {
+//     var tooltip = el.nextElementSibling;
+//     var tooltipDisplay = tooltip.style.display;
+//     if (tooltipDisplay == 'none') {
+//         var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+//         for (i = 0; i < allTooltip.length; i++) {
+//             allTooltip[i].style.display = 'none';
+//         }
+//         tooltip.style.display = 'block';
+//     } else {
+//         tooltip.style.display = 'none';
+//     }
+// }
 // var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: '8ae08dca07a36a1019fccd94dc29f48e037312ac322437a4a9b0364f2599ba92813c9c77f9215c9a056812428f74bb41', values: {}, ready: function () { } }; var d = document; s = d.createElement('script'); s.type = 'text/javascript'; s.id = 'zsiqscript'; s.defer = true; s.src = 'https://salesiq.zoho.com/widget'; t = d.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t); function trackVisitor1742164000001858039() { try { if ($zoho) { var LDTuvidObj = document.forms['WebToLeads1742164000001858039']['LDTuvid']; if (LDTuvidObj) { LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid(); } var firstnameObj = document.forms['WebToLeads1742164000001858039']['First Name']; if (firstnameObj) { name = firstnameObj.value + ' ' + name; } $zoho.salesiq.visitor.name(name); var emailObj = document.forms['WebToLeads1742164000001858039']['Email']; if (emailObj) { email = emailObj.value; $zoho.salesiq.visitor.email(email); } } } catch (e) { } }
 
 

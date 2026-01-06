@@ -61,7 +61,7 @@ export default function ChatQoute() {
             product: form1.product1,
             contact_type: activeItem1,
             Source_URL: window.location.href,
-            lead_source: extractDomain(window.location.href)
+            lead_source: window.location.href
         };
 
         try {

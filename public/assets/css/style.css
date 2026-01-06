@@ -7704,9 +7704,9 @@ body footer .icon_fixed .whatsapp_fixed {
 
 }
 
-/* .zsiq_floatmain {
+.zsiq_floatmain {
   display: none !important;
-} */
+}
  .zsiq_floatmain {
   opacity: 0;
   z-index: -1;
@@ -8008,4 +8008,9 @@ body footer .icon_fixed .whatsapp_fixed {
     background: rgb(252, 209, 10) !important;
     width: 90px !important;
   }
+}
+
+.why_content_dark.why_content li:before {
+    background-color: #343a40 !important;
+    top: 7px !important;
 }

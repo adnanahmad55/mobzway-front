@@ -11,9 +11,9 @@ import { menuData } from "./menuData";
 export default function Header() {
     const pathname = usePathname();
 
-    const country = pathname.split("/")[1] || "in";
+    const country = pathname.split("/")[1] || "default";
 
-    const menu = menuData[country] || menuData.in;
+    const menu = menuData[country] || menuData.default;
 
 
     // if (
@@ -206,10 +206,22 @@ export default function Header() {
                                     {item.children && (
                                         <ul className="sub-menu">
                                             {item.children.map((child, j) => (
-                                                <li key={j}>
-                                                    <Link href={`/${country}${child.path}`}>
-                                                        {child.label}
-                                                    </Link>
+                                                <li key={j} className={child.children ? "has_child" : ""}>
+                                                    {child.path ? (
+                                                        <Link href={`/${country}${child.path}`}>{child.label}</Link>
+                                                    ) : (
+                                                        <a href="#">{child.label}</a>
+                                                    )}
+
+                                                    {child.children && (
+                                                        <ul className="sub-menu">
+                                                            {child.children.map((sub, k) => (
+                                                                <li key={k}>
+                                                                    <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
                                                 </li>
                                             ))}
                                         </ul>
@@ -219,7 +231,7 @@ export default function Header() {
 
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
-                                    href="/our-games/"
+                                    href="/our-games"
                                     className="contact_btn skill-games-contact-none"
                                 >
                                     {/* <span
@@ -248,14 +260,14 @@ export default function Header() {
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </a>
                             </li>
-                            
+
                             {/* <li id="menu-item-7296"
                           class="contact_btn_list_wrapper menu-item menu-item-type-custom menu-item-object-custom d-block d-md-none mt-3">
                           <a href="tel:+91-7878-044-044" class="contact_btn"><i class="fas fa-phone-alt"></i> 7878 044 044 CALL US NOW !</a>
                       </li> */}
                         </ul>
                         <ul id="menu-header-menu" className="d-flex mobile_menu">
-                            <li id="menu-item-75" className="menu-item">
+                            {/* <li id="menu-item-75" className="menu-item">
                                 <a href="javascript:void(0)">Poker</a>
                                 <ul className="sub-menu">
                                     <li id="menu-item-76" className="menu-item">
@@ -377,7 +389,42 @@ export default function Header() {
                                         </Link>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> */}
+
+                            {menu.map((item, i) => (
+                                <li key={i} className={item.children ? "has_child" : ""}>
+                                    {item.path ? (
+                                        <Link href={`/${country}${item.path}`}>{item.label}</Link>
+                                    ) : (
+                                        <a href="#">{item.label}</a>
+                                    )}
+
+                                    {item.children && (
+                                        <ul className="sub-menu">
+                                            {item.children.map((child, j) => (
+                                                <li key={j} className={child.children ? "has_child" : ""}>
+                                                    {child.path ? (
+                                                        <Link href={`/${country}${child.path}`}>{child.label}</Link>
+                                                    ) : (
+                                                        <a href="#">{child.label}</a>
+                                                    )}
+
+                                                    {child.children && (
+                                                        <ul className="sub-menu">
+                                                            {child.children.map((sub, k) => (
+                                                                <li key={k}>
+                                                                    <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            ))}
+
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
                                     href="/our-games/"

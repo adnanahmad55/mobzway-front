@@ -375,7 +375,7 @@ export default function RummyGameDevelopment() {
                                     width={1600}
                                     height={900}
                                     alt="best online rummy game app"
-                                    data-original="/assets/images/rummy-game-development/game-launched1.webp"
+                                    src="/assets/images/rummy-game-development/game-launched1.webp"
                                     className="games-launched img-lazy"
                                 />
                                 Game Launched
@@ -388,7 +388,7 @@ export default function RummyGameDevelopment() {
                                     width={1600}
                                     height={900}
                                     alt="best online rummy game app"
-                                    data-original="/assets/images/rummy-game-development/satisfied-customers1.webp"
+                                    src="/assets/images/rummy-game-development/satisfied-customers1.webp"
                                     className="satisfied-customers img-lazy"
                                 />
                                 Satisfied customers
@@ -401,7 +401,7 @@ export default function RummyGameDevelopment() {
                                     width={1600}
                                     height={900}
                                     alt="best online rummy game app"
-                                    data-original="/assets/images/rummy-game-development/client-retension1.webp"
+                                    src="/assets/images/rummy-game-development/client-retension1.webp"
                                     className="client-retension img-lazy"
                                 />
                                 Client retention
@@ -414,7 +414,7 @@ export default function RummyGameDevelopment() {
                                     width={1600}
                                     height={900}
                                     alt="best online rummy game app"
-                                    data-original="/assets/images/rummy-game-development/players1.webp"
+                                    src="/assets/images/rummy-game-development/players1.webp"
                                     className="players img-lazy"
                                 />
                                 Players
@@ -494,7 +494,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Point Rummy"
-                                            data-original="/assets/images/rummy-game-development/point-rummy.webp"
+                                            src="/assets/images/rummy-game-development/point-rummy.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -518,7 +518,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Pool Rummy"
-                                            data-original="/assets/images/rummy-game-development/pool-rummy.webp"
+                                            src="/assets/images/rummy-game-development/pool-rummy.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -542,7 +542,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Deal Rummy"
-                                            data-original="/assets/images/rummy-game-development/deal-rummy.webp"
+                                            src="/assets/images/rummy-game-development/deal-rummy.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -752,7 +752,7 @@ export default function RummyGameDevelopment() {
                                                 width={1600}
                                                 height={900}
                                                 alt="best online rummy game app"
-                                                data-original="/assets/images/rummy-game-development/1-01.webp"
+                                                src="/assets/images/rummy-game-development/1-01.webp"
                                                 className="wow bounceInRight new-one img-lazy"
                                                 data-wow-duration="2s"
                                                 style={{ visibility: "visible", animationDuration: "2s" }}
@@ -784,7 +784,7 @@ export default function RummyGameDevelopment() {
                                                 width={1600}
                                                 height={900}
                                                 alt="best online rummy game app"
-                                                data-original="/assets/images/rummy-game-development/3-01.webp"
+                                                src="/assets/images/rummy-game-development/3-01.webp"
                                                 className="wow bounceInRight new-one img-lazy"
                                                 data-wow-duration="2s"
                                                 style={{ visibility: "visible", animationDuration: "2s" }}
@@ -817,7 +817,7 @@ export default function RummyGameDevelopment() {
                                                 width={1600}
                                                 height={900}
                                                 alt="best online rummy game app"
-                                                data-original="/assets/images/rummy-game-development/02-01.webp"
+                                                src="/assets/images/rummy-game-development/02-01.webp"
                                                 className="wow bounceInRight new-one img-lazy"
                                                 data-wow-duration="2s"
                                                 style={{ visibility: "visible", animationDuration: "2s" }}
@@ -881,7 +881,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Tournaments"
-                                            data-original="/assets/images/rummy-game-development/r04.webp"
+                                            src="/assets/images/rummy-game-development/r04.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -905,7 +905,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Private Table"
-                                            data-original="/assets/images/rummy-game-development/r05.webp"
+                                            src="/assets/images/rummy-game-development/r05.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -929,7 +929,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Multi-Language"
-                                            data-original="/assets/images/rummy-game-development/r06.webp"
+                                            src="/assets/images/rummy-game-development/r06.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -954,7 +954,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Rewards & Loyalty"
-                                            data-original="/assets/images/rummy-game-development/r07.webp"
+                                            src="/assets/images/rummy-game-development/r07.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -979,7 +979,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Back Office & CRM"
-                                            data-original="/assets/images/rummy-game-development/r08.webp"
+                                            src="/assets/images/rummy-game-development/r08.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -1003,7 +1003,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="RNG Certified Games"
-                                            data-original="/assets/images/rummy-game-development/r09.webp"
+                                            src="/assets/images/rummy-game-development/r09.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -1027,7 +1027,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Anti Fraud System"
-                                            data-original="/assets/images/rummy-game-development/r10.webp"
+                                            src="/assets/images/rummy-game-development/r10.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -1051,7 +1051,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Responsible Gaming"
-                                            data-original="/assets/images/rummy-game-development/r11.webp"
+                                            src="/assets/images/rummy-game-development/r11.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -1075,7 +1075,7 @@ export default function RummyGameDevelopment() {
                                             width={1600}
                                             height={900}
                                             alt="Payment Security"
-                                            data-original="/assets/images/rummy-game-development/r12.webp"
+                                            src="/assets/images/rummy-game-development/r12.webp"
                                             className="img-lazy"
                                         />
                                     </div>
@@ -1095,6 +1095,7 @@ export default function RummyGameDevelopment() {
                     </div>
                 </div>
             </section>
+
             <section className="developer">
                 <div className="container c-1">
                     {/* <div class="heading_title text-center">
@@ -1173,7 +1174,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="best online rummy game app"
-                                data-original="/assets/images/rummy-game-development/hire-rummy-game-developer.webp"
+                                src="/assets/images/rummy-game-development/hire-rummy-game-developer.webp"
                                 className="wow bounceInRight hire-image img-lazy m-0 px-md-5"
                                 data-wow-duration="2s"
                                 style={{ visibility: "visible", animationDuration: "2s" }}
@@ -1182,6 +1183,7 @@ export default function RummyGameDevelopment() {
                     </div>
                 </div>
             </section>
+            
             <section className="mb-5 why">
                 <div className="container c-1">
                     <div className="row">
@@ -1228,7 +1230,7 @@ export default function RummyGameDevelopment() {
                                 Benefits of Choosing Mobzway for Rummy Game Development Solutions{" "}
                             </h4>
                             <ul
-                                style={{ listStyleType: "disc", lineHeight: 25, margin: "0 18px" }}
+                                style={{ listStyleType: "disc", lineHeight: '25px', margin: "0 18px" }}
                             >
                                 <li>Licensed software with comprehensive legal documentation.</li>
                                 <li>
@@ -1272,7 +1274,7 @@ export default function RummyGameDevelopment() {
                             <div className="px-md-2">
                                 <img
                                     alt="best online rummy game app"
-                                    data-original="/assets/images/rummy-game-development/why_choose_us_rummy.webp"
+                                    src="/assets/images/rummy-game-development/why_choose_us_rummy.webp"
                                     className="wow bounceInRight hire-image img-lazy px-md-5"
                                     data-wow-duration="2s"
                                     style={{ visibility: "visible", animationDuration: "2s" }}
@@ -1344,7 +1346,7 @@ export default function RummyGameDevelopment() {
                                                 height={900}
                                                 className="hireimagrespo img-lazy"
                                                 alt="best online rummy game app"
-                                                data-original="/assets/images/rummy-game-development/Architecture.webp"
+                                                src="/assets/images/rummy-game-development/Architecture.webp"
                                             />
                                         </div>
                                     </div>
@@ -1387,7 +1389,7 @@ export default function RummyGameDevelopment() {
                                                 height={900}
                                                 className="hireimagrespo img-lazy"
                                                 alt="best online rummy game app"
-                                                data-original="/assets/images/rummy-game-development/Platforms.webp"
+                                                src="/assets/images/rummy-game-development/Platforms.webp"
                                             />
                                         </div>
                                     </div>
@@ -1429,7 +1431,7 @@ export default function RummyGameDevelopment() {
                                                 height={900}
                                                 className="hireimagrespo img-lazy"
                                                 alt="best online rummy game app"
-                                                data-original="/assets/images/rummy-game-development/Security.webp"
+                                                src="/assets/images/rummy-game-development/Security.webp"
                                             />
                                         </div>
                                     </div>
@@ -1471,7 +1473,7 @@ export default function RummyGameDevelopment() {
                                                 height={900}
                                                 className="hireimagrespo img-lazy"
                                                 alt="best online rummy game app"
-                                                data-original="/assets/images/rummy-game-development/Technology.webp"
+                                                src="/assets/images/rummy-game-development/Technology.webp"
                                             />
                                         </div>
                                     </div>
@@ -1483,7 +1485,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="best online rummy game app"
-                                data-original="/assets/images/rummy-game-development/Architecture.webp"
+                                src="/assets/images/rummy-game-development/Architecture.webp"
                                 className=" hire-image img-lazy"
                                 id="one"
                             />
@@ -1491,7 +1493,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="best online rummy game app"
-                                data-original="/assets/images/rummy-game-development/Platforms.webp"
+                                src="/assets/images/rummy-game-development/Platforms.webp"
                                 className=" hire-image img-lazy"
                                 id="two"
                             />
@@ -1499,7 +1501,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="best online rummy game app"
-                                data-original="/assets/images/rummy-game-development/Security.webp"
+                                src="/assets/images/rummy-game-development/Security.webp"
                                 className=" hire-image img-lazy"
                                 id="three"
                             />
@@ -1507,7 +1509,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="best online rummy game app"
-                                data-original="/assets/images/rummy-game-development/Technology.webp"
+                                src="/assets/images/rummy-game-development/Technology.webp"
                                 className=" hire-image img-lazy"
                                 id="four"
                             />
@@ -2369,7 +2371,7 @@ export default function RummyGameDevelopment() {
                             <img
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/softwaresuggest.webp"
+                                src="/assets/images/rummy-game-development/softwaresuggest.webp"
                                 className=" hire-image icons img-lazy"
                             />{" "}
                         </div>
@@ -2378,7 +2380,7 @@ export default function RummyGameDevelopment() {
                             <img
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/topmobileappdevelopers.webp"
+                                src="/assets/images/rummy-game-development/topmobileappdevelopers.webp"
                                 className=" hire-image icons img-lazy"
                             />{" "}
                         </div>
@@ -2387,7 +2389,7 @@ export default function RummyGameDevelopment() {
                             <img
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/capterra.webp"
+                                src="/assets/images/rummy-game-development/capterra.webp"
                                 className=" hire-image icons img-lazy"
                             />{" "}
                         </div>
@@ -2418,7 +2420,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="poker game"
-                                data-original="/assets/images/rummy-game-development/CashfreePayments.webp"
+                                src="/assets/images/rummy-game-development/CashfreePayments.webp"
                                 className="icons icons2 img-lazy"
                             />
                         </div>
@@ -2427,7 +2429,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="Razorpay"
-                                data-original="/assets/images/rummy-game-development/Razorpay.webp"
+                                src="/assets/images/rummy-game-development/Razorpay.webp"
                                 className="icons img-lazy"
                             />
                         </div>
@@ -2436,7 +2438,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="rummy game"
-                                data-original="/assets/images/rummy-game-development/Payu.webp"
+                                src="/assets/images/rummy-game-development/Payu.webp"
                                 className="icons img-lazy"
                             />
                         </div>
@@ -2444,7 +2446,7 @@ export default function RummyGameDevelopment() {
                             <img
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/Paytm.webp"
+                                src="/assets/images/rummy-game-development/Paytm.webp"
                                 className="icons img-lazy"
                             />
                         </div>
@@ -2453,7 +2455,7 @@ export default function RummyGameDevelopment() {
                                 width={1600}
                                 height={900}
                                 alt="rummy"
-                                data-original="/assets/images/rummy-game-development/Neteller.webp"
+                                src="/assets/images/rummy-game-development/Neteller.webp"
                                 className="icons img-lazy"
                             />
                         </div>
@@ -2461,7 +2463,7 @@ export default function RummyGameDevelopment() {
                             <img
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/PayPal.webp"
+                                src="/assets/images/rummy-game-development/PayPal.webp"
                                 className="icons img-lazy"
                             />
                         </div>
@@ -2475,7 +2477,7 @@ export default function RummyGameDevelopment() {
                                 alt="rummy game"
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/Bitcoin.webp"
+                                src="/assets/images/rummy-game-development/Bitcoin.webp"
                                 className=" icons bit img-lazy"
                             />
                         </div>
@@ -2483,7 +2485,7 @@ export default function RummyGameDevelopment() {
                             <img
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/Stripe.webp"
+                                src="/assets/images/rummy-game-development/Stripe.webp"
                                 className="  icons img-lazy"
                             />
                         </div>
@@ -2491,7 +2493,7 @@ export default function RummyGameDevelopment() {
                             <img
                                 width={1600}
                                 height={900}
-                                data-original="/assets/images/rummy-game-development/Skrill.webp"
+                                src="/assets/images/rummy-game-development/Skrill.webp"
                                 className=" icons skrill img-lazy"
                             />
                         </div>
@@ -2530,7 +2532,7 @@ export default function RummyGameDevelopment() {
                                                 width={1600}
                                                 height={900}
                                                 alt="Poker Game"
-                                                data-original="/assets/images/rummy-game-development/Product_Poker.webp"
+                                                src="/assets/images/rummy-game-development/Product_Poker.webp"
                                                 className="img-lazy"
                                             />
                                         </div>
@@ -2561,7 +2563,7 @@ export default function RummyGameDevelopment() {
                                                 width={1600}
                                                 height={900}
                                                 alt="Rummy"
-                                                data-original="/assets/images/rummy-game-development/Product_Casino.webp"
+                                                src="/assets/images/rummy-game-development/Product_Casino.webp"
                                                 className="img-lazy"
                                             />
                                         </div>
@@ -2592,7 +2594,7 @@ export default function RummyGameDevelopment() {
                                                 width={1600}
                                                 height={900}
                                                 alt="Teen Patti Game"
-                                                data-original="/assets/images/rummy-game-development/Product_Teenpatti.webp"
+                                                src="/assets/images/rummy-game-development/Product_Teenpatti.webp"
                                                 className="img-lazy"
                                             />
                                         </div>
@@ -2623,7 +2625,7 @@ export default function RummyGameDevelopment() {
                                                 width={1600}
                                                 height={900}
                                                 alt="Casino"
-                                                data-original="/assets/images/rummy-game-development/product_ludo.webp"
+                                                src="/assets/images/rummy-game-development/product_ludo.webp"
                                                 className="img-lazy"
                                             />
                                         </div>

@@ -157,8 +157,9 @@ export function middleware(request) {
 
   // 🌍 Country detection
   const country =
-    request.headers.get("x-vercel-ip-country") ||
-    request.headers.get("x-vercel-country") ||
+    request.headers.get("cloudfront-viewer-country") || // AWS
+    request.headers.get("x-vercel-ip-country") ||       // Vercel
+    request.headers.get("x-vercel-country") ||          // Vercel fallback
     "IN";
 
   // 🌏 Asia (except India & Bangladesh)
