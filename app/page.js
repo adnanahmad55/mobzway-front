@@ -2,6 +2,7 @@
 //   return <p>Redirecting...</p>;
 // }
 
+
 "use client";
 import { useEffect } from "react";
 
@@ -9,17 +10,14 @@ export default function Home() {
   useEffect(() => {
     async function detectCountry() {
       try {
-        // 1️⃣ Get real IP of user from browser
-        const ipRes = await fetch("https://api.ipify.org?format=json");
-        const { ip } = await ipRes.json();
+        const res = await fetch("/api/geo");
+        const { country } = await res.json();
 
-        // 2️⃣ Get country from IP
-        const geoRes = await fetch(`https://ipwho.is/${ip}`);
-        const geo = await geoRes.json();
-        const country = geo?.country_code || "IN";
+        const asiaCountries = [
+          "PK","NP","LK","BT","MM","TH","MY","SG",
+          "ID","PH","VN","KH","LA","CN","JP","KR"
+        ];
 
-        const asiaCountries = ["PK","NP","LK","BT","MM","TH","MY","SG",
-                               "ID","PH","VN","KH","LA","CN","JP","KR"];
         let prefix = "in";
 
         if (country === "IN") prefix = "in";
@@ -30,10 +28,8 @@ export default function Home() {
         else if (["DE","FR","IT","ES","NL"].includes(country)) prefix = "eu";
         else if (["NG","ZA","KE","EG"].includes(country)) prefix = "af";
 
-        // 3️⃣ Redirect user
         window.location.replace(`/${prefix}`);
-      } catch (err) {
-        // fallback
+      } catch {
         window.location.replace("/in");
       }
     }
@@ -43,4 +39,3 @@ export default function Home() {
 
   return null;
 }
-
