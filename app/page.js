@@ -30,12 +30,13 @@ export default function Home() {
         else if (["DE","FR","IT","ES","NL"].includes(country)) prefix = "eu";
         else if (["NG","ZA","KE","EG"].includes(country)) prefix = "af";
 
-        // window.location.replace(`/${prefix}`);
+        window.location.replace(`/${prefix}`);
       } catch (err) {
-        // window.location.replace("/in");
+        window.location.replace("/in");
       }
     }
 
+    
     detectCountry();
   }, []);
 
