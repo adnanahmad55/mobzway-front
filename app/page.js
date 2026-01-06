@@ -9,14 +9,14 @@ export default function Home() {
   useEffect(() => {
     async function detectCountry() {
       try {
-        // 1. Get real IP from client
+        // 1️⃣ Get real IP of user from browser
         const ipRes = await fetch("https://api.ipify.org?format=json");
         const { ip } = await ipRes.json();
 
-        // 2. Get country from IP
+        // 2️⃣ Get country from IP
         const geoRes = await fetch(`https://ipwho.is/${ip}`);
         const geo = await geoRes.json();
-        const country = geo.country_code || "IN";
+        const country = geo?.country_code || "IN";
 
         const asiaCountries = ["PK","NP","LK","BT","MM","TH","MY","SG",
                                "ID","PH","VN","KH","LA","CN","JP","KR"];
@@ -30,15 +30,17 @@ export default function Home() {
         else if (["DE","FR","IT","ES","NL"].includes(country)) prefix = "eu";
         else if (["NG","ZA","KE","EG"].includes(country)) prefix = "af";
 
+        // 3️⃣ Redirect user
         window.location.replace(`/${prefix}`);
       } catch (err) {
+        // fallback
         window.location.replace("/in");
       }
     }
 
-    
     detectCountry();
   }, []);
 
   return null;
 }
+
