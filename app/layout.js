@@ -11,6 +11,8 @@ import Footer from "./components/Footer";
 import Script from "next/script";
 import SiteScripts from "./components/SiteScripts";
 import ZohoLoader from "./components/ZohoLoader";
+import { LanguageProvider } from "./components/LanguageProvider";
+import { cookies } from "next/headers";
 // import '../public/assets/css/owl.css';
 // import '../public/assets/css/owl.carousel.min.css';
 // import '../public/assets/css/owl.theme.default.min.css';
@@ -23,7 +25,10 @@ export const metadata = {
   description: 'Mobzway is a top poker and casino game development company.',
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // const cookieStore = cookies();
+  const defaultLang =  "en";
+
   return (
     <html lang="en">
       <head>
@@ -101,9 +106,11 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="">
+        <LanguageProvider defaultLang={defaultLang}>
         <Header />
         {children}
         <Footer />
+        </LanguageProvider>
         <ZohoLoader />
         <SiteScripts />
 

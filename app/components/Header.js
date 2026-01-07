@@ -1,19 +1,33 @@
 "use client";
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Typewriter from './Typewriter'
 // import AOS from 'aos';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 // import WOW from "wowjs";
 import { menuData } from "./menuData";
+import { useLang } from './LanguageProvider';
+import { languages } from '../lib/i18n';
 
 
 export default function Header() {
     const pathname = usePathname();
+    const [open, setOpen] = useState(false);
 
     const country = pathname.split("/")[1] || "default";
 
     const menu = menuData[country] || menuData.default;
+
+    const { lang, setLang } = useLang();
+
+    function changeLang(e) {
+        console.log(e, 'eeeee');
+        
+        // const value = e.target.value;
+        document.cookie = `lang=${e}; path=/`;
+        setLang(e);
+        setOpen(false);
+    }
 
 
     // if (
@@ -260,6 +274,18 @@ export default function Header() {
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </a>
                             </li>
+
+                            {/* <select value={lang} onChange={changeLang}
+                            style={{background:'transparent', border: '0', outline:'none'}}>
+                                {languages.map((l) => (
+                                    <option key={l} value={l}>
+                                        <img src={`/assets/images/${l.toUpperCase()}.png`} />
+                                    </option>
+                                ))}
+                            </select> */}
+
+                            
+
 
                             {/* <li id="menu-item-7296"
                           class="contact_btn_list_wrapper menu-item menu-item-type-custom menu-item-object-custom d-block d-md-none mt-3">
