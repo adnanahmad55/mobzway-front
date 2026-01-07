@@ -243,7 +243,7 @@ export default function Header() {
                                 </li>
                             ))}
 
-                            <li id="menu-item-7296" className=" border-0">
+                            <li id="menu-item-7296" className=" border-0 mr-4">
                                 <Link
                                     href="/our-games"
                                     className="contact_btn skill-games-contact-none"
@@ -284,7 +284,48 @@ export default function Header() {
                                 ))}
                             </select> */}
 
-                            
+                          {country === 'bd' &&  <div className="dropdown d-flex align-items-center">
+                                <button
+                                    className="border-0 p-0"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    style={{ textDecoration: "none" }}
+                                    onClick={() => setOpen(true)}
+                                >
+                                    <img
+                                        src={`/assets/images/${lang.toUpperCase()}.png`}
+                                        alt={lang}
+                                        width="20"
+                                        className="me-2"
+                                        style={{width:' 22px'}}
+                                    />
+                                    {/* {lang.toUpperCase()} */}
+                                </button>
+
+                                {open && <div className="dropdown-menu show dropdown-menu-end p-0 overflow-hidden bg-dark"
+                                style={{left:'-30px', width:'90px', minWidth:'90px', borderRadius:'2px'}}>
+                                    {languages.map((l) => (
+                                        <div key={l} className='m-0'>
+                                            <button
+                                                className="dropdown-item px-2 d-flex align-items-center bg-dark"
+                                                onClick={() => changeLang(l)}
+                                                style={{color:'#fff'}}
+                                            >
+                                                <img
+                                                    src={`/assets/images/${l.toUpperCase()}.png`}
+                                                    alt={l}
+                                                    width="20"
+                                                    className="mr-2"
+                                                    style={{width:' 25px'}}
+                                                />
+                                                {l.toUpperCase()}
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                                }
+                            </div>}
 
 
                             {/* <li id="menu-item-7296"
