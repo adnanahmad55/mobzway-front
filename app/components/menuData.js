@@ -2,6 +2,10 @@ export const menuData = {
   in: [
     { label: "Custom Games", path: "/custom-game-development" },
     { label: "Hire Developers", path: "/hire-game-developers" },
+    { label: "About Us", path: "/about-us"},
+    { label: "Awards", path: "/awards-and-recognition"},
+    { label: "Contact Us", path: "/contact-us"},
+    // { label: "Blog", path: "/contact-us"}
 
     // {
     //   label: "More Solutions",
@@ -19,6 +23,9 @@ export const menuData = {
     { label: "Slot Games", path: "/slot-game-development" },
     { label: "Fish Table Games", path: "/casino-software" },
     { label: "Casino Games", path: "/casino-software" },
+    { label: "About Us", path: "/about-us"},
+    { label: "Awards", path: "/awards-and-recognition"},
+    { label: "Contact Us", path: "/contact-us"},
 
     // {
     //   label: "More Solutions",
@@ -35,6 +42,9 @@ export const menuData = {
     // { label: "Service", path: "/" },
     { label: "Sports Book", path: "/sportsbook-software-development" },
     { label: "Casino Games", path: "/casino-software" },
+    { label: "About Us", path: "/about-us"},
+    { label: "Awards", path: "/awards-and-recognition"},
+    { label: "Contact Us", path: "/contact-us"},
 
 
   ],
@@ -42,6 +52,9 @@ export const menuData = {
   eu: [
     { label: "Sportsbook", path: "/sportsbook-software-development" },
     { label: " Casino Platform", path: "/casino-software" },
+    { label: "About Us", path: "/about-us"},
+    { label: "Awards", path: "/awards-and-recognition"},
+    { label: "Contact Us", path: "/contact-us"},
 
 
   ],
@@ -50,6 +63,9 @@ export const menuData = {
     { label: "Bingo", path: "/bingo-software" },
     { label: "Keno", path: "/keno-game-development" },
     { label: "SportsBook", path: "/sportsbook-software-development" },
+    { label: "About Us", path: "/about-us"},
+    { label: "Awards", path: "/awards-and-recognition"},
+    { label: "Contact Us", path: "/contact-us"},
 
 
   ],
@@ -58,6 +74,9 @@ export const menuData = {
     { label: "Casino Platform", path: "/casino-software-development" },
     { label: "Ludo", path: "/ludo-game-development-bd" },
     { label: "Slot Games", path: "/slot-game-development-bd" },
+    { label: "About Us", path: "/about-us"},
+    { label: "Awards", path: "/awards-and-recognition"},
+    { label: "Contact Us", path: "/contact-us"},
 
 
   ],
@@ -66,6 +85,9 @@ export const menuData = {
     { label: "Casino Platform", path: "/casino-software-development-asia" },
     { label: "Ludo", path: "/ludo-game-development-bd" },
     { label: "Slot Games", path: "/slot-game-development-bd" },
+    { label: "About Us", path: "/about-us"},
+    { label: "Awards", path: "/awards-and-recognition"},
+    { label: "Contact Us", path: "/contact-us"},
 
 
   ],

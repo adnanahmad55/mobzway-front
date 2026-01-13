@@ -243,6 +243,22 @@ export default function Header() {
                                 </li>
                             ))}
 
+                            <li id="menu-item-7296" className=" border-0">
+                                <Link
+                                    href="https://www.mobzway.com/blog/"
+                                    className=""
+                                >
+                                    {/* <span
+                                        className="typewrite"
+                                        data-period={4000}
+                                        data-type='["60+ Games", "Try Demo"]'
+                                    >
+                                        <span className="wrap" />
+                                    </span> */}
+                                    Blog
+                                </Link>
+                                </li>
+
                             <li id="menu-item-7296" className=" border-0 mr-4">
                                 <Link
                                     href="/our-games"
@@ -283,6 +299,7 @@ export default function Header() {
                                     </option>
                                 ))}
                             </select> */}
+                            {/* {country} */}
 
                           {country === 'bd' &&  <div className="dropdown d-flex align-items-center">
                                 <button
