@@ -1,5 +1,18 @@
 import React from 'react'
 
+export const metadata = {
+    title: "Casino software development company in Bangladesh | Mobzway",
+    description:
+        "TMobzway is leading casino software development company in Bangladesh delivering slots, live casino, and RNG gaming platforms with advanced security. Contact Now",
+    keywords: ["Casino software development company in Bangladesh"],
+    alternates: {
+        canonical: "https://www.mobzway.com/bd/",
+        languages: {
+            "en-IN": "https://www.mobzway.com/bd/",
+        },
+    },
+};
+
 export default function CasinoSoftwareDevelopment() {
     return (
         <>
@@ -13,7 +26,7 @@ export default function CasinoSoftwareDevelopment() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Casino Software Development
+                        Casino software development company in Bangladesh | Mobzway
                     </h1>
 
                     <div className="btn_outer">

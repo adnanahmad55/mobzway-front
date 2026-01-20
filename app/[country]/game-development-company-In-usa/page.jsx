@@ -1,19 +1,20 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Sportsbook software development company in Bangladesh",
-    description:
-        "Top sportsbook software development company in Bangladesh offering secure betting platforms, odds engines, risk management, and real-time data solutions.",
-    keywords: ["Sportsbook software development company in Bangladesh"],
-    alternates: {
-        canonical: "https://www.mobzway.com/bd/",
-        languages: {
-            "en-IN": "https://www.mobzway.com/bd/",
-        },
+  title: "Game development company in USA | Game development Service",
+  description:
+    "Mobzway is top game development company in the USA offering custom mobile games, casual games and multiplayer game development services. Hire game developers!",
+  keywords: ["Game development company in USA, Game development Service in USA"],
+  alternates: {
+    canonical: "https://www.mobzway.com/us/",
+    languages: {
+      "en-IN": "https://www.mobzway.com/us/",
     },
+  },
 };
 
-export default function SportsbookSoftwareDevelopment() {
+
+export default function GameDevelopmentCompanyInUSA() {
     return (
         <>
 
@@ -26,7 +27,7 @@ export default function SportsbookSoftwareDevelopment() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Sportsbook software development company in Bangladesh
+                        Game development company in USA | Game development Service
                     </h1>
 
                     <div className="btn_outer">
@@ -115,15 +116,11 @@ export default function SportsbookSoftwareDevelopment() {
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Are you looking for a reputable Sportsbook software development company in Bangladesh to assist you? Mobzway provides an entirely flexible and robust Sportsbook software development service in Bangladesh marketplace, for businesses looking to grow or create their Sportsbook business.
-                    </p>
-                    <p className="content" style={{ marginBottom: 15, color: "#000", fontSize: 17 }}>
-                        Whether you’re looking for a White Label product, Custom-built Software, or complete Mobile Development Team, we provide the technology & experience to provide you with everything based on today’s local and global betting practices.
+                        Mobzway is a top-notch Game development company in USA, and the company is providing complete game development services from the very first step to the final launch for mobile, web, PC, and console games.
                     </p>
                     <p className="content" style={{ color: "#000", fontSize: 17 }}>
-                        Our Sportsbook solutions are currently trusted by Sportsbook operators in Asia, Europe, Africa and the USA. As a result, we are a preferred partner for both start-up businesses and established gaming companies.
+                        Mobzway has a great focus on innovation, performance, and user engagement, and thus, it offers businesses the helping hand to convert their ideas into successful gaming products.
                     </p>
-
                 </div>
             </section>
 
@@ -140,21 +137,21 @@ export default function SportsbookSoftwareDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="yellow">Why Choose Mobzway as your Preferred Sportsbook Software  </span>{" "}
-                                <span className="black"> Development Company in Bangladesh?</span>
+                                <span className="yellow">Why Choose Mobzway as Your </span>{" "}
+                                <span className="black"> Game development company in USA</span>
                             </h2>
                         </div>
                     </div>
 
-                    {/* <div className="col-md-12 col1 wow" data-wow-duration="1s">
+                    <div className="col-md-12 col1 wow" data-wow-duration="1s">
                         <p className="hire-para col-md-12 para-plateform text-center">
-                            Understanding of the Local Market + Global Experience
+                            Our experts blend visionary designs, state-of-the-art technology, and market orientation to bring forth the best games.
 
                             <br />
                             <br />
                             <br />
                         </p>
-                    </div> */}
+                    </div>
                     <div className="row row1 desktopversion">
                         <div className="col-md-12 col2">
                             <div className="row">
@@ -173,19 +170,18 @@ export default function SportsbookSoftwareDevelopment() {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title cards text-center">
-                                                Understanding of the Local Market + Global Experience
+                                                Custom Game Development Services
                                             </h5>
-                                            <p className="card-text text-center text-dark">
-                                                Mobzway has an in-depth understanding of how its local market operates, where demand is greatest, and how to develop products to meet those demands. Mobzway also has experience developing products for the following markets:
-
-                                            </p>
+                                            {/* <p className="card-text text-center text-dark">
+                                                Indian game developers possess excellent technical skills in:
+                                            </p> */}
                                             <ul className='why_content why_content_dark p-0 my-2'>
-                                                <li className='text-dark'>Cricket Betting Software</li>
-                                                <li className='text-dark'>Football Betting Software</li>
-                                                <li className='text-dark'>Kabaddi Betting Software</li>
-                                                <li className='text-dark'>Tennis, Basketball & eSports Betting Software</li>
+                                                <li className='text-dark'>Games for mobile, PC & console</li>
+                                                <li className='text-dark'>2D, 3D and multiplayer games </li>
+                                                <li className='text-dark'>Development of cross-platform games</li>
+
                                             </ul>
-                                            <p className="card-text text-center text-dark">Mobzway's Sportsbook Platforms have been built with high-volumes of traffic in mind, so they can handle everything from high traffic events to performance speed and convenience across multiple devices.</p>
+                                            {/* <p className="card-text text-center text-dark">These qualities make India the best choice for companies seeking to outsource their game development.</p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -205,20 +201,13 @@ export default function SportsbookSoftwareDevelopment() {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title cards text-center">
-                                                Full-service Sportsbook Development
+                                                Experienced Game Developers
                                             </h5>
-                                            <p className="card-text text-center text-dark">
-                                                Mobzway's complete Sportsbook software development solutions in Bangladesh include the following components:
-                                            </p>
                                             <ul className='why_content why_content_dark p-0 my-2'>
-                                                <li className='text-dark'>Odds & Risk Management System</li>
-                                                <li className='text-dark'>Live/In-play Betting Engine</li>
-                                                <li className='text-dark'>Integration with Major Odds Providers</li>
-                                                <li className='text-dark'>Player Management & KYC Systems</li>
-                                                <li className='text-dark'>Admin Dashboard & Reporting System</li>
-                                                <li className='text-dark'>Bonus & Promotions Engine</li>
-                                                <li className='text-dark'>Multi-Currency Wallet</li>
-                                                <li className='text-dark'>Agent/Affiliate Systems</li>
+                                                <li className='text-dark'>Proficient Unity, Unreal and HTML5 developers</li>
+                                                <li className='text-dark'>Agile methodology</li>
+                                                <li className='text-dark'>Fully committed development teams</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -239,17 +228,12 @@ export default function SportsbookSoftwareDevelopment() {
                                             />
                                         </div>
                                         <div className="card-body">
-                                            <h5 className="card-title cards text-center">A customizable and scalable sportsbook platform</h5>
-                                            <p className="card-text text-center text-dark">
-                                                When using our Bangladesh-ready sportsbook platform, you will customize the following:
-                                            </p>
+                                            <h5 className="card-title cards text-center">End-to-End Development</h5>
                                             <ul className='why_content why_content_dark p-0 my-2'>
-                                                <li className='text-dark'>UI/UX design</li>
-                                                <li className='text-dark'>Player experience</li>
-                                                <li className='text-dark'>Market Availability </li>
-                                                <li className='text-dark'>Games offered</li>
-                                                <li className='text-dark'>Payment/Withdrawal methods</li>
-                                                <li className='text-dark'>Agent levels or Hierarchy</li>
+                                                <li className='text-dark'>Design and prototyping of the game</li>
+                                                <li className='text-dark'>Testing and development</li>
+                                                <li className='text-dark'>Janitor and support after launching</li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -271,21 +255,50 @@ export default function SportsbookSoftwareDevelopment() {
                                             />
                                         </div>
                                         <div className="card-body">
-                                            <h5 className="card-title cards text-center">Mobile-first sportsbook experience</h5>
-                                            <p className="card-text text-center text-dark">
-                                                Considering that more than 80% of bettors are using their smartphones or other mobile devices to place bets, we are giving our customers:
-                                            </p>
+                                            <h5 className="card-title cards text-center">Scalable & Secure Solutions</h5>
                                             <ul className='why_content why_content_dark p-0 my-2'>
-                                                <li className='text-dark'>Android App</li>
-                                                <li className='text-dark'>iOS App</li>
-                                                <li className='text-dark'>Progressive Web App (PWA) Sportsbook</li>
-                                                <li className='text-dark'>Totally responsive website</li>
+                                                <li className='text-dark'>Infrastructure based on the cloud</li>
+                                                <li className='text-dark'>Systems with highly secure backend</li>
+                                                <li className='text-dark'>Gameplay that is optimized for performance</li>
+
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
 
+                                {/* <div
+                                    className="col-lg-4 col-md-6 col21 mb-5  wow bounceInRight"
+                                    data-wow-duration="2s"
+                                    data-wow-delay=".2s"
+                                >
+                                    <div className="card  plateform-card">
+                                        <div className="imgminheight">
+                                            <img
+                                                alt="best online rummy game app"
+                                                src="/assets/images/Mac_PC.webp"
+                                                style={{ width: 150 }}
+                                                className="wow bounceInRight new-one "
+                                                data-wow-duration="2s"
+                                            />
+                                        </div>
+                                        <div className="card-body">
+                                            <h5 className="card-title cards text-center">Expertise in All Game Genres</h5>
+                                            <p className="card-text text-center text-dark">
+                                                Get the right developers for your projects:
+                                            </p>
 
+                                            <ul className='why_content why_content_dark p-0 my-2'>
+                                                <li className='text-dark'>2D and 3D games</li>
+                                                <li className='text-dark'>Casual and hyper-casual games</li>
+                                                <li className='text-dark'>Real-time multiplayer games</li>
+                                                <li className='text-dark'>Fantasy sports and sports games </li>
+                                                <li className='text-dark'>Educational and simulation games</li>
+                                                <li className='text-dark'>AR/VR games</li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -305,22 +318,22 @@ export default function SportsbookSoftwareDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="yellow">Key Features of Our Sportsbook </span>{" "}
+                                <span className="yellow">Our Game Development  </span>{" "}
                                 <span className="black">
-                                    Software in Bangladesh
+                                    Services in the USA
                                 </span>
                             </h2>
                         </div>
                     </div>
-                    {/* <div
+                    <div
                         className="col-md-12 col1 wow animated"
                         data-wow-duration="2s"
                         style={{ visibility: "visible", animationDuration: "2s" }}
                     >
-                        <p className="hire-para col-md-12 text-center">
+                        {/* <p className="hire-para col-md-12 text-center">
                             We give different hiring structures depending on your business needs:
-                        </p>
-                    </div> */}
+                        </p> */}
+                    </div>
                     <div className="row row1 row1add">
                         <div className="col-lg-4 col-md-6 col1">
                             <div className="row">
@@ -336,11 +349,11 @@ export default function SportsbookSoftwareDevelopment() {
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Pre-Match/In-play Betting</h3>
+                                    <h3 className='text-center'>Mobile Game Development</h3>
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        We offer pre-match and in-play betting on thousands of matches each day from all major sports.
+                                        Development for Android & iOS, Games: casual, hyper-casual, & real-money, Mobile gameplay with high-performance
                                     </p>
                                 </div>
                             </div>
@@ -359,11 +372,11 @@ export default function SportsbookSoftwareDevelopment() {
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Real-Time Odds</h3>
+                                    <h3 className='text-center'>PC & Console Game Development</h3>
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        We provide real-time odds through your chosen global odds suppliers. Our process guarantees you the best possible odds for the most accurate results for your punters.
+                                        Development of AAA & indie games, Cross-platform support, Graphics & physics optimized
                                     </p>
                                 </div>
                             </div>
@@ -382,15 +395,16 @@ export default function SportsbookSoftwareDevelopment() {
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Multi-Language Support</h3>
+                                    <h3 className='text-center'>Multiplayer & Online Game Development</h3>
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        We provide our sportsbook software in both English and Bengali, and we can provide multi-language support according to your market.
+                                        Systems for multiplayer in real-time, Integration of matchmaking & leaderboard, Architecture of a secure server
                                     </p>
                                 </div>
                             </div>
                         </div>
+
 
                         <div className="col-lg-4 col-md-6 col1">
                             <div className="row">
@@ -406,92 +420,17 @@ export default function SportsbookSoftwareDevelopment() {
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Secure Payment Options</h3>
+                                    <h3 className='text-center'>Casino & iGaming Game Developmen</h3>
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        We provide a wide variety of payment options, including:
-                                    </p>
-                                    <p>Local payment gateways that are friendly to Bangladeshi operators.
-                                        E-wallets,
-                                        Crypto wallets (optional),
-                                        Instant withdrawal modules,
-                                        In Bangladesh, we have a very established payment processing environment, in order to give you the highest level of assurance regarding your players’ deposits and withdrawals</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6 col1">
-                            <div className="row">
-                                <div className="col-md-12 col-sm-12 col-12 d-flex justify-content-center">
-                                    <div className="image_area">
-                                        <img
-                                            width={1600}
-                                            height={900}
-                                            alt="Multi-Language"
-                                            src="/assets/images/rummy-game-development/r06.webp"
-                                            className="img-lazy"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Agent & Sub-Agent's System</h3>
-                                </div>
-                                <div className="col-md-12">
-                                    <p>
-                                        Ideal for operators within Bangladesh who use a hierarchical distribution model.
+                                        Development of slot, table, & card games, Platforms for sportsbook & casino, Gaming solutions that are RNG-certified
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-6 col1">
-                            <div className="row">
-                                <div className="col-md-12 col-sm-12 col-12 d-flex justify-content-center">
-                                    <div className="image_area">
-                                        <img
-                                            width={1600}
-                                            height={900}
-                                            alt="Multi-Language"
-                                            src="/assets/images/rummy-game-development/r06.webp"
-                                            className="img-lazy"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Anti-Fraud & Security Features</h3>
-                                </div>
-                                <div className="col-md-12">
-                                    <p>
-                                        Secure API framework, DDoS protection, Anti-cheat monitoring, Role-based access control, The sports betting software we supply comes with the built-in anti-fraud features, and then there are a plethora of tools that we provide to safeguard your business as well as your players from getting involved in fraudulent activities, all this while keeping your operation's integrity and security intact.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="col-lg-4 col-md-6 col1">
-                            <div className="row">
-                                <div className="col-md-12 col-sm-12 col-12 d-flex justify-content-center">
-                                    <div className="image_area">
-                                        <img
-                                            width={1600}
-                                            height={900}
-                                            alt="Multi-Language"
-                                            src="/assets/images/rummy-game-development/r06.webp"
-                                            className="img-lazy"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Robust Admin Panel</h3>
-                                </div>
-                                <div className="col-md-12">
-                                    <p>
-                                        Your complete solution to the management of users, markets, profits, settlements, promotions and reports. All from one centralized dashboard, which can be configured according to your requirements.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
 
                     </div>
@@ -499,75 +438,11 @@ export default function SportsbookSoftwareDevelopment() {
             </section>
 
 
-            <section className="mb-5 why">
-                <div className="container c-1">
-                    <div className="row">
-                        <div className="col-md-12 text-center">
-                            <div
-                                className="aos-init"
-                                data-aos="fade-right"
-                                data-aos-duration={1500}
-                                data-aos-once="true"
-                            >
-                                <h2 className="sub_title">
-                                    <span className="yellow">Tech Stack Used for </span>{" "}
-                                    <span className="black">
-                                        Sportsbook Software in Bangladesh
-                                    </span>
-                                </h2>
-                            </div>
-                            {/* <p className="text-justify">
-                                
-                            </p> */}
-                        </div>
-                        <div className="col-md-6">
-                            <br />
-                            <br />
-                            {/* <h4 className="new-head">
-                                Benefits of Choosing Mobzway for Rummy Game Development Solutions{" "}
-                            </h4> */}
-                            <ul
-                                style={{ listStyleType: "disc", lineHeight: '25px', margin: "0 18px" }}
-                            >
-                                <li><b>Backend:</b> Node.js, Java, PHP, Go. </li>
-                                <li>
-                                    <b>Frontend:</b> Angular, React, Vue
-                                </li>
-                                <li>
-                                    <b>Database:</b> MySQL, PostgreSQL, MongoDB
-                                </li>
-                                <li>
-                                    <b>Server:</b> AWS, Google Cloud, Azure
-                                </li>
-                                <li><b>Real-Time Engines:</b>  WebSocket, Socket.io, WebRTC</li>
-                                <li>
-                                    <b>Security:</b> AES/SSL encryption, IP blocking, tokenized sessions.
-                                </li>
 
-                            </ul>
-                        </div>
-                        <div className="col-md-6 mtp pt-md-0 mt-2">
-                            <div className="px-md-2">
-                                <img
-                                    alt="best online rummy game app"
-                                    src="/assets/images/rummy-game-development/why_choose_us_rummy.webp"
-                                    className="wow bounceInRight hire-image img-lazy px-md-5"
-                                    data-wow-duration="2s"
-                                    style={{ visibility: "visible", animationDuration: "2s" }}
-                                    width={1600}
-                                    height={900}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section className="developer">
+            {/* <section className="developer">
                 <div className="container c-1">
-                    {/* <div class="heading_title text-center">
-   <h1><span>HIRE</span> POKER GAME DEVELOPER</h1>
-   </div> */}
+                   
                     <div className="col-md-12 text-center">
                         <div
                             className="aos-init"
@@ -576,11 +451,11 @@ export default function SportsbookSoftwareDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="yellow">Sports Covered in Our </span>{" "}
-                                <span className="black">Bangladesh-Ready Platform</span>
-                                {/*2*/}
+                                <span className="yellow">Fish Table Gaming </span>{" "}
+                                <span className="black">Market Opportunity in the USA</span>
+                                
                             </h2>
-                            <p>We provide odds & markets on:</p>
+                            
                         </div>
                     </div>
                     <div className="row row1">
@@ -594,35 +469,12 @@ export default function SportsbookSoftwareDevelopment() {
                             }}
                         >
                             <p className="hire-para">
-                                Cricket
+                                The USA market for fish table games is increasing night and every day, and the reasons for this are arcade-style excitement, multiplayer competition, and skill-based features as the main factors. The players love the fast action combined with the rewards, while the operators look for systems they can depend on that can grow easily.
                                 <br />
                                 <br />
-                                Football
-                                <br />
-                                <br />
-                                Tennis
-                                <br />
-                                <br />
-                                Basketball
-                                <br />
-                                <br />
-                                Badminton
-                                <br />
-                                <br />
-                                Table Tennis
-                                <br />
-                                <br />
-                                Volleyball
-                                <br />
-                                <br />
-                                Kabaddi
-                                <br />
-                                <br />
-                                Esports (Dota2, CS2, Valorant)
-                                <br />
-                                <br />
-                                Horse racing & virtual sports
-                                Operators have the choice to select or limit sports depending on geographical tastes.
+                                Mobzway is the one who not only caters to the players' needs but also assures the operators' requirements by supplying fish table games that are entertaining, secure, and focused on profit. thats why we are premier Fish Table games development company in USA that provide all these benefits to operators.
+                                
+
                             </p>
                             <div className="btn_outer my-bt">
                                 <a
@@ -648,7 +500,7 @@ export default function SportsbookSoftwareDevelopment() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
             <section>
@@ -661,22 +513,22 @@ export default function SportsbookSoftwareDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="yellow">Custom Sportsbook Development</span>{" "}
+                                <span className="yellow">Key Features of  </span>{" "}
                                 <span className="black">
                                     {" "}
-                                    Services in Bangladesh
+                                    Our Game Development Solutions{/*< /span*/}
                                 </span>
                             </h2>
                         </div>
                     </div>
-                    {/* <div className="col-md-12 col1 wow" data-wow-duration="1s">
+                    <div className="col-md-12 col1 wow" data-wow-duration="1s">
                         <p className="hire-para col-md-12 para-plateform text-center">
-                            The following are the technologies our developers utilize to develop games:
+                            {/* The following technology has been used to build our fish table games: */}
 
                             <br />
                             <br />
                         </p>
-                    </div> */}
+                    </div>
                     <div className="row row1 desktopversion">
                         <div className="col-md-12 col2">
                             <div className="row">
@@ -695,11 +547,11 @@ export default function SportsbookSoftwareDevelopment() {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title cards text-center">
-                                                White Label Sportsbook
+                                                UI/UX that engage the user & gameplay mechanics
                                             </h5>
-                                            <p className="card-text text-center text-dark">
-                                                Launch quickly with ready-made modules + your branding.
-                                            </p>
+                                            {/* <p className="card-text text-center text-dark">
+                                                Unity, Unreal Engine, Cocos2d, Godo
+                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -719,12 +571,12 @@ export default function SportsbookSoftwareDevelopment() {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title cards text-center">
-                                                Custom Sportsbook Development
+                                                Game logic powered by AI
                                             </h5>
-                                            <p className="card-text text-center text-dark">
+                                            {/* <p className="card-text text-center text-dark">
                                                 {" "}
-                                                Unique UI, special markets, custom betting logic.
-                                            </p>
+                                                C#, C++, and JS/TS
+                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -743,16 +595,11 @@ export default function SportsbookSoftwareDevelopment() {
                                             />
                                         </div>
                                         <div className="card-body">
-                                            <h5 className="card-title cards text-center">API Integration Services</h5>
-                                            <p className="card-text text-center text-dark">
+                                            <h5 className="card-title cards text-center">Multi-language & global monetization</h5>
+                                            {/* <p className="card-text text-center text-dark">
                                                 {" "}
-                                                Third-party odds APIs,
-                                                Payment APIs,
-                                                Casino APIs,
-                                                CRM systems,
-                                                Data feed providers
-
-                                            </p>
+                                                Node.js, Java, Firebase, and AWS
+                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -772,11 +619,11 @@ export default function SportsbookSoftwareDevelopment() {
                                             />
                                         </div>
                                         <div className="card-body">
-                                            <h5 className="card-title cards text-center">Dedicated Sportsbook Developers</h5>
-                                            <p className="card-text text-center text-dark">
+                                            <h5 className="card-title cards text-center">Secure payment & analytics systems</h5>
+                                            {/* <p className="card-text text-center text-dark">
                                                 {" "}
-                                                Hire developers experienced in: Odds engines, Risk management, Agent systems, Mobile apps, Payment modules
-                                            </p>
+                                                Blender, Maya, Photoshop, and Substance
+                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -796,11 +643,8 @@ export default function SportsbookSoftwareDevelopment() {
                                             />
                                         </div>
                                         <div className="card-body">
-                                            <h5 className="card-title cards text-center">Multiplayer connection technologies</h5>
-                                            <p className="card-text text-center text-dark">
-                                                {" "}
-                                                Photon, SmartFox, Mirror, and WebRTC
-                                            </p>
+                                            <h5 className="card-title cards text-center">Ability to easily integrate with a casino's platform</h5>
+                                            
                                         </div>
                                     </div>
                                 </div> */}
@@ -813,9 +657,7 @@ export default function SportsbookSoftwareDevelopment() {
 
             <section className="solutions">
                 <div className="container c-1">
-                    {/* <div class="heading_title text-center">
-   <h1><span>ONLINE</span> POKER GAME DEVELOPMENT SOLUTIONS</h1>
-   </div> */}
+
                     <div className="col-md-12 text-center">
                         <div
                             className="aos-init"
@@ -824,9 +666,10 @@ export default function SportsbookSoftwareDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="yellow">Bangladesh Operators' </span>{" "}
-                                <span className="black"> Reason to Choose Mobzway</span>
+                                <span className="yellow">Gaming Industry </span>{" "}
+                                <span className="black">Opportunity in USA</span>
                             </h2>
+                            <p>he United States continues to be one of the leading gaming industries throughout the world because of several factors:</p>
                         </div>
                     </div>
                     <div className="row row1">
@@ -855,36 +698,92 @@ export default function SportsbookSoftwareDevelopment() {
                             }}
                         >
                             <p className="para-1">
-                                Over a decade of gaming tech experience
+                                Gaming is Highly Engaging for Users Across All Gaming Platforms.
+                                <br />
+                                <br />
+                                There is a Multi-Billion Dollar Growth Rate of Mobile and Online Gaming.
+                                <br />
+                                <br />
+                                Demand for Innovative and Engaging Experiences Continues to Grow.
+                                <br />
+                                <br />
+                                Mobzway provides Businesses with Future-Ready Game Development Solutions for Success in this Fast-Paced Industry. we are premier Game development company in USA.
 
-                                <br />
-                                <br />
-                                Completely customizable platform
 
-                                <br />
-                                <br />
-                                Robust security posture
-
-                                <br />
-                                <br />
-                                Cost effective pricing models
-
-                                <br />
-                                <br />
-                                Team of support available full-time
-
-                                <br />
-                                <br />
-                                Quick rolling out and upgrades
-
-                                <br />
-                                <br />
-                                Legally supporting infrastructures
-                                <br />
-                                <br />
-                                No matter if you are a long-time operator or a startup, our sportsbook software in Bangladesh is your partner for profitable and sustainable growth.
                             </p>
 
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="developer">
+                <div className="container c-1">
+
+                    <div className="col-md-12 text-center">
+                        <div
+                            className="aos-init"
+                            data-aos="fade-right"
+                            data-aos-duration={1500}
+                            data-aos-once="true"
+                        >
+                            <h2 className="sub_title">
+                                <span className="yellow">Development </span>{" "}
+                                <span className="black">Technology Stack</span>
+
+                            </h2>
+
+                        </div>
+                    </div>
+                    <div className="row row1">
+                        <div
+                            className="col-md-6 col1 wow bounceInUp"
+                            data-wow-duration="2s"
+                            style={{
+                                visibility: "visible",
+                                animationDuration: "2s",
+                                animationName: "none"
+                            }}
+                        >
+                            <p className="hire-para">
+                                Mobzway utilizes the latest Gaming Development Technologies, including:
+                                <br />
+                                <br />
+                                Unity 3D & Unreal Engine.
+                                <br />
+                                <br />
+                                HTML5, JavaScript & WebGL.
+                                <br />
+                                <br />
+                                C#, C++, and multiple Backend Frameworks.
+                                <br />
+                                <br />
+                                Cloud Hosting through AWS and Azure.
+
+
+                            </p>
+                            <div className="btn_outer my-bt">
+                                <a
+                                    id="requestaquoterummy3"
+                                    data-toggle="modal"
+                                    data-target="#requestQoute"
+                                    className="contact_btn requst"
+                                >
+                                    Request A Quote
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col1 pt-md-0">
+                            <img
+                                width={1600}
+                                height={900}
+                                alt="best online rummy game app"
+                                src="/assets/images/rummy-game-development/hire-rummy-game-developer.webp"
+                                className="wow bounceInRight hire-image img-lazy m-0 px-md-5"
+                                data-wow-duration="2s"
+                                style={{ visibility: "visible", animationDuration: "2s" }}
+                            />
                         </div>
                     </div>
                 </div>
@@ -1026,9 +925,9 @@ export default function SportsbookSoftwareDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="black_bg_head_yellow">Start your Sportsbook  </span>{" "}
+                                <span className="black_bg_head_yellow">Develop Your Next </span>{" "}
                                 <span className="black_bg_head_white">
-                                    Business in Bangladesh Now
+                                    Game with Mobzway
                                 </span>
                             </h2>
                         </div>
@@ -1044,19 +943,12 @@ export default function SportsbookSoftwareDevelopment() {
                                 fontSize: "1.30rem !important"
                             }}
                         >
-                            If you are looking for Sportsbook Software Development Company in Bangladesh, you are at the right place. Mobzway will create you a rich in features, safe and profit-making sportsbook platform designed for Bangladesh.
+                            As a leading and trusted Game development company in USA, Mobzway provides expert game development services that will result in innovative, engaging games that will create revenues for your Business.
                         </h3>
-                        <span className='text-white bg-transparent p-0 d-block'>Get in touch with us to receive:</span>
-                        <span className='text-white bg-transparent p-0 d-block' style={{fontSize:'18px'}}>Access to demo, 
-                            Information about prices, 
-                            List of features, 
-                            Options for hiring developers
-                        </span>
-                        <span className='text-white bg-transparent p-0 d-block' style={{fontSize:'18px'}}>Let’s create together your next generation of sports betting platform with Mobzway, one of the best Sportsbook Software Development Company in Bangladesh!</span>
                     </div>
-                    <div className="text-center mt-3">
+                    <div className="text-center">
                         <button className="btn" data-toggle="modal" data-target="#requestQoute">
-                            <p>Try Demo</p>
+                            <p>Get Your Free Consultation Today</p>
                         </button>
                     </div>
                 </div>

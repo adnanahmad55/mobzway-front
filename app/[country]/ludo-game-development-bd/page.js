@@ -1,5 +1,18 @@
 import React from 'react'
 
+export const metadata = {
+    title: "Ludo game development company in Bangladesh | Ludo Services",
+    description:
+        "Mobzway is Best Ludo game development company in Bangladesh offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.",
+    keywords: ["Ludo game development company in Bangladesh, Ludo game development service in Bangladesh"],
+    alternates: {
+        canonical: "https://www.mobzway.com/bd/",
+        languages: {
+            "en-IN": "https://www.mobzway.com/bd/",
+        },
+    },
+};
+
 export default function LudoGameDevelopment() {
     return (
         <>

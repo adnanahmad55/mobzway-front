@@ -1,5 +1,18 @@
 import React from 'react'
 
+export const metadata = {
+    title: "Hire Best game developers in India | Get Dedicated Developer",
+    description:
+        "Hire dedicated game developers in India for custom mobile, casual, and multiplayer games. Expert Unity and HTML5 engineers for your next gaming project.",
+    keywords: ["hire game developers in india, hire game developers india, "],
+    alternates: {
+        canonical: "https://www.mobzway.com/in/",
+        languages: {
+            "en-IN": "https://www.mobzway.com/in/",
+        },
+    },
+};
+
 export default function HireGameDevelopers() {
     return (
         <>

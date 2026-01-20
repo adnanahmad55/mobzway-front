@@ -1,8 +1,23 @@
 import React from 'react'
 
+export const metadata = {
+    title: "Best Custom Game Developers in India | Get Company Services",
+    description:
+        "Hire the best custom game developers in India for 2D, 3D, mobile, and casual game solutions. Get scalable, secure and high-performance game development services.",
+    keywords: ["Custom Game Development Services"],
+    alternates: {
+        canonical: "https://www.mobzway.com/in/",
+        languages: {
+            "en-IN": "https://www.mobzway.com/in/",
+        },
+    },
+};
+
 export default function CustomGameDevelopment() {
-  return (
-    <>
+
+
+    return (
+        <>
 
             <section
                 className="banner pokers banner_lth position-relative banner-texas"
@@ -13,7 +28,7 @@ export default function CustomGameDevelopment() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Custom Game Development
+                        Best Custom Game Developers in India | Get Company Services
                     </h1>
 
                     <div className="btn_outer">
@@ -590,7 +605,7 @@ export default function CustomGameDevelopment() {
             </section>
 
 
-            
+
 
             <section className="solutions">
                 <div className="container c-1">
@@ -826,5 +841,5 @@ export default function CustomGameDevelopment() {
 
         </>
 
-  )
+    )
 }

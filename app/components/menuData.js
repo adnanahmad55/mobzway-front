@@ -19,10 +19,10 @@ export const menuData = {
   ],
 
   us: [
-    { label: "Custom Games", path: "/custom-game-development" },
-    { label: "Slot Games", path: "/slot-game-development" },
-    { label: "Fish Table Games", path: "/casino-software" },
-    { label: "Casino Games", path: "/casino-software" },
+    { label: "Custom Games", path: "/game-development-company-In-usa" },
+    { label: "Slot Games", path: "/slot-game-development-company-in-usa" },
+    { label: "Fish Table Games", path: "/fish-table-games" },
+    { label: "Casino Games", path: "/casino-game-development-company-in-usa" },
     { label: "About Us", path: "/about-us"},
     { label: "Awards", path: "/awards-and-recognition"},
     { label: "Contact Us", path: "/contact-us"},
@@ -38,10 +38,10 @@ export const menuData = {
   ],
 
   uk: [
-    { label: "Game Development Service", path: "/" },
+    { label: "Game Development Service", path: "/game-development-service-uk" },
     // { label: "Service", path: "/" },
-    { label: "Sports Book", path: "/sportsbook-software-development" },
-    { label: "Casino Games", path: "/casino-software" },
+    { label: "Sports Book", path: "/sportsbook-software-development-company-in-uk" },
+    { label: "Casino Games", path: "/casino-game-development-company-in-london-uk" },
     { label: "About Us", path: "/about-us"},
     { label: "Awards", path: "/awards-and-recognition"},
     { label: "Contact Us", path: "/contact-us"},

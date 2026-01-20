@@ -1,5 +1,18 @@
 import React from 'react'
 
+export const metadata = {
+    title: "slot game development company in bangladesh | Mobzway",
+    description:
+        "Mobzway is the top slot game development company in Bangladesh delivering high-quality slot engines, engaging designs, and casino-grade security. Get in Touch!",
+    keywords: ["slot game development company in bangladesh"],
+    alternates: {
+        canonical: "https://www.mobzway.com/bd/",
+        languages: {
+            "en-IN": "https://www.mobzway.com/bd/",
+        },
+    },
+};
+
 export default function SlotGameDevelopment() {
     return (
         <>
@@ -13,7 +26,7 @@ export default function SlotGameDevelopment() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Slot Game Development
+                        slot game development company in bangladesh | Mobzway
                     </h1>
 
                     <div className="btn_outer">
