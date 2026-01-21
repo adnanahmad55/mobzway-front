@@ -1,6 +1,32 @@
+import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
+// export const metadata = {
+//     title: "Sportsbook software development company Indonesia | Mobzway",
+//     description:
+//         "Mobzway is top sportsbook software development company in Indonesia delivering secure betting platforms with real-time odds and risk management tools.",
+//     keywords: ["Sportsbook software development company in Indonesia"],
+//     alternates: {
+//         canonical: "https://www.mobzway.com/id/",
+//         languages: {
+//             "en-IN": "https://www.mobzway.com/id/",
+//         },
+//     },
+// };
+
+export async function generateMetadata() {
+    const country = getCountryName();
+
+    return {
+        title: `Sportsbook software development company ${country} | Mobzway`,
+        description: `Mobzway is top sportsbook software development company in ${country} delivering secure betting platforms with real-time odds and risk management tools.`,
+        keywords: [`Sportsbook software development company in ${country}`],
+    };
+}
+
 export default function SportsbookSoftwareDevelopment() {
+    const country = getCountryName();
+
     return (
         <>
 
@@ -13,7 +39,7 @@ export default function SportsbookSoftwareDevelopment() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Sportsbook Software Development Japan
+                        Sportsbook software development company {country} | Mobzway
                     </h1>
 
                     <div className="btn_outer">
@@ -102,10 +128,10 @@ export default function SportsbookSoftwareDevelopment() {
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway is a notable slot game development company in Japan that has been drawing attention to its aesthetically pleasing, RNG-certified, and robustly performing slot games for the online casinos, the iGaming newcomers and the gaming platforms. Our slot gaming solutions are crafted to provide not only high player engagement but also a long-term retention and monetization while keeping fairness, scalability, and technical stability in the picture.
+                        Mobzway is a notable slot game development company in {country} that has been drawing attention to its aesthetically pleasing, RNG-certified, and robustly performing slot games for the online casinos, the iGaming newcomers and the gaming platforms. Our slot gaming solutions are crafted to provide not only high player engagement but also a long-term retention and monetization while keeping fairness, scalability, and technical stability in the picture.
                     </p>
                     <p className="content" style={{ color: "#000", fontSize: 17 }}>
-                        We can provide a wide range of custom and white-label slot games that would be suitable for both regional Japanese operators and the companies that are targeting the international gaming market.
+                        We can provide a wide range of custom and white-label slot games that would be suitable for both regional {country}ese operators and the companies that are targeting the international gaming market.
                     </p>
                 </div>
             </section>
@@ -124,7 +150,7 @@ export default function SportsbookSoftwareDevelopment() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Why Choose Mobzway as  </span>{" "}
-                                <span className="black">Slot Game Development Company in Japan?</span>
+                                <span className="black">Slot Game Development Company in {country}?</span>
                             </h2>
                         </div>
                     </div>
@@ -319,7 +345,7 @@ export default function SportsbookSoftwareDevelopment() {
                             <h2 className="sub_title">
                                 <span className="yellow">Slot Game </span>{" "}
                                 <span className="black">
-                                    Development in Japan
+                                    Development in {country}
                                 </span>
                             </h2>
                         </div>
@@ -352,8 +378,8 @@ export default function SportsbookSoftwareDevelopment() {
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        Creating lightweight/optimized slot games for Performance, 
-                                        Slot Games are built for Modern Web Browsers, 
+                                        Creating lightweight/optimized slot games for Performance,
+                                        Slot Games are built for Modern Web Browsers,
                                         Slot Games offer Smooth Animation and Responsive Game Play
                                     </p>
                                 </div>
@@ -401,8 +427,8 @@ export default function SportsbookSoftwareDevelopment() {
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        Designing single and multi-level progressive jackpots, 
-                                        Providing Real-time updates of jackpot pools,  
+                                        Designing single and multi-level progressive jackpots,
+                                        Providing Real-time updates of jackpot pools,
                                         improve engagement/retention of players
                                     </p>
                                 </div>
@@ -428,8 +454,8 @@ export default function SportsbookSoftwareDevelopment() {
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        Integrating with Online Casino Platforms, 
-                                        Integrating Wallets/Payment Systems, 
+                                        Integrating with Online Casino Platforms,
+                                        Integrating Wallets/Payment Systems,
                                         Compatibility with sportsbooks and game aggregators
                                     </p>
                                 </div>
@@ -454,10 +480,10 @@ export default function SportsbookSoftwareDevelopment() {
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        Bonus Rounds/Free Spins/Triggers, 
-                                        Wilds/Scatters/Multipliers, 
-                                        Multi-currency/Multi-Language Support, 
-                                        Secure Wallet Integration, 
+                                        Bonus Rounds/Free Spins/Triggers,
+                                        Wilds/Scatters/Multipliers,
+                                        Multi-currency/Multi-Language Support,
+                                        Secure Wallet Integration,
                                         Real-Time Analytics/Game Performance Reports
                                     </p>
                                 </div>
@@ -477,12 +503,12 @@ export default function SportsbookSoftwareDevelopment() {
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Slot Gaming Market Potential in Japan</h3>
+                                    <h3 className='text-center'>Slot Gaming Market Potential in {country}</h3>
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        Japan is a highly developed digital gaming market propelled by the following factors: 
-                                        High mobile and Internet penetration, High interest in digital entertainment and interactive gaming, 
+                                        {country} is a highly developed digital gaming market propelled by the following factors:
+                                        High mobile and Internet penetration, High interest in digital entertainment and interactive gaming,
                                         Demand for high-quality slot content with a high visual polish
                                     </p>
                                 </div>
@@ -651,7 +677,7 @@ export default function SportsbookSoftwareDevelopment() {
                 </div>
             </section> */}
 
-           
+
 
 
             <section>
@@ -1037,7 +1063,7 @@ export default function SportsbookSoftwareDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="black_bg_head_yellow">Collaboration for Japan </span>{" "}
+                                <span className="black_bg_head_yellow">Collaboration for {country} </span>{" "}
                                 <span className="black_bg_head_white">
                                     Slot Game Development - Mobzway
                                 </span>
@@ -1055,7 +1081,7 @@ export default function SportsbookSoftwareDevelopment() {
                                 fontSize: "1.30rem !important"
                             }}
                         >
-                            Team-up with the reliable slot game development company in Japan, Mobzway, based in Japan, to develop interesting slot games that will promote the acquisition, engagement, and retention of players.
+                            Team-up with the reliable slot game development company in {country}, Mobzway, based in {country}, to develop interesting slot games that will promote the acquisition, engagement, and retention of players.
                         </h3>
                     </div>
                     <div className="text-center">

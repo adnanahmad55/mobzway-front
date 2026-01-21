@@ -1,5 +1,18 @@
 import React from 'react'
 
+export const metadata = {
+    title: "Casino Game development company in London, UK | Mobzway",
+    description:
+        "Mobzway is trusted casino game development company in London, UK, offering slots, live casino, and complete iGaming platform solutions. Hire game developers!",
+    keywords: ["Casino Game development company in London, Casino Game development company in UK"],
+    alternates: {
+        canonical: "https://www.mobzway.com/uk/",
+        languages: {
+            "en-IN": "https://www.mobzway.com/uk/",
+        },
+    },
+};
+
 export default function CasinoGameDevelopmentCompanyInLondonUk() {
     return (
         <>
@@ -13,7 +26,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Casino Game Development Company In LondonUk
+                        Casino Game development company in London, UK | Mobzway
                     </h1>
 
                     <div className="btn_outer">

@@ -1,6 +1,18 @@
+import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
+export async function generateMetadata() {
+    const country = getCountryName();
+
+    return {
+        title: `Casino software development company in ${country} | Mobzway`,
+        description: `Mobzway is leading casino software development company in ${{country}} offering slots, live casino, and custom iGaming platforms. Hire Casino Game Developers today`,
+        keywords: [`Casino software development company in ${country}`],
+    };
+}
+
 export default function CasinoSoftwareDevelopmentAsia() {
+    const country = getCountryName();
     return (
         <>
 
@@ -13,7 +25,7 @@ export default function CasinoSoftwareDevelopmentAsia() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Casino Software Development Japan
+                        Casino software development company in {country} | Mobzway 
                     </h1>
 
                     <div className="btn_outer">
@@ -102,7 +114,7 @@ export default function CasinoSoftwareDevelopmentAsia() {
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway has become a prominent provider of trustable casino software development company in Japan. We provide secure, scalable and feature-rich online casino platforms for Start-up company, Casino operators, & iGaming Company. Our Casino solution is built on modern technology and adheres to international iGaming Development Standards, ensuring performance and security, and adaptability for the long haul.
+                        Mobzway has become a prominent provider of trustable casino software development company in {country}. We provide secure, scalable and feature-rich online casino platforms for Start-up company, Casino operators, & iGaming Company. Our Casino solution is built on modern technology and adheres to international iGaming Development Standards, ensuring performance and security, and adaptability for the long haul.
                     </p>
                     <p className="content" style={{ color: "#000", fontSize: 17 }}>
                         From the idea-generating stage to creating the final product, we assist companies build an online casino Platform that is tailored to the specific needs of both domestic and overseas Gaming Market
@@ -124,7 +136,7 @@ export default function CasinoSoftwareDevelopmentAsia() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Why Choose Mobzway as  </span>{" "}
-                                <span className="black">Slot Game Development Company in Japan?</span>
+                                <span className="black">Slot Game Development Company in {country}?</span>
                             </h2>
                         </div>
                     </div>
@@ -319,7 +331,7 @@ export default function CasinoSoftwareDevelopmentAsia() {
                             <h2 className="sub_title">
                                 <span className="yellow">Slot Game </span>{" "}
                                 <span className="black">
-                                    Development in Japan
+                                    Development in {country}
                                 </span>
                             </h2>
                         </div>
@@ -477,11 +489,11 @@ export default function CasinoSoftwareDevelopmentAsia() {
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Slot Gaming Market Potential in Japan</h3>
+                                    <h3 className='text-center'>Slot Gaming Market Potential in {country}</h3>
                                 </div>
                                 <div className="col-md-12">
                                     <p>
-                                        Japan is a highly developed digital gaming market propelled by the following factors: 
+                                        {country} is a highly developed digital gaming market propelled by the following factors: 
                                         High mobile and Internet penetration, High interest in digital entertainment and interactive gaming, 
                                         Demand for high-quality slot content with a high visual polish
                                     </p>
@@ -1037,7 +1049,7 @@ export default function CasinoSoftwareDevelopmentAsia() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="black_bg_head_yellow">Collaboration for Japan </span>{" "}
+                                <span className="black_bg_head_yellow">Collaboration for {country} </span>{" "}
                                 <span className="black_bg_head_white">
                                     Slot Game Development - Mobzway
                                 </span>
@@ -1055,7 +1067,7 @@ export default function CasinoSoftwareDevelopmentAsia() {
                                 fontSize: "1.30rem !important"
                             }}
                         >
-                            Team-up with the reliable slot game development company in Japan, Mobzway, based in Japan, to develop interesting slot games that will promote the acquisition, engagement, and retention of players.
+                            Team-up with the reliable slot game development company in {country}, Mobzway, based in {country}, to develop interesting slot games that will promote the acquisition, engagement, and retention of players.
                         </h3>
                     </div>
                     <div className="text-center">

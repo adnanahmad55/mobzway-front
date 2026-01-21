@@ -1,17 +1,17 @@
 import React from 'react'
 
-// export const metadata = {
-//   title: "Best slot game development company in USA | Mobzway",
-//   description:
-//     "Mobzway is best slot game development company in the USA creating premium slot machines, RNG slots, and casino-ready slot engines. Hire game developers in USA!",
-//   keywords: ["slot game development company in USA"],
-//   alternates: {
-//     canonical: "https://www.mobzway.com/us/",
-//     languages: {
-//       "en-IN": "https://www.mobzway.com/us/",
-//     },
-//   },
-// };
+export const metadata = {
+  title: "Best Fish Table games development company in USA | Mobzway",
+  description:
+    "Mobzway is Leading Fish Table game development company in the USA delivering fast, engaging and secure fish arcade game solutions. Hire game developers in USA!",
+  keywords: ["Fish Table games development company in USA"],
+  alternates: {
+    canonical: "https://www.mobzway.com/us/",
+    languages: {
+      "en-IN": "https://www.mobzway.com/us/",
+    },
+  },
+};
 
 export default function FishTableGames() {
     return (
@@ -26,7 +26,7 @@ export default function FishTableGames() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Fish Table games development company in USA
+                        Best Fish Table games development company in USA | Mobzway
                     </h1>
 
                     <div className="btn_outer">

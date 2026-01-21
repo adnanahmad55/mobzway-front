@@ -1,5 +1,18 @@
 import React from 'react'
 
+export const metadata = {
+    title: "Best Sportsbook software development company in London, UK",
+    description:
+        "Mobzway is leading sportsbook software development company in London, UK, delivering secure betting platforms with real-time odds. Hire sportsbook developers!",
+    keywords: ["Sportsbook software development company in London, Sportsbook software development company in UK"],
+    alternates: {
+        canonical: "https://www.mobzway.com/uk/",
+        languages: {
+            "en-IN": "https://www.mobzway.com/uk/",
+        },
+    },
+};
+
 export default function GameDevelopmentServiceUk() {
     return (
         <>
@@ -13,7 +26,7 @@ export default function GameDevelopmentServiceUk() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Game Development Service Uk
+                        Best Sportsbook software development company in London, UK
                     </h1>
 
                     <div className="btn_outer">
