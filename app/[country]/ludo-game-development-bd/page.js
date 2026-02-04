@@ -7,7 +7,7 @@ export async function generateMetadata() {
     return {
         title: `Ludo game development company in ${country} | Ludo Services`,
         description: `Mobzway is Best Ludo game development company in ${country} offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.`,
-        keywords: [`Ludo game development company in {country}, Ludo game development service in ${country}`],
+        keywords: [`Ludo game development company in ${country}, Ludo game development service in ${country}`],
     };
 }
 

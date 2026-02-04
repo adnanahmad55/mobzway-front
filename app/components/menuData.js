@@ -19,7 +19,7 @@ export const menuData = {
   ],
 
   us: [
-    { label: "Custom Games", path: "/game-development-company-In-usa" },
+    { label: "Custom Games", path: "/game-development-company-in-usa" },
     { label: "Slot Games", path: "/slot-game-development-company-in-usa" },
     { label: "Fish Table Games", path: "/fish-table-games" },
     { label: "Casino Games", path: "/casino-game-development-company-in-usa" },
