@@ -1,36 +1,36 @@
 import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
-export async function generateMetadata() {
-    const countryName = getCountryName(); // e.g., "India" or "Bangladesh"
+// Function mein { params } receive karna zaroori hai 👇
+export async function generateMetadata({ params }) {
+    
+    // 1. URL se country code nikalo (e.g., 'bd', 'in')
+    const countryCode = params.country; 
 
-    // 1. Country Name ko Code mein badalne ka map
-    const countryMap = {
-        "Bangladesh": "bd",
-        "India": "in",
-        "United States": "us",
-        "United Kingdom": "uk"
+    // 2. Map banao Code -> Name ke liye
+    const codeToName = {
+        "bd": "Bangladesh",
+        "in": "India",
+        "us": "United States",
+        "uk": "United Kingdom"
     };
 
-    // Default 'bd' agar country nahi mile
-    const code = countryMap[countryName] || "bd"; 
+    // 3. Country ka pura naam nikalo (Default: India agar code na mile)
+    const countryName = codeToName[countryCode] || "India"; 
 
-    // 2. Dynamic URL Create karna (Jo tumhare URL pattern se match kare)
-    // Pattern: /bd/ludo-game-development-bd ya /in/ludo-game-development-in
+    // 4. Sahi URL banao
     const baseUrl = "https://www.mobzway.com";
-    const currentPath = `${code}/ludo-game-development-${code}`;
-    const fullUrl = `${baseUrl}/${currentPath}`;
+    const currentUrl = `${baseUrl}/${countryCode}/ludo-game-development-${countryCode}`;
 
     return {
         title: `Ludo game development company in ${countryName} | Ludo Services`,
-        description: `Mobzway is Best Ludo game development company in ${countryName} offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.`,
-        keywords: [`Ludo game development company in ${countryName}`, `Ludo game development service in ${countryName}`],
+        description: `Mobzway is Best Ludo game development company in ${countryName} offering multiplayer Ludo apps...`,
+        keywords: [`Ludo game development company in ${countryName}`],
         
-        // 3. SEO Tags (Canonical + Hreflang)
         alternates: {
-            canonical: fullUrl,
+            canonical: currentUrl,
             languages: {
-                [`en-${code}`]: fullUrl, // Ye khud banayega: "en-in": ".../in/ludo-game-development-in"
+                [`en-${countryCode}`]: currentUrl, 
             },
         },
     };
