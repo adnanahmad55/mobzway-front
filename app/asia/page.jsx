@@ -50,15 +50,27 @@ export default function AfHomepage() {
     //     console.log("Headers not available in dev");
     // }
 
-    const [country, setCountry] = useState("Thailand");
+const [country, setCountry] = useState("Thailand");
+
+    // 2. Asian Countries ki list defines ki hai
+    const asianCountries = [
+        "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
+        "Philippines", "Japan", "South Korea", "Cambodia", "Laos", 
+        "Myanmar", "Brunei", "Sri Lanka", "Nepal", "Bangladesh",
+        "Taiwan", "Hong Kong", "China"
+    ];
 
     const getCountryByIP = async () => {
         try {
             const res = await fetch("https://ipapi.co/json/");
             const data = await res.json();
-            setCountry(data.country_name || "Unknown");
+            
+            // Logic: Sirf tab update karo jab country Asian list mein ho
+            if (asianCountries.includes(data.country_name)) {
+                setCountry(data.country_name);
+            }
         } catch (err) {
-            setCountry("Unknown");
+            // Error aane par "Thailand" hi rahega
         }
     };
 
@@ -77,13 +89,16 @@ export default function AfHomepage() {
                         `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
                     );
                     const data = await res.json();
-                    setCountry(data.countryName || "Unknown");
+                    
+                    // Logic: Yahan bhi check lagaya hai
+                    if (asianCountries.includes(data.countryName)) {
+                        setCountry(data.countryName);
+                    }
                 } catch {
                     getCountryByIP();
                 }
             },
             () => {
-
                 getCountryByIP();
             }
         );
