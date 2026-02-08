@@ -2,35 +2,35 @@ import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
 export async function generateMetadata() {
-    const country = getCountryName(); // e.g., "Bangladesh"
+    const countryName = getCountryName(); // e.g., "India" or "Bangladesh"
 
-    // 1. Country Name ko Code (bd, in, us) mein convert karne ke liye Map
-    const countryToCode = {
+    // 1. Country Name ko Code mein badalne ka map
+    const countryMap = {
         "Bangladesh": "bd",
         "India": "in",
         "United States": "us",
-        "United Kingdom": "uk",
-        // Yahan aur countries add kar sakte ho agar chahiye
+        "United Kingdom": "uk"
     };
 
-    // Agar country map mein nahi mili to default 'bd' 
-    const code = countryToCode[country] || "bd"; 
+    // Default 'bd' agar country nahi mile
+    const code = countryMap[countryName] || "bd"; 
 
-    // 2. Dynamic 
-   
+    // 2. Dynamic URL Create karna (Jo tumhare URL pattern se match kare)
+    // Pattern: /bd/ludo-game-development-bd ya /in/ludo-game-development-in
     const baseUrl = "https://www.mobzway.com";
-    const pageUrl = `${baseUrl}/${code}/ludo-game-development-${code}`;
+    const currentPath = `${code}/ludo-game-development-${code}`;
+    const fullUrl = `${baseUrl}/${currentPath}`;
 
     return {
-        title: `Ludo game development company in ${country} | Ludo Services`,
-        description: `Mobzway is Best Ludo game development company in ${country} offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.`,
-        keywords: [`Ludo game development company in ${country}`, `Ludo game development service in ${country}`],
+        title: `Ludo game development company in ${countryName} | Ludo Services`,
+        description: `Mobzway is Best Ludo game development company in ${countryName} offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.`,
+        keywords: [`Ludo game development company in ${countryName}`, `Ludo game development service in ${countryName}`],
         
-       
+        // 3. SEO Tags (Canonical + Hreflang)
         alternates: {
-            canonical: pageUrl,
+            canonical: fullUrl,
             languages: {
-                [`en-${code}`]: pageUrl, 
+                [`en-${code}`]: fullUrl, // Ye khud banayega: "en-in": ".../in/ludo-game-development-in"
             },
         },
     };
