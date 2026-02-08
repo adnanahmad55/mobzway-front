@@ -681,8 +681,8 @@ export default function CustomGameDevelopment() {
                 <div className="container c-1">
                     <div className="col-md-12 text-center">
                         <h3 className="sub_title ft_40">
-                            <span className="yellow">Hire the Best Custom Game Developers in </span>{" "}
-                            <span className="black"> India – Start Your Project Today</span>
+                            <span className="yellow">What </span>{" "}
+                            <span className="black">do clients say about us?</span>
                         </h3>
                     </div>
                     <div
@@ -810,9 +810,9 @@ export default function CustomGameDevelopment() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="black_bg_head_yellow">Hire The Best Game </span>{" "}
+                                <span className="black_bg_head_yellow">Hire the Best Custom Game Developers in India</span>{" "}
                                 <span className="black_bg_head_white">
-                                    Developers In India Today
+                                    Start Your Project Today
                                 </span>
                             </h2>
                         </div>
@@ -828,7 +828,7 @@ export default function CustomGameDevelopment() {
                                 fontSize: "1.30rem !important"
                             }}
                         >
-                            Mobzway has the best-trained and experienced game development talent in India, and if you are ready to build a new game or improve upon your current game, we want to partner with you to provide you with world-class gaming solutions.
+                            Whether you are a regular game designer, you develop competitive multiplayer environments or you are a gaming platform developer, Mobzway's custom-made game development solutions will help you grow into a worldwide leader more rapidly than ever.
                         </h3>
                     </div>
                     <div className="text-center">

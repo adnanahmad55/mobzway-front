@@ -50,15 +50,28 @@ export default function AfHomepage() {
     //     console.log("Headers not available in dev");
     // }
 
-    const [country, setCountry] = useState("India");
+const [country, setCountry] = useState("South Africa");
 
-    const getCountryByIP = async () => {
+  // Ye list yahin define kar do ya file ke upar
+  const africanCountries = [
+    "South Africa", "Nigeria", "Kenya", "Ghana", "Egypt", 
+    "Tanzania", "Uganda", "Algeria", "Morocco", "Ethiopia", 
+    "Zambia", "Zimbabwe", "Rwanda", "Botswana", "Senegal"
+  ];
+
+  const getCountryByIP = async () => {
     try {
       const res = await fetch("https://ipapi.co/json/");
       const data = await res.json();
-      setCountry(data.country_name || "Unknown");
+      
+      // LOGIC CHANGE HERE: Sirf tab update karega jab country Africa list me hogi
+      if (africanCountries.includes(data.country_name)) {
+          setCountry(data.country_name);
+      }
+      
     } catch (err) {
-      setCountry("Unknown");
+      // Error aaye to kuch mat karo, default South Africa hi rehne do
+      // setCountry("Unknown");  <-- Isko hata diya taaki Unknown na dikhe
     }
   };
 
@@ -77,13 +90,17 @@ export default function AfHomepage() {
             `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
           );
           const data = await res.json();
-          setCountry(data.countryName || "Unknown");
+          
+          // LOGIC CHANGE HERE:
+          if (africanCountries.includes(data.countryName)) {
+             setCountry(data.countryName);
+          }
+
         } catch {
           getCountryByIP();
         }
       },
       () => {
-        
         getCountryByIP();
       }
     );

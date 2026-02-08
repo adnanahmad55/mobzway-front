@@ -50,7 +50,7 @@ export default function AfHomepage() {
     //     console.log("Headers not available in dev");
     // }
 
-    const [country, setCountry] = useState("India");
+    const [country, setCountry] = useState("Thailand");
 
     const getCountryByIP = async () => {
         try {
@@ -646,27 +646,27 @@ export default function AfHomepage() {
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Mobzway's know-how in providing customized gaming solutions has put them on the stage of one of the top gaming software developers in the world.
+                                Mobzway is a reputable global gaming software development company, which provides personalized gaming solutions for the {country} market.
 
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                We take care of every single detail of the game production process from start to finish including the in-house development, content integration, and even the technical issues, leaving you with the marketing and player base expansion to do.
+Our skill set covers every aspect of game development, secure system architecture, and smooth game content integration; thus it is possible for you to direct your efforts toward marketing, branding, and user acquisition.
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 35 }}
                             >
-                                Our team of experts is versed in the making of in-demand games like Ludo, Poker-style games, Rummy-style games, Teen Patti, and others that fall into the category of skill and entertainment games for the web, Android, iOS, and HTML5 platforms.
+                                We possess a vast amount of experience in the skill-based and entertainment-driven games category developing. 
 
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                We only ask for the game concept and basic specifications from the clients. Our professionals then innovate your imagination into a fully functional and ready-to-market game within the stipulated period.
+                                Ludo, card games, board games, Poker-style games, Rummy-style games, Teen Patti, and casino-style gaming products for web, mobile, and HTML5 platforms are some of the major developments we did.
 
                             </div>
 
@@ -674,7 +674,7 @@ export default function AfHomepage() {
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Wondering how Mobzway would be able to assist you in your game design, business establishment, and player growth in {country} and other countries?
+                               All the gaming specialists of ours just need your game concept and core 
 
                             </div>
 
@@ -778,7 +778,7 @@ export default function AfHomepage() {
                                 >
                                     <h2 className="sub_title">
                                         <span className="yellow">Why </span>{" "}
-                                        <span className="black">Choose Us?</span>
+                                        <span className="black">Choose Us in {country}?</span>
                                     </h2>
                                 </div>
                                 <ul
@@ -787,33 +787,33 @@ export default function AfHomepage() {
                                     data-aos-duration={1000}
                                 >
                                     <li>
-                                        Product designed by experienced gaming professionals who know the industry well.
+                                        Products made by professional gaming experts with both local and global knowledge
 
                                     </li>
                                     <li>
-                                        Experienced programmers aimed at developing high-quality games that are reliable and engaging.
+                                        Programmers that are very skilled and their work is focused on performance, stability, and excellent game quality
 
                                     </li>
                                     <li>
-                                        Cross-platform solutions supporting Web, Mobile, PC, and Mac
+                                        Gaming solutions that can be used on Web, Mobile, PC, and Mac
 
                                     </li>
-                                    <li>Easy integration with popular and {country}-supporting payment systems
+                                    <li>Popular and regionally-friendly payment gateway integration is supported
 
                                     </li>
-                                    <li>Products with support in English and {country}n languages offered to {country}n players
+                                    <li>Products are launched with both {country}'s language and English language support
                                     </li>
                                     <li>
-                                        Monitoring and Support Services 24×7 for availability of up to 99.99 percent
+                                       To make sure the platform is always up and running, there is constant monitoring and technical support that is available 24×7
 
                                     </li>
-                                    <li>Cost-effective and time-efficient gaming development solutions
+                                    <li>Development of games that is both cost-effective and time-efficient
 
                                     </li>
-                                    <li>Enhanced safety features to prevent fraud, hacking, and cyber attacks
+                                    <li>Highly advanced security measures to prevent fraud and cyber attacks
 
                                     </li>
-                                    <li>Free Business Consultation to enhance {country}n gamblers and startups
+                                    <li>Business consulting services free of charge to help game operators and startups
                                     </li>
 
                                 </ul>
