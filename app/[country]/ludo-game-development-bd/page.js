@@ -2,12 +2,37 @@ import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
 export async function generateMetadata() {
-    const country = getCountryName();
+    const country = getCountryName(); // e.g., "Bangladesh"
+
+    // 1. Country Name ko Code (bd, in, us) mein convert karne ke liye Map
+    const countryToCode = {
+        "Bangladesh": "bd",
+        "India": "in",
+        "United States": "us",
+        "United Kingdom": "uk",
+        // Yahan aur countries add kar sakte ho agar chahiye
+    };
+
+    // Agar country map mein nahi mili to default 'bd' 
+    const code = countryToCode[country] || "bd"; 
+
+    // 2. Dynamic 
+   
+    const baseUrl = "https://www.mobzway.com";
+    const pageUrl = `${baseUrl}/${code}/ludo-game-development-${code}`;
 
     return {
         title: `Ludo game development company in ${country} | Ludo Services`,
         description: `Mobzway is Best Ludo game development company in ${country} offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.`,
-        keywords: [`Ludo game development company in ${country}, Ludo game development service in ${country}`],
+        keywords: [`Ludo game development company in ${country}`, `Ludo game development service in ${country}`],
+        
+       
+        alternates: {
+            canonical: pageUrl,
+            languages: {
+                [`en-${code}`]: pageUrl, 
+            },
+        },
     };
 }
 
