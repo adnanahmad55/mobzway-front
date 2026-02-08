@@ -6,9 +6,9 @@ export const metadata = {
         "Mobzway is leading casino software development company in Bangladesh delivering slots, live casino, and RNG gaming platforms with advanced security. Contact Now",
     keywords: ["Casino software development company in Bangladesh"],
     alternates: {
-        canonical: "https://www.mobzway.com/bd/",
+        canonical: "https://www.mobzway.com/bd/casino-software-development",
         languages: {
-            "en-bd": "https://www.mobzway.com/bd/",
+            "en-bd": "https://www.mobzway.com/bd/casino-software-development",
         },
     },
 };

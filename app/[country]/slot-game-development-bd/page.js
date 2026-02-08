@@ -6,9 +6,9 @@ export const metadata = {
         "Mobzway is the top slot game development company in Bangladesh delivering high-quality slot engines, engaging designs, and casino-grade security. Get in Touch!",
     keywords: ["slot game development company in bangladesh"],
     alternates: {
-        canonical: "https://www.mobzway.com/bd/",
+        canonical: "https://www.mobzway.com/bd/slot-game-development-bd",
         languages: {
-            "en-bd": "https://www.mobzway.com/bd/",
+            "en-bd": "https://www.mobzway.com/bd/slot-game-development-bd",
         },
     },
 };
@@ -518,7 +518,7 @@ export default function SlotGameDevelopment() {
                         </div>
                         <div className="col-md-7">
                             <div className='row'>
-                                <div class="col-md-4">
+                                <div className="col-md-4">
 
 
                                     <br />
