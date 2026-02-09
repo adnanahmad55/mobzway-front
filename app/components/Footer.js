@@ -314,9 +314,7 @@ export default function Footer() {
                             <ul className="foot_navs">
                                 <li>
                                     <a>
-                                        <strong>LEGAL DISCLAIMER: </strong>
-                                        Mobzway Technologies does NOT provide real money gaming services
-                                        in India.
+                                      
                                         {/* <span id="dots">...</span> */}
                                         {!showMore && <span id="dots">...</span>}
                                         {showMore && (

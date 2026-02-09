@@ -404,8 +404,8 @@ const [country, setCountry] = useState("South Africa");
             >
                 <div className="container">
                     <h1 className="sub_title text-center">
-                        <span className="yellow">Mobzway – Online Gaming Software  </span>{" "}
-                        <span className="black">Development Company in {country}</span>
+                        <span className="yellow">Mobzway-</span>{" "}
+                        <span className="black">Online Gaming Software Development Company in {country}</span>
                     </h1>
                     <p
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}

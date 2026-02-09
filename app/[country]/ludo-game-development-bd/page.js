@@ -2,12 +2,14 @@ import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
 // Function mein { params } receive karna zaroori hai 👇
+// Function async hona chahiye
 export async function generateMetadata({ params }) {
     
-    // 1. URL se country code nikalo (e.g., 'bd', 'in')
-    const countryCode = params.country; 
+    // 👇 YAHAN HAI FIX: params ko pehle await karna padega!
+    const resolvedParams = await params; 
+    const countryCode = resolvedParams.country; 
 
-    // 2. Map banao Code -> Name ke liye
+    // Baaki logic same rahega...
     const codeToName = {
         "bd": "Bangladesh",
         "in": "India",
@@ -15,16 +17,17 @@ export async function generateMetadata({ params }) {
         "uk": "United Kingdom"
     };
 
-    // 3. Country ka pura naam nikalo (Default: India agar code na mile)
     const countryName = codeToName[countryCode] || "India"; 
 
-    // 4. Sahi URL banao
+    // URL Construction
     const baseUrl = "https://www.mobzway.com";
+    
+   
     const currentUrl = `${baseUrl}/${countryCode}/ludo-game-development-${countryCode}`;
 
     return {
         title: `Ludo game development company in ${countryName} | Ludo Services`,
-        description: `Mobzway is Best Ludo game development company in ${countryName} offering multiplayer Ludo apps...`,
+        description: `Mobzway is Best Ludo game development company in ${countryName}...`,
         keywords: [`Ludo game development company in ${countryName}`],
         
         alternates: {
