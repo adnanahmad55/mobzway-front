@@ -50,27 +50,15 @@ export default function AfHomepage() {
     //     console.log("Headers not available in dev");
     // }
 
-const [country, setCountry] = useState("Thailand");
-
-    // 2. Asian Countries ki list defines ki hai
-    const asianCountries = [
-        "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
-        "Philippines", "Japan", "South Korea", "Cambodia", "Laos", 
-        "Myanmar", "Brunei", "Sri Lanka", "Nepal", "Bangladesh",
-        "Taiwan", "Hong Kong", "China"
-    ];
+    const [country, setCountry] = useState("India");
 
     const getCountryByIP = async () => {
         try {
             const res = await fetch("https://ipapi.co/json/");
             const data = await res.json();
-            
-            // Logic: Sirf tab update karo jab country Asian list mein ho
-            if (asianCountries.includes(data.country_name)) {
-                setCountry(data.country_name);
-            }
+            setCountry(data.country_name || "Unknown");
         } catch (err) {
-            // Error aane par "Thailand" hi rahega
+            setCountry("Unknown");
         }
     };
 
@@ -89,16 +77,13 @@ const [country, setCountry] = useState("Thailand");
                         `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
                     );
                     const data = await res.json();
-                    
-                    // Logic: Yahan bhi check lagaya hai
-                    if (asianCountries.includes(data.countryName)) {
-                        setCountry(data.countryName);
-                    }
+                    setCountry(data.countryName || "Unknown");
                 } catch {
                     getCountryByIP();
                 }
             },
             () => {
+
                 getCountryByIP();
             }
         );
@@ -405,8 +390,8 @@ const [country, setCountry] = useState("Thailand");
             >
                 <div className="container">
                     <h1 className="sub_title text-center">
-                        <span className="yellow">Mobzway – </span>{" "}
-                        <span className="black">Online Gaming Software Development Company in {country}</span>
+                        <span className="yellow">Mobzway – Online Gaming Software  </span>{" "}
+                        <span className="black">Development Company in {country}</span>
                     </h1>
                     <p
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
@@ -661,27 +646,27 @@ const [country, setCountry] = useState("Thailand");
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Mobzway is a reputable global gaming software development company, which provides personalized gaming solutions for the {country} market.
+                                Mobzway's know-how in providing customized gaming solutions has put them on the stage of one of the top gaming software developers in the world.
 
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-Our skill set covers every aspect of game development, secure system architecture, and smooth game content integration; thus it is possible for you to direct your efforts toward marketing, branding, and user acquisition.
+                                We take care of every single detail of the game production process from start to finish including the in-house development, content integration, and even the technical issues, leaving you with the marketing and player base expansion to do.
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 35 }}
                             >
-                                We possess a vast amount of experience in the skill-based and entertainment-driven games category developing. 
+                                Our team of experts is versed in the making of in-demand games like Ludo, Poker-style games, Rummy-style games, Teen Patti, and others that fall into the category of skill and entertainment games for the web, Android, iOS, and HTML5 platforms.
 
                             </div>
                             <div
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Ludo, card games, board games, Poker-style games, Rummy-style games, Teen Patti, and casino-style gaming products for web, mobile, and HTML5 platforms are some of the major developments we did.
+                                We only ask for the game concept and basic specifications from the clients. Our professionals then innovate your imagination into a fully functional and ready-to-market game within the stipulated period.
 
                             </div>
 
@@ -689,7 +674,7 @@ Our skill set covers every aspect of game development, secure system architectur
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                               All the gaming specialists of ours just need your game concept and core 
+                                Wondering how Mobzway would be able to assist you in your game design, business establishment, and player growth in {country} and other countries?
 
                             </div>
 
@@ -793,7 +778,7 @@ Our skill set covers every aspect of game development, secure system architectur
                                 >
                                     <h2 className="sub_title">
                                         <span className="yellow">Why </span>{" "}
-                                        <span className="black">Choose Us in {country}?</span>
+                                        <span className="black">Choose Us?</span>
                                     </h2>
                                 </div>
                                 <ul
@@ -802,33 +787,33 @@ Our skill set covers every aspect of game development, secure system architectur
                                     data-aos-duration={1000}
                                 >
                                     <li>
-                                        Products made by professional gaming experts with both local and global knowledge
+                                        Product designed by experienced gaming professionals who know the industry well.
 
                                     </li>
                                     <li>
-                                        Programmers that are very skilled and their work is focused on performance, stability, and excellent game quality
+                                        Experienced programmers aimed at developing high-quality games that are reliable and engaging.
 
                                     </li>
                                     <li>
-                                        Gaming solutions that can be used on Web, Mobile, PC, and Mac
+                                        Cross-platform solutions supporting Web, Mobile, PC, and Mac
 
                                     </li>
-                                    <li>Popular and regionally-friendly payment gateway integration is supported
+                                    <li>Easy integration with popular and {country}-supporting payment systems
 
                                     </li>
-                                    <li>Products are launched with both {country}'s language and English language support
+                                    <li>Products with support in English and {country}n languages offered to {country}n players
                                     </li>
                                     <li>
-                                       To make sure the platform is always up and running, there is constant monitoring and technical support that is available 24×7
+                                        Monitoring and Support Services 24×7 for availability of up to 99.99 percent
 
                                     </li>
-                                    <li>Development of games that is both cost-effective and time-efficient
+                                    <li>Cost-effective and time-efficient gaming development solutions
 
                                     </li>
-                                    <li>Highly advanced security measures to prevent fraud and cyber attacks
+                                    <li>Enhanced safety features to prevent fraud, hacking, and cyber attacks
 
                                     </li>
-                                    <li>Business consulting services free of charge to help game operators and startups
+                                    <li>Free Business Consultation to enhance {country}n gamblers and startups
                                     </li>
 
                                 </ul>

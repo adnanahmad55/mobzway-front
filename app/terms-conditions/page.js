@@ -83,58 +83,30 @@ export default function TermsConditions() {
                         <div className="col-md-12 ">
                             <div className="">
                                 <p className="para_content">
-                                    Primarily Mobzway's gaming softwares is configured for virtual
-                                    chips/play money and delivered to the CLIENT for entertainment
-                                    purpose only. The CLIENT is committed to operating it for the same
-                                    purpose. In such scenarios, these softwares can't be used for
-                                    gambling purposes by CLIENT directly or indirectly involving real
-                                    money. If CLIENT commits a breach of this term, then Mobzway will
-                                    terminate CLIENT's service with immediate effect.
+Mobzway Technologies specializes in gaming software designed mostly for entertainment, technology, and business solution needs. The Client agrees to make use of the software in conformity with all relevant laws and regulations governing the countries of operation.
+Mobzway does not operate, manage, nor control any of the gaming, betting, and gambling business activities carried out by the Client.
+
                                     <br />
                                     <br />
-                                    Skill-based gaming products offered by Mobzway can be operated by
-                                    CLIENT in INDIA with real money except in the states and union
-                                    territories where it is prohibited. CLIENT can operate Non-skill
-                                    based gaming products offered by Mobzway with real money only
-                                    outside of INDIA, and CLIENT should not allow players/users from
-                                    INDIA. If CLIENT commits a breach of this term, then Mobzway will
-                                    terminate the service with immediate effect.
+The Client is solely responsible for:
+Legal operation of the gaming platforms in their target locations
+Clients should not use Mobzway software in countries or regions where gaming or betting is considered illegal or restricted by local laws.
+Additionally, Mobzway does not offer legal licensing, legal approvals, or legal advisory services. All licensing, legal certification, and legal compliance fall within the Client's responsibility.
                                     <br />
                                     <br />
-                                    Further, for both inside &amp; outside of INDIA, the CLIENT
-                                    carries the responsibility to have studied and understood the laws
-                                    and regulatory environment for operations of the games and
-                                    gambling of the country, where the CLIENT will launch games.
-                                    CLIENTs should not operate Mobzway's gaming products in countries
-                                    where gambling is not permitted and against the law and regulatory
-                                    environment of the country. The CLIENT should only use the games
-                                    in the countries where these games are permitted, and CLIENT
-                                    adheres with the law and the regulatory environment and CLIENT
-                                    seek licenses required in the respective countries. Suppose
-                                    Mobzway ever identifies that the CLIENT uses the software for
-                                    gambling purposes without obtaining the necessary license by the
-                                    CLIENT. In that case, Mobzway will terminate the service with
-                                    immediate effect.
+Mobzway does not provide legal licensing, regulatory approvals, or legal advisory services. The Client must handle all licensing requirements and certification obligations together with regulatory compliance duties.
+Mobzway Technologies bears no responsibility for any legal or regulatory issues, compliance problems, or operational difficulties that the Client encounters across different jurisdictions.
+Mobzway will not take responsibility for any damages which either directly or indirectly create special or incidental results that follow from using its software products and platforms and services.
+The Client accepts to receive various communication methods which include emails and calls and messages when they use Mobzway websites and applications and platforms.
+Service updates
+Account information
+Marketing or promotional communication
+Clients may opt out of marketing communications by contacting at{" "}
+                                    <b>info@mobzway.com</b>
                                     <br />
                                     <br />
-                                    By using this Website/Application or Platform, it is deemed that
-                                    You have consented to receive telephone calls, SMSes and emails
-                                    from Us at any time We deem fit. Such communications shall send to
-                                    You on the telephone number and email ID provided by You to use
-                                    this Website/Application or Platform, which are subject to Our
-                                    Privacy Policy. These communications include but are not limited
-                                    to contacting You through information received from Third Parties.
-                                    Such communications by Us is for purposes that, among other
-                                    things, include clarification calls, marketing calls and
-                                    promotional calls. If you wish to stop receiving notifications
-                                    from Us about marketing and promotional calls/concerning any
-                                    communication received from Us, You may email Us at{" "}
-                                    <b>info@mobzway.com</b>. The information provided by You shall be
-                                    deemed to be confidential. It shall not disclose to any Third
-                                    Party unless the same is required to be mandatorily disclosed to
-                                    relevant government authorities under the applicable laws. If we
-                                    are required to make any such mandatory disclosure, We will notify
-                                    You about the same.
+
+All client information is treated as confidential and handled according to applicable data protection laws. Information may only be disclosed if required by law or regulatory authorities.
                                 </p>
                             </div>
                         </div>

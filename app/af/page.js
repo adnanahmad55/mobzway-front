@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import BannerForm from "../components/BannerForm";
+import Footer from "../components/Footer";
 // import { headers } from "next/headers";
 import { useEffect, useState } from "react";
 
@@ -59,52 +60,48 @@ const [country, setCountry] = useState("South Africa");
     "Zambia", "Zimbabwe", "Rwanda", "Botswana", "Senegal"
   ];
 
-  const getCountryByIP = async () => {
+const getCountryByIP = async () => {
     try {
-      const res = await fetch("https://ipapi.co/json/");
-      const data = await res.json();
-      
-      // LOGIC CHANGE HERE: Sirf tab update karega jab country Africa list me hogi
-      if (africanCountries.includes(data.country_name)) {
-          setCountry(data.country_name);
-      }
-      
+        const res = await fetch("https://ipapi.co/json/");
+        const data = await res.json();
+        
+        // Direct set karo, koi asianCountries check mat lagao
+        if (data.country_name) {
+             setCountry(data.country_name);
+        }
     } catch (err) {
-      // Error aaye to kuch mat karo, default South Africa hi rehne do
-      // setCountry("Unknown");  <-- Isko hata diya taaki Unknown na dikhe
+        console.log("IP detection failed");
     }
-  };
+};
 
-  useEffect(() => {
+useEffect(() => {
     if (!navigator.geolocation) {
-      getCountryByIP();
-      return;
+        getCountryByIP();
+        return;
     }
 
     navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const { latitude, longitude } = position.coords;
-
-        try {
-          const res = await fetch(
-            `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
-          );
-          const data = await res.json();
-          
-          // LOGIC CHANGE HERE:
-          if (africanCountries.includes(data.countryName)) {
-             setCountry(data.countryName);
-          }
-
-        } catch {
-          getCountryByIP();
+        async (position) => {
+            const { latitude, longitude } = position.coords;
+            try {
+                const res = await fetch(
+                    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
+                );
+                const data = await res.json();
+                
+                // YAHAN SE IF CONDITION HATA DI HAI
+                if (data.countryName) {
+                    setCountry(data.countryName);
+                }
+            } catch {
+                getCountryByIP();
+            }
+        },
+        () => {
+            getCountryByIP();
         }
-      },
-      () => {
-        getCountryByIP();
-      }
     );
-  }, []);
+}, []);
 
 
     return (

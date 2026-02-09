@@ -16,7 +16,7 @@ export default function Footer() {
                     backgroundColor: "#0f100f",
                 }}>
                 <div className="container">
-                    <div className="row pdbm">
+                    <div className="row pdbm justify-content-around">
                         <div className="col-xl-2 col-lg-2 col-md-6">
                             <div className="foot_info">
                                 <div className="widget widget_text">
@@ -124,6 +124,7 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
+                    
                         <div className="mnsprg col-xl-2 col-lg-3 col-md-6">
                             <div className="widget widget_text">
                                 <div className="widget-content">
@@ -160,7 +161,7 @@ export default function Footer() {
                                                         sales@mobzway.com
                                                     </a>
                                                 </li>
-                           
+
                                                 <li>
                                                     <a
                                                         className="dmca-badge"
@@ -253,7 +254,7 @@ export default function Footer() {
                         <div className="col-md-7">
                             <div className="copy_right">
                                 <p>
-                                    © 2015 - 2026 By{" "}
+                                    © 2015 - 2021 By{" "}
                                     <Link
                                         className="text-white"
                                         href="/"
