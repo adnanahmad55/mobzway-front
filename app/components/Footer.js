@@ -124,65 +124,7 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-3">
-                            <div className="foot_info manpser">
-                                <div className="widget widget_text">
-                                    <div className="widget-content">
-                                        <div className="textwidget">
-                                            <div className="footer_title">Service</div>
-                                            <ul className="foot_navs">
-                                                <li>
-                                                    <Link href="/poker-game-development/">
-                                                        Poker Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/rummy-game-development/">
-                                                        Rummy Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/teen-patti-game-development/">
-                                                        Teen Patti Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/pool-game-development/">
-                                                        Pool Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/card-game-development/">
-                                                        Card Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/ludo-game-development/">
-                                                        Ludo Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/blackjack-game-development/">
-                                                        BlackJack Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/baccarat-game-development/">
-                                                        Baccarat Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/roulette-game-development/">
-                                                        {" "}
-                                                        Roulette Game Development
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div className="col-xl-3 col-lg-2 col-md-3">
                             <div className="foot_info manpser">
                                 <div className="widget widget_text">
@@ -314,7 +256,8 @@ export default function Footer() {
                             <ul className="foot_navs">
                                 <li>
                                     <a>
-                                      
+                                        <strong>LEGAL DISCLAIMER: </strong>
+                                        Mobzway Technologies provides gaming software development and technology solutions only. We do not operate or promote gambling or betting activities.
                                         {/* <span id="dots">...</span> */}
                                         {!showMore && <span id="dots">...</span>}
                                         {showMore && (
@@ -323,10 +266,7 @@ export default function Footer() {
                                                 style={{
                                                     display: `${showMore ? 'block' : 'none'}`,
                                                 }}>
-                                                Access to such services is restricted by law under the IT Act,
-                                                2000 and the Promotion & Regulation of Online Gaming Bill, 2025.
-                                                We build games solely for fun and entertainment purposes for the
-                                                Indian market.
+                                                Different jurisdictions create different gaming and iGaming laws that apply to their territory. Clients are solely responsible for obtaining required licenses, permissions, and ensuring compliance with all applicable laws before operating any gaming platform.
                                                 <br />
                                                 <br />
                                                 We do not provide any development, maintenance, and support
@@ -336,6 +276,9 @@ export default function Footer() {
                                                 outside of India and want to offer their services in India as
                                                 well.
                                                 <br />
+                                                <br/>
+                                                The website content serves as informational material which does not provide legal guidance. Mobzway is not responsible for any regulatory compliance problems that result from client activities.
+                                                <br/>
                                                 <br />
                                                 Our website does not offer/provide illegal or legal advice for
                                                 any gaming/gambling/iGaming activities. We provide information
@@ -381,7 +324,7 @@ export default function Footer() {
                         <div className="col-md-7">
                             <div className="copy_right">
                                 <p>
-                                    © 2015 - 2021 By{" "}
+                                    © 2015 - 2026 By{" "}
                                     <Link
                                         className="text-white"
                                         href="/"
