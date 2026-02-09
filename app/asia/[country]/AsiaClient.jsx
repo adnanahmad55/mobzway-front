@@ -1,132 +1,130 @@
 "use client";
 import Image from "next/image";
-import BannerForm from "../components/BannerForm";
-// import { headers } from "next/headers";
+import BannerForm from "../../components/BannerForm"; 
 import { useEffect, useState } from "react";
 
 // export const metadata = {
-//     title: "Mobzway - Online Gaming Software Development Company",
-//     description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-//     keywords: "Gaming Software Development, Gaming Software Developers, Gaming Software Providers",
-//     openGraph: {
-//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-//         url: "https://www.mobzway.com/",
-//         siteName: "Mobzway Technologies",
-//         images: [
-//             {
-//                 url: "https://www.mobzway.com/assets/images/homepage_banner.avif",
-//                 width: 815,
-//                 height: 821,
-//                 alt: "mobzway",
-//                 type: "image/jpg",
-//             },
-//         ],
-//     },
-//     twitter: {
-//         card: "summary_large_image",
-//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-//         site: "@mobzway",
-//         creator: "@mobzway",
-//         images: ["https://www.mobzway.com/assets/images/homepage_banner.avif"],
-//     },
-//     alternates: {
-//         canonical: "https://www.mobzway.com/",
-//     },
+//     title: "Mobzway - Online Gaming Software Development Company",
+//     description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
+//     keywords: "Gaming Software Development, Gaming Software Developers, Gaming Software Providers",
+//     openGraph: {
+//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
+//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
+//         url: "https://www.mobzway.com/",
+//         siteName: "Mobzway Technologies",
+//         images: [
+//             {
+//                 url: "https://www.mobzway.com/assets/images/homepage_banner.avif",
+//                 width: 815,
+//                 height: 821,
+//                 alt: "mobzway",
+//                 type: "image/jpg",
+//             },
+//         ],
+//     },
+//     twitter: {
+//         card: "summary_large_image",
+//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
+//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
+//         site: "@mobzway",
+//         creator: "@mobzway",
+//         images: ["https://www.mobzway.com/assets/images/homepage_banner.avif"],
+//     },
+//     alternates: {
+//         canonical: "https://www.mobzway.com/",
+//     },
 // };
 
 const COUNTRY_CODE_TO_NAME = {
-  PK: "Pakistan", LK: "Sri Lanka", TH: "Thailand", SG: "Singapore", 
-  VN: "Vietnam", ID: "Indonesia", PH: "Philippines", MY: "Malaysia", 
-  AE: "UAE", SA: "Saudi Arabia", 
-  CN: "China", TW: "Taiwan", HK: "Hong Kong", 
-  JP: "Japan", KR: "South Korea", KH: "Cambodia", LA: "Laos", 
-  MM: "Myanmar", BN: "Brunei", NP: "Nepal"
-  // ❌ INDIA REMOVED
+  PK: "Pakistan", LK: "Sri Lanka", TH: "Thailand", SG: "Singapore", 
+  VN: "Vietnam", ID: "Indonesia", PH: "Philippines", MY: "Malaysia", 
+  AE: "UAE", SA: "Saudi Arabia", 
+  CN: "China", TW: "Taiwan", HK: "Hong Kong", 
+  JP: "Japan", KR: "South Korea", KH: "Cambodia", LA: "Laos", 
+  MM: "Myanmar", BN: "Brunei", NP: "Nepal"
+  // ❌ INDIA REMOVED
 };
 
 export default function AfHomepage() {
-    const [country, setCountry] = useState("Thailand"); // Default
+    const [country, setCountry] = useState("Thailand"); // Default
 
-    // 2. Allowed List (Yahan se India hata diya hai)
-    const validAsianCountries = [
-        "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
-        "Philippines", "Japan", "South Korea", "Cambodia", "Laos", 
-        "Myanmar", "Brunei", "Sri Lanka", "Nepal",
-        "Taiwan", "Hong Kong", "China", "Pakistan", "UAE", "Saudi Arabia"
-        // ❌ Note: "India" yahan nahi hona chahiye!
-    ];
+    // 2. Allowed List (Yahan se India hata diya hai)
+    const validAsianCountries = [
+        "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
+        "Philippines", "Japan", "South Korea", "Cambodia", "Laos", 
+        "Myanmar", "Brunei", "Sri Lanka", "Nepal",
+        "Taiwan", "Hong Kong", "China", "Pakistan", "UAE", "Saudi Arabia"
+        // ❌ Note: "India" yahan nahi hona chahiye!
+    ];
 
-    const getCookie = (name) => {
-        if (typeof document === "undefined") return null;
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(";").shift();
-        return null;
-    };
+    const getCookie = (name) => {
+        if (typeof document === "undefined") return null;
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+        return null;
+    };
 
-    const getCountryByIP = async () => {
-        try {
-            console.log("⚠️ Fallback to IP API triggered...");
-            const res = await fetch("https://ipapi.co/json/");
-            const data = await res.json();
-            console.log("📡 IP API returned:", data.country_name);
+    const getCountryByIP = async () => {
+        try {
+            console.log("⚠️ Fallback to IP API triggered...");
+            const res = await fetch("https://ipapi.co/json/");
+            const data = await res.json();
+            console.log("📡 IP API returned:", data.country_name);
 
-            // Agar IP ne "India" diya, toh ye False hoga aur "Thailand" hi rahega
-            if (validAsianCountries.includes(data.country_name)) {
-                setCountry(data.country_name);
-            } else {
-                console.log("🛑 Country not in allowed list. Ignoring.");
-            }
-        } catch (err) {
-            console.log("IP Fallback Failed");
-        }
-    };
+            // Agar IP ne "India" diya, toh ye False hoga aur "Thailand" hi rahega
+            if (validAsianCountries.includes(data.country_name)) {
+                setCountry(data.country_name);
+            } else {
+                console.log("🛑 Country not in allowed list. Ignoring.");
+            }
+        } catch (err) {
+            console.log("IP Fallback Failed");
+        }
+    };
 
-    useEffect(() => {
-        // STEP 1: Cookie Check
-        const savedCode = getCookie("country_code");
-        if (savedCode && COUNTRY_CODE_TO_NAME[savedCode]) {
-            console.log("✅ Cookie Found:", COUNTRY_CODE_TO_NAME[savedCode]);
-            setCountry(COUNTRY_CODE_TO_NAME[savedCode]);
-            return; 
-        }
+    useEffect(() => {
+        // STEP 1: Cookie Check
+        const savedCode = getCookie("country_code");
+        if (savedCode && COUNTRY_CODE_TO_NAME[savedCode]) {
+            console.log("✅ Cookie Found:", COUNTRY_CODE_TO_NAME[savedCode]);
+            setCountry(COUNTRY_CODE_TO_NAME[savedCode]);
+            return; 
+        }
 
-        // STEP 2: Geolocation
-        if (!navigator.geolocation) {
-            getCountryByIP();
-            return;
-        }
+        // STEP 2: Geolocation
+        if (!navigator.geolocation) {
+            getCountryByIP();
+            return;
+        }
 
-        navigator.geolocation.getCurrentPosition(
-            async (position) => {
-                const { latitude, longitude } = position.coords;
-                try {
-                    const res = await fetch(
-                        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
-                    );
-                    const data = await res.json();
-                    console.log("📍 Geo API returned:", data.countryName);
-                    
-                    if (validAsianCountries.includes(data.countryName)) {
-                        setCountry(data.countryName);
-                    } else {
-                        // Agar Geo ne "India" diya ya koi unknown country di -> IP check
-                        getCountryByIP();
-                    }
-                } catch {
-                    getCountryByIP();
-                }
-            },
-            () => {
-                getCountryByIP();
-            }
-        );
-    }, []);
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const { latitude, longitude } = position.coords;
+                try {
+                    const res = await fetch(
+                        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
+                    );
+                    const data = await res.json();
+                    console.log("📍 Geo API returned:", data.countryName);
+                    
+                    if (validAsianCountries.includes(data.countryName)) {
+                        setCountry(data.countryName);
+                    } else {
+                        // Agar Geo ne "India" diya ya koi unknown country di -> IP check
+                        getCountryByIP();
+                    }
+                } catch {
+                    getCountryByIP();
+                }
+            },
+            () => {
+                getCountryByIP();
+            }
+        );
+    }, []);
 
-
-    return (
+    return (
         <>
 
             <style

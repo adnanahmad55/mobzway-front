@@ -1,44 +1,60 @@
 import { NextResponse } from 'next/server';
 
-// ... (List wahi purani rahengi: EUROPEAN_COUNTRIES, etc.) ...
+// 1. Dynamic Asia Routing (Code -> Folder Name)
+const ASIA_SLUGS = {
+  CN: 'china', 
+  JP: 'japan', 
+  KR: 'southkorea', 
+  PK: 'pakistan', 
+  TH: 'thailand', 
+  VN: 'vietnam', 
+  MY: 'malaysia', 
+  SG: 'singapore', 
+  ID: 'indonesia', 
+  PH: 'philippines', 
+  AE: 'uae', 
+  SA: 'saudiarabia',
+  LK: 'srilanka', 
+  NP: 'nepal', 
+  TW: 'taiwan', 
+  HK: 'hongkong'
+};
+
+// 2. Other Regions
 const EUROPEAN_COUNTRIES = ['FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 'PL', 'IE', 'CH', 'AT', 'PT', 'RU']; 
 const AFRICAN_COUNTRIES = ['ZA', 'EG', 'NG', 'KE', 'GH', 'MA', 'TZ', 'UG', 'ZW', 'ET'];
-const ASIAN_COUNTRIES = ['PK', 'LK', 'NP', 'TH', 'SG', 'JP', 'KR', 'MY', 'VN', 'ID', 'PH', 'CN', 'TW', 'HK', 'AE', 'SA'];
 
 export function middleware(request) {
   const { pathname, searchParams } = request.nextUrl;
 
-  // 1. Country Detect
+  // Country Detect (Query Param ?c=XX ya GeoLocation)
   let country = searchParams.get('c') || request.geo?.country || 'IN';
   country = country.toUpperCase();
 
-  // Root ('/') par Redirect Logic
+  // Sirf Home Page ('/') par redirect logic chalega
   if (pathname === '/') {
-    let targetUrl = '/asia'; 
-
-    if (country === 'IN') targetUrl = '/in';
-    else if (country === 'US') targetUrl = '/us';
-    else if (country === 'GB') targetUrl = '/uk';
-    else if (country === 'BD') targetUrl = '/bd';
-    else if (EUROPEAN_COUNTRIES.includes(country)) targetUrl = '/eu';
-    else if (AFRICAN_COUNTRIES.includes(country)) targetUrl = '/af';
-    else if (ASIAN_COUNTRIES.includes(country)) targetUrl = '/asia';
-
-    // 2. Response Banao
-    const response = NextResponse.redirect(new URL(targetUrl, request.url));
     
-    // 🔥 FIX 1: Cookie ko Force Update karo (Path '/' zaroori hai)
-    response.cookies.set('country_code', country, { 
-      path: '/',
-      maxAge: 60 * 60 * 24 // 1 day validity
-    });
+    // --- Rule 1: Dynamic Asia Countries ---
+    if (ASIA_SLUGS[country]) {
+        // Example: CN -> /asia/china
+        return NextResponse.redirect(new URL(`/asia/${ASIA_SLUGS[country]}`, request.url));
+    }
 
-    // 🔥 FIX 2: Browser Cache ko maaro goli (Disable Cache)
-    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    // --- Rule 2: Fixed Specific Routes ---
+    if (country === 'IN') return NextResponse.redirect(new URL('/in', request.url));
+    if (country === 'US') return NextResponse.redirect(new URL('/us', request.url));
+    if (country === 'GB') return NextResponse.redirect(new URL('/uk', request.url)); 
+    if (country === 'BD') return NextResponse.redirect(new URL('/bd', request.url));
 
-    return response;
+    // --- Rule 3: Broad Regions ---
+    if (EUROPEAN_COUNTRIES.includes(country)) return NextResponse.redirect(new URL('/eu', request.url));
+    if (AFRICAN_COUNTRIES.includes(country)) return NextResponse.redirect(new URL('/af', request.url));
+
+    // --- Rule 4: Default Fallback (Thailand) ---
+    // Agar country code match nahi hua, toh safe side Thailand bhej do
+    return NextResponse.redirect(new URL('/asia/thailand', request.url));
   }
-  
+
   return NextResponse.next();
 }
 
