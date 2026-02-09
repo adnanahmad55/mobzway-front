@@ -124,65 +124,6 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-
-                        <div className="col-xl-3 col-lg-2 col-md-3">
-                            <div className="foot_info manpser">
-                                <div className="widget widget_text">
-                                    <div className="widget-content">
-                                        <div className="textwidget">
-                                            <div className="footer_title">More</div>
-                                            <ul className="foot_navs">
-                                                <li>
-                                                    <Link href="/texas-holdem-poker/">
-                                                        Texas Holdem Poker
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/seven-stud-poker/">
-                                                        Seven Stud Poker
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/omaha-poker-game-development/">
-                                                        Omaha Poker Game
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/andar-bahar-game-development/">
-                                                        Andar Bahar Game
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/triple-chance-game-development/">
-                                                        Triple Chance Game
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/slot-game-development/">
-                                                        Slot Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/bingo-software/">
-                                                        Bingo Software Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/keno-game-development/">
-                                                        Keno Game Development
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/ofc-poker-game-development/">
-                                                        OFC Poker Game Development
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div className="mnsprg col-xl-2 col-lg-3 col-md-6">
                             <div className="widget widget_text">
                                 <div className="widget-content">
@@ -219,19 +160,7 @@ export default function Footer() {
                                                         sales@mobzway.com
                                                     </a>
                                                 </li>
-                                                <li className="d-flex add">
-                                                    <i className="fas fa-map-marker-alt pr-2" />
-                                                    <br />
-                                                    <address>
-                                                        G-4, Okay Plus Spaces,
-                                                        <br />
-                                                        Malviya Nagar Industrial
-                                                        <br />
-                                                        Area Jaipur, (Raj) India
-                                                        <br />
-                                                        302017
-                                                    </address>
-                                                </li>
+                           
                                                 <li>
                                                     <a
                                                         className="dmca-badge"
