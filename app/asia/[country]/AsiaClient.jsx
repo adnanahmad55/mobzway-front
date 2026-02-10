@@ -74,10 +74,10 @@ export default function AfHomepage() {
                 if (validAsianCountries.includes(data.country_name)) {
                     setCountry(data.country_name);
                 } else {
-                    console.log("🛑 Country not in allowed list (e.g. India/USA). Keeping Default: Thailand.");
+                    console.log("🛑 Country not in allowed list (e.g. India/USA). Keeping Default: Asia.");
                 }
             } catch (err) {
-                console.log("⚠️ IP Fallback Failed or Adblocker blocked request. Defaulting to Thailand.");
+                console.log("⚠️ IP Fallback Failed or Adblocker blocked request. Defaulting to Asia.");
             }
         };
 
