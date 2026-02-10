@@ -90,7 +90,7 @@ export default function EuContent() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Casino Software in Malta
+                                                        Casino Software in {country_name}
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -98,7 +98,7 @@ export default function EuContent() {
                                                         alt="Poker Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Malta-ready Casino Software Built for Global iGaming Operators.
+                                                        {country_name}-ready Casino Software Built for Global iGaming Operators.
                                                         Scalable platforms with secure architecture, rich game libraries, and seamless integrations.
 
                                                     </div>
@@ -115,7 +115,7 @@ export default function EuContent() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Sportsbook Software in Malta
+                                                        Sportsbook Software in {country_name}
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -123,7 +123,7 @@ export default function EuContent() {
                                                         alt="Rummy Game"
                                                     />
                                                     <div className="hero__description">
-                                                        Advanced Sportsbook Software Solutions from Malta’s iGaming Hub.
+                                                        Advanced Sportsbook Software Solutions from {country_name}'s iGaming Hub.
                                                         Real-time odds, multi-sport coverage, and robust risk management systems.
 
                                                     </div>
@@ -358,13 +358,13 @@ export default function EuContent() {
                 <div className="container">
                     <h1 className="sub_title text-center">
                         <span className="yellow">Mobzway – Online Gaming Software  </span>{" "}
-                        <span className="black">Development Company in Malta</span>
+                        <span className="black">Development Company in {country_name}</span>
                     </h1>
                     <p
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway has its place among global gaming software development companies. The company holds ample experience in bespoke iGaming solution development to cater to the Malta and European markets. Our team of experienced developers builds customized products for sportsbook and casino gaming demands while targeting platforms like Android, iOS, and HTML5. Mobzway Technologies had proudly stood as one of the most trusted iGaming technology partners, with over 500 titles launched and more than 300 global clients served, boasting a 97% retention rate with clients-only evidence of our drive for quality, compliance, and long-term partnerships.
+                        Mobzway has its place among global gaming software development companies. The company holds ample experience in bespoke iGaming solution development to cater to the {country_name} and European markets. Our team of experienced developers builds customized products for sportsbook and casino gaming demands while targeting platforms like Android, iOS, and HTML5. Mobzway Technologies had proudly stood as one of the most trusted iGaming technology partners, with over 500 titles launched and more than 300 global clients served, boasting a 97% retention rate with clients-only evidence of our drive for quality, compliance, and long-term partnerships.
 
                     </p>
                     {/* <p className="content" style={{ color: "#000", fontSize: 17 }}>
@@ -568,7 +568,7 @@ export default function EuContent() {
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                At Mobzway, we are an experienced gaming software development company operating in Malta with extensive expertise in the development of iGaming and casino software solutions. We offer solutions to many of your key challenges, including: licensing support and assistance; in-house software development services; and integration of all game content into your online casino. This allows you to focus more on marketing, branding and acquiring players.
+                                At Mobzway, we are an experienced gaming software development company operating in {country_name} with extensive expertise in the development of iGaming and casino software solutions. We offer solutions to many of your key challenges, including: licensing support and assistance; in-house software development services; and integration of all game content into your online casino. This allows you to focus more on marketing, branding and acquiring players.
 
                             </div>
                             <div
@@ -587,7 +587,7 @@ export default function EuContent() {
                                 className="help_cotnent text-center"
                                 style={{ paddingBottom: 15 }}
                             >
-                                Do you want to see how Mobzway can help you with your product development strategy, your business in Malta, and with your future growth in the global iGaming markets? Just get in touch with us for a free consultation.
+                                Do you want to see how Mobzway can help you with your product development strategy, your business in {country_name}, and with your future growth in the global iGaming markets? Just get in touch with us for a free consultation.
 
                             </div>
 
@@ -708,7 +708,7 @@ export default function EuContent() {
                                     data-aos-duration={1000}
                                 >
                                     <li>
-                                        Products developed by iGaming professionals who have the knowledge and experience of the industry for several years in the Malta market.
+                                        Products developed by iGaming professionals who have the knowledge and experience of the industry for several years in the {country_name} market.
 
                                     </li>
                                     <li>
@@ -720,7 +720,7 @@ export default function EuContent() {
                                         Multi-platform offerings that are the same in Web, Mobile, PC, and MaC.
 
                                     </li>
-                                    <li>Easy integration with EU-compliant and Malta-friendly payment gateways
+                                    <li>Easy integration with EU-compliant and {country_name}-friendly payment gateways
 
                                     </li>
                                     <li>Products delivered with multi-language and regional localization capabilities
