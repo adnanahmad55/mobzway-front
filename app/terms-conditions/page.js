@@ -49,7 +49,12 @@ export default function TermsConditions() {
 <section
     className="same_content_sec"
     style={{
-        backgroundImage: 'url("/assets/images/comman_bg.png")'
+        backgroundImage: 'url("/assets/images/comman_bg.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        // ✅ YE ZAROORI HAI: Header overlap bachane ke liye padding upar rakhi hai
+        paddingTop: "160px",
+        paddingBottom: "80px"
     }}
 >
     <div className="container">
@@ -59,51 +64,60 @@ export default function TermsConditions() {
                     data-aos="fade-right"
                     data-aos-duration={1500}
                     data-aos-once="true"
+                    className="mb-5"
                 >
                     <h2 className="sub_title text-center">
-                        <span className="yellow"> Rules</span>{" "}
+                        <span className="yellow">Rules</span>{" "}
                         <span className="black">&amp; Regulations</span>
                     </h2>
                 </div>
             </div>
-            <div className="col-md-12 ">
-                <div className="para_content">
-                    <p>
-                        Mobzway Technologies specializes in gaming software designed mostly for entertainment, technology, and business solution needs. The Client agrees to make use of the software in conformity with all relevant laws and regulations governing the countries of operation. 
-                        <strong> Mobzway does not operate, manage, nor control any of the gaming, betting, and gambling business activities carried out by the Client.</strong>
+
+            <div className="col-md-12">
+                {/* ✅ CHANGE HERE: White background aur shadow hata di hai. Ab ye transparent hai. */}
+                <div
+                    className="para_content"
+                    style={{ lineHeight: "1.8" }}
+                >
+                    <p className="mb-4">
+                        Mobzway Technologies specializes in gaming software designed mostly for entertainment, technology, and business solution needs. The Client agrees to make use of the software in conformity with all relevant laws and regulations governing the countries of operation.
+                        <br /><br />
+                        <strong>Important:</strong> Mobzway does not operate, manage, nor control any of the gaming, betting, and gambling business activities carried out by the Client.
                     </p>
 
-                    <h4>Regulatory Compliance Responsibility</h4>
+                    {/* Headings aur Lists ko saaf-suthra rakha hai */}
+                    <h4 className="mt-4 mb-3" style={{ fontWeight: "700" }}>Regulatory Compliance Responsibility</h4>
                     <p>The Client is solely responsible for:</p>
-                    <ul>
+                    <ul style={{ listStyleType: "disc", paddingLeft: "20px", marginBottom: "20px" }}>
                         <li>Legal operation of the gaming platforms in their target locations.</li>
                         <li>Ensuring they do not use Mobzway software in countries or regions where gaming or betting is considered illegal or restricted by local laws.</li>
                     </ul>
 
-                    <h4>Licensing &amp; Legal Permissions</h4>
+                    <h4 className="mt-4 mb-3" style={{ fontWeight: "700" }}>Licensing &amp; Legal Permissions</h4>
                     <p>
                         Mobzway does not offer legal licensing, legal approvals, or legal advisory services. All licensing, legal certification, and legal compliance fall within the Client's responsibility. The Client must handle all licensing requirements and certification obligations together with regulatory compliance duties.
                     </p>
 
-                    <h4>Limitation of Liability</h4>
+                    <h4 className="mt-4 mb-3" style={{ fontWeight: "700" }}>Limitation of Liability</h4>
                     <p>
-                        Mobzway Technologies bears no responsibility for any legal or regulatory issues, compliance problems, or operational difficulties that the Client encounters across different jurisdictions. Mobzway will not take responsibility for any damages which either directly or indirectly create special or incidental results that follow from using its software products, platforms, and services.
+                        Mobzway Technologies bears no responsibility for any legal or regulatory issues, compliance problems, or operational difficulties that the Client encounters across different jurisdictions.
+                        Mobzway will not take responsibility for any damages which either directly or indirectly create special or incidental results that follow from using its software products, platforms, and services.
                     </p>
 
-                    <h4>Communication Consent</h4>
+                    <h4 className="mt-4 mb-3" style={{ fontWeight: "700" }}>Communication Consent</h4>
                     <p>
                         The Client accepts to receive various communication methods which include emails, calls, and messages when they use Mobzway websites, applications, and platforms for:
                     </p>
-                    <ul>
+                    <ul style={{ listStyleType: "disc", paddingLeft: "20px", marginBottom: "20px" }}>
                         <li>Service updates</li>
                         <li>Account information</li>
                         <li>Marketing or promotional communication</li>
                     </ul>
-                    <p>
-                        Clients may opt out of marketing communications by contacting: <b>info@mobzway.com</b>
+                    <p className="mb-4">
+                        Clients may opt out of marketing communications by contacting: <a href="mailto:info@mobzway.com" style={{ fontWeight: "bold"}}>info@mobzway.com</a>
                     </p>
 
-                    <h4>Data Privacy</h4>
+                    <h4 className="mt-4 mb-3" style={{ fontWeight: "700" }}>Data Privacy</h4>
                     <p>
                         All client information is treated as confidential and handled according to applicable data protection laws. Information may only be disclosed if required by law or regulatory authorities.
                     </p>
