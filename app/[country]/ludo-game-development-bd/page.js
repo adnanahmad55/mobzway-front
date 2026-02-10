@@ -26,8 +26,8 @@ export async function generateMetadata({ params }) {
     const currentUrl = `${baseUrl}/${countryCode}/ludo-game-development-${countryCode}`;
 
     return {
-        title: `Ludo game development company in ${countryName} | Ludo Services`,
-        description: `Mobzway is Best Ludo game development company in ${countryName}...`,
+        title: `Ludo game development company in ${countryName} |Ludo Services`,
+        description: `Mobzway is Best Ludo game development company in ${countryName} offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.`,
         keywords: [`Ludo game development company in ${countryName}`],
         
         alternates: {
