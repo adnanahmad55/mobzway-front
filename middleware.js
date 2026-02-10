@@ -20,16 +20,16 @@ const ASIA_SLUGS = {
   HK: 'hongkong'
 };
 
-// 2. Europe Region (EU) - In sabko /eu par bhejenge
+// 2. Europe Region (EU) - Norway (NO) included here!
 const EUROPEAN_COUNTRIES = [
   'FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 
-  'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO'
+  'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO', 'HU'
 ]; 
 
-// 3. Africa Region (AF) - In sabko /af par bhejenge
+// 3. Africa Region (AF)
 const AFRICAN_COUNTRIES = [
   'ZA', 'EG', 'NG', 'KE', 'GH', 'MA', 'TZ', 'UG', 'ZW', 'ET', 
-  'DZ', 'SD', 'AO', 'MZ', 'CI', 'CM'
+  'DZ', 'SD', 'AO', 'MZ', 'CI', 'CM', 'SN'
 ];
 
 export function middleware(request) {
@@ -38,40 +38,40 @@ export function middleware(request) {
   // Sirf Home Page ('/') par redirect logic chalega
   if (pathname === '/') {
     
-    // Country Detect Karo (Vercel Header se ya Query Param se testing ke liye)
-    // ?c=FR likh kar tum test kar sakte ho localhost pe
+    // Country Detect Karo (Query Param 'c' se testing ke liye, ya Vercel Header se)
     let country = searchParams.get('c') || request.geo?.country || request.headers.get('x-vercel-ip-country') || 'TH';
     
-    country = country.toUpperCase(); // Ensure uppercase (e.g., 'in' -> 'IN')
+    country = country.toUpperCase(); // Ensure uppercase (e.g., 'no' -> 'NO')
     
-    console.log(`Middleware Detected: ${country}`);
+    console.log(`🛡️ Middleware Detected Country: ${country}`);
 
-    // --- PRIORITY 1: FIXED SPECIFIC ROUTES ---
-    // In countries ka apna alag folder hai, pehle inhe check karo
+    // --- PRIORITY 1: VIP COUNTRIES (Fixed Folders) ---
     if (country === 'IN') return NextResponse.redirect(new URL('/in', request.url));
     if (country === 'US') return NextResponse.redirect(new URL('/us', request.url));
     if (country === 'GB') return NextResponse.redirect(new URL('/uk', request.url)); // GB = United Kingdom
     if (country === 'BD') return NextResponse.redirect(new URL('/bd', request.url));
 
-    // --- PRIORITY 2: DYNAMIC ASIA ROUTES ---
+    // --- PRIORITY 2: REGIONS (Europe & Africa) ---
+    
+    // Agar Norway (NO) ya koi bhi EU country hai -> /eu par bhejo
+    if (EUROPEAN_COUNTRIES.includes(country)) {
+        return NextResponse.redirect(new URL('/eu', request.url));
+    }
+
+    // Agar Africa list mein hai -> /af par bhejo
+    if (AFRICAN_COUNTRIES.includes(country)) {
+        return NextResponse.redirect(new URL('/af', request.url));
+    }
+
+    // --- PRIORITY 3: DYNAMIC ASIA ROUTES ---
     // Agar Asia list mein hai -> /asia/country-name
     if (ASIA_SLUGS[country]) {
         return NextResponse.redirect(new URL(`/asia/${ASIA_SLUGS[country]}`, request.url));
     }
 
-    // --- PRIORITY 3: BROAD REGIONS ---
-    // Agar Europe list mein hai -> /eu
-    if (EUROPEAN_COUNTRIES.includes(country)) {
-        return NextResponse.redirect(new URL('/eu', request.url));
-    }
-
-    // Agar Africa list mein hai -> /af
-    if (AFRICAN_COUNTRIES.includes(country)) {
-        return NextResponse.redirect(new URL('/af', request.url));
-    }
-
     // --- PRIORITY 4: DEFAULT FALLBACK ---
-    // Agar upar mein se koi nahi mila (jaise Antarctica, Brazil, Australia), toh Thailand bhej do
+    // Agar Antarctica, Brazil, Australia se koi aaya -> Default Thailand
+    console.log(`⚠️ No specific route for ${country}. Fallback to Thailand.`);
     return NextResponse.redirect(new URL('/asia/thailand', request.url));
   }
 
