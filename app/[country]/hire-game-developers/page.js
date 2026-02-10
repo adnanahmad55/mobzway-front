@@ -8,7 +8,7 @@ export const metadata = {
     alternates: {
         canonical: "https://www.mobzway.com/in/",
         languages: {
-            "en-IN": "https://www.mobzway.com/in/",
+            "en-in": "https://www.mobzway.com/in/",
         },
     },
 };
