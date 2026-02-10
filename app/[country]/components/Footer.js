@@ -497,7 +497,7 @@ export default function Footer() {
                     style={{
                         display: "none !important",
                         right: "0",
-                        zIndex: "99999",
+                        zIndex: "99999"
                     }}>
                     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
                     <meta content="text/html;charset=UTF-8" httpEquiv="content-type" />
