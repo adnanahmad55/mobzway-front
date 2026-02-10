@@ -46,7 +46,7 @@ MM: "Myanmar", BN: "Brunei", NP: "Nepal"
 };
 
 export default function AfHomepage() {
-    const [country, setCountry] = useState("Thailand");
+    const [country, setCountry] = useState("Asia");
 
     const validAsianCountries = [
         "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
