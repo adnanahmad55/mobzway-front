@@ -42,19 +42,18 @@ AE: "UAE", SA: "Saudi Arabia",
 CN: "China", TW: "Taiwan", HK: "Hong Kong", 
 JP: "Japan", KR: "South Korea", KH: "Cambodia", LA: "Laos", 
 MM: "Myanmar", BN: "Brunei", NP: "Nepal"
-// ❌ INDIA REMOVED
+
 };
 
 export default function AfHomepage() {
-    const [country, setCountry] = useState("Thailand"); // Default
+    const [country, setCountry] = useState("Thailand");
 
-    // Allowed Countries List
     const validAsianCountries = [
         "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
         "Philippines", "Japan", "South Korea", "Cambodia", "Laos", 
         "Myanmar", "Brunei", "Sri Lanka", "Nepal",
         "Taiwan", "Hong Kong", "China", "Pakistan", "UAE", "Saudi Arabia"
-        // ❌ India excluded
+
     ];
 
     useEffect(() => {
@@ -62,16 +61,16 @@ export default function AfHomepage() {
             try {
                 console.log("📡 Checking IP Location...");
                 
-                // IP API call
+                
                 const res = await fetch("https://ipapi.co/json/");
                 
-                // Agar response OK nahi hai toh error throw karo
+               
                 if (!res.ok) throw new Error("API Limit or Error");
 
                 const data = await res.json();
                 console.log("📍 IP Detected Country:", data.country_name);
 
-                // Check karo agar country valid list mein hai
+                
                 if (validAsianCountries.includes(data.country_name)) {
                     setCountry(data.country_name);
                 } else {
@@ -82,9 +81,9 @@ export default function AfHomepage() {
             }
         };
 
-        // Function call
+
         getCountryByIP();
-    }, []); // Empty array ka matlab ye sirf ek baar chalega page load par
+    }, []); 
     return (
         <>
 

@@ -1,56 +1,77 @@
 import { NextResponse } from 'next/server';
 
-// Allowed Asian Countries (India is NOT here)
+// 1. Dynamic Asia Routing (Country Code -> Folder Slug)
 const ASIA_SLUGS = {
-  CN: 'china', JP: 'japan', KR: 'southkorea', 
-  PK: 'pakistan', TH: 'thailand', VN: 'vietnam', 
-  MY: 'malaysia', SG: 'singapore', ID: 'indonesia', 
-  PH: 'philippines', AE: 'uae', SA: 'saudiarabia',
-  LK: 'srilanka', NP: 'nepal', TW: 'taiwan', HK: 'hongkong'
+  CN: 'china', 
+  JP: 'japan', 
+  KR: 'southkorea', 
+  PK: 'pakistan', 
+  TH: 'thailand', 
+  VN: 'vietnam', 
+  MY: 'malaysia', 
+  SG: 'singapore', 
+  ID: 'indonesia', 
+  PH: 'philippines', 
+  AE: 'uae', 
+  SA: 'saudiarabia',
+  LK: 'srilanka', 
+  NP: 'nepal', 
+  TW: 'taiwan', 
+  HK: 'hongkong'
 };
 
-export async function middleware(request) {
-  const { pathname } = request.nextUrl;
+// 2. Europe Region (EU) - In sabko /eu par bhejenge
+const EUROPEAN_COUNTRIES = [
+  'FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 
+  'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO'
+]; 
 
-  // Sirf Home Page ('/') par check karenge
+// 3. Africa Region (AF) - In sabko /af par bhejenge
+const AFRICAN_COUNTRIES = [
+  'ZA', 'EG', 'NG', 'KE', 'GH', 'MA', 'TZ', 'UG', 'ZW', 'ET', 
+  'DZ', 'SD', 'AO', 'MZ', 'CI', 'CM'
+];
+
+export function middleware(request) {
+  const { pathname, searchParams } = request.nextUrl;
+
+  // Sirf Home Page ('/') par redirect logic chalega
   if (pathname === '/') {
     
-    let country = 'TH'; // Default fallback
+    // Country Detect Karo (Vercel Header se ya Query Param se testing ke liye)
+    // ?c=FR likh kar tum test kar sakte ho localhost pe
+    let country = searchParams.get('c') || request.geo?.country || request.headers.get('x-vercel-ip-country') || 'TH';
+    
+    country = country.toUpperCase(); // Ensure uppercase (e.g., 'in' -> 'IN')
+    
+    console.log(`Middleware Detected: ${country}`);
 
-    try {
-      // 1. IP se Country Pata karo (Vercel/Next.js IP header)
-      // Localhost pe ye aksar kaam nahi karta, isliye API fallback zaruri hai
-      const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
-      
-      // Note: Middleware me hum external fetch avoid karte hain speed ke liye, 
-      // lekin strict requirement ke liye yahan simple geo header check karte hain.
-      // Vercel/Netlify par 'x-vercel-ip-country' header milta hai.
-      
-      const geoCountry = request.geo?.country || request.headers.get('x-vercel-ip-country') || 'TH';
-      country = geoCountry;
+    // --- PRIORITY 1: FIXED SPECIFIC ROUTES ---
+    // In countries ka apna alag folder hai, pehle inhe check karo
+    if (country === 'IN') return NextResponse.redirect(new URL('/in', request.url));
+    if (country === 'US') return NextResponse.redirect(new URL('/us', request.url));
+    if (country === 'GB') return NextResponse.redirect(new URL('/uk', request.url)); // GB = United Kingdom
+    if (country === 'BD') return NextResponse.redirect(new URL('/bd', request.url));
 
-    } catch (error) {
-      console.log("Geo lookup failed, using default");
-    }
-
-    // Convert to Uppercase
-    country = country.toUpperCase();
-    console.log("Detected Country via Middleware:", country);
-
-    // --- ROUTING LOGIC ---
-
-    // 1. Agar India (IN) hai -> /in bhejo
-    if (country === 'IN') {
-      return NextResponse.redirect(new URL('/in', request.url));
-    }
-
-    // 2. Agar koi Allowed Asian Country hai -> /asia/country-name
+    // --- PRIORITY 2: DYNAMIC ASIA ROUTES ---
+    // Agar Asia list mein hai -> /asia/country-name
     if (ASIA_SLUGS[country]) {
-      return NextResponse.redirect(new URL(`/asia/${ASIA_SLUGS[country]}`, request.url));
+        return NextResponse.redirect(new URL(`/asia/${ASIA_SLUGS[country]}`, request.url));
     }
 
-    // 3. Agar Netherlands (NL) ya koi aur Unknown country hai -> Default Thailand
-    // Ye line ensure karegi ki NL wale ko India na dikhe
+    // --- PRIORITY 3: BROAD REGIONS ---
+    // Agar Europe list mein hai -> /eu
+    if (EUROPEAN_COUNTRIES.includes(country)) {
+        return NextResponse.redirect(new URL('/eu', request.url));
+    }
+
+    // Agar Africa list mein hai -> /af
+    if (AFRICAN_COUNTRIES.includes(country)) {
+        return NextResponse.redirect(new URL('/af', request.url));
+    }
+
+    // --- PRIORITY 4: DEFAULT FALLBACK ---
+    // Agar upar mein se koi nahi mila (jaise Antarctica, Brazil, Australia), toh Thailand bhej do
     return NextResponse.redirect(new URL('/asia/thailand', request.url));
   }
 
