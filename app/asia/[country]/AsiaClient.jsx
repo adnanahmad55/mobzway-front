@@ -36,94 +36,55 @@ import { useEffect, useState } from "react";
 // };
 
 const COUNTRY_CODE_TO_NAME = {
-  PK: "Pakistan", LK: "Sri Lanka", TH: "Thailand", SG: "Singapore", 
-  VN: "Vietnam", ID: "Indonesia", PH: "Philippines", MY: "Malaysia", 
-  AE: "UAE", SA: "Saudi Arabia", 
-  CN: "China", TW: "Taiwan", HK: "Hong Kong", 
-  JP: "Japan", KR: "South Korea", KH: "Cambodia", LA: "Laos", 
-  MM: "Myanmar", BN: "Brunei", NP: "Nepal"
-  // ❌ INDIA REMOVED
+PK: "Pakistan", LK: "Sri Lanka", TH: "Thailand", SG: "Singapore", 
+VN: "Vietnam", ID: "Indonesia", PH: "Philippines", MY: "Malaysia", 
+AE: "UAE", SA: "Saudi Arabia", 
+CN: "China", TW: "Taiwan", HK: "Hong Kong", 
+JP: "Japan", KR: "South Korea", KH: "Cambodia", LA: "Laos", 
+MM: "Myanmar", BN: "Brunei", NP: "Nepal"
+// ❌ INDIA REMOVED
 };
 
 export default function AfHomepage() {
-    const [country, setCountry] = useState("Thailand"); // Default
+    const [country, setCountry] = useState("Thailand"); // Default
 
-    // 2. Allowed List (Yahan se India hata diya hai)
-    const validAsianCountries = [
-        "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
-        "Philippines", "Japan", "South Korea", "Cambodia", "Laos", 
-        "Myanmar", "Brunei", "Sri Lanka", "Nepal",
-        "Taiwan", "Hong Kong", "China", "Pakistan", "UAE", "Saudi Arabia"
-        // ❌ Note: "India" yahan nahi hona chahiye!
-    ];
+    // Allowed Countries List
+    const validAsianCountries = [
+        "Thailand", "Vietnam", "Malaysia", "Singapore", "Indonesia", 
+        "Philippines", "Japan", "South Korea", "Cambodia", "Laos", 
+        "Myanmar", "Brunei", "Sri Lanka", "Nepal",
+        "Taiwan", "Hong Kong", "China", "Pakistan", "UAE", "Saudi Arabia"
+        // ❌ India excluded
+    ];
 
-    const getCookie = (name) => {
-        if (typeof document === "undefined") return null;
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(";").shift();
-        return null;
-    };
+    useEffect(() => {
+        const getCountryByIP = async () => {
+            try {
+                console.log("📡 Checking IP Location...");
+                
+                // IP API call
+                const res = await fetch("https://ipapi.co/json/");
+                
+                // Agar response OK nahi hai toh error throw karo
+                if (!res.ok) throw new Error("API Limit or Error");
 
-    const getCountryByIP = async () => {
-        try {
-            console.log("⚠️ Fallback to IP API triggered...");
-            const res = await fetch("https://ipapi.co/json/");
-            const data = await res.json();
-            console.log("📡 IP API returned:", data.country_name);
+                const data = await res.json();
+                console.log("📍 IP Detected Country:", data.country_name);
 
-            // Agar IP ne "India" diya, toh ye False hoga aur "Thailand" hi rahega
-            if (validAsianCountries.includes(data.country_name)) {
-                setCountry(data.country_name);
-            } else {
-                console.log("🛑 Country not in allowed list. Ignoring.");
-            }
-        } catch (err) {
-            console.log("IP Fallback Failed");
-        }
-    };
+                // Check karo agar country valid list mein hai
+                if (validAsianCountries.includes(data.country_name)) {
+                    setCountry(data.country_name);
+                } else {
+                    console.log("🛑 Country not in allowed list (e.g. India/USA). Keeping Default: Thailand.");
+                }
+            } catch (err) {
+                console.log("⚠️ IP Fallback Failed or Adblocker blocked request. Defaulting to Thailand.");
+            }
+        };
 
-    useEffect(() => {
-        // STEP 1: Cookie Check
-        const savedCode = getCookie("country_code");
-        if (savedCode && COUNTRY_CODE_TO_NAME[savedCode]) {
-            console.log("✅ Cookie Found:", COUNTRY_CODE_TO_NAME[savedCode]);
-            setCountry(COUNTRY_CODE_TO_NAME[savedCode]);
-            return; 
-        }
-
-        // STEP 2: Geolocation
-        if (!navigator.geolocation) {
-            getCountryByIP();
-            return;
-        }
-
-        navigator.geolocation.getCurrentPosition(
-            async (position) => {
-                const { latitude, longitude } = position.coords;
-                try {
-                    const res = await fetch(
-                        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
-                    );
-                    const data = await res.json();
-                    console.log("📍 Geo API returned:", data.countryName);
-                    
-                    if (validAsianCountries.includes(data.countryName)) {
-                        setCountry(data.countryName);
-                    } else {
-                        // Agar Geo ne "India" diya ya koi unknown country di -> IP check
-                        getCountryByIP();
-                    }
-                } catch {
-                    getCountryByIP();
-                }
-            },
-            () => {
-                getCountryByIP();
-            }
-        );
-    }, []);
-
+        // Function call
+        getCountryByIP();
+    }, []); // Empty array ka matlab ye sirf ek baar chalega page load par
     return (
         <>
 
