@@ -1,6 +1,6 @@
 "use client";
 
-
+import React, { useEffect, useState } from 'react';
 import React from 'react'
 import { useLang } from '../components/LanguageProvider';
 import { dictionary } from '../lib/i18n';
@@ -8,7 +8,38 @@ import BannerForm from '../components/BannerForm';
 
 export default function BDHomeClient() {
     const { lang } = useLang();
+    const [debugInfo, setDebugInfo] = useState("Checking Location...");
 
+    useEffect(() => {
+        const checkLocation = async () => {
+            try {
+                console.log("🇧🇩 Checking IP for Bangladesh Page...");
+                const res = await fetch("https://ipapi.co/json/");
+                if (!res.ok) throw new Error("API Error");
+                
+                const data = await res.json();
+                setDebugInfo(`${data.country_name} (${data.country_code})`);
+
+                // --- REDIRECT LOGIC ---
+                // Agar banda India se hai, toh /in bhej do
+                if (data.country_code === 'IN') {
+                    window.location.href = "/in";
+                }
+                // Agar banda Europe se hai, toh /eu bhej do
+                else if (['DE', 'FR', 'IT', 'NL', 'NO'].includes(data.country_code)) {
+                    // ⚠️ NOTE: Testing ke liye is line ko comment rakha hai taaki tum page dekh sako
+                    // window.location.href = "/eu"; 
+                    console.log("User is from Europe, but staying on page for testing.");
+                }
+
+            } catch (error) {
+                console.log("IP Check Failed");
+                setDebugInfo("Location check failed");
+            }
+        };
+
+        checkLocation();
+    }, []);
     return (
         <>
 
