@@ -289,7 +289,7 @@ export default function Footer() {
                                 <li>
                                     <a
                                         aria-label="linkedin"
-                                        href="https://www.linkedin.com/company/mobzway-technologies-llp"
+                                        href="https://www.linkedin.com/search/results/all/?keywords=mobzway%20technologies&origin=TYPEAHEAD_HISTORY&searchId=7f36ae2f-cb2e-4371-871b-475c3059ed85&sid=i%3Ab&spellCorrectionEnabled=true"
                                         rel="noopener"
                                         target="_blank">
                                         <i className="fab fa-linkedin-in" />

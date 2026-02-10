@@ -1,5 +1,5 @@
 import React from 'react'
-import BannerForm from '../components/BannerForm'
+import BannerForm from '../[country]/components/BannerForm'
 
 export default function RummySoftware() {
     return (

@@ -1,6 +1,6 @@
 "use client";
 // import "../../public/assets/css/stylebook.css";
-import "../../../public/assets/css/stylebook.css"
+import "../../public/assets/css/stylebook.css";
 
 import React, { useEffect } from 'react'
 
