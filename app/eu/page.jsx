@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BannerForm from "../components/BannerForm";
-
+import { useEffect, useState } from "react";
 export const metadata = {
     title: "Mobzway - Online Gaming Software Development Company",
     description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
@@ -32,12 +32,6 @@ export const metadata = {
         canonical: "https://www.mobzway.com/",
     },
 };
-"use client";
-import Image from "next/image";
-import BannerForm from "../components/BannerForm"; // Path check kar lena
-import { useEffect, useState } from "react";
-
-
 export default function EuHomePage() {
         const [country, setCountry] = useState("Malta"); 
     const [debugInfo, setDebugInfo] = useState("Loading...");
