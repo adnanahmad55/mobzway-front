@@ -5,7 +5,7 @@ import Image from "next/image"; // <--- You asked for this import, it goes here
 import BannerForm from "../components/BannerForm";
 
 export default function EuContent() {
-    const [country, setCountry] = useState("Malta"); 
+    const [country, setCountry] = useState("Europe"); 
     const [debugInfo, setDebugInfo] = useState("Loading...");
 
     // European Countries List
