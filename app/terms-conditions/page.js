@@ -67,8 +67,8 @@ export default function TermsConditions() {
                     className="mb-5"
                 >
                     <h2 className="sub_title text-center">
-                        <span className="yellow">Rules</span>{" "}
-                        <span className="black">&amp; Regulations</span>
+                        <span className="yellow">Terms </span>{" "}
+                        <span className="black">&amp; Conditions</span>
                     </h2>
                 </div>
             </div>
