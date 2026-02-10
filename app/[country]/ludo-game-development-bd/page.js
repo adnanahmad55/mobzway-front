@@ -66,7 +66,7 @@ export default function LudoGameDevelopment() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Ludo game development company in {country} | Ludo Services
+                        Ludo game development company in Bangladesh | Ludo Services
                     </h1>
 
                     <div className="btn_outer">
@@ -177,7 +177,7 @@ export default function LudoGameDevelopment() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Reasons Why Mobzway is the Leading Ludo </span>{" "}
-                                <span className="black"> Game Development Company in {country}</span>
+                                <span className="black"> Game Development Company in Bangladesh</span>
                             </h2>
                         </div>
                     </div>
@@ -212,7 +212,7 @@ export default function LudoGameDevelopment() {
                                                 Local User {country}-Centric UI/UX
                                             </h5>
                                             <p className="card-text text-center text-dark">
-                                                The Ludo games we develop are the ones that the {country} players would love most:
+                                                The Ludo games we develop are the ones that the Bangladesh players would love most:
                                             </p>
                                             <ul className='why_content why_content_dark p-0 my-2'>
                                                 <li className='text-dark'>Support in Bangla/English languages</li>
@@ -314,7 +314,7 @@ export default function LudoGameDevelopment() {
                                                 <li className='text-dark'>Rapid Deployment</li>
                                                 <li className='text-dark'>Ready-to-Use Ludo Features</li>
                                                 <li className='text-dark'>Integrated Payment Options</li>
-                                                <li className='text-dark'>Ideal for {country} Startups!</li>
+                                                <li className='text-dark'>Ideal for Bangladesh Startups!</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -870,7 +870,7 @@ export default function LudoGameDevelopment() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Mobile-Friendly </span>{" "}
-                                <span className="black"> Ludo Games for {country}</span>
+                                <span className="black"> Ludo Games for Bangladesh</span>
                             </h2>
                         </div>
                     </div>
@@ -900,7 +900,7 @@ export default function LudoGameDevelopment() {
                             }}
                         >
                             <p className="para-1">
-                                The majority of gamers in {country} access their games through mobile devices; therefore, our Ludo applications introduce:
+                                The majority of gamers in Bangladesh access their games through mobile devices; therefore, our Ludo applications introduce:
                                 <br />
                                 <br />
                                 Super fast load time
@@ -1132,7 +1132,7 @@ export default function LudoGameDevelopment() {
                             <h2 className="sub_title">
                                 <span className="black_bg_head_yellow">Start your Ludo  </span>{" "}
                                 <span className="black_bg_head_white">
-                                    game in {country} today!
+                                    game in Bangladesh today!
                                 </span>
                             </h2>
                         </div>
