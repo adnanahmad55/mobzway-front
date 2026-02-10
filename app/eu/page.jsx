@@ -1,6 +1,6 @@
 import EuContent from "./EuContent"; // Import the client component
 
-// This stays here (Server Side)
+
 export const metadata = {
     title: "Mobzway - Online Gaming Software Development Company",
     description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",

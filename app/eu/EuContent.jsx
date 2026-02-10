@@ -1,20 +1,31 @@
-"use client"; // <--- This is required for useState/useEffect
+"use client"; 
 
 import { useEffect, useState } from "react";
-import Image from "next/image"; // <--- You asked for this import, it goes here
+import Image from "next/image"; 
 import BannerForm from "../components/BannerForm";
+const EU_COUNTRY_CODE_TO_NAME = {
+    // Western Europe
+    DE: "Germany", FR: "France", NL: "Netherlands", BE: "Belgium", 
+    AT: "Austria", CH: "Switzerland", LU: "Luxembourg", LI: "Liechtenstein", 
+    MC: "Monaco", GB: "United Kingdom", IE: "Ireland",
 
+    // Nordic / Northern
+    SE: "Sweden", NO: "Norway", DK: "Denmark", FI: "Finland", IS: "Iceland",
+
+    // Southern Europe
+    IT: "Italy", ES: "Spain", PT: "Portugal", GR: "Greece", 
+    MT: "Malta", CY: "Cyprus", VA: "Vatican City", SM: "San Marino", AD: "Andorra",
+
+    // Eastern Europe
+    RU: "Russia", PL: "Poland", UA: "Ukraine", CZ: "Czech Republic", 
+    RO: "Romania", HU: "Hungary", BG: "Bulgaria", SK: "Slovakia", 
+    HR: "Croatia", RS: "Serbia", SI: "Slovenia", EE: "Estonia", 
+    LV: "Latvia", LT: "Lithuania", BY: "Belarus", MD: "Moldova", 
+    BA: "Bosnia and Herzegovina", AL: "Albania", MK: "North Macedonia", ME: "Montenegro"
+};
 export default function EuContent() {
     const [country, setCountry] = useState("Europe"); 
     const [debugInfo, setDebugInfo] = useState("Loading...");
-
-    // European Countries List
-const validEuCountries = [
-        "Malta", "Germany", "France", "Italy", "Spain", "Netherlands", "The Netherlands", // 👈 Ye add kiya
-        "Belgium", "Sweden", "Norway", "Denmark", "Finland", "Poland", "Ireland", 
-        "Switzerland", "Austria", "Portugal", "Russia", "Ukraine", 
-        "Greece", "Czech Republic", "Romania", "Hungary", "United Kingdom"
-    ];
 
     useEffect(() => {
         const getCountryByIP = async () => {
@@ -28,30 +39,39 @@ const validEuCountries = [
                 setDebugInfo(`${data.country_name} (${data.country_code})`);
                 
                 // --- REDIRECT SAFETY LOGIC ---
+                // Agar banda Asia ya India se hai
                 if (data.continent_code === 'AS' || data.country_code === 'IN') {
                       if(data.country_code === 'IN') window.location.href = "/in";
-                      else window.location.href = "/asia/thailand";
+                      else window.location.href = "/asia/thailand"; // Default Asia page
                       return;
                 }
 
+                // Agar banda Africa se hai
                 if (data.continent_code === 'AF') {
                     window.location.href = "/af";
                     return;
                 }
 
-                // --- CONTENT UPDATE LOGIC ---
-                if (validEuCountries.includes(data.country_name)) {
-                    setCountry(data.country_name);
-                } 
+                // --- ✅ CONTENT UPDATE LOGIC (Updated) ---
+                // Hum Code check karenge (Example: 'NL'), Naam nahi.
+                const matchedCountryName = EU_COUNTRY_CODE_TO_NAME[data.country_code];
+
+                if (matchedCountryName) {
+                    // Agar Code list mein hai, toh humara wala Naam set karo
+                    setCountry(matchedCountryName);
+                } else {
+                    // Agar Code list mein nahi hai (Unknown), toh Default Europe
+                    setCountry("Europe");
+                }
 
             } catch (err) {
-                console.log("⚠️ IP Check Failed. Defaulting to Malta.");
+                console.log("⚠️ IP Check Failed. Defaulting to Europe.");
+                setCountry("Europe");
             }
         };
 
         getCountryByIP();
     }, []);
-
     return (
         <>
   

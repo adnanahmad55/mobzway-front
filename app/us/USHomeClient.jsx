@@ -2,57 +2,135 @@
 
 import React, { useEffect, useState } from 'react';
 import BannerForm from '../components/BannerForm';
-import { useLang } from '../components/LanguageProvider'; // Agar language use ho rahi hai to
-import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
+// import { useLang } from '../components/LanguageProvider'; // Uncomment if needed
+// import { dictionary } from '../lib/i18n'; // Uncomment if needed
 
+// ✅ 1. US & AMERICAS MAPPING (Code -> Name)
+// Isse spelling mistakes fix hongi aur naming consistent rahegi
+const US_REGION_CODE_TO_NAME = {
+    // --- North America ---
+    US: "United States",
+    CA: "Canada",
+    MX: "Mexico",
+    GL: "Greenland",
+    BM: "Bermuda",
+    PM: "Saint Pierre and Miquelon",
 
-    // Agar dictionary use nahi kar rahe to ye lines hata dena
-    // const { lang } = useLang(); 
-    
+    // --- South America ---
+    BR: "Brazil",
+    AR: "Argentina",
+    CO: "Colombia",
+    CL: "Chile",
+    PE: "Peru",
+    VE: "Venezuela",
+    EC: "Ecuador",
+    BO: "Bolivia",
+    PY: "Paraguay",
+    UY: "Uruguay",
+    GY: "Guyana",
+    SR: "Suriname",
+    GF: "French Guiana",
+    FK: "Falkland Islands",
 
+    // --- Central America ---
+    PA: "Panama",
+    CR: "Costa Rica",
+    GT: "Guatemala",
+    HN: "Honduras",
+    NI: "Nicaragua",
+    SV: "El Salvador",
+    BZ: "Belize",
 
- export default function USHome() {
-        const [debugInfo, setDebugInfo] = useState("Checking Location...");
+    // --- Caribbean (Islands) ---
+    JM: "Jamaica",
+    DO: "Dominican Republic",
+    CU: "Cuba",
+    HT: "Haiti",
+    BS: "Bahamas",
+    PR: "Puerto Rico",
+    TT: "Trinidad and Tobago",
+    BB: "Barbados",
+    LC: "Saint Lucia",
+    CW: "Curaçao",
+    AW: "Aruba",
+    KY: "Cayman Islands",
+    GD: "Grenada",
+    AG: "Antigua and Barbuda",
+    VC: "Saint Vincent and the Grenadines",
+    KN: "Saint Kitts and Nevis",
+    DM: "Dominica",
+    SX: "Sint Maarten",
+    TC: "Turks and Caicos Islands",
+    VG: "British Virgin Islands",
+    VI: "U.S. Virgin Islands"
+};
+
+export default function USHome() {
+    const [country, setCountry] = useState("United States"); // Default
+    const [debugInfo, setDebugInfo] = useState("Loading...");
 
     useEffect(() => {
         const checkLocation = async () => {
             try {
                 console.log("🇺🇸 Checking IP for US Page...");
+                
                 const res = await fetch("https://ipapi.co/json/");
                 if (!res.ok) throw new Error("API Error");
                 
                 const data = await res.json();
                 setDebugInfo(`${data.country_name} (${data.country_code})`);
 
-                // --- REDIRECT LOGIC (Wrong Country Check) ---
-                
-                // 1. Agar India se hai -> India bhejo
+                // --- 🛑 REDIRECT LOGIC (Bahar walo ko bhagao) ---
+
+                // 1. India se hai -> /in
                 if (data.country_code === 'IN') {
                     window.location.href = "/in";
-                }
-                // 2. Agar Bangladesh se hai -> BD bhejo
-                else if (data.country_code === 'BD') {
-                    window.location.href = "/bd";
-                }
-                // 3. Agar Europe se hai -> EU bhejo
-                else if (['DE', 'FR', 'IT', 'NL', 'NO', 'GB', 'ES'].includes(data.country_code)) {
-                    window.location.href = "/eu";
+                    return;
                 }
                 
-                // 4. Agar US se hai, to yahi rehne do.
-                // Note: US page aksar "Global/Default" page bhi hota hai, 
-                // isliye agar koi unknown country hai (jaise Brazil/Japan), 
-                // toh unhe yahi rehne dena safe hai.
+                // 2. Bangladesh se hai -> /bd
+                if (data.country_code === 'BD') {
+                    window.location.href = "/bd";
+                    return;
+                }
+
+                if (data.continent_code === 'EU') {
+                    window.location.href = "/eu";
+                    return;
+                }
+
+                // 4. Asia se hai (Exclude IN/BD jo upar handle ho gaye) -> /asia
+                if (data.continent_code === 'AS') {
+                    window.location.href = "/asia/thailand"; // Default Asia page
+                    return;
+                }
+
+                // 5. Africa se hai -> /af
+                if (data.continent_code === 'AF') {
+                    window.location.href = "/af";
+                    return;
+                }
+
+                const matchedCountryName = US_REGION_CODE_TO_NAME[data.country_code];
+
+                if (matchedCountryName) {
+                    
+                    setCountry(matchedCountryName);
+                } else {
+                   
+                    setCountry("United States");
+                }
 
             } catch (error) {
-                console.log("IP Check Failed");
-                setDebugInfo("Location check failed");
+                console.log("⚠️ IP Check Failed. Defaulting to US.");
+                setDebugInfo("Check Failed");
+                setCountry("United States");
             }
         };
 
         checkLocation();
     }, []);
-     return (
+         return (
          <>
              {/* <script
          dangerouslySetInnerHTML={{
@@ -109,7 +187,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                              <div className="row">
                                                  <div className="col-md-7">
                                                      <h2 data-hk="s40-1-12" className="hero__title">
-                                                         Game Development in the USA
+                                                         Game Development in the {country}
                                                      </h2>
                                                      <img
                                                          className="d-block d-md-none mb-3 w-100"
@@ -117,7 +195,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                                          alt="Poker Game"
                                                      />
                                                      <div className="hero__description">
-                                                         Create exceptional games intended for the American market.
+                                                         Create exceptional games intended for the {country} market.
                                                          Custom mobile, casino, and multiplayer game development powered by top-tier innovation.
  
                                                      </div>
@@ -134,7 +212,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                              <div className="row">
                                                  <div className="col-md-7">
                                                      <h2 data-hk="s40-1-12" className="hero__title">
-                                                         Slot Games in the USA
+                                                         Slot Games in the {country}
                                                      </h2>
                                                      <img
                                                          className="d-block d-md-none mb-3 w-100"
@@ -142,7 +220,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                                          alt="Rummy Game"
                                                      />
                                                      <div className="hero__description">
-                                                         Top-Notch Slot Game Development for the US Gaming Industry.
+                                                         Top-Notch Slot Game Development for the {country} Gaming Industry.
                                                          Profoundly engaging themes, impeccable mechanics, and safe real-money integrations.
  
                                                      </div>
@@ -159,7 +237,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                              <div className="row">
                                                  <div className="col-md-7">
                                                      <h2 data-hk="s40-1-12" className="hero__title">
-                                                         Fish Tables Game in the USA
+                                                         Fish Tables Game in the {country}
                                                      </h2>
                                                      <img
                                                          className="d-block d-md-none mb-3 w-100"
@@ -167,7 +245,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                                          alt="Ludo Game"
                                                      />
                                                      <div className="hero__description">
-                                                         High-velocity Fish Table Game Development for US Operators.
+                                                         High-velocity Fish Table Game Development for {country} Operators.
                                                          Quick gameplay, mesmerizing graphics, and fool-proof anti-fraud protection.
                                                      </div>
                                                  </div>
@@ -183,7 +261,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                              <div className="row">
                                                  <div className="col-md-7">
                                                      <h2 data-hk="s40-1-12" className="hero__title">
-                                                         Casino Games in the USA
+                                                         Casino Games in the {country}
                                                      </h2>
                                                      <img
                                                          className="d-block d-md-none mb-3 w-100"
@@ -191,7 +269,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                                          alt="Multi Game Platform"
                                                      />
                                                      <div className="hero__description">
-                                                         Complete Casino Game Development for US iGaming Brands.
+                                                         Complete Casino Game Development for {country} iGaming Brands.
                                                          RNG-certified games, cross-platform builds, and flexible gaming ecosystems.
                                                      </div>
                                                  </div>
@@ -423,17 +501,17 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                  <div className="container">
                      <h1 className="sub_title text-center">
                          <span className="yellow">Mobzway – Leading Online Gaming Software </span>{" "}
-                         <span className="black">Development Company in the USA</span>
+                         <span className="black">Development Company in the {country}</span>
                      </h1>
                      <p
                          style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                          className="content"
                      >
-                         Mobzway is a gaming software development company that is recognized and trusted globally for its performance-oriented solutions specifically for the US gaming and entertainment industry. Our proficient staff does the trick in developing custom game platforms like Poker, Rummy, Teen Patti, Ludo, Roulette, Blackjack, Slots, Fish Tables, and Casino systems from scratch for Android, iOS, and HTML5.
+                         Mobzway is a gaming software development company that is recognized and trusted globally for its performance-oriented solutions specifically for the {country} gaming and entertainment industry. Our proficient staff does the trick in developing custom game platforms like Poker, Rummy, Teen Patti, Ludo, Roulette, Blackjack, Slots, Fish Tables, and Casino systems from scratch for Android, iOS, and HTML5.
  
                      </p>
                      <p className="content" style={{ color: "#000", fontSize: 17 }}>
-                         With a robust global footprint and demonstrated expertise, we have done over 500 gaming products’ launches, served 300+ overseas clients, and have a remarkable 97% client retention rate, thus becoming one of the most trustworthy partners for gaming brands in the USA.
+                         With a robust global footprint and demonstrated expertise, we have done over 500 gaming products launches, served 300+ overseas clients, and have a remarkable 97% client retention rate, thus becoming one of the most trustworthy partners for gaming brands in the USA.
  
                      </p>
                  </div>
@@ -768,7 +846,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                  className="help_cotnent text-center"
                                  style={{ paddingBottom: 15 }}
                              >
-                                 Mobzway is known as a globally recognized provider of gaming software development solutions, whose innovative and state-of-the-art technology allows for seamless integration of superior, scalable and high-performance gaming experiences for operators and startups in the U.S. market.
+                                 Mobzway is known as a globally recognized provider of gaming software development solutions, whose innovative and state-of-the-art technology allows for seamless integration of superior, scalable and high-performance gaming experiences for operators and startups in the {country} market.
  
                              </div>
                              <div
@@ -781,7 +859,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                  className="help_cotnent text-center"
                                  style={{ paddingBottom: 35 }}
                              >
-                                 Mobzway has expertise in most of the growing gaming segments within the U.S. marketplace, including but not limited to: Slot Machines, Fish Games, Custom Gaming Solutions, and Full Casino Game Platforms.
+                                 Mobzway has expertise in most of the growing gaming segments within the {country} marketplace, including but not limited to: Slot Machines, Fish Games, Custom Gaming Solutions, and Full Casino Game Platforms.
                              </div>
                              <div
                                  className="help_cotnent text-center"
@@ -908,7 +986,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                      data-aos-duration={1000}
                                  >
                                      <li>
-                                         We offer expert-crafted gaming products that are made by the industry veterans who have extensive knowledge of both US and global gaming markets.
+                                         We offer expert-crafted gaming products that are made by the industry veterans who have extensive knowledge of both {country} and global gaming markets.
                                      </li>
                                      <li>
                                          Top-tier developers and architects are the ones who guarantee the premium quality, high performance, and smooth gameplay to all categories of games.
@@ -916,7 +994,7 @@ import { dictionary } from '../lib/i18n'; // Agar dictionary use ho rahi hai to
                                      <li>
                                          Cross-platform compatibility is offered for the games that are created for Web, Mobile, PC, and Mac thus ensuring the maximum player base.
                                      </li>
-                                     <li>Seamless integration of payment gateway that works with the major US and international payment systems.</li>
+                                     <li>Seamless integration of payment gateway that works with the major {country} and international payment systems.</li>
                                      <li>Localized game experiences are offered along with the support for regional languages and personalized options for players.</li>
                                      <li>
                                          24/7 dedicated support and monitoring are in place to ensure 99.99% uptime and thus, uninterrupted gaming operations are guaranteed.
