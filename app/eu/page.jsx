@@ -32,8 +32,69 @@ export const metadata = {
         canonical: "https://www.mobzway.com/",
     },
 };
+"use client";
+import Image from "next/image";
+import BannerForm from "../components/BannerForm"; // Path check kar lena
+import { useEffect, useState } from "react";
+
 
 export default function EuHomePage() {
+        const [country, setCountry] = useState("Malta"); 
+    const [debugInfo, setDebugInfo] = useState("Loading...");
+
+    // European Countries List (IP checking ke liye)
+    const validEuCountries = [
+        "Malta", "Germany", "France", "Italy", "Spain", "Netherlands", "Belgium", 
+        "Sweden", "Norway", "Denmark", "Finland", "Poland", "Ireland", 
+        "Switzerland", "Austria", "Portugal", "Russia", "Ukraine", 
+        "Greece", "Czech Republic", "Romania", "Hungary", "United Kingdom"
+    ];
+
+    // Country Codes mapping (Optional: Agar API codes return karti hai)
+    const EU_CODES = ['MT', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO', 'HU', 'GB'];
+
+    useEffect(() => {
+        const getCountryByIP = async () => {
+            try {
+                console.log("📡 Checking IP for Europe Page...");
+                
+                const res = await fetch("https://ipapi.co/json/");
+                if (!res.ok) throw new Error("API Error");
+
+                const data = await res.json();
+                setDebugInfo(`${data.country_name} (${data.country_code})`);
+                console.log("📍 Detected:", data.country_name);
+
+                // --- REDIRECT SAFETY LOGIC ---
+                // Agar galti se koi Asian banda /eu par aa gaya, toh wapas bhej do
+                if (data.continent_code === 'AS' || data.country_code === 'IN') {
+                     // Agar India hai to /in, warna /asia/thailand
+                     if(data.country_code === 'IN') window.location.href = "/in";
+                     else window.location.href = "/asia/thailand";
+                     return;
+                }
+
+                // Agar banda Africa se hai
+                if (data.continent_code === 'AF') {
+                    window.location.href = "/af";
+                    return;
+                }
+
+                // --- CONTENT UPDATE LOGIC ---
+                // Agar country valid European list mein hai, toh content change karo
+                if (validEuCountries.includes(data.country_name)) {
+                    setCountry(data.country_name);
+                } else {
+                    console.log("Country not in Main EU list, keeping default Malta.");
+                }
+
+            } catch (err) {
+                console.log("⚠️ IP Check Failed. Defaulting to Malta.");
+            }
+        };
+
+        getCountryByIP();
+    }, []);
     return (
         <>
 
