@@ -46,73 +46,72 @@ export default function TermsConditions() {
                 }}
             />
             {/* Banner */}
-            <section
-                alt="Terms & Conditions"
-                className="banner pokers position-relative"
-                style={{
-                    backgroundImage:
-                        'url("/assets/images/terms_conditions.jpg")'
-                }}
-            >
-                <div className="overlay" />
-                <div className="wel_come_container thank_you_welcome_container">
-                    <h1 className="welcome_text career_banner_text">Terms and Conditions</h1>
+<section
+    className="same_content_sec"
+    style={{
+        backgroundImage: 'url("/assets/images/comman_bg.png")'
+    }}
+>
+    <div className="container">
+        <div className="row">
+            <div className="col-md-12">
+                <div
+                    data-aos="fade-right"
+                    data-aos-duration={1500}
+                    data-aos-once="true"
+                >
+                    <h2 className="sub_title text-center">
+                        <span className="yellow"> Rules</span>{" "}
+                        <span className="black">&amp; Regulations</span>
+                    </h2>
                 </div>
-            </section>
-            {/* same_content_sec */}
-            <section
-                className="same_content_sec"
-                style={{
-                    backgroundImage: 'url("/assets/images/comman_bg.png")'
-                }}
-            >
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div
-                                data-aos="fade-right"
-                                data-aos-duration={1500}
-                                data-aos-once="true"
-                            >
-                                <h2 className="sub_title text-center">
-                                    <span className="yellow"> Rules</span>{" "}
-                                    <span className="black">&amp; Regulations</span>
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="col-md-12 ">
-                            <div className="">
-                                <p className="para_content">
-Mobzway Technologies specializes in gaming software designed mostly for entertainment, technology, and business solution needs. The Client agrees to make use of the software in conformity with all relevant laws and regulations governing the countries of operation.
-Mobzway does not operate, manage, nor control any of the gaming, betting, and gambling business activities carried out by the Client.
+            </div>
+            <div className="col-md-12 ">
+                <div className="para_content">
+                    <p>
+                        Mobzway Technologies specializes in gaming software designed mostly for entertainment, technology, and business solution needs. The Client agrees to make use of the software in conformity with all relevant laws and regulations governing the countries of operation. 
+                        <strong> Mobzway does not operate, manage, nor control any of the gaming, betting, and gambling business activities carried out by the Client.</strong>
+                    </p>
 
-                                    <br />
-                                    <br />
-The Client is solely responsible for:
-Legal operation of the gaming platforms in their target locations
-Clients should not use Mobzway software in countries or regions where gaming or betting is considered illegal or restricted by local laws.
-Additionally, Mobzway does not offer legal licensing, legal approvals, or legal advisory services. All licensing, legal certification, and legal compliance fall within the Client's responsibility.
-                                    <br />
-                                    <br />
-Mobzway does not provide legal licensing, regulatory approvals, or legal advisory services. The Client must handle all licensing requirements and certification obligations together with regulatory compliance duties.
-Mobzway Technologies bears no responsibility for any legal or regulatory issues, compliance problems, or operational difficulties that the Client encounters across different jurisdictions.
-Mobzway will not take responsibility for any damages which either directly or indirectly create special or incidental results that follow from using its software products and platforms and services.
-The Client accepts to receive various communication methods which include emails and calls and messages when they use Mobzway websites and applications and platforms.
-Service updates
-Account information
-Marketing or promotional communication
-Clients may opt out of marketing communications by contacting at{" "}
-                                    <b>info@mobzway.com</b>
-                                    <br />
-                                    <br />
+                    <h4>Regulatory Compliance Responsibility</h4>
+                    <p>The Client is solely responsible for:</p>
+                    <ul>
+                        <li>Legal operation of the gaming platforms in their target locations.</li>
+                        <li>Ensuring they do not use Mobzway software in countries or regions where gaming or betting is considered illegal or restricted by local laws.</li>
+                    </ul>
 
-All client information is treated as confidential and handled according to applicable data protection laws. Information may only be disclosed if required by law or regulatory authorities.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <h4>Licensing &amp; Legal Permissions</h4>
+                    <p>
+                        Mobzway does not offer legal licensing, legal approvals, or legal advisory services. All licensing, legal certification, and legal compliance fall within the Client's responsibility. The Client must handle all licensing requirements and certification obligations together with regulatory compliance duties.
+                    </p>
+
+                    <h4>Limitation of Liability</h4>
+                    <p>
+                        Mobzway Technologies bears no responsibility for any legal or regulatory issues, compliance problems, or operational difficulties that the Client encounters across different jurisdictions. Mobzway will not take responsibility for any damages which either directly or indirectly create special or incidental results that follow from using its software products, platforms, and services.
+                    </p>
+
+                    <h4>Communication Consent</h4>
+                    <p>
+                        The Client accepts to receive various communication methods which include emails, calls, and messages when they use Mobzway websites, applications, and platforms for:
+                    </p>
+                    <ul>
+                        <li>Service updates</li>
+                        <li>Account information</li>
+                        <li>Marketing or promotional communication</li>
+                    </ul>
+                    <p>
+                        Clients may opt out of marketing communications by contacting: <b>info@mobzway.com</b>
+                    </p>
+
+                    <h4>Data Privacy</h4>
+                    <p>
+                        All client information is treated as confidential and handled according to applicable data protection laws. Information may only be disclosed if required by law or regulatory authorities.
+                    </p>
                 </div>
-            </section>
+            </div>
+        </div>
+    </div>
+</section>
             {/*-------------How We Can Help------------------*/}
             <section
                 className="how_we_canhelp"
