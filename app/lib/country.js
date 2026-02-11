@@ -1,4 +1,4 @@
-import { headers } from 'next/headers';
+/*import { headers } from 'next/headers';
 
 export async function getCountryName() {
   // 1. Production Check (Vercel/AWS Headers)
@@ -26,4 +26,4 @@ export async function getCountryName() {
     console.log("IP API Failed:", error);
     return 'IN'; // Default fallback
   }
-}
+}*/

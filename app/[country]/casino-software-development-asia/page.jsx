@@ -1,7 +1,7 @@
 import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
-export async function generateMetadata() {
+/*export async function generateMetadata() {
     const country = getCountryName();
 
     return {
@@ -9,7 +9,7 @@ export async function generateMetadata() {
         description: `Mobzway is leading casino software development company in ${{country}} offering slots, live casino, and custom iGaming platforms. Hire Casino Game Developers today`,
         keywords: [`Casino software development company in ${country}`],
     };
-}
+}*/
 const COUNTRY_CODE_TO_NAME = {
     // South Asia (Minus India & Bangladesh)
     PK: "Pakistan",
