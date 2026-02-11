@@ -1,4 +1,4 @@
-import { getCountryFromIP } from '@/app/lib/country';
+import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 
 // export const metadata = {
@@ -25,7 +25,7 @@ export async function generateMetadata() {
 }
 
 export default function SportsbookSoftwareDevelopment() {
-    const country = getCountryFromIP();
+    const country = getCountryName();
 
     return (
         <>

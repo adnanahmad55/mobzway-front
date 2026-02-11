@@ -1,6 +1,6 @@
 import { headers } from 'next/headers';
 
-export async function getCountryFromIP() {
+export async function getCountryName() {
   // 1. Production Check (Vercel/AWS Headers)
   try {
     const headerList = headers();
