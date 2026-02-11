@@ -1,5 +1,8 @@
 //import { getCountryName } from '@/app/lib/country';
+"use client";
 import React from 'react'
+import BannerForm from "../../components/BannerForm"; 
+import { useEffect, useState } from "react";
 
 /*export async function generateMetadata() {
     const country = getCountryName();
