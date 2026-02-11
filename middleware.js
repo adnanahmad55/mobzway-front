@@ -1,32 +1,18 @@
 import { NextResponse } from 'next/server';
 
-// 1. Dynamic Asia Routing (Country Code -> Folder Slug)
-const ASIA_SLUGS = {
-  CN: 'china', 
-  JP: 'japan', 
-  KR: 'southkorea', 
-  PK: 'pakistan', 
-  TH: 'thailand', 
-  VN: 'vietnam', 
-  MY: 'malaysia', 
-  SG: 'singapore', 
-  ID: 'indonesia', 
-  PH: 'philippines', 
-  AE: 'uae', 
-  SA: 'saudiarabia',
-  LK: 'srilanka', 
-  NP: 'nepal', 
-  TW: 'taiwan', 
-  HK: 'hongkong'
-};
+// 1. Asia Codes (ASIA_SLUGS hata diya kyunki use nahi ho rha tha)
+const ASIA_CODES = [
+  'CN', 'JP', 'KR', 'PK', 'TH', 'VN', 'MY', 'SG', 'ID', 'PH', 
+  'AE', 'SA', 'LK', 'NP', 'TW', 'HK'
+];
 
-// 2. Europe Region (EU) - Norway (NO) included here!
+// 2. Europe Region
 const EUROPEAN_COUNTRIES = [
   'FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 
   'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO', 'HU'
 ]; 
 
-// 3. Africa Region (AF)
+// 3. Africa Region
 const AFRICAN_COUNTRIES = [
   'ZA', 'EG', 'NG', 'KE', 'GH', 'MA', 'TZ', 'UG', 'ZW', 'ET', 
   'DZ', 'SD', 'AO', 'MZ', 'CI', 'CM', 'SN'
@@ -35,46 +21,57 @@ const AFRICAN_COUNTRIES = [
 export function middleware(request) {
   const { pathname, searchParams } = request.nextUrl;
 
-  // Sirf Home Page ('/') par redirect logic chalega
   if (pathname === '/') {
     
-    // Country Detect Karo (Query Param 'c' se testing ke liye, ya Vercel Header se)
-    let country = searchParams.get('c') || request.geo?.country || request.headers.get('x-vercel-ip-country') || 'TH';
+    // --- 🚨 PRODUCTION CHANGE HERE 🚨 ---
     
-    country = country.toUpperCase(); // Ensure uppercase (e.g., 'no' -> 'NO')
-    
-    console.log(`🛡️ Middleware Detected Country: ${country}`);
+    let country = 
+      // 1. Manual Testing (?c=US) - Ye production me debugging ke liye rakh sakte ho
+      searchParams.get('c') || 
+      
+      // 2. Vercel & Next.js Edge
+      request.geo?.country || 
+      request.headers.get('x-vercel-ip-country') || 
+      
+      // 3. AWS CloudFront (Agar AWS use kar rahe ho)
+      request.headers.get('cloudfront-viewer-country') ||
 
-    // --- PRIORITY 1: VIP COUNTRIES (Fixed Folders) ---
+      // 4. Azure / Cloudflare (Agar Azure Front Door ya CF use ho raha h)
+      request.headers.get('cf-ipcountry') || 
+      
+      // 5. Default Fallback (Agar IP detect na ho to India ya Thailand bhejo)
+      'IN'; 
+    
+    // Country code ko clean karo
+    country = country ? country.toUpperCase().trim() : 'IN';
+    
+    console.log(`🛡️ Live User Country: ${country}`);
+
+    // --- PRIORITY 1: VIP COUNTRIES ---
     if (country === 'IN') return NextResponse.redirect(new URL('/in', request.url));
     if (country === 'US') return NextResponse.redirect(new URL('/us', request.url));
-    if (country === 'GB') return NextResponse.redirect(new URL('/uk', request.url)); // GB = United Kingdom
+    if (country === 'GB') return NextResponse.redirect(new URL('/uk', request.url)); 
     if (country === 'BD') return NextResponse.redirect(new URL('/bd', request.url));
 
-    // --- PRIORITY 2: REGIONS (Europe & Africa) ---
-    
-    // Agar Norway (NO) ya koi bhi EU country hai -> /eu par bhejo
+    // --- PRIORITY 2: REGIONS ---
     if (EUROPEAN_COUNTRIES.includes(country)) {
         return NextResponse.redirect(new URL('/eu', request.url));
     }
-
-    // Agar Africa list mein hai -> /af par bhejo
     if (AFRICAN_COUNTRIES.includes(country)) {
         return NextResponse.redirect(new URL('/af', request.url));
     }
 
     // --- PRIORITY 3: DYNAMIC ASIA ROUTES ---
-    // Agar Asia list mein hai -> /asia/country-name
-    if (ASIA_SLUGS[country]) {
-        return NextResponse.redirect(new URL(`/asia/${ASIA_SLUGS[country]}`, request.url));
+    if (ASIA_CODES.includes(country)) {
+        return NextResponse.redirect(new URL(`/${country.toLowerCase()}`, request.url));
     }
-
-    // --- PRIORITY 4: DEFAULT FALLBACK ---
-    // Agar Antarctica, Brazil, Australia se koi aaya -> Default Thailand
-    console.log(`⚠️ No specific route for ${country}. Fallback to Asia.`);
-    return NextResponse.redirect(new URL('/asia/asia', request.url));
+    
+    // --- PRIORITY 4: FINAL FALLBACK ---
+    // Agar country kisi list me nahi mili (e.g. Antarctica, Australia)
+    console.log(`⚠️ Unmatched Country: ${country}. Fallback to /asia`);
+    return NextResponse.redirect(new URL('/asia', request.url));
   }
-
+  
   return NextResponse.next();
 }
 

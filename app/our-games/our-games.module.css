@@ -1,0 +1,144 @@
+.desktopversion .imgminheight {
+    margin-top: 10px;
+    min-height: 150px;
+}
+
+.desktopversion .imgminheight img {
+    width: 140px;
+}
+
+.skill-games-items {
+    border: 1px solid #fcd10a;
+}
+
+.skill-games-items *,
+.skill-games-items {
+    transition: all .4s linear;
+}
+
+.skill-games-items:hover {
+    background: #fcd10a !important;
+}
+
+.skill-games-items:hover img {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.rng_game_item {
+    box-shadow: 0 .5rem 1rem #00000026;
+    border-radius: 19px;
+    cursor: pointer;
+}
+
+.rng_game_item img {
+    border-radius: 19px;
+}
+
+.rng-game-text {
+    padding: 15px;
+    font-size: 18px !important;
+    font-weight: 600;
+}
+
+.rng-game-icon::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    visibility: hidden;
+    border-radius: 17px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s ease 0s;
+}
+
+/* .rng_game_item:hover .rng-game-icon::after {
+  visibility: visible;
+  opacity: 1;
+} */
+.header-shrink {
+    box-shadow: 0 0 10px #000;
+    background-color: #202020;
+}
+
+.rng_games_block .col-lg-4.mb-4 {
+    margin-bottom: 30px !important;
+}
+
+.game_info,
+.try_demo_link {
+    background: rgb(0, 0, 0);
+    border: 1px solid;
+    border-color: #000;
+    font-size: 14px;
+    border-radius: 25px;
+    color: #fff;
+    padding: 5px 8px;
+    min-width: 85px;
+    text-align: center;
+    transition: all .4s linear;
+    opacity: 0;
+}
+
+.rng_game_item .game_info,
+.rng-game-icon:hover .try_demo_link {
+    opacity: 1;
+}
+
+.game_info:hover {
+    background: transparent;
+    color: #000;
+}
+
+.try_demo_link {
+    background: #fcd10a;
+    border-color: #fcd10a !important;
+    color: #000 !important;
+    box-shadow: 0 0px 10px #000;
+}
+
+
+.try_demo_link {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+}
+
+.try_demo_link svg {
+    fill: #000;
+    width: 7px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+.try_demo_link:hover svg {
+    fill: #000;
+}
+
+.skill-games-contact {
+    display: block !important;
+}
+
+.skill-games-contact-none {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+
+    .skill-games-contact-none-mb,
+    .skill-games-contact {
+        display: none !important;
+    }
+
+    .skill-games-contact-mb {
+        display: block !important;
+    }
+
+}
