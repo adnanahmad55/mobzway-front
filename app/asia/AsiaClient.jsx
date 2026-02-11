@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import BannerForm from "../../components/BannerForm"; 
+import BannerForm from "../components/BannerForm"; 
 import { useEffect, useState } from "react";
 
 // export const metadata = {
