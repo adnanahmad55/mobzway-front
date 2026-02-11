@@ -13,8 +13,11 @@ import { languages } from '../lib/i18n';
 export default function Header() {
     const pathname = usePathname();
     const [open, setOpen] = useState(false);
-
-    const country = pathname.split("/")[1] || "default";
+const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
+if (ASIA_CODES.includes(country)) {
+        country = 'asia'; // Forcefully 'asia' set kar diya
+    }
+    //const country = pathname.split("/")[1] || "default";
 
     const menu = menuData[country] || menuData.default;
 

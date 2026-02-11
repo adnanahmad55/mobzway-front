@@ -254,7 +254,7 @@ export default function Footer() {
                         <div className="col-md-7">
                             <div className="copy_right">
                                 <p>
-                                    © 2015 - 2021 By{" "}
+                                    © 2015 - 2026 By{" "}
                                     <Link
                                         className="text-white"
                                         href="/"
