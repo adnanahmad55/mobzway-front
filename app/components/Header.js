@@ -222,7 +222,9 @@ if (ASIA_CODES.includes(country)) {
         if (country === 'asia' && item.path?.includes('ludo-game-development')) {
             finalPath = '/ludo-game-development/';
         }
-
+        if (item.path?.includes('slot-game-development')) {
+            finalPath = '/slot-game-development/';
+        }
         return (
             <li key={i} className={item.children ? "has_child" : ""}>
                 {item.path ? (
