@@ -231,6 +231,15 @@ if (ASIA_CODES.includes(country)) {
             finalPath = '/slot-game-development-company-in-usa/';
         }
     }
+    if (country === 'eu' || country === 'europe') {
+    if (item.path?.includes('slot-game-development')) {
+        finalPath = '/slot-game-development-company-in-europe/';
+    }
+
+    if (item.path?.includes('ludo-game-development')) {
+        finalPath = '/ludo-game-development-company-in-europe/';
+    }
+}
         return (
             <li key={i} className={item.children ? "has_child" : ""}>
                 {item.path ? (
