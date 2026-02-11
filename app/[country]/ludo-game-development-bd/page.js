@@ -155,10 +155,10 @@ export default function LudoGameDevelopment() {
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway is a highly regarded Ludo game development company in {country} that offers innovative, tailored, and multiplayer Ludo game solutions for startups, businessmen, and even large firms. With a decade-long experience in the real-time gaming industry, we are now able to create cutting-edge Ludo applications and Ludo board games that not only maintain the high performance but also provide the users with smooth gameplay, scalability, and lots of fun interacting with the system.
+                        Mobzway is a highly regarded Ludo game development company in Bangladesh that offers innovative, tailored, and multiplayer Ludo game solutions for startups, businessmen, and even large firms. With a decade-long experience in the real-time gaming industry, we are now able to create cutting-edge Ludo applications and Ludo board games that not only maintain the high performance but also provide the users with smooth gameplay, scalability, and lots of fun interacting with the system.
                     </p>
                     <p className="content" style={{ color: "#000", fontSize: 17 }}>
-                        Whether you are looking for a custom Ludo game development company in {country}, a white-label Ludo solution, or a real-money Ludo platform, the group of our professional developers works according to the specific needs of the rapidly evolving mobile gaming market in {country}.
+                        Whether you are looking for a custom Ludo game development company in Bangladesh, a white-label Ludo solution, or a real-money Ludo platform, the group of our professional developers works according to the specific needs of the rapidly evolving mobile gaming market in {country}.
                     </p>
                 </div>
             </section>
@@ -209,7 +209,7 @@ export default function LudoGameDevelopment() {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title cards text-center">
-                                                Local User {country}-Centric UI/UX
+                                                Local User Bangladesh-Centric UI/UX
                                             </h5>
                                             <p className="card-text text-center text-dark">
                                                 The Ludo games we develop are the ones that the Bangladesh players would love most:
@@ -1068,7 +1068,7 @@ export default function LudoGameDevelopment() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Hire Dedicated </span>{" "}
-                                <span className="black">Ludo Game Developers in {country}</span>
+                                <span className="black">Ludo Game Developers in Bangladesh</span>
                                 {/*2*/}
                             </h2>
                         </div>

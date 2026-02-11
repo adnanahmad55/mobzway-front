@@ -557,9 +557,7 @@ export default function SlotGameDevelopment() {
 
                                     </ul>
                                 </div>
-                                <div class="col-md-4">
-
-
+                                <div className="col-md-4">
                                     <br />
                                     <br />
                                     <h4 className="new-head">
@@ -597,7 +595,7 @@ export default function SlotGameDevelopment() {
 
                                 </div>
 
-                                <div class="col-md-4">
+                                <div className="col-md-4">
 
 
                                     <br />
@@ -847,7 +845,7 @@ export default function SlotGameDevelopment() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Reasons to Trust Mobzway</span>{" "}
-                                <span className="black"> for Hire Game Developers in India</span>
+                                <span className="black"> for Hire Game Developers in Bangladesh</span>
                             </h2>
                         </div>
                     </div>
@@ -1041,7 +1039,7 @@ export default function SlotGameDevelopment() {
                             <h2 className="sub_title">
                                 <span className="black_bg_head_yellow">Hire The Best Game </span>{" "}
                                 <span className="black_bg_head_white">
-                                    Developers In India Today
+                                    Developers In Bangladesh Today
                                 </span>
                             </h2>
                         </div>
@@ -1057,7 +1055,7 @@ export default function SlotGameDevelopment() {
                                 fontSize: "1.30rem !important"
                             }}
                         >
-                            Mobzway has the best-trained and experienced game development talent in India, and if you are ready to build a new game or improve upon your current game, we want to partner with you to provide you with world-class gaming solutions.
+                            Mobzway has the best-trained and experienced game development talent in Bangladesh, and if you are ready to build a new game or improve upon your current game, we want to partner with you to provide you with world-class gaming solutions.
                         </h3>
                     </div>
                     <div className="text-center">
