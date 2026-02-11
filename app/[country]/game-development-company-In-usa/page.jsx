@@ -27,7 +27,7 @@ export default function GameDevelopmentCompanyInUSA() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Game development company in USA | Game development Service
+                        Game development company in USA | Game development Service in USA
                     </h1>
 
                     <div className="btn_outer">
