@@ -213,39 +213,53 @@ if (ASIA_CODES.includes(country)) {
                     <div className="left_nav mt-3">
                         <ul id="menu-header-menu" className="d-flex desktop_menu">
 
-                            {menu.map((item, i) => (
-                                <li key={i} className={item.children ? "has_child" : ""}>
-                                    {item.path ? (
-                                        <Link href={`/${country}${item.path}`}>{item.label}</Link>
-                                    ) : (
-                                        <a href="#">{item.label}</a>
-                                    )}
+  {menu.map((item, i) => {
+        
+        // 1. Logic: Default path set karo
+        let finalPath = item.path;
 
-                                    {item.children && (
-                                        <ul className="sub-menu">
-                                            {item.children.map((child, j) => (
-                                                <li key={j} className={child.children ? "has_child" : ""}>
-                                                    {child.path ? (
-                                                        <Link href={`/${country}${child.path}`}>{child.label}</Link>
-                                                    ) : (
-                                                        <a href="#">{child.label}</a>
-                                                    )}
+        // 2. Condition: Agar Asia hai aur Ludo wala link hai, to path change karo
+        if (country === 'asia' && item.path?.includes('ludo-game-development')) {
+            finalPath = '/ludo-game-development/';
+        }
 
-                                                    {child.children && (
-                                                        <ul className="sub-menu">
-                                                            {child.children.map((sub, k) => (
-                                                                <li key={k}>
-                                                                    <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    )}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </li>
-                            ))}
+        return (
+            <li key={i} className={item.children ? "has_child" : ""}>
+                {item.path ? (
+                    // 3. Yahan humne 'item.path' ki jagah 'finalPath' use kiya
+                    <Link href={`/${country}${finalPath}`}>{item.label}</Link>
+                ) : (
+                    <a href="#">{item.label}</a>
+                )}
+
+                {/* Sub-menu wala code same rahega */}
+                {item.children && (
+                    <ul className="sub-menu">
+                        {item.children.map((child, j) => (
+                            <li key={j} className={child.children ? "has_child" : ""}>
+                                {child.path ? (
+                                    <Link href={`/${country}${child.path}`}>{child.label}</Link>
+                                ) : (
+                                    <a href="#">{child.label}</a>
+                                )}
+
+                                {/* Sub-sub-menu logic same rahega */}
+                                {child.children && (
+                                    <ul className="sub-menu">
+                                        {child.children.map((sub, k) => (
+                                            <li key={k}>
+                                                <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </li>
+        );
+    })}
 
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
