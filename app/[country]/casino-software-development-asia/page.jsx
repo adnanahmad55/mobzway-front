@@ -10,9 +10,120 @@ export async function generateMetadata() {
         keywords: [`Casino software development company in ${country}`],
     };
 }
+const COUNTRY_CODE_TO_NAME = {
+    // South Asia (Minus India & Bangladesh)
+    PK: "Pakistan",
+    LK: "Sri Lanka",
+    NP: "Nepal",
+    BT: "Bhutan",
+    MV: "Maldives",
+    AF: "Afghanistan",
 
+    // South East Asia
+    TH: "Thailand",
+    SG: "Singapore",
+    VN: "Vietnam",
+    ID: "Indonesia",
+    PH: "Philippines",
+    MY: "Malaysia",
+    KH: "Cambodia",
+    LA: "Laos",
+    MM: "Myanmar",
+    BN: "Brunei",
+    TL: "Timor-Leste",
+
+    // East Asia
+    CN: "China",
+    JP: "Japan",
+    KR: "South Korea",
+    KP: "North Korea",
+    TW: "Taiwan",
+    MN: "Mongolia",
+    HK: "Hong Kong",
+    MO: "Macau",
+
+    // West Asia (Middle East)
+    AE: "UAE",
+    SA: "Saudi Arabia",
+    QA: "Qatar",
+    KW: "Kuwait",
+    BH: "Bahrain",
+    OM: "Oman",
+    YE: "Yemen",
+    IL: "Israel",
+    JO: "Jordan",
+    LB: "Lebanon",
+    SY: "Syria",
+    IQ: "Iraq",
+    IR: "Iran",
+    PS: "Palestine",
+    TR: "Turkey", 
+    CY: "Cyprus",
+
+    // Central Asia
+    KZ: "Kazakhstan",
+    UZ: "Uzbekistan",
+    TM: "Turkmenistan",
+    KG: "Kyrgyzstan",
+    TJ: "Tajikistan",
+
+    // Caucasus
+    AZ: "Azerbaijan",
+    AM: "Armenia",
+    GE: "Georgia"
+};
 export default function CasinoSoftwareDevelopmentAsia() {
-    const country = getCountryName();
+    //const country = getCountryName();
+      const [country, setCountry] = useState("Asia");
+    
+        const validAsianCountries = [
+        // South Asia
+        "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives", "Afghanistan",
+        
+        // South East Asia
+        "Thailand", "Singapore", "Vietnam", "Indonesia", "Philippines", "Malaysia", "Cambodia", "Laos", "Myanmar", "Brunei", "Timor-Leste",
+        
+        // East Asia
+        "China", "Japan", "South Korea", "North Korea", "Taiwan", "Mongolia", "Hong Kong", "Macau",
+        
+        // West Asia
+        "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Yemen", "Israel", "Jordan", "Lebanon", "Syria", "Iraq", "Iran", "Palestine", "Turkey", "Cyprus",
+        
+        // Central Asia
+        "Kazakhstan", "Uzbekistan", "Turkmenistan", "Kyrgyzstan", "Tajikistan",
+        
+        // Caucasus
+        "Azerbaijan", "Armenia", "Georgia"
+    ];
+    
+        useEffect(() => {
+            const getCountryByIP = async () => {
+                try {
+                    console.log("📡 Checking IP Location...");
+                    
+                    
+                    const res = await fetch("https://ipapi.co/json/");
+                    
+                   
+                    if (!res.ok) throw new Error("API Limit or Error");
+    
+                    const data = await res.json();
+                    console.log("📍 IP Detected Country:", data.country_name);
+    
+                    
+                    if (validAsianCountries.includes(data.country_name)) {
+                        setCountry(data.country_name);
+                    } else {
+                        console.log("🛑 Country not in allowed list (e.g. India/USA). Keeping Default: Asia.");
+                    }
+                } catch (err) {
+                    console.log("⚠️ IP Fallback Failed or Adblocker blocked request. Defaulting to Asia.");
+                }
+            };
+    
+    
+            getCountryByIP();
+        }, []); 
     return (
         <>
 
