@@ -1,19 +1,23 @@
-// 1. Dhyan dena: Path '../asia/AsiaClient' tumhare folder structure ke hisab se change ho sakta hai
-// Agar ye file 'app/[country]/' mein hai aur component 'app/asia/' mein, to '../asia' sahi hai.
-import AfHomepage from "../asia/AsiaClient"; 
+import AfHomepage from "../asia/AsiaClient"; // Path check kar lena
 import { notFound } from "next/navigation";
 
-// Jo countries allow karni hain unki list
-const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my']; 
+const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
 
-export default function CountryDynamicPage({ params }) {
-  // 2. Security Check: Agar koi galat country dale (e.g. /usa) to 404 dikhao
-  if (!ASIA_CODES.includes(params.country)) {
+// 1. Function ko 'async' banao
+export default async function CountryDynamicPage({ params }) {
+  
+  // 2. Params ko 'await' karo (Next.js 15+ mein zaroori hai)
+  const resolvedParams = await params;
+  const country = resolvedParams.country;
+
+  // Debugging ke liye: Console mein check karo kya aa raha hai
+  console.log("Requested Country:", country);
+
+  // 3. Check karo
+  if (!ASIA_CODES.includes(country)) {
     return notFound();
   }
 
-  // 3. Magic: Wahi same 'AfHomepage' component return kar do
-  // Isse content wahi 'Asia' wala dikhega, par URL '/sg' rahega
   return (
     <div>
        <AfHomepage />
