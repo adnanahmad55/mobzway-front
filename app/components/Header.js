@@ -225,6 +225,12 @@ if (ASIA_CODES.includes(country)) {
         if (item.path?.includes('slot-game-development')) {
             finalPath = '/slot-game-development/';
         }
+        if (country === 'us') {
+        // Agar USA hai aur Slot game wala link hai
+        if (item.path?.includes('slot-game-development')) {
+            finalPath = '/slot-game-development-company-in-usa/';
+        }
+    }
         return (
             <li key={i} className={item.children ? "has_child" : ""}>
                 {item.path ? (
