@@ -71,8 +71,8 @@ export function middleware(request) {
 
     // --- PRIORITY 4: DEFAULT FALLBACK ---
     // Agar Antarctica, Brazil, Australia se koi aaya -> Default Thailand
-    console.log(`⚠️ No specific route for ${country}. Fallback to Thailand.`);
-    return NextResponse.redirect(new URL('/asia/', request.url));
+    console.log(`⚠️ No specific route for ${country}. Fallback to Asia.`);
+    return NextResponse.redirect(new URL('/asia/asia', request.url));
   }
 
   return NextResponse.next();
