@@ -152,7 +152,7 @@ export default function SportsbookSoftwareDevelopment() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Sportsbook software development company {country} | Mobzway
+                        Sportsbook software development company in {country} | Mobzway
                     </h1>
 
                     <div className="btn_outer">
