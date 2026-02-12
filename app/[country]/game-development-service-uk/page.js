@@ -432,30 +432,7 @@ export default function GameDevelopmentServiceUk() {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-6 col1">
-                            <div className="row">
-                                <div className="col-md-12 col-sm-12 col-12 d-flex justify-content-center">
-                                    <div className="image_area">
-                                        <img
-                                            width={1600}
-                                            height={900}
-                                            alt="Multi-Language"
-                                            src="/assets/images/rummy-game-development/r06.webp"
-                                            className="img-lazy"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Our Games' Key Features</h3>
-                                </div>
-                                <div className="col-md-12">
-                                    <p>
-                                        Top-notch graphics and animations, Gameplay that is smooth and very responsive, Support for many languages, Analytics and tracking in the game, Updates and scalability are done regularly
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
+                
 
 
 
@@ -475,8 +452,8 @@ export default function GameDevelopmentServiceUk() {
         data-aos-once="true"
       >
         <h2 className="sub_title">
-          <span className="yellow">Key Features of </span>{" "}
-          <span className="black">Our Games</span>
+          <span className="yellow">Our Games </span>{" "}
+          <span className="black">Key Features</span>
         </h2>
       </div>
     </div>
