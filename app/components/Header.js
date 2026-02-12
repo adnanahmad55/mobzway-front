@@ -260,6 +260,15 @@ export default function Header() {
                                         finalPath = '/sportsbook-software-development-eu/';
                                     }
                                 }
+                                if (menuKey === 'uk') {
+                                   if (item.path?.includes('casino-game-development')) {
+                                       finalPath = '/casino-game-development-company-in-uk/'; // Ya jo bhi tumhara UK wala URL ho
+                                   }
+                                   // Agar Ludo ke liye bhi chahiye:
+                                   if (item.path?.includes('ludo-game-development')) {
+                                       finalPath = '/ludo-game-development-uk/';
+                                   }
+                               }                               
 
                                 return (
                                     <li key={i} className={item.children ? "has_child" : ""}>
