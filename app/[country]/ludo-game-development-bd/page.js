@@ -1529,7 +1529,7 @@ export default function LudoGameDevelopment() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">HIRE</span>{" "}
-                                <span className="black">LUDO GAME DEVELOPER</span>
+                                <span className="black">LUDO GAME DEVELOPER IN Bangladesh</span>
                                 {/*2*/}
                             </h2>
                         </div>
@@ -1538,9 +1538,9 @@ export default function LudoGameDevelopment() {
                         <div className="col-md-6 col1 wow bounceInUp" data-wow-duration="2s">
                             <p className="hire-para">
                                 Mobzway stands out as one of the premier Ludo game development
-                                platforms in India, providing unparalleled convenience to aspiring
+                                platforms in Bangladesh, providing unparalleled convenience to aspiring
                                 gaming entrepreneurs and established businesses alike. When you hire
-                                a dedicated Ludo game developer in India through us, you're choosing
+                                a dedicated Ludo game developer in Bangladesh through us, you're choosing
                                 a path towards customized excellence.
                                 <br />
                                 <br />
