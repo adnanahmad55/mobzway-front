@@ -3,37 +3,39 @@ import Image from "next/image";
 import BannerForm from "../components/BannerForm"; 
 import { useEffect, useState } from "react";
 
-// export const metadata = {
-//     title: "Mobzway - Online Gaming Software Development Company",
-//     description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-//     keywords: "Gaming Software Development, Gaming Software Developers, Gaming Software Providers",
-//     openGraph: {
-//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-//         url: "https://www.mobzway.com/",
-//         siteName: "Mobzway Technologies",
-//         images: [
-//             {
-//                 url: "https://www.mobzway.com/assets/images/homepage_banner.avif",
-//                 width: 815,
-//                 height: 821,
-//                 alt: "mobzway",
-//                 type: "image/jpg",
-//             },
-//         ],
-//     },
-//     twitter: {
-//         card: "summary_large_image",
-//         title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-//         description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-//         site: "@mobzway",
-//         creator: "@mobzway",
-//         images: ["https://www.mobzway.com/assets/images/homepage_banner.avif"],
-//     },
-//     alternates: {
-//         canonical: "https://www.mobzway.com/",
-//     },
-// };
+export const metadata = {
+    title: "Mobzway - Online Gaming Software Development Company in Asia",
+    description: "Mobzway is a leading gaming software development company in Asia. We provide custom poker, casino, rummy, Ludo, and Teen Patti gaming software solutions across Asian markets.",
+    keywords: "Gaming Software Development Asia, Gaming Software Developers Asia, Gaming Software Providers Asia, Online Casino Software Asia",
+    openGraph: {
+        title: "Mobzway - Online Gaming Software Development Company Asia | Gaming Software Provider",
+        description: "Mobzway is a leading gaming software development company in Asia. We provide custom poker, casino, rummy, Ludo, and Teen Patti gaming software solutions across Asian markets.",
+        url: "https://www.mobzway.com/asia",
+        siteName: "Mobzway Technologies",
+        images: [
+            {
+                url: "https://www.mobzway.com/assets/images/homepage_banner.avif",
+                width: 815,
+                height: 821,
+                alt: "mobzway asia",
+                type: "image/jpg",
+            },
+        ],
+        locale: "en_us", 
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Mobzway - Online Gaming Software Development Company Asia",
+        description: "Mobzway is a leading gaming software development company in Asia. We provide custom poker, casino, rummy, Ludo, and Teen Patti gaming software solutions.",
+        site: "@mobzway",
+        creator: "@mobzway",
+        images: ["https://www.mobzway.com/assets/images/homepage_banner.avif"],
+    },
+    alternates: {
+        canonical: "https://www.mobzway.com/asia",
+    },
+};
 
 const COUNTRY_CODE_TO_NAME = {
     // South Asia (Minus India & Bangladesh)
