@@ -445,7 +445,14 @@ export default function GameDevelopmentServiceUk() {
                                         />
                                     </div>
                                 </div>
-                           
+                                <div className="col-md-12 col-sm-12 col-12">
+                                    <h3 className='text-center'>Our Games' Key Features</h3>
+                                </div>
+                                <div className="col-md-12">
+                                    <p>
+                                        Top-notch graphics and animations, Gameplay that is smooth and very responsive, Support for many languages, Analytics and tracking in the game, Updates and scalability are done regularly
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
@@ -456,15 +463,83 @@ export default function GameDevelopmentServiceUk() {
                     </div>
                 </div>
             </section>
+<section className="developer" style={{ padding: "60px 0" }}>
+  <div className="container c-1">
+    
+    {/* --- Heading --- */}
+    <div className="col-md-12 text-center mb-5">
+      <div
+        className="aos-init"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
+        <h2 className="sub_title">
+          <span className="yellow">Key Features of </span>{" "}
+          <span className="black">Our Games</span>
+        </h2>
+      </div>
+    </div>
 
-<section className="key-features">
-   <div className="container">
-       <h2>Our Games' Key Features</h2>
-       {/* Woh content yahan paste karein jo upar se cut kiya tha */}
-       <p>Top-notch graphics, Smooth gameplay, etc...</p>
-   </div>
+    {/* --- Content Area --- */}
+    <div className="row row1 align-items-center">
+      
+      {/* Left Side: Features List */}
+      <div
+        className="col-lg-6 col-md-12 wow bounceInLeft"
+        data-wow-duration="2s"
+      >
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          {[
+            "Top-notch graphics and animations",
+            "Smooth and very responsive gameplay",
+            "Multi-language support",
+            "Real-time Analytics and game tracking",
+            "Regular updates and high scalability",
+          ].map((text, index) => (
+            <li
+              key={index}
+              className="d-flex align-items-center mb-4"
+              style={{ fontSize: "18px", fontWeight: "500" }}
+            >
+              {/* Yellow Check Icon */}
+              <span
+                style={{
+                  display: "inline-flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "32px",
+                  height: "32px",
+                  backgroundColor: "#fcd10a", // Yellow color
+                  borderRadius: "50%",
+                  marginRight: "15px",
+                  flexShrink: 0,
+                }}
+              >
+                <i className="fas fa-check" style={{ fontSize: "14px", color: "#000" }}></i>
+              </span>
+              {text}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Right Side: Image */}
+      <div
+        className="col-lg-6 col-md-12 pt-md-0 text-center wow bounceInRight"
+        data-wow-duration="2s"
+      >
+        <img
+          src="/assets/images/rummy-game-development/hire-rummy-game-developer.webp"
+          alt="Game Development Features"
+          className="img-fluid"
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
+      </div>
+
+    </div>
+  </div>
 </section>
-
 
             <section className="developer">
                 <div className="container c-1">
