@@ -12,119 +12,9 @@ import { useEffect, useState } from "react";
         keywords: [`Casino software development company in ${country}`],
     };
 }*/
-const COUNTRY_CODE_TO_NAME = {
-    // South Asia (Minus India & Bangladesh)
-    PK: "Pakistan",
-    LK: "Sri Lanka",
-    NP: "Nepal",
-    BT: "Bhutan",
-    MV: "Maldives",
-    AF: "Afghanistan",
 
-    // South East Asia
-    TH: "Thailand",
-    SG: "Singapore",
-    VN: "Vietnam",
-    ID: "Indonesia",
-    PH: "Philippines",
-    MY: "Malaysia",
-    KH: "Cambodia",
-    LA: "Laos",
-    MM: "Myanmar",
-    BN: "Brunei",
-    TL: "Timor-Leste",
-
-    // East Asia
-    CN: "China",
-    JP: "Japan",
-    KR: "South Korea",
-    KP: "North Korea",
-    TW: "Taiwan",
-    MN: "Mongolia",
-    HK: "Hong Kong",
-    MO: "Macau",
-
-    // West Asia (Middle East)
-    AE: "UAE",
-    SA: "Saudi Arabia",
-    QA: "Qatar",
-    KW: "Kuwait",
-    BH: "Bahrain",
-    OM: "Oman",
-    YE: "Yemen",
-    IL: "Israel",
-    JO: "Jordan",
-    LB: "Lebanon",
-    SY: "Syria",
-    IQ: "Iraq",
-    IR: "Iran",
-    PS: "Palestine",
-    TR: "Turkey", 
-    CY: "Cyprus",
-
-    // Central Asia
-    KZ: "Kazakhstan",
-    UZ: "Uzbekistan",
-    TM: "Turkmenistan",
-    KG: "Kyrgyzstan",
-    TJ: "Tajikistan",
-
-    // Caucasus
-    AZ: "Azerbaijan",
-    AM: "Armenia",
-    GE: "Georgia"
-};
 export default function LudoGameDevelopment() {
-     const [country, setCountry] = useState("Asia");
-        
-            const validAsianCountries = [
-            // South Asia
-            "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives", "Afghanistan",
-            
-            // South East Asia
-            "Thailand", "Singapore", "Vietnam", "Indonesia", "Philippines", "Malaysia", "Cambodia", "Laos", "Myanmar", "Brunei", "Timor-Leste",
-            
-            // East Asia
-            "China", "Japan", "South Korea", "North Korea", "Taiwan", "Mongolia", "Hong Kong", "Macau",
-            
-            // West Asia
-            "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Yemen", "Israel", "Jordan", "Lebanon", "Syria", "Iraq", "Iran", "Palestine", "Turkey", "Cyprus",
-            
-            // Central Asia
-            "Kazakhstan", "Uzbekistan", "Turkmenistan", "Kyrgyzstan", "Tajikistan",
-            
-            // Caucasus
-            "Azerbaijan", "Armenia", "Georgia"
-        ];
-        
-            useEffect(() => {
-                const getCountryByIP = async () => {
-                    try {
-                        console.log("📡 Checking IP Location...");
-                        
-                        
-                        const res = await fetch("https://ipapi.co/json/");
-                        
-                       
-                        if (!res.ok) throw new Error("API Limit or Error");
-        
-                        const data = await res.json();
-                        console.log("📍 IP Detected Country:", data.country_name);
-        
-                        
-                        if (validAsianCountries.includes(data.country_name)) {
-                            setCountry(data.country_name);
-                        } else {
-                            console.log("🛑 Country not in allowed list (e.g. India/USA). Keeping Default: Asia.");
-                        }
-                    } catch (err) {
-                        console.log("⚠️ IP Fallback Failed or Adblocker blocked request. Defaulting to Asia.");
-                    }
-                };
-        
-        
-                getCountryByIP();
-            }, []); 
+      
     return (
         <>
             <style
@@ -161,7 +51,7 @@ export default function LudoGameDevelopment() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h1 data-hk="s40-1-12" className="hero__title">
-                                                        Ludo Game Development Company in {country}
+                                                        Ludo Game Development Company in Bangladesh
                                                     </h1>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
@@ -171,7 +61,7 @@ export default function LudoGameDevelopment() {
                                                     <div className="hero__description">
                                                         Looking for the right Ludo game solution for your
                                                         business, don't hesitate to connect with Mobzway for
-                                                        professional Ludo game development company in {country}. Experience
+                                                        professional Ludo game development company in Bangladesh. Experience
                                                         with engaging gameplay and vibrant graphics.
                                                     </div>
                                                 </div>
@@ -187,7 +77,7 @@ export default function LudoGameDevelopment() {
                                             <div className="row">
                                                 <div className="col-md-7">
                                                     <h2 data-hk="s40-1-12" className="hero__title">
-                                                        Ludo King Clone in {country}
+                                                        Ludo King Clone in Bangladesh
                                                     </h2>
                                                     <img
                                                         className="d-block d-md-none mb-3 w-100"
