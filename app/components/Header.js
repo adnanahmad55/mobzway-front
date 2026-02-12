@@ -9,61 +9,43 @@ import { menuData } from "./menuData";
 import { useLang } from './LanguageProvider';
 import { languages } from '../lib/i18n';
 
-
 export default function Header() {
-   const pathname = usePathname();
+    const pathname = usePathname();
     const [open, setOpen] = useState(false);
-    const { lang, setLang } = useLang(); // Hook ko upar rakho
+    const { lang, setLang } = useLang();
 
-    // 1. URL Country: Ye sirf Link banane mein kaam aayega (taaki '/sg' dikhe)
-    let urlCountry = pathname.split("/")[1] || "default";
+    // ==============================================================
+    // 1. SETUP VARIABLES (Ye sabse important hai)
+    // ==============================================================
+    
+    // 'urlCountry': Ye URL banane ke liye hai (e.g. 'sg', 'pk', 'us')
+    // Isko hum change nahi karenge, taaki browser mein URL sahi dikhe.
+    let urlCountry = pathname?.split("/")[1] || "default";
 
-    // 2. Menu Key: Ye decide karega ki Menu kaunsa dikhana hai (Asia, Default, etc.)
+    // 'menuKey': Ye Menu Data fetch karne ke liye hai
     let menuKey = urlCountry;
 
     const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
-    
-    // Agar country Asia list mein hai, to Menu Key 'asia' kar do (Par URL Country 'sg' hi rahega)
+
+    // Agar URL Asia ki kisi country ka hai, to Menu 'asia' wala load karo
     if (ASIA_CODES.includes(urlCountry)) {
-        menuKey = 'asia'; 
+        menuKey = 'asia';
     }
 
-    // 3. Menu data fetch karo 'menuKey' ke hisaab se
+    // Data fetch karo based on menuKey
     const menu = menuData[menuKey] || menuData.default;
+
+    // ==============================================================
+
     function changeLang(e) {
         console.log(e, 'eeeee');
-        
-        // const value = e.target.value;
         document.cookie = `lang=${e}; path=/`;
         setLang(e);
         setOpen(false);
     }
 
-
-    // if (
-    //     pathname === "/in" ||
-    //     pathname === "/us" ||
-    //     pathname === "/uk" ||
-    //     pathname === "/eu" ||
-    //     pathname === "/bd" ||
-    //     pathname === "/af"
-    // ) {
-    //     return null;
-    // }
-
-    // useEffect(() => {
-    //     AOS.init({
-    //         duration: 800,
-    //         once: false,
-    //     })
-    // }, [])
-    // useEffect(() => {
-    //     new WOW.WOW().init();
-    // }, []);
-
     useEffect(() => {
         if (typeof window !== "undefined") {
-
             // AOS
             import("aos").then((AOS) => {
                 AOS.default.init({
@@ -76,11 +58,8 @@ export default function Header() {
             import("wowjs").then((WOW) => {
                 new WOW.WOW().init();
             });
-
         }
     }, []);
-
-
 
     const handleMenuToggle = () => {
         document.querySelector(".responsive-nav span")?.classList.toggle("one");
@@ -95,15 +74,11 @@ export default function Header() {
                     <div className="top_contact w-100">
                         <div className="top_left">
                             <ul className="d-flex justify-content-end">
+                                {/* Contact Details Section */}
                                 <li className="t_wrapper">
                                     <div className="t_wrapper d-flex">
-                                        <a
-                                            className="whatsappHb"
-                                            href="https://api.whatsapp.com/send?phone=919116005595"
-                                        >
-                                            <span className="pr-1">
-                                                <i className="fab fa-whatsapp" />
-                                            </span>
+                                        <a className="whatsappHb" href="https://api.whatsapp.com/send?phone=919116005595">
+                                            <span className="pr-1"><i className="fab fa-whatsapp" /></span>
                                             +91-9116005595
                                         </a>
                                     </div>
@@ -111,9 +86,7 @@ export default function Header() {
                                 <li>
                                     <div className="t_wrapper d-flex">
                                         <a className="telephoneHb" href="tel:+91-7878-044-044">
-                                            <span className="pr-1">
-                                                <i className="fas fa-phone-alt" />
-                                            </span>
+                                            <span className="pr-1"><i className="fas fa-phone-alt" /></span>
                                             +91-7878-044-044
                                         </a>
                                     </div>
@@ -121,9 +94,7 @@ export default function Header() {
                                 <li className="responsive_call_sec">
                                     <div className="t_wrapper d-flex call_number">
                                         <a href="tel:+91-7878-044-044">
-                                            <span className="pr-1">
-                                                <i className="fas fa-phone-alt" />
-                                            </span>
+                                            <span className="pr-1"><i className="fas fa-phone-alt" /></span>
                                             7878 044 044
                                         </a>
                                     </div>
@@ -137,9 +108,7 @@ export default function Header() {
                                 <li>
                                     <div className="t_wrapper d-flex">
                                         <a href="mailto:sales@mobzway.com">
-                                            <span className="pr-1">
-                                                <i className="fas fa-envelope" />
-                                            </span>
+                                            <span className="pr-1"><i className="fas fa-envelope" /></span>
                                             sales@mobzway.com
                                         </a>
                                     </div>
@@ -151,65 +120,17 @@ export default function Header() {
                 <div id="menus_lnk" className="d-flex justify-content-between">
                     <div className="brand_wrapper align-self-center">
                         <Link href="/" className="brand">
-                            <img
-                                src="/assets/images/logo.png"
-                                width={1600}
-                                height={900}
-                                alt="Mobzway Logo"
-                            />
+                            <img src="/assets/images/logo.png" width={1600} height={900} alt="Mobzway Logo" />
                         </Link>
                     </div>
                     <div className="d-flex d-lg-none align-items-center">
-                        <a
-                            href="/our-games/"
-                            className="responsive-nav mobileNavbar responsive-nav-demo skill-games-contact-none-mb"
-                            style={{
-                                background: "#fcd10a",
-                                marginRight: 8,
-                                width: "90px",
-                                overflow: "hidden"
-                            }}
-                        >
-                            {/* <span
-                                className="typewrite"
-                                data-period={4000}
-                                data-type='["60+ Games", "Try Demo"]'
-                            >
-                                <span className="wrap" />
-                            </span> */}
-                            <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
-
-                        </a>
-                        <a
-                            href="javascript:void(0)"
-                            data-toggle="modal"
-                            data-target="#chatQoute"
-                            className="responsive-nav responsive-nav-demo skill-games-contact-mb"
-                            style={{
-                                display: "none",
-                                background: "#fcd10a !important",
-                                marginRight: 8,
-                                width: "90px !important",
-                                overflow: "hidden"
-                            }}
-                        >
-                            {/* <span
-                                className="typewrite"
-                                data-period={4000}
-                                data-type='["60+ Games", "Try Demo"]'
-                            >
-                                <span className="wrap" />
-                            </span> */}
+                        <a href="/our-games/" className="responsive-nav mobileNavbar responsive-nav-demo skill-games-contact-none-mb" style={{ background: "#fcd10a", marginRight: 8, width: "90px", overflow: "hidden" }}>
                             <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                         </a>
-                        {/* <button class="responsive-nav responsive-nav-demo" style="background:#fcd10a !important;margin-right: 8px;width: 90px !important;" data-toggle="modal" data-target="#chatQoute">
-                      try demo
-                  </button> */}
-                        <button
-                            className="responsive-nav"
-                            onClick={handleMenuToggle}
-                            style={{ fontSize: 0, background: "transparent !important" }}
-                        >
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#chatQoute" className="responsive-nav responsive-nav-demo skill-games-contact-mb" style={{ display: "none", background: "#fcd10a !important", marginRight: 8, width: "90px !important", overflow: "hidden" }}>
+                            <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
+                        </a>
+                        <button className="responsive-nav" onClick={handleMenuToggle} style={{ fontSize: 0, background: "transparent !important" }}>
                             Menu
                             <span className="line trun" />
                             <span className="line ops" />
@@ -217,96 +138,96 @@ export default function Header() {
                         </button>
                     </div>
                     <div className="left_nav mt-3">
-<ul id="menu-header-menu" className="d-flex desktop_menu">
+                        
+                        {/* ================================================= */}
+                        {/* MAIN MENU LOOP WITH REDIRECTION LOGIC */}
+                        {/* ================================================= */}
+                        <ul id="menu-header-menu" className="d-flex desktop_menu">
+                            {menu.map((item, i) => {
+                                
+                                let finalPath = item.path;
 
-    {menu.map((item, i) => {
-        
-        let finalPath = item.path;
-
-        // --- ASIA LOGIC (Menu Key check karo) ---
-        if (menuKey === 'asia') {
-            if (item.path?.includes('ludo-game-development')) {
-                finalPath = '/ludo-game-development-asia/';
-            }
-            if (item.path?.includes('slot-game-development')) {
-                finalPath = '/slot-game-development-asia/';
-            }
-        }
-
-        // --- USA LOGIC ---
-        if (menuKey === 'us') {
-            if (item.path?.includes('slot-game-development')) {
-                finalPath = '/slot-game-development-usa/';
-            }
-        }
-
-        // --- EU LOGIC ---
-        if (menuKey === 'eu' || menuKey === 'europe') {
-            if (item.path?.includes('sportsbook-software-development')) {
-                finalPath = '/sportsbook-software-development-eu/';
-            }
-        }
-
-        return (
-            <li key={i} className={item.children ? "has_child" : ""}>
-                {item.path ? (
-                    // 🔥 MAIN FIX: Yahan 'urlCountry' use karo taaki link '/sg' rahe
-                    <Link href={`/${urlCountry}${finalPath}`}>{item.label}</Link>
-                ) : (
-                    <a href="#">{item.label}</a>
-                )}
-
-                {/* --- SUB-MENU LOGIC (Dropdowns) --- */}
-                {item.children && (
-                    <ul className="sub-menu">
-                        {item.children.map((child, j) => {
-                            
-                            let childPath = child.path;
-
-                            // Child Logic Check (Same logic here)
-                            if (menuKey === 'asia') {
-                                if (child.path?.includes('ludo-game-development')) {
-                                    childPath = '/ludo-game-development-asia/';
+                                // --- ASIA LOGIC (Check based on menuKey) ---
+                                if (menuKey === 'asia') {
+                                    if (item.path?.includes('ludo-game-development')) {
+                                        finalPath = '/ludo-game-development-asia/';
+                                    }
+                                    if (item.path?.includes('slot-game-development')) {
+                                        finalPath = '/slot-game-development-asia/';
+                                    }
                                 }
-                                if (child.path?.includes('slot-game-development')) {
-                                    childPath = '/slot-game-development-asia/';
+
+                                // --- USA LOGIC ---
+                                if (menuKey === 'us') {
+                                    if (item.path?.includes('slot-game-development')) {
+                                        finalPath = '/slot-game-development-usa/';
+                                    }
                                 }
-                            }
-                            if (menuKey === 'us') {
-                                if (child.path?.includes('slot-game-development')) {
-                                    childPath = '/slot-game-development-usa/';
+
+                                // --- EU LOGIC ---
+                                if (menuKey === 'eu' || menuKey === 'europe') {
+                                    if (item.path?.includes('sportsbook-software-development')) {
+                                        finalPath = '/sportsbook-software-development-eu/';
+                                    }
                                 }
-                            }
 
-                            return (
-                                <li key={j} className={child.children ? "has_child" : ""}>
-                                    {child.path ? (
-                                        // 🔥 FIX: Yahan bhi 'urlCountry' use karo
-                                        <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
-                                    ) : (
-                                        <a href="#">{child.label}</a>
-                                    )}
+                                return (
+                                    <li key={i} className={item.children ? "has_child" : ""}>
+                                        {item.path ? (
+                                            // 🔥 Using urlCountry to keep URL /sg
+                                            <Link href={`/${urlCountry}${finalPath}`}>{item.label}</Link>
+                                        ) : (
+                                            <a href="#">{item.label}</a>
+                                        )}
 
-                                    {/* Sub-Sub Menu */}
-                                    {child.children && (
-                                        <ul className="sub-menu">
-                                            {child.children.map((sub, k) => (
-                                                <li key={k}>
-                                                    <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </li>
-                            );
-                        })}
-                    </ul>
-                )}
-            </li>
-        );
-    })}
+                                        {item.children && (
+                                            <ul className="sub-menu">
+                                                {item.children.map((child, j) => {
+                                                    
+                                                    let childPath = child.path;
 
-                            <li id="menu-item-7296" className=" border-0">
+                                                    // --- ASIA CHILD LOGIC ---
+                                                    if (menuKey === 'asia') {
+                                                        if (child.path?.includes('ludo-game-development')) {
+                                                            childPath = '/ludo-game-development-asia/';
+                                                        }
+                                                        if (child.path?.includes('slot-game-development')) {
+                                                            childPath = '/slot-game-development-asia/';
+                                                        }
+                                                    }
+                                                    // --- USA CHILD LOGIC ---
+                                                    if (menuKey === 'us') {
+                                                        if (child.path?.includes('slot-game-development')) {
+                                                            childPath = '/slot-game-development-usa/';
+                                                        }
+                                                    }
+
+                                                    return (
+                                                        <li key={j} className={child.children ? "has_child" : ""}>
+                                                            {child.path ? (
+                                                                <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
+                                                            ) : (
+                                                                <a href="#">{child.label}</a>
+                                                            )}
+
+                                                            {child.children && (
+                                                                <ul className="sub-menu">
+                                                                    {child.children.map((sub, k) => (
+                                                                        <li key={k}>
+                                                                            <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            )}
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
+                                        )}
+                                    </li>
+                                );
+                            })}
+                                <li id="menu-item-7296" className=" border-0">
                                 <Link
                                     href="https://www.mobzway.com/blog/"
                                     className=""
