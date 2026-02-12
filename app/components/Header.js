@@ -153,7 +153,7 @@ export default function Header() {
                                         finalPath = '/ludo-game-development/';
                                     }
                                     if (item.path?.includes('slot-game-development')) {
-                                        finalPath = '/slot-game-development-asia/';
+                                        finalPath = '/slot-game-development/';
                                     }
                                 }
 
