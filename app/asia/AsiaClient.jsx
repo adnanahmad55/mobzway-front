@@ -99,7 +99,7 @@ const COUNTRY_CODE_TO_NAME = {
     AM: "Armenia",
     GE: "Georgia"
 };
-import React, { useEffect, useState } from 'react';
+
 
 // 👇 YAHAN CHANGE 1: 'countryCode' prop receive karein
 export default function AfHomepage({ countryCode }) {
