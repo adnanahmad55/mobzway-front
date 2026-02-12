@@ -2,8 +2,10 @@
 //import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
+
 const COUNTRY_CODE_TO_NAME = {
-    // Europe
     FR: "France",
     DE: "Germany",
     IT: "Italy",
@@ -15,6 +17,19 @@ const COUNTRY_CODE_TO_NAME = {
     SE: "Sweden",
     MT: "Malta",
     GB: "United Kingdom"
+};
+const COUNTRY_CODE_TO_SLUG = {
+    FR: "fr",
+    DE: "de",
+    IT: "it",
+    ES: "es",
+    AT: "at",
+    GR: "gr",
+    PT: "pt",
+    NL: "nl",
+    SE: "se",
+    MT: "mt",
+    GB: "uk" // 👈 important (SEO friendly)
 };
 
  /*export const metadata = {
@@ -41,47 +56,36 @@ const COUNTRY_CODE_TO_NAME = {
 }*/
 
 export default function SportsbookSoftwareDevelopment() {
-    //const country = getCountryName();
-   const [country, setCountry] = useState("Europe");
 
-const validEuropeanCountries = [
-    // Western Europe
-    "France",
-    "Germany",
-    "Netherlands",
-    "Austria",
-
-    // Southern Europe
-    "Italy",
-    "Spain",
-    "Portugal",
-    "Greece",
-    "Malta",
-
-    // Northern Europe
-    "Sweden",
-    "United Kingdom"
-];
-
- useEffect(() => {
+    const [country, setCountry] = useState("Europe");
+   const router = useRouter();
+    useEffect(() => {
     const getCountryByIP = async () => {
         try {
             console.log("📡 Checking IP Location...");
 
             const res = await fetch("https://ipapi.co/json/");
-
             if (!res.ok) throw new Error("API Limit or Error");
 
             const data = await res.json();
-            console.log("📍 IP Detected Country:", data.country_name);
 
-            if (validEuropeanCountries.includes(data.country_name)) {
-                setCountry(data.country_name);
+            console.log("📍 Detected:", data.country_name, data.country);
+
+            const detectedCode = data.country;
+
+            if (COUNTRY_CODE_TO_SLUG[detectedCode]) {
+
+                const slug = COUNTRY_CODE_TO_SLUG[detectedCode];
+
+                console.log("✅ Redirecting to:", slug);
+
+                router.push(`/${slug}/sportsbook-software-development/`);
             } else {
-                console.log("🛑 Country not in allowed list. Keeping Default: Europe.");
+                console.log("🛑 Not EU country → staying on default EU page");
             }
+
         } catch (err) {
-            console.log("⚠️ IP Fallback Failed or blocked. Defaulting to Europe.");
+            console.log("⚠️ IP detection failed → staying default");
         }
     };
 

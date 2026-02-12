@@ -11,19 +11,25 @@ import { languages } from '../lib/i18n';
 
 
 export default function Header() {
-    const pathname = usePathname();
+   const pathname = usePathname();
     const [open, setOpen] = useState(false);
-    let country = pathname.split("/")[1] || "default";
-const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
-if (ASIA_CODES.includes(country)) {
-        country = 'asia'; // Forcefully 'asia' set kar diya
-    }
-    //const country = pathname.split("/")[1] || "default";
-
-    const menu = menuData[country] || menuData.default;
-
     const { lang, setLang } = useLang();
 
+    // 1. URL Country: Ye link banane ke liye use hoga (sg, pk, etc.) - TAAKI URL 'sg' RAHE
+    let urlCountry = pathname.split("/")[1] || "default";
+
+    // 2. Menu Key: Ye decide karega ki data kaunsa dikhana hai (Logic ke liye)
+    let menuKey = urlCountry;
+
+    const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
+    
+    // Agar country Asia list mein hai, to Menu Key 'asia' kar do (Par URL Country 'sg' hi rahega)
+    if (ASIA_CODES.includes(urlCountry)) {
+        menuKey = 'asia'; 
+    }
+
+    // 3. Ab menu 'menuKey' ke hisaab se ayega (Asia wala data)
+    const menu = menuData[menuKey] || menuData.default;
     function changeLang(e) {
         console.log(e, 'eeeee');
         
@@ -211,67 +217,89 @@ if (ASIA_CODES.includes(country)) {
                         </button>
                     </div>
                     <div className="left_nav mt-3">
-                        <ul id="menu-header-menu" className="d-flex desktop_menu">
+<ul id="menu-header-menu" className="d-flex desktop_menu">
 
-  {menu.map((item, i) => {
+    {menu.map((item, i) => {
         
-        // 1. Logic: Default path set karo
         let finalPath = item.path;
 
-        // 2. Condition: Agar Asia hai aur Ludo wala link hai, to path change karo
-        if (country === 'asia' && item.path?.includes('ludo-game-development')) {
-            finalPath = '/ludo-game-development/';
+        // --- ASIA LOGIC (Check on menuKey) ---
+        if (menuKey === 'asia') {
+            if (item.path?.includes('ludo-game-development')) {
+                finalPath = '/ludo-game-development-asia/';
+            }
+            if (item.path?.includes('slot-game-development')) {
+                finalPath = '/slot-game-development-asia/';
+            }
         }
-        if (item.path?.includes('slot-game-development')) {
-            finalPath = '/slot-game-development/';
-        }
-        if (country === 'us') {
-        // Agar USA hai aur Slot game wala link hai
-        if (item.path?.includes('slot-game-development')) {
-            finalPath = '/slot-game-development-company-in-usa/';
-        }
-    }
-    if (country === 'eu' || country === 'europe') {
-    if (item.path?.includes('slot-game-development')) {
-        finalPath = '/slot-game-development-company-in-europe/';
-    }
 
-    if (item.path?.includes('ludo-game-development')) {
-        finalPath = '/ludo-game-development-company-in-europe/';
-    }
-}
+        // --- USA LOGIC (Check on menuKey) ---
+        if (menuKey === 'us') {
+            if (item.path?.includes('slot-game-development')) {
+                finalPath = '/slot-game-development-usa/';
+            }
+        }
+
+        // --- EU LOGIC (Agar chahiye) ---
+        if (menuKey === 'eu' || menuKey === 'europe') {
+            if (item.path?.includes('sportsbook-software-development')) {
+                finalPath = '/sportsbook-software-development-eu/';
+            }
+        }
+
         return (
             <li key={i} className={item.children ? "has_child" : ""}>
                 {item.path ? (
-                    // 3. Yahan humne 'item.path' ki jagah 'finalPath' use kiya
-                    <Link href={`/${country}${finalPath}`}>{item.label}</Link>
+                    // 🔥 MAIN FIX: Yahan 'urlCountry' use karo (sg) na ki 'menuKey' (asia)
+                    <Link href={`/${urlCountry}${finalPath}`}>{item.label}</Link>
                 ) : (
                     <a href="#">{item.label}</a>
                 )}
 
-                {/* Sub-menu wala code same rahega */}
+                {/* Sub-menu mein bhi same logic */}
                 {item.children && (
                     <ul className="sub-menu">
-                        {item.children.map((child, j) => (
-                            <li key={j} className={child.children ? "has_child" : ""}>
-                                {child.path ? (
-                                    <Link href={`/${country}${child.path}`}>{child.label}</Link>
-                                ) : (
-                                    <a href="#">{child.label}</a>
-                                )}
+                        {item.children.map((child, j) => {
+                            
+                            let childPath = child.path;
 
-                                {/* Sub-sub-menu logic same rahega */}
-                                {child.children && (
-                                    <ul className="sub-menu">
-                                        {child.children.map((sub, k) => (
-                                            <li key={k}>
-                                                <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </li>
-                        ))}
+                            // Child Logic Check
+                            if (menuKey === 'asia') {
+                                if (child.path?.includes('ludo-game-development')) {
+                                    childPath = '/ludo-game-development-asia/';
+                                }
+                                if (child.path?.includes('slot-game-development')) {
+                                    childPath = '/slot-game-development-asia/';
+                                }
+                            }
+                            if (menuKey === 'us') {
+                                if (child.path?.includes('slot-game-development')) {
+                                    childPath = '/slot-game-development-usa/';
+                                }
+                            }
+
+                            return (
+                                <li key={j} className={child.children ? "has_child" : ""}>
+                                    {child.path ? (
+                                        // 🔥 FIX Here too
+                                        <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
+                                    ) : (
+                                        <a href="#">{child.label}</a>
+                                    )}
+
+                                    {/* Sub-Sub Menu */}
+                                    {child.children && (
+                                        <ul className="sub-menu">
+                                            {child.children.map((sub, k) => (
+                                                <li key={k}>
+                                                    <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            );
+                        })}
                     </ul>
                 )}
             </li>
