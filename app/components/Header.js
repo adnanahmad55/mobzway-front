@@ -9,28 +9,32 @@ import { menuData } from "./menuData";
 import { useLang } from './LanguageProvider';
 import { languages } from '../lib/i18n';
 
+
 export default function Header() {
     const pathname = usePathname();
     const [open, setOpen] = useState(false);
     const { lang, setLang } = useLang();
 
     // ==============================================================
-    // 1. SETUP VARIABLES (Ye sabse important hai)
+    // 1. SETUP VARIABLES (Logic Fix)
     // ==============================================================
-    
-    // 'urlCountry': Ye URL banane ke liye hai (e.g. 'sg', 'pk', 'us')
+
+    // 'urlCountry': Ye URL banane ke liye use hoga (e.g. 'sg', 'pk', 'us')
     // Isko hum change nahi karenge, taaki browser mein URL sahi dikhe.
     let urlCountry = pathname?.split("/")[1] || "default";
 
     // 'menuKey': Ye Menu Data fetch karne ke liye hai
     let menuKey = urlCountry;
+
+    // 🔥 LIST UPDATED: India ('in') and Bangladesh ('bd') REMOVED from this list.
+    // They will now fallback to their own specific menus if they exist in menuData, or default.
     const ASIA_CODES = [
-        'sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my', // Old ones
-        'az', 'kh', 'ge', 'jp', 'la', 'lb', 'mv', 'mn', // New: Azerbaijan, Cambodia, Georgia, Japan, Laos, Lebanon, Maldives, Mongolia
-        'mm', 'ph', 'kr', 'lk', 'tr', 'ae'              // New: Myanmar, Philippines, S.Korea, Sri Lanka, Turkey, UAE
+        'sg', 'pk', 'th', 'vn', 'id', 'my',              // SE Asia & Pakistan
+        'am', 'az', 'kh', 'ge', 'jp', 'la', 'lb', 'mv',  // Armenia, Azerbaijan, Cambodia, Georgia, Japan, Laos, Lebanon, Maldives
+        'mn', 'mm', 'ph', 'kr', 'lk', 'tr', 'ae'         // Mongolia, Myanmar, Philippines, S.Korea, Sri Lanka, Turkey, UAE
     ];
 
-    // Agar URL Asia ki kisi country ka hai, to Menu 'asia' wala load karo
+    // Agar country Asia list mein hai, to Menu 'asia' wala load karo
     if (ASIA_CODES.includes(urlCountry)) {
         menuKey = 'asia';
     }
@@ -42,13 +46,38 @@ export default function Header() {
 
     function changeLang(e) {
         console.log(e, 'eeeee');
+
+        // const value = e.target.value;
         document.cookie = `lang=${e}; path=/`;
         setLang(e);
         setOpen(false);
     }
 
+
+    // if (
+    //     pathname === "/in" ||
+    //     pathname === "/us" ||
+    //     pathname === "/uk" ||
+    //     pathname === "/eu" ||
+    //     pathname === "/bd" ||
+    //     pathname === "/af"
+    // ) {
+    //     return null;
+    // }
+
+    // useEffect(() => {
+    //     AOS.init({
+    //         duration: 800,
+    //         once: false,
+    //     })
+    // }, [])
+    // useEffect(() => {
+    //     new WOW.WOW().init();
+    // }, []);
+
     useEffect(() => {
         if (typeof window !== "undefined") {
+
             // AOS
             import("aos").then((AOS) => {
                 AOS.default.init({
@@ -61,8 +90,11 @@ export default function Header() {
             import("wowjs").then((WOW) => {
                 new WOW.WOW().init();
             });
+
         }
     }, []);
+
+
 
     const handleMenuToggle = () => {
         document.querySelector(".responsive-nav span")?.classList.toggle("one");
@@ -77,11 +109,15 @@ export default function Header() {
                     <div className="top_contact w-100">
                         <div className="top_left">
                             <ul className="d-flex justify-content-end">
-                                {/* Contact Details Section */}
                                 <li className="t_wrapper">
                                     <div className="t_wrapper d-flex">
-                                        <a className="whatsappHb" href="https://api.whatsapp.com/send?phone=919116005595">
-                                            <span className="pr-1"><i className="fab fa-whatsapp" /></span>
+                                        <a
+                                            className="whatsappHb"
+                                            href="https://api.whatsapp.com/send?phone=919116005595"
+                                        >
+                                            <span className="pr-1">
+                                                <i className="fab fa-whatsapp" />
+                                            </span>
                                             +91-9116005595
                                         </a>
                                     </div>
@@ -89,7 +125,9 @@ export default function Header() {
                                 <li>
                                     <div className="t_wrapper d-flex">
                                         <a className="telephoneHb" href="tel:+91-7878-044-044">
-                                            <span className="pr-1"><i className="fas fa-phone-alt" /></span>
+                                            <span className="pr-1">
+                                                <i className="fas fa-phone-alt" />
+                                            </span>
                                             +91-7878-044-044
                                         </a>
                                     </div>
@@ -97,7 +135,9 @@ export default function Header() {
                                 <li className="responsive_call_sec">
                                     <div className="t_wrapper d-flex call_number">
                                         <a href="tel:+91-7878-044-044">
-                                            <span className="pr-1"><i className="fas fa-phone-alt" /></span>
+                                            <span className="pr-1">
+                                                <i className="fas fa-phone-alt" />
+                                            </span>
                                             7878 044 044
                                         </a>
                                     </div>
@@ -111,7 +151,9 @@ export default function Header() {
                                 <li>
                                     <div className="t_wrapper d-flex">
                                         <a href="mailto:sales@mobzway.com">
-                                            <span className="pr-1"><i className="fas fa-envelope" /></span>
+                                            <span className="pr-1">
+                                                <i className="fas fa-envelope" />
+                                            </span>
                                             sales@mobzway.com
                                         </a>
                                     </div>
@@ -123,17 +165,65 @@ export default function Header() {
                 <div id="menus_lnk" className="d-flex justify-content-between">
                     <div className="brand_wrapper align-self-center">
                         <Link href="/" className="brand">
-                            <img src="/assets/images/logo.png" width={1600} height={900} alt="Mobzway Logo" />
+                            <img
+                                src="/assets/images/logo.png"
+                                width={1600}
+                                height={900}
+                                alt="Mobzway Logo"
+                            />
                         </Link>
                     </div>
                     <div className="d-flex d-lg-none align-items-center">
-                        <a href="/our-games/" className="responsive-nav mobileNavbar responsive-nav-demo skill-games-contact-none-mb" style={{ background: "#fcd10a", marginRight: 8, width: "90px", overflow: "hidden" }}>
+                        <a
+                            href="/our-games/"
+                            className="responsive-nav mobileNavbar responsive-nav-demo skill-games-contact-none-mb"
+                            style={{
+                                background: "#fcd10a",
+                                marginRight: 8,
+                                width: "90px",
+                                overflow: "hidden"
+                            }}
+                        >
+                            {/* <span
+                                className="typewrite"
+                                data-period={4000}
+                                data-type='["60+ Games", "Try Demo"]'
+                            >
+                                <span className="wrap" />
+                            </span> */}
+                            <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
+
+                        </a>
+                        <a
+                            href="javascript:void(0)"
+                            data-toggle="modal"
+                            data-target="#chatQoute"
+                            className="responsive-nav responsive-nav-demo skill-games-contact-mb"
+                            style={{
+                                display: "none",
+                                background: "#fcd10a !important",
+                                marginRight: 8,
+                                width: "90px !important",
+                                overflow: "hidden"
+                            }}
+                        >
+                            {/* <span
+                                className="typewrite"
+                                data-period={4000}
+                                data-type='["60+ Games", "Try Demo"]'
+                            >
+                                <span className="wrap" />
+                            </span> */}
                             <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                         </a>
-                        <a href="javascript:void(0)" data-toggle="modal" data-target="#chatQoute" className="responsive-nav responsive-nav-demo skill-games-contact-mb" style={{ display: "none", background: "#fcd10a !important", marginRight: 8, width: "90px !important", overflow: "hidden" }}>
-                            <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
-                        </a>
-                        <button className="responsive-nav" onClick={handleMenuToggle} style={{ fontSize: 0, background: "transparent !important" }}>
+                        {/* <button class="responsive-nav responsive-nav-demo" style="background:#fcd10a !important;margin-right: 8px;width: 90px !important;" data-toggle="modal" data-target="#chatQoute">
+                      try demo
+                  </button> */}
+                        <button
+                            className="responsive-nav"
+                            onClick={handleMenuToggle}
+                            style={{ fontSize: 0, background: "transparent !important" }}
+                        >
                             Menu
                             <span className="line trun" />
                             <span className="line ops" />
@@ -141,22 +231,19 @@ export default function Header() {
                         </button>
                     </div>
                     <div className="left_nav mt-3">
-                        
-                        {/* ================================================= */}
-                        {/* MAIN MENU LOOP WITH REDIRECTION LOGIC */}
-                        {/* ================================================= */}
                         <ul id="menu-header-menu" className="d-flex desktop_menu">
+
                             {menu.map((item, i) => {
-                                
+
                                 let finalPath = item.path;
 
                                 // --- ASIA LOGIC (Check based on menuKey) ---
                                 if (menuKey === 'asia') {
                                     if (item.path?.includes('ludo-game-development')) {
-                                        finalPath = '/ludo-game-development/';
+                                        finalPath = '/ludo-game-development-asia/';
                                     }
                                     if (item.path?.includes('slot-game-development')) {
-                                        finalPath = '/slot-game-development/';
+                                        finalPath = '/slot-game-development-asia/';
                                     }
                                 }
 
@@ -186,7 +273,7 @@ export default function Header() {
                                         {item.children && (
                                             <ul className="sub-menu">
                                                 {item.children.map((child, j) => {
-                                                    
+
                                                     let childPath = child.path;
 
                                                     // --- ASIA CHILD LOGIC ---
@@ -201,13 +288,14 @@ export default function Header() {
                                                     // --- USA CHILD LOGIC ---
                                                     if (menuKey === 'us') {
                                                         if (child.path?.includes('slot-game-development')) {
-                                                            childPath = '/slot-game-development-usa/';
+                                                            childPath = '/slot-game-development-company-in-usa/';
                                                         }
                                                     }
 
                                                     return (
                                                         <li key={j} className={child.children ? "has_child" : ""}>
                                                             {child.path ? (
+                                                                // 🔥 Using urlCountry here too
                                                                 <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
                                                             ) : (
                                                                 <a href="#">{child.label}</a>
@@ -230,21 +318,22 @@ export default function Header() {
                                     </li>
                                 );
                             })}
-                                <li id="menu-item-7296" className=" border-0">
+
+                            <li id="menu-item-7296" className=" border-0">
                                 <Link
                                     href="https://www.mobzway.com/blog/"
                                     className=""
                                 >
                                     {/* <span
-                                        className="typewrite"
-                                        data-period={4000}
-                                        data-type='["60+ Games", "Try Demo"]'
-                                    >
-                                        <span className="wrap" />
-                                    </span> */}
+                                    className="typewrite"
+                                    data-period={4000}
+                                    data-type='["60+ Games", "Try Demo"]'
+                                >
+                                    <span className="wrap" />
+                                </span> */}
                                     Blog
                                 </Link>
-                                </li>
+                            </li>
 
                             <li id="menu-item-7296" className=" border-0 mr-4">
                                 <Link
@@ -252,12 +341,12 @@ export default function Header() {
                                     className="contact_btn skill-games-contact-none"
                                 >
                                     {/* <span
-                                        className="typewrite"
-                                        data-period={4000}
-                                        data-type='["60+ Games", "Try Demo"]'
-                                    >
-                                        <span className="wrap" />
-                                    </span> */}
+                                    className="typewrite"
+                                    data-period={4000}
+                                    data-type='["60+ Games", "Try Demo"]'
+                                >
+                                    <span className="wrap" />
+                                </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </Link>
                                 <a
@@ -268,12 +357,12 @@ export default function Header() {
                                     style={{ display: "none" }}
                                 >
                                     {/* <span
-                                        className="typewrite"
-                                        data-period={4000}
-                                        data-type='["60+ Games", "Try Demo"]'
-                                    >
-                                        <span className="wrap" />
-                                    </span> */}
+                                    className="typewrite"
+                                    data-period={4000}
+                                    data-type='["60+ Games", "Try Demo"]'
+                                >
+                                    <span className="wrap" />
+                                </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </a>
                             </li>
@@ -286,9 +375,9 @@ export default function Header() {
                                     </option>
                                 ))}
                             </select> */}
-                            {/* {urlCountry} */}
+                            {/* {country} */}
 
-                          {urlCountry === 'bd' &&  <div className="dropdown d-flex align-items-center">
+                            {urlCountry === 'bd' && <div className="dropdown d-flex align-items-center">
                                 <button
                                     className="border-0 p-0"
                                     type="button"
@@ -302,26 +391,26 @@ export default function Header() {
                                         alt={lang}
                                         width="20"
                                         className="me-2"
-                                        style={{width:' 22px'}}
+                                        style={{ width: ' 22px' }}
                                     />
                                     {/* {lang.toUpperCase()} */}
                                 </button>
 
                                 {open && <div className="dropdown-menu show dropdown-menu-end p-0 overflow-hidden bg-dark"
-                                style={{left:'-30px', width:'90px', minWidth:'90px', borderRadius:'2px'}}>
+                                    style={{ left: '-30px', width: '90px', minWidth: '90px', borderRadius: '2px' }}>
                                     {languages.map((l) => (
                                         <div key={l} className='m-0'>
                                             <button
                                                 className="dropdown-item px-2 d-flex align-items-center bg-dark"
                                                 onClick={() => changeLang(l)}
-                                                style={{color:'#fff'}}
+                                                style={{ color: '#fff' }}
                                             >
                                                 <img
                                                     src={`/assets/images/${l.toUpperCase()}.png`}
                                                     alt={l}
                                                     width="20"
                                                     className="mr-2"
-                                                    style={{width:' 25px'}}
+                                                    style={{ width: ' 25px' }}
                                                 />
                                                 {l.toUpperCase()}
                                             </button>
@@ -498,16 +587,16 @@ export default function Header() {
 
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
-                                    href="/our-games/"
+                                    href="https://www.mobzway.com/blog/"
                                     className="contact_btn skill-games-contact-none"
                                 >
                                     {/* <span
-                                        className="typewrite"
-                                        data-period={4000}
-                                        data-type='["60+ Games", "Try Demo"]'
-                                    >
-                                        <span className="wrap" />
-                                    </span> */}
+                                    className="typewrite"
+                                    data-period={4000}
+                                    data-type='["60+ Games", "Try Demo"]'
+                                >
+                                    <span className="wrap" />
+                                </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </Link>
                                 <a
@@ -518,15 +607,16 @@ export default function Header() {
                                     style={{ display: "none" }}
                                 >
                                     {/* <span
-                                        className="typewrite"
-                                        data-period={4000}
-                                        data-type='["60+ Games", "Try Demo"]'
-                                    >
-                                        <span className="wrap" />
-                                    </span> */}
+                                    className="typewrite"
+                                    data-period={4000}
+                                    data-type='["60+ Games", "Try Demo"]'
+                                >
+                                    <span className="wrap" />
+                                </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </a>
                             </li>
+
                             {/* <li id="menu-item-7296"
                           class="contact_btn_list_wrapper menu-item menu-item-type-custom menu-item-object-custom d-block d-md-none mt-3">
                           <a href="tel:+91-7878-044-044" class="contact_btn"><i class="fas fa-phone-alt"></i> 7878 044 044 CALL US NOW !</a>
