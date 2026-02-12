@@ -2,8 +2,22 @@ import { NextResponse } from 'next/server';
 
 // 1. Asia Codes (ASIA_SLUGS hata diya kyunki use nahi ho rha tha)
 const ASIA_CODES = [
-  'CN', 'JP', 'KR', 'PK', 'TH', 'VN', 'MY', 'SG', 'ID', 'PH', 
-  'AE', 'SA', 'LK', 'NP', 'TW', 'HK'
+  // East Asia
+  'CN', 'JP', 'KR', 'KP', 'TW', 'HK', 'MO', 'MN',
+
+  // South Asia
+  'IN', 'PK', 'BD', 'LK', 'NP', 'BT', 'MV', 'AF',
+
+  // Southeast Asia
+  'TH', 'VN', 'MY', 'SG', 'ID', 'PH', 'KH', 'LA', 'MM', 'BN', 'TL',
+
+  // Central Asia
+  'KZ', 'UZ', 'TM', 'TJ', 'KG',
+
+  // West Asia / Middle East
+  'AE', 'SA', 'QA', 'KW', 'BH', 'OM', 'YE',
+  'IR', 'IQ', 'IL', 'JO', 'LB', 'SY',
+  'TR', 'GE', 'AM', 'AZ'
 ];
 
 // 2. Europe Region

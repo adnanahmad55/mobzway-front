@@ -3,9 +3,24 @@
 import AfHomepage from "../asia/AsiaClient"; 
 import { notFound } from "next/navigation";
 
-const ASIA_CODES = [ 'sg', 'pk', 'th', 'vn', 'id', 'my',              // SE Asia & Pakistan
-        'am', 'az', 'kh', 'ge', 'jp', 'la', 'lb', 'mv',  // Armenia, Azerbaijan, Cambodia, Georgia, Japan, Laos, Lebanon, Maldives
-        'mn', 'mm', 'ph', 'kr', 'lk', 'tr', 'ae','sa','np']; 
+const ASIA_CODES = [
+    // East Asia
+    'cn', 'jp', 'kr', 'kp', 'tw', 'hk', 'mo', 'mn',
+
+    // South Asia
+    'in', 'pk', 'bd', 'lk', 'np', 'bt', 'mv', 'af',
+
+    // Southeast Asia
+    'th', 'vn', 'my', 'sg', 'id', 'ph', 'kh', 'la', 'mm', 'bn', 'tl',
+
+    // Central Asia
+    'kz', 'uz', 'tm', 'tj', 'kg',
+
+    // West Asia / Middle East
+    'ae', 'sa', 'qa', 'kw', 'bh', 'om', 'ye',
+    'ir', 'iq', 'il', 'jo', 'lb', 'sy',
+    'tr', 'ge', 'am', 'az'
+]; 
 
 export default async function CountryDynamicPage({ params }) {
   const resolvedParams = await params;

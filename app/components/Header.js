@@ -28,12 +28,24 @@ export default function Header() {
 
     // 🔥 LIST UPDATED: India ('in') and Bangladesh ('bd') REMOVED from this list.
     // They will now fallback to their own specific menus if they exist in menuData, or default.
-    const ASIA_CODES = [
-        'sg', 'pk', 'th', 'vn', 'id', 'my',              // SE Asia & Pakistan
-        'am', 'az', 'kh', 'ge', 'jp', 'la', 'lb', 'mv',  // Armenia, Azerbaijan, Cambodia, Georgia, Japan, Laos, Lebanon, Maldives
-        'mn', 'mm', 'ph', 'kr', 'lk', 'tr', 'ae' ,'sa','np'       // Mongolia, Myanmar, Philippines, S.Korea, Sri Lanka, Turkey, UAE
-    ];
+const ASIA_CODES = [
+    // East Asia
+    'cn', 'jp', 'kr', 'kp', 'tw', 'hk', 'mo', 'mn',
 
+    // South Asia
+    'in', 'pk', 'bd', 'lk', 'np', 'bt', 'mv', 'af',
+
+    // Southeast Asia
+    'th', 'vn', 'my', 'sg', 'id', 'ph', 'kh', 'la', 'mm', 'bn', 'tl',
+
+    // Central Asia
+    'kz', 'uz', 'tm', 'tj', 'kg',
+
+    // West Asia / Middle East
+    'ae', 'sa', 'qa', 'kw', 'bh', 'om', 'ye',
+    'ir', 'iq', 'il', 'jo', 'lb', 'sy',
+    'tr', 'ge', 'am', 'az'
+];
     // Agar country Asia list mein hai, to Menu 'asia' wala load karo
     if (ASIA_CODES.includes(urlCountry)) {
         menuKey = 'asia';
