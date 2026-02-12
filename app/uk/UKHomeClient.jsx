@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import BannerForm from '../components/BannerForm';
 
 
-/*const UK_REGION_MAP = {
+const UK_REGION_MAP = {
     
     GB: "United Kingdom", 
     
@@ -17,11 +17,11 @@ import BannerForm from '../components/BannerForm';
 
     GI: "Gibraltar", 
     MT: "Malta"     
-};*/
+};
 
 export default function UKHomeClient() {
     const [country, setCountry] = useState("United Kingdom"); // Default
-   /* const [debugInfo, setDebugInfo] = useState("Loading...");
+    const [debugInfo, setDebugInfo] = useState("Loading...");
 
     useEffect(() => {
         const checkLocation = async () => {
@@ -87,7 +87,7 @@ export default function UKHomeClient() {
         };
 
         checkLocation();
-    }, []);*/
+    }, []);
      return (
             <>
     
