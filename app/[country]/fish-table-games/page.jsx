@@ -1,5 +1,5 @@
 import React from 'react'
-
+export const dynamic = 'force-static';
 export const metadata = {
   title: "Best Fish Table games development company in USA | Mobzway",
   description:
