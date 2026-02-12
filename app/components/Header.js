@@ -163,7 +163,7 @@ export default function Header() {
                                 // --- USA LOGIC ---
                                 if (menuKey === 'us') {
                                     if (item.path?.includes('slot-game-development')) {
-                                        finalPath = '/slot-game-development-usa/';
+                                        finalPath = '/slot-game-development-company-in-usa/';
                                     }
                                 }
 
