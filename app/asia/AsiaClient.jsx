@@ -99,59 +99,58 @@ const COUNTRY_CODE_TO_NAME = {
     AM: "Armenia",
     GE: "Georgia"
 };
+import React, { useEffect, useState } from 'react';
 
-export default function AfHomepage() {
-    const [country, setCountry] = useState("Asia");
+// 👇 YAHAN CHANGE 1: 'countryCode' prop receive karein
+export default function AfHomepage({ countryCode }) {
+    
+    // 👇 YAHAN CHANGE 2: Check karein agar URL se code aaya hai
+    const codeUpper = countryCode ? countryCode.toUpperCase() : null;
+    const urlCountryName = codeUpper ? COUNTRY_CODE_TO_NAME[codeUpper] : null;
+
+    // State initialize karein: Agar URL country hai to wahi use karein, nahi to 'Asia'
+    const [country, setCountry] = useState(urlCountryName || "Asia");
 
     const validAsianCountries = [
-    // South Asia
-    "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives", "Afghanistan",
-    
-    // South East Asia
-    "Thailand", "Singapore", "Vietnam", "Indonesia", "Philippines", "Malaysia", "Cambodia", "Laos", "Myanmar", "Brunei", "Timor-Leste",
-    
-    // East Asia
-    "China", "Japan", "South Korea", "North Korea", "Taiwan", "Mongolia", "Hong Kong", "Macau",
-    
-    // West Asia
-    "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Yemen", "Israel", "Jordan", "Lebanon", "Syria", "Iraq", "Iran", "Palestine", "Turkey", "Cyprus",
-    
-    // Central Asia
-    "Kazakhstan", "Uzbekistan", "Turkmenistan", "Kyrgyzstan", "Tajikistan",
-    
-    // Caucasus
-    "Azerbaijan", "Armenia", "Georgia"
-];
+        "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives", "Afghanistan",
+        "Thailand", "Singapore", "Vietnam", "Indonesia", "Philippines", "Malaysia", "Cambodia", "Laos", "Myanmar", "Brunei", "Timor-Leste",
+        "China", "Japan", "South Korea", "North Korea", "Taiwan", "Mongolia", "Hong Kong", "Macau",
+        "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Yemen", "Israel", "Jordan", "Lebanon", "Syria", "Iraq", "Iran", "Palestine", "Turkey", "Cyprus",
+        "Kazakhstan", "Uzbekistan", "Turkmenistan", "Kyrgyzstan", "Tajikistan",
+        "Azerbaijan", "Armenia", "Georgia"
+    ];
 
     useEffect(() => {
+        // 👇 YAHAN CHANGE 3: Agar URL country mil gayi hai, to IP Check MAT karo (Return)
+        if (urlCountryName) {
+            console.log("✅ Using URL Country:", urlCountryName);
+            setCountry(urlCountryName); // Ensure state is synced
+            return; // 🛑 Stop execution here
+        }
+
+        // --- IP Fallback Logic (Sirf tab chalega jab URL generic /asia ho) ---
         const getCountryByIP = async () => {
             try {
-                console.log("📡 Checking IP Location...");
-                
-                
+                console.log("📡 Checking IP Location (Fallback)...");
                 const res = await fetch("https://ipapi.co/json/");
-                
-               
                 if (!res.ok) throw new Error("API Limit or Error");
 
                 const data = await res.json();
                 console.log("📍 IP Detected Country:", data.country_name);
 
-                
                 if (validAsianCountries.includes(data.country_name)) {
                     setCountry(data.country_name);
                 } else {
-                    console.log("🛑 Country not in allowed list (e.g. India/USA). Keeping Default: Asia.");
+                    console.log("🛑 Country not in allowed list. Keeping Default: Asia.");
                 }
             } catch (err) {
-                console.log("⚠️ IP Fallback Failed or Adblocker blocked request. Defaulting to Asia.");
+                console.log("⚠️ IP Fallback Failed. Defaulting to Asia.");
             }
         };
 
-
         getCountryByIP();
-    }, []); 
-    return (
+    }, [countryCode]);
+      return (
         <>
 
             <style
