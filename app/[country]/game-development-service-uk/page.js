@@ -445,14 +445,7 @@ export default function GameDevelopmentServiceUk() {
                                         />
                                     </div>
                                 </div>
-                                <div className="col-md-12 col-sm-12 col-12">
-                                    <h3 className='text-center'>Our Games' Key Features</h3>
-                                </div>
-                                <div className="col-md-12">
-                                    <p>
-                                        Top-notch graphics and animations, Gameplay that is smooth and very responsive, Support for many languages, Analytics and tracking in the game, Updates and scalability are done regularly
-                                    </p>
-                                </div>
+                           
                             </div>
                         </div>
 
@@ -464,7 +457,13 @@ export default function GameDevelopmentServiceUk() {
                 </div>
             </section>
 
-
+<section className="key-features">
+   <div className="container">
+       <h2>Our Games' Key Features</h2>
+       {/* Woh content yahan paste karein jo upar se cut kiya tha */}
+       <p>Top-notch graphics, Smooth gameplay, etc...</p>
+   </div>
+</section>
 
 
             <section className="developer">
