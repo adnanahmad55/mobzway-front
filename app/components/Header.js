@@ -13,12 +13,12 @@ import { languages } from '../lib/i18n';
 export default function Header() {
    const pathname = usePathname();
     const [open, setOpen] = useState(false);
-    const { lang, setLang } = useLang();
+    const { lang, setLang } = useLang(); // Hook ko upar rakho
 
-    // 1. URL Country: Ye link banane ke liye use hoga (sg, pk, etc.) - TAAKI URL 'sg' RAHE
+    // 1. URL Country: Ye sirf Link banane mein kaam aayega (taaki '/sg' dikhe)
     let urlCountry = pathname.split("/")[1] || "default";
 
-    // 2. Menu Key: Ye decide karega ki data kaunsa dikhana hai (Logic ke liye)
+    // 2. Menu Key: Ye decide karega ki Menu kaunsa dikhana hai (Asia, Default, etc.)
     let menuKey = urlCountry;
 
     const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
@@ -28,7 +28,7 @@ export default function Header() {
         menuKey = 'asia'; 
     }
 
-    // 3. Ab menu 'menuKey' ke hisaab se ayega (Asia wala data)
+    // 3. Menu data fetch karo 'menuKey' ke hisaab se
     const menu = menuData[menuKey] || menuData.default;
     function changeLang(e) {
         console.log(e, 'eeeee');
@@ -223,7 +223,7 @@ export default function Header() {
         
         let finalPath = item.path;
 
-        // --- ASIA LOGIC (Check on menuKey) ---
+        // --- ASIA LOGIC (Menu Key check karo) ---
         if (menuKey === 'asia') {
             if (item.path?.includes('ludo-game-development')) {
                 finalPath = '/ludo-game-development-asia/';
@@ -233,14 +233,14 @@ export default function Header() {
             }
         }
 
-        // --- USA LOGIC (Check on menuKey) ---
+        // --- USA LOGIC ---
         if (menuKey === 'us') {
             if (item.path?.includes('slot-game-development')) {
                 finalPath = '/slot-game-development-usa/';
             }
         }
 
-        // --- EU LOGIC (Agar chahiye) ---
+        // --- EU LOGIC ---
         if (menuKey === 'eu' || menuKey === 'europe') {
             if (item.path?.includes('sportsbook-software-development')) {
                 finalPath = '/sportsbook-software-development-eu/';
@@ -250,20 +250,20 @@ export default function Header() {
         return (
             <li key={i} className={item.children ? "has_child" : ""}>
                 {item.path ? (
-                    // 🔥 MAIN FIX: Yahan 'urlCountry' use karo (sg) na ki 'menuKey' (asia)
+                    // 🔥 MAIN FIX: Yahan 'urlCountry' use karo taaki link '/sg' rahe
                     <Link href={`/${urlCountry}${finalPath}`}>{item.label}</Link>
                 ) : (
                     <a href="#">{item.label}</a>
                 )}
 
-                {/* Sub-menu mein bhi same logic */}
+                {/* --- SUB-MENU LOGIC (Dropdowns) --- */}
                 {item.children && (
                     <ul className="sub-menu">
                         {item.children.map((child, j) => {
                             
                             let childPath = child.path;
 
-                            // Child Logic Check
+                            // Child Logic Check (Same logic here)
                             if (menuKey === 'asia') {
                                 if (child.path?.includes('ludo-game-development')) {
                                     childPath = '/ludo-game-development-asia/';
@@ -281,7 +281,7 @@ export default function Header() {
                             return (
                                 <li key={j} className={child.children ? "has_child" : ""}>
                                     {child.path ? (
-                                        // 🔥 FIX Here too
+                                        // 🔥 FIX: Yahan bhi 'urlCountry' use karo
                                         <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
                                     ) : (
                                         <a href="#">{child.label}</a>
