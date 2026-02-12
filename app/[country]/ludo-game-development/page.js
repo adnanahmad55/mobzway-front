@@ -98,33 +98,34 @@ export default function LudoGameDevelopment() {
         ];
         
             useEffect(() => {
-                const getCountryByIP = async () => {
-                    try {
-                        console.log("📡 Checking IP Location...");
-                        
-                        
-                        const res = await fetch("https://ipapi.co/json/");
-                        
-                       
-                        if (!res.ok) throw new Error("API Limit or Error");
-        
-                        const data = await res.json();
-                        console.log("📍 IP Detected Country:", data.country_name);
-        
-                        
-                        if (validAsianCountries.includes(data.country_name)) {
-                            setCountry(data.country_name);
-                        } else {
-                            console.log("🛑 Country not in allowed list (e.g. India/USA). Keeping Default: Asia.");
-                        }
-                    } catch (err) {
-                        console.log("⚠️ IP Fallback Failed or Adblocker blocked request. Defaulting to Asia.");
-                    }
-                };
-        
-        
-                getCountryByIP();
-            }, []); 
+    const getCountryByIP = async () => {
+        try {
+            console.log("📡 Checking IP Location...");
+            
+            const res = await fetch("https://ipapi.co/json/");
+            if (!res.ok) throw new Error("API Error");
+
+            const data = await res.json();
+            console.log("📍 Full Response:", data);
+
+            const detectedCountry = COUNTRY_CODE_TO_NAME[data.country_code];
+
+            console.log("Mapped Country:", detectedCountry);
+
+            if (detectedCountry && validAsianCountries.includes(detectedCountry)) {
+                setCountry(detectedCountry);
+            } else {
+                console.log("🛑 Country not allowed. Keeping default: Asia");
+            }
+
+        } catch (err) {
+            console.log("⚠️ IP Detection Failed:", err.message);
+        }
+    };
+
+    getCountryByIP();
+}, []);
+
     return (
         <>
             <style
