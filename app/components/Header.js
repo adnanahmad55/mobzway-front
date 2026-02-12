@@ -24,8 +24,11 @@ export default function Header() {
 
     // 'menuKey': Ye Menu Data fetch karne ke liye hai
     let menuKey = urlCountry;
-
-    const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
+    const ASIA_CODES = [
+        'sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my', // Old ones
+        'az', 'kh', 'ge', 'jp', 'la', 'lb', 'mv', 'mn', // New: Azerbaijan, Cambodia, Georgia, Japan, Laos, Lebanon, Maldives, Mongolia
+        'mm', 'ph', 'kr', 'lk', 'tr', 'ae'              // New: Myanmar, Philippines, S.Korea, Sri Lanka, Turkey, UAE
+    ];
 
     // Agar URL Asia ki kisi country ka hai, to Menu 'asia' wala load karo
     if (ASIA_CODES.includes(urlCountry)) {
@@ -283,7 +286,7 @@ export default function Header() {
                                     </option>
                                 ))}
                             </select> */}
-                            {/* {country} */}
+                            {/* {urlCountry} */}
 
                           {urlCountry === 'bd' &&  <div className="dropdown d-flex align-items-center">
                                 <button
