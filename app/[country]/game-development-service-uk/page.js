@@ -26,7 +26,7 @@ export default function GameDevelopmentServiceUk() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Best Sportsbook software development company in London, UK
+                        Game development company in London, UK | Game developers UK
                     </h1>
 
                     <div className="btn_outer">
