@@ -66,13 +66,9 @@ export function middleware(request) {
     // --- PRIORITY 3: STATIC REGIONS ---
     
     // Africa (Abhi bhi /af par hi bhej rahe hain, agar dynamic chahiye to bata dena)
-    if (AFRICAN_COUNTRIES.includes(country)) {
-        return NextResponse.redirect(new URL('/af', request.url));
-    }
-    
-    // --- PRIORITY 4: FINAL FALLBACK ---
-    // Agar Australia (AU) ya Brazil (BR) aaye -> Default Global Page
-    console.log(`⚠️ Unmatched Country: ${country}. Fallback to /af`);
+    if (AFRICAN_COUNTRIES.includes(country)) return NextResponse.redirect(new URL(`/${country.toLowerCase()}`, request.url));
+
+    // C. FALLBACK
     return NextResponse.redirect(new URL('/af', request.url));
   }
   

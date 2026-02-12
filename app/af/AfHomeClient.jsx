@@ -4,102 +4,45 @@ import React, { useEffect, useState } from 'react';
 import BannerForm from '../components/BannerForm';
 
 // ✅ COMPLETE AFRICA REGION MAPPING (Code -> Name)
-const AFRICA_REGION_MAP = {
-    // Major Markets
-    ZA: "South Africa",
-    NG: "Nigeria",
-    KE: "Kenya",
-    GH: "Ghana",
-    EG: "Egypt",
-    
-    // East & West Africa
-    TZ: "Tanzania",
-    UG: "Uganda",
-    ET: "Ethiopia",
-    RW: "Rwanda",
-    SN: "Senegal",
-    CI: "Ivory Coast",
-    CM: "Cameroon",
-
-    // North Africa
-    DZ: "Algeria",
-    MA: "Morocco",
-    TN: "Tunisia",
-
-    // Southern Africa
-    ZM: "Zambia",
-    ZW: "Zimbabwe",
-    BW: "Botswana",
-    NA: "Namibia",
-    MZ: "Mozambique",
-    AO: "Angola"
+const AF_CODE_TO_NAME = {
+    ZA: "South Africa", NG: "Nigeria", KE: "Kenya", EG: "Egypt", GH: "Ghana",
+    MA: "Morocco", TZ: "Tanzania", UG: "Uganda", ZW: "Zimbabwe", ET: "Ethiopia",
+    DZ: "Algeria", SD: "Sudan", AO: "Angola", MZ: "Mozambique", CI: "Ivory Coast",
+    CM: "Cameroon", SN: "Senegal", NA: "Namibia", BW: "Botswana", RW: "Rwanda"
 };
 
-export default function AfHomeClient() {
-    const [country, setCountry] = useState("South Africa"); // Default Strong Market
-    const [debugInfo, setDebugInfo] = useState("Loading...");
+export default function AfHomeClient({ countryCode }) {
+    
+    // 2. URL Check
+    const codeUpper = countryCode ? countryCode.toUpperCase() : null;
+    const urlCountryName = codeUpper ? AF_CODE_TO_NAME[codeUpper] : null;
+
+    // 3. State Init
+    const [country, setCountry] = useState(urlCountryName || "Africa");
 
     useEffect(() => {
-        const checkLocation = async () => {
+        // 4. STOP IP CHECK if URL has country
+        if (urlCountryName) {
+            console.log("✅ Using URL Country for Africa:", urlCountryName);
+            setCountry(urlCountryName);
+            return;
+        }
+
+        // 5. Fallback IP Check (Sirf generic /af ke liye)
+        const getCountryByIP = async () => {
             try {
-                console.log("🌍 Checking IP for Africa Page...");
-                
                 const res = await fetch("https://ipapi.co/json/");
-                if (!res.ok) throw new Error("API Error");
-                
                 const data = await res.json();
-                setDebugInfo(`${data.country_name} (${data.country_code})`);
-
-                // --- 🛑 REDIRECT SAFETY LOGIC (Galat traffic ko sahi jagah bhejo) ---
-
-                // 1. India/Asia -> /in or /asia
-                if (data.country_code === 'IN') {
-                    window.location.href = "/in";
-                    return;
-                }
-                if (data.country_code === 'BD') {
-                    window.location.href = "/bd";
-                    return;
-                }
-                if (data.continent_code === 'AS') {
-                    window.location.href = "/asia/thailand";
-                    return;
-                }
-
-                // 2. Europe -> /eu
-                if (data.continent_code === 'EU') {
-                    window.location.href = "/eu";
-                    return;
-                }
-
-                // 3. Americas (North & South) -> /us
-                if (data.continent_code === 'NA' || data.continent_code === 'SA') {
-                    window.location.href = "/us";
-                    return;
-                }
-
-                //  CONTENT UPDATE LOGIC
-                // Pehle Map check karo, agar nahi mile toh API ka naam use karo
-                const matchedName = AFRICA_REGION_MAP[data.country_code];
-                
-                if (matchedName) {
-                    setCountry(matchedName);
-                } else if (data.continent_code === 'AF') {
-                  
+                if (data.continent_code === 'AF') {
                     setCountry(data.country_name);
-                } else {
-                    // Fallback
-                    setCountry("South Africa");
                 }
-
-            } catch (error) {
-                console.log("⚠️ IP Check Failed. Defaulting to South Africa.");
-                setCountry("South Africa");
+            } catch (err) {
+                console.log("IP Check Failed");
             }
         };
 
-        checkLocation();
-    }, []);
+        getCountryByIP();
+    }, [countryCode]);
        return (
             <>
     

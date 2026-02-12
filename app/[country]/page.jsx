@@ -26,6 +26,7 @@ const EU_CODES = [
     'eu', 'fr', 'de', 'it', 'es', 'nl', 'be', 'se', 'no', 'dk', 'fi', 
     'pl', 'ie', 'ch', 'at', 'pt', 'ru', 'ua', 'gr', 'cz', 'ro', 'hu'
 ];
+const AF_CODES = ['af', 'za', 'eg', 'ng', 'ke', 'gh', 'ma', 'tz', 'ug', 'zw', 'et', 'dz', 'sd', 'ao', 'mz', 'ci', 'cm', 'sn', 'na', 'bw', 'rw'];
 
 export default async function CountryDynamicPage({ params }) {
     // Next.js 15+ mein params await karna padta hai
@@ -60,5 +61,8 @@ export default async function CountryDynamicPage({ params }) {
 
     // D. GLOBAL FALLBACK (Africa / Rest of World)
     // Agar country kisi list mein nahi hai (e.g. Brazil, Australia), tab ye chalega.
-    return <AfHomeClient />; 
+   if (AF_CODES.includes(c)) {
+        // 🔥 Prop pass kar rahe hain taaki "Casino in Nigeria" dikhe
+        return <AfHomeClient countryCode={c} />;
+    }
 }
