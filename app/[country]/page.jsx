@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 const ASIA_CODES = [ 'sg', 'pk', 'th', 'vn', 'id', 'my',              // SE Asia & Pakistan
         'am', 'az', 'kh', 'ge', 'jp', 'la', 'lb', 'mv',  // Armenia, Azerbaijan, Cambodia, Georgia, Japan, Laos, Lebanon, Maldives
-        'mn', 'mm', 'ph', 'kr', 'lk', 'tr', 'ae','sa']; 
+        'mn', 'mm', 'ph', 'kr', 'lk', 'tr', 'ae','sa','np']; 
 
 export default async function CountryDynamicPage({ params }) {
   const resolvedParams = await params;

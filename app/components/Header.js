@@ -31,7 +31,7 @@ export default function Header() {
     const ASIA_CODES = [
         'sg', 'pk', 'th', 'vn', 'id', 'my',              // SE Asia & Pakistan
         'am', 'az', 'kh', 'ge', 'jp', 'la', 'lb', 'mv',  // Armenia, Azerbaijan, Cambodia, Georgia, Japan, Laos, Lebanon, Maldives
-        'mn', 'mm', 'ph', 'kr', 'lk', 'tr', 'ae' ,'sa'       // Mongolia, Myanmar, Philippines, S.Korea, Sri Lanka, Turkey, UAE
+        'mn', 'mm', 'ph', 'kr', 'lk', 'tr', 'ae' ,'sa','np'       // Mongolia, Myanmar, Philippines, S.Korea, Sri Lanka, Turkey, UAE
     ];
 
     // Agar country Asia list mein hai, to Menu 'asia' wala load karo
