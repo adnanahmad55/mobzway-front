@@ -8,7 +8,7 @@ export const metadata = {
     alternates: {
         canonical: "https://www.mobzway.com/uk/",
         languages: {
-            "en-IN": "https://www.mobzway.com/uk/",
+            "en-uk": "https://www.mobzway.com/uk/",
         },
     },
 };
@@ -26,7 +26,7 @@ export default function GameDevelopmentServiceUk() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Best Sportsbook software development company in London, UK
+                        Best Sportsbook software development company in UK
                     </h1>
 
                     <div className="btn_outer">
@@ -115,7 +115,7 @@ export default function GameDevelopmentServiceUk() {
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway is a reputable Game development company in London, UK, that is known for providing high-quality and performance-driven games and immersive games to the clients starting from small enterprises to large global brands. The game developers, who are based in the UK, are excellent at creating excellent digital experiences that are engaging and interactive across all the platforms namely mobile, web, PC and console.
+                        Mobzway is a reputable Game development company in UK, that is known for providing high-quality and performance-driven games and immersive games to the clients starting from small enterprises to large global brands. The game developers, who are based in the UK, are excellent at creating excellent digital experiences that are engaging and interactive across all the platforms namely mobile, web, PC and console.
                     </p>
                     <p className="content" style={{ color: "#000", fontSize: 17 }}>
                         We produce the games from concept design to the final deployment which are the perfect combination of creativity, technology, and player-centric design.
@@ -137,7 +137,7 @@ export default function GameDevelopmentServiceUk() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Reasons for Selecting Mobzway as</span>{" "}
-                                <span className="black"> Your Game development company in London, UK</span>
+                                <span className="black"> Your Game development company in UK</span>
                             </h2>
                         </div>
                     </div>
@@ -322,7 +322,7 @@ export default function GameDevelopmentServiceUk() {
                             <h2 className="sub_title">
                                 <span className="yellow">Our Game Development</span>{" "}
                                 <span className="black">
-                                     Services in London, UK
+                                     Services in UK
                                 </span>
                             </h2>
                         </div>
@@ -478,7 +478,7 @@ export default function GameDevelopmentServiceUk() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="yellow">London as a </span>{" "}
+                                <span className="yellow">UK as a </span>{" "}
                                 <span className="black">Global Hub for Gaming</span>
                                 
                             </h2>
@@ -502,7 +502,7 @@ export default function GameDevelopmentServiceUk() {
                                 Today's growing gaming industry within the UK, which appears to be primarily driven by mobile game players, indie developers, and new technology trends (e.g., augmented reality and virtual reality).
                                 <br/>
                                 <br/>
-                                Mobzway enables businesses to utilize this growth potential through developing games based upon contemporary player demands and their own commercial goals. thats we are one of the best Game development company in London, UK.
+                                Mobzway enables businesses to utilize this growth potential through developing games based upon contemporary player demands and their own commercial goals. thats we are one of the best Game development company in UK.
                                 
 
                             </p>
@@ -955,7 +955,7 @@ export default function GameDevelopmentServiceUk() {
                             <h2 className="sub_title">
                                 <span className="black_bg_head_yellow">Additionally, we utilize cloud platforms (AWS and Azure) as well as Node.js.</span>{" "}
                                 <span className="black_bg_head_white">
-                                    Partner with Game development company in London, UK – Mobzway
+                                    Partner with Game development company in UK – Mobzway
                                 </span>
                             </h2>
                         </div>

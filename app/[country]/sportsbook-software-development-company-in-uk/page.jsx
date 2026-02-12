@@ -13,7 +13,7 @@ export default function SportsbookSoftwareDevelopmentCompanyInUK() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Sportsbook software development company in London, UK
+                        Sportsbook software development company in UK
                     </h1>
 
                     <div className="btn_outer">
@@ -102,7 +102,7 @@ export default function SportsbookSoftwareDevelopmentCompanyInUK() {
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway is a dependable Sportsbook software development company in London, UK. It is the provider of betting platforms that are high-performance, secure, and scalable for the iGaming operators and the digital betting businesses. The sports bet solutions we provide are capable of real-time betting, odds management, and very large traffic at the same time. They are created with user friendliness and smoothness as the highest priorities.
+                        Mobzway is a dependable Sportsbook software development company in UK. It is the provider of betting platforms that are high-performance, secure, and scalable for the iGaming operators and the digital betting businesses. The sports bet solutions we provide are capable of real-time betting, odds management, and very large traffic at the same time. They are created with user friendliness and smoothness as the highest priorities.
                     </p>
                     <p className="content" style={{ color: "#000", fontSize: 17 }}>
                         If you plan to launch a new sportsbook or want to upgrade your current one, Mobzway is the one-stop-shop for sportsbook software that will help you with your business growth and efficiency in operation.
@@ -124,7 +124,7 @@ export default function SportsbookSoftwareDevelopmentCompanyInUK() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Why Mobzway is one of the best </span>{" "}
-                                <span className="black">Sportsbook software development company in London, UK</span>
+                                <span className="black">Sportsbook software development company in UK</span>
                             </h2>
                         </div>
                     </div>
@@ -307,7 +307,7 @@ export default function SportsbookSoftwareDevelopmentCompanyInUK() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="yellow">Our London, UK-based Sportsbook </span>{" "}
+                                <span className="yellow">Our UK-based Sportsbook </span>{" "}
                                 <span className="black">
                                     Software Development Services
                                 </span>
@@ -691,7 +691,7 @@ export default function SportsbookSoftwareDevelopmentCompanyInUK() {
                                 The UK is one of the biggest and most regulated sports betting markets across the world. Those seeking to operate within the UK market need sportsbook software which is reliable and scalable.
                                 <br />
                                 <br />
-                                Mobzway assists betting companies to compete favorably by providing them with sportsbook platforms that are developed to be functional. thats why we are most chosen Sportsbook software development company in London, UK.
+                                Mobzway assists betting companies to compete favorably by providing them with sportsbook platforms that are developed to be functional. thats why we are most chosen Sportsbook software development company UK.
                                 <br />
                                 <br />
 
@@ -931,7 +931,7 @@ export default function SportsbookSoftwareDevelopmentCompanyInUK() {
                                 fontSize: "1.30rem !important"
                             }}
                         >
-                            Collaborate with Mobzway, one of the most admired Sportsbook software development company in London, UK, in the development of a safe, scalable, and future-ready sportsbook solution.
+                            Collaborate with Mobzway, one of the most admired Sportsbook software development company in UK, in the development of a safe, scalable, and future-ready sportsbook solution.
                         </h3>
                     </div>
                     <div className="text-center">

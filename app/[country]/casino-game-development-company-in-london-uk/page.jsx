@@ -8,7 +8,7 @@ export const metadata = {
     alternates: {
         canonical: "https://www.mobzway.com/uk/",
         languages: {
-            "en-IN": "https://www.mobzway.com/uk/",
+            "en-uk": "https://www.mobzway.com/uk/",
         },
     },
 };
@@ -26,7 +26,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                 <div className="overlay" />
                 <div className="wel_come_container">
                     <h1 className="welcome_text wel">
-                        Casino Game development company in London, UK | Mobzway
+                        Casino Game development company UK | Mobzway
                     </h1>
 
                     <div className="btn_outer">
@@ -115,7 +115,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                         style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                         className="content"
                     >
-                        Mobzway, a leading game development company in London, UK, is well-known for its professional casino game development services. The company is engaged in the creation and design of online gaming platforms to which fair, engaging, and high-quality casino games will be added. Games with smooth gameplay and great visuals that can be played on all devices are being developed as individual projects.
+                        Mobzway, a leading game development company in UK, is well-known for its professional casino game development services. The company is engaged in the creation and design of online gaming platforms to which fair, engaging, and high-quality casino games will be added. Games with smooth gameplay and great visuals that can be played on all devices are being developed as individual projects.
                     </p>
                     <p className="content" style={{ color: "#000", fontSize: 17 }}>
                         The development of casino games is our main area of work, hence we provide development services of the highest quality to iGaming operators, startups, and digital entertainment brands in seeking to add their game portfolio with either custom or white-label casino games.
@@ -137,7 +137,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                         >
                             <h2 className="sub_title">
                                 <span className="yellow">Reasons to Partner with Mobzway as </span>{" "}
-                                <span className="black">Your game development company in London, UK</span>
+                                <span className="black">Your game development company in UK</span>
                             </h2>
                         </div>
                     </div>
@@ -319,7 +319,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                             <h2 className="sub_title">
                                 <span className="yellow">Casino Game Development </span>{" "}
                                 <span className="black">
-                                    Services in London, UK
+                                    Services in UK
                                 </span>
                             </h2>
                         </div>
@@ -704,7 +704,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                                 The highly developed and competitive iGaming market in the UK is always requiring new and high-quality casino games. This is due to the fact that players are demanding games with good graphics, high performance, and proper results.
                                 <br />
                                 <br />
-                                Mobzway is able to meet the demand by providing casino games that are designed to meet the objectives of being reliable, engaging, and long-lasting. thats why we are most preferred game development company in London, UK.
+                                Mobzway is able to meet the demand by providing casino games that are designed to meet the objectives of being reliable, engaging, and long-lasting. thats why we are most preferred game development company in UK.
                                 <br />
                                 <br />
                                 
@@ -930,7 +930,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                             <h2 className="sub_title">
                                 <span className="black_bg_head_yellow">Partner With Mobzway For Casino </span>{" "}
                                 <span className="black_bg_head_white">
-                                    Game Development In London, UK
+                                    Game Development In UK
                                 </span>
                             </h2>
                         </div>
@@ -946,7 +946,7 @@ export default function CasinoGameDevelopmentCompanyInLondonUk() {
                                 fontSize: "1.30rem !important"
                             }}
                         >
-                            Collaborate with the trustworthy game development company in London, UK, to design exciting casino games that can allure and promote steady growth of players.
+                            Collaborate with the trustworthy game development company in UK, to design exciting casino games that can allure and promote steady growth of players.
                         </h3>
                     </div>
                     <div className="text-center">

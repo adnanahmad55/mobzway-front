@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import BannerForm from '../components/BannerForm';
 
 
-const UK_REGION_MAP = {
+/*const UK_REGION_MAP = {
     
     GB: "United Kingdom", 
     
@@ -17,11 +17,11 @@ const UK_REGION_MAP = {
 
     GI: "Gibraltar", 
     MT: "Malta"     
-};
+};*/
 
 export default function UKHomeClient() {
     const [country, setCountry] = useState("United Kingdom"); // Default
-    const [debugInfo, setDebugInfo] = useState("Loading...");
+   /* const [debugInfo, setDebugInfo] = useState("Loading...");
 
     useEffect(() => {
         const checkLocation = async () => {
@@ -87,7 +87,7 @@ export default function UKHomeClient() {
         };
 
         checkLocation();
-    }, []);
+    }, []);*/
      return (
             <>
     
@@ -125,7 +125,7 @@ export default function UKHomeClient() {
                                                 <div className="row">
                                                     <div className="col-md-7">
                                                         <h2 data-hk="s40-1-12" className="hero__title">
-                                                            Game‍‌‍‍‌‍‌‍‍‌ Development Services {country}
+                                                            Game‍‌‍‍‌‍‌‍‍‌ Development Services in UK
                                                         </h2>
                                                         <img
                                                             className="d-block d-md-none mb-3 w-100"
@@ -133,7 +133,7 @@ export default function UKHomeClient() {
                                                             alt="Poker Game"
                                                         />
                                                         <div className="hero__description">
-                                                            Custom game development solutions tailored to the {country} market. Games that are scalable, secure, and engaging and can be delivered through the web, mobile, and cross-platform.
+                                                            Custom game development solutions tailored to the UK market. Games that are scalable, secure, and engaging and can be delivered through the web, mobile, and cross-platform.
     
                                                         </div>
                                                     </div>
@@ -157,7 +157,7 @@ export default function UKHomeClient() {
                                                             alt="Rummy Game"
                                                         />
                                                         <div className="hero__description">
-                                                            Highly efficient sportsbook software crafted specifically for {country} operators. Some of the features include real-time odds, risk management tools, and effortless platform integrations.
+                                                            Highly efficient sportsbook software crafted specifically for UK operators. Some of the features include real-time odds, risk management tools, and effortless platform integrations.
     
                                                         </div>
                                                     </div>
@@ -173,7 +173,7 @@ export default function UKHomeClient() {
                                                 <div className="row">
                                                     <div className="col-md-7">
                                                         <h2 data-hk="s40-1-12" className="hero__title">
-                                                            Casino Games Development {country}
+                                                            Casino Games Development UK
                                                         </h2>
                                                         <img
                                                             className="d-block d-md-none mb-3 w-100"
@@ -181,7 +181,7 @@ export default function UKHomeClient() {
                                                             alt="Ludo Game"
                                                         />
                                                         <div className="hero__description">
-                                                            Exclusive casino game development for the {country} iGaming industry. Some of the features of the games include RNG-ready, visually immersive, and the games have a robust backend architecture.
+                                                            Exclusive casino game development for the UK iGaming industry. Some of the features of the games include RNG-ready, visually immersive, and the games have a robust backend architecture.
                                                         </div>
                                                     </div>
                                                     <div className="col-md-5 d-none d-md-block">
@@ -413,13 +413,13 @@ export default function UKHomeClient() {
                     <div className="container">
                         <h1 className="sub_title text-center">
                             <span className="yellow">Mobzway – Online Gaming Software </span>{" "}
-                            <span className="black">Development Company in the {country}</span>
+                            <span className="black">Development Company in the UK</span>
                         </h1>
                         <p
                             style={{ marginBottom: 15, color: "#000", fontSize: 17 }}
                             className="content"
                         >
-                            Mobzway is a top-notch worldwide gaming software development company that launches tailor-made gaming solutions for the {country} market. Our experts have the hands-on knowledge and proficiency in creating engaging and secure games. The games we have expertise in are Custom games, Sportsbook software and other casino-style games for Android, iOS, and HTML5 platforms.
+                            Mobzway is a top-notch worldwide gaming software development company that launches tailor-made gaming solutions for the UK market. Our experts have the hands-on knowledge and proficiency in creating engaging and secure games. The games we have expertise in are Custom games, Sportsbook software and other casino-style games for Android, iOS, and HTML5 platforms.
     
                         </p>
                         <p className="content" style={{ color: "#000", fontSize: 17 }}>
@@ -638,7 +638,7 @@ export default function UKHomeClient() {
                                     className="help_cotnent text-center"
                                     style={{ paddingBottom: 15 }}
                                 >
-                                    Mobzway is a reliable video gaming software provider for the {country} Market, and we create custom "end-to-end" solutions for our customers. We develop all of the required components of your video gaming platform, including Platform Development, Integration of Video Gaming Products, and Regulatory Compliances. So you can spend more time marketing your business instead of worrying about all the technical complexities of your platform.
+                                    Mobzway is a reliable video gaming software provider for the UK Market, and we create custom "end-to-end" solutions for our customers. We develop all of the required components of your video gaming platform, including Platform Development, Integration of Video Gaming Products, and Regulatory Compliances. So you can spend more time marketing your business instead of worrying about all the technical complexities of your platform.
     
                                 </div>
                                 <div
