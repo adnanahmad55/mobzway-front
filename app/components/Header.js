@@ -364,7 +364,7 @@ export default function Header() {
                             </select> */}
                             {/* {country} */}
 
-                          {country === 'bd' &&  <div className="dropdown d-flex align-items-center">
+                          {urlCountry === 'bd' &&  <div className="dropdown d-flex align-items-center">
                                 <button
                                     className="border-0 p-0"
                                     type="button"
@@ -541,7 +541,7 @@ export default function Header() {
                             {menu.map((item, i) => (
                                 <li key={i} className={item.children ? "has_child" : ""}>
                                     {item.path ? (
-                                        <Link href={`/${country}${item.path}`}>{item.label}</Link>
+                                        <Link href={`/${urlCountry}${item.path}`}>{item.label}</Link>
                                     ) : (
                                         <a href="#">{item.label}</a>
                                     )}
@@ -551,7 +551,7 @@ export default function Header() {
                                             {item.children.map((child, j) => (
                                                 <li key={j} className={child.children ? "has_child" : ""}>
                                                     {child.path ? (
-                                                        <Link href={`/${country}${child.path}`}>{child.label}</Link>
+                                                        <Link href={`/${urlCountry}${child.path}`}>{child.label}</Link>
                                                     ) : (
                                                         <a href="#">{child.label}</a>
                                                     )}
@@ -560,7 +560,7 @@ export default function Header() {
                                                         <ul className="sub-menu">
                                                             {child.children.map((sub, k) => (
                                                                 <li key={k}>
-                                                                    <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
+                                                                    <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
                                                                 </li>
                                                             ))}
                                                         </ul>
