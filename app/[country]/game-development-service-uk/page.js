@@ -6,9 +6,9 @@ export const metadata = {
         "Mobzway is leading sportsbook software development company in London, UK, delivering secure betting platforms with real-time odds. Hire sportsbook developers!",
     keywords: ["Sportsbook software development company in London, Sportsbook software development company in UK"],
     alternates: {
-        canonical: "https://www.mobzway.com/uk/",
+        canonical: "https://www.mobzway.com/uk/game-development-service-uk",
         languages: {
-            "en-uk": "https://www.mobzway.com/uk/",
+            "en-uk": "https://www.mobzway.com/uk/game-development-service-uk",
         },
     },
 };
