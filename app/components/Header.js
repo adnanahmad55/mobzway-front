@@ -280,9 +280,7 @@ const ASIA_CODES = [
                                    if (item.path?.includes('ludo-game-development')) {
                                        finalPath = '/ludo-game-development-uk/';
                                    }
-                                   if (item.path?.includes('game-development-company-in-london-uk')) {
-                                       finalPath = '/ludo-game-development-uk/';
-                                   }
+                                 
                                }                               
 
                                 return (
