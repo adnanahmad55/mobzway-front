@@ -150,7 +150,7 @@ export default function Header() {
                                 // --- ASIA LOGIC (Check based on menuKey) ---
                                 if (menuKey === 'asia') {
                                     if (item.path?.includes('ludo-game-development')) {
-                                        finalPath = '/ludo-game-development-asia/';
+                                        finalPath = '/ludo-game-development/';
                                     }
                                     if (item.path?.includes('slot-game-development')) {
                                         finalPath = '/slot-game-development-asia/';
