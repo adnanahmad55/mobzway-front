@@ -66,8 +66,8 @@ const US_REGION_CODE_TO_NAME = {
 };
 
 export default function USHome() {
-    const [country, setCountry] = useState("United States"); // Default
-    const [debugInfo, setDebugInfo] = useState("Loading...");
+   const [country, setCountry] = useState("US"); // Default
+    /* const [debugInfo, setDebugInfo] = useState("Loading...");
 
     useEffect(() => {
         const checkLocation = async () => {
@@ -129,7 +129,7 @@ export default function USHome() {
         };
 
         checkLocation();
-    }, []);
+    }, []);*/
          return (
          <>
              {/* <script
@@ -195,7 +195,7 @@ export default function USHome() {
                                                          alt="Poker Game"
                                                      />
                                                      <div className="hero__description">
-                                                         Create exceptional games intended for the {country} market.
+                                                         Create exceptional games intended for the US market.
                                                          Custom mobile, casino, and multiplayer game development powered by top-tier innovation.
  
                                                      </div>
@@ -220,7 +220,7 @@ export default function USHome() {
                                                          alt="Rummy Game"
                                                      />
                                                      <div className="hero__description">
-                                                         Top-Notch Slot Game Development for the {country} Gaming Industry.
+                                                         Top-Notch Slot Game Development for the US Gaming Industry.
                                                          Profoundly engaging themes, impeccable mechanics, and safe real-money integrations.
  
                                                      </div>
@@ -245,7 +245,7 @@ export default function USHome() {
                                                          alt="Ludo Game"
                                                      />
                                                      <div className="hero__description">
-                                                         High-velocity Fish Table Game Development for {country} Operators.
+                                                         High-velocity Fish Table Game Development for US Operators.
                                                          Quick gameplay, mesmerizing graphics, and fool-proof anti-fraud protection.
                                                      </div>
                                                  </div>
