@@ -516,7 +516,7 @@ export default function LudoGameDevelopment() {
                         <div className="col-md-6 col1">
                             <p className="wow bounceInUp para-1" data-wow-duration="2s">
                                 Mobzway Technologies is the leading Ludo game app development
-                                company serving the clients in India, the USA, the UK, and
+                                company serving the clients in Bangladesh,india,the USA, the UK, and
                                 Australia. We specialize in delivering next-generation Ludo game
                                 development services to both established gaming businesses and
                                 ambitious entrepreneurs. Our expert developers craft Ludo games that
