@@ -14,7 +14,7 @@ import EuContent from '@/app/eu/EuContent';            // Europe (Ensure path is
 // --- 2. DEFINE REGION LISTS ---
 const ASIA_CODES = [
     'asia', 'cn', 'jp', 'kr', 'kp', 'tw', 'hk', 'mo', 'mn',
-    'pk', 'bd', 'lk', 'np', 'bt', 'mv', 'af',
+    'pk', 'lk', 'np', 'bt', 'mv', 'af',
     'th', 'vn', 'my', 'sg', 'id', 'ph', 'kh', 'la', 'mm', 'bn', 'tl',
     'kz', 'uz', 'tm', 'tj', 'kg',
     'ae', 'sa', 'qa', 'kw', 'bh', 'om', 'ye',

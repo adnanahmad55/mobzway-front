@@ -33,7 +33,7 @@ const ASIA_CODES = [
     'cn', 'jp', 'kr', 'kp', 'tw', 'hk', 'mo', 'mn',
 
     // South Asia
-    'in', 'pk', 'bd', 'lk', 'np', 'bt', 'mv', 'af',
+     'pk', 'lk', 'np', 'bt', 'mv', 'af',
 
     // Southeast Asia
     'th', 'vn', 'my', 'sg', 'id', 'ph', 'kh', 'la', 'mm', 'bn', 'tl',
