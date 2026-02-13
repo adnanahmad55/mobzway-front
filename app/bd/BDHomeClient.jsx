@@ -6,37 +6,7 @@ import { dictionary } from '../lib/i18n';
 import BannerForm from '../components/BannerForm';
 
 export default function BDHomeClient() {
-    const { lang } = useLang();
-    const [debugInfo, setDebugInfo] = useState("Checking Location...");
 
-    useEffect(() => {
-        const checkLocation = async () => {
-            try {
-                console.log("🇧🇩 Checking IP for Bangladesh Page...");
-                const res = await fetch("https://ipapi.co/json/");
-                if (!res.ok) throw new Error("API Error");
-                
-                const data = await res.json();
-                setDebugInfo(`${data.country_name} (${data.country_code})`);
-
-        
-                if (data.country_code === 'IN') {
-                    window.location.href = "/in";
-                }
-            
-                else if (['DE', 'FR', 'IT', 'NL', 'NO'].includes(data.country_code)) {
-                  
-                    console.log("User is from Europe, but staying on page for testing.");
-                }
-
-            } catch (error) {
-                console.log("IP Check Failed");
-                setDebugInfo("Location check failed");
-            }
-        };
-
-        checkLocation();
-    }, []);
     return (
         <>
 
