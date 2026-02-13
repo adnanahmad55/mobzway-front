@@ -7,7 +7,7 @@ import '../public/assets/css/style_ra.css';
 import '../public/assets/css/aos.css';
 
 // 👇 Naya Component Import karein (Header/Footer ab iske andar hain)
-import CountryLayout from "components/CountryLayout"; 
+import CountryLayout from "../components/CountryLayout"; 
 
 import SiteScripts from "./components/SiteScripts";
 import ZohoLoader from "./components/ZohoLoader";
