@@ -4,22 +4,24 @@ import { NextResponse } from 'next/server';
 // Note: IN, BD removed (VIP handled)
 const ASIA_CODES = [
   'CN', 'JP', 'KR', 'KP', 'TW', 'HK', 'MO', 'MN',
-  'PK', 'LK', 'NP', 'BT', 'MV', 'AF',
+  'PK', 'LK', 'NP', 'BT', 'MV', // 'AF' (Afghanistan) removed to avoid conflict with /af (Africa page)
   'TH', 'VN', 'MY', 'SG', 'ID', 'PH', 'KH', 'LA', 'MM', 'BN', 'TL',
   'KZ', 'UZ', 'TM', 'TJ', 'KG',
   'AE', 'SA', 'QA', 'KW', 'BH', 'OM', 'YE', 'IR', 'IQ', 'IL', 'JO', 'LB', 'SY', 'TR', 'GE', 'AM', 'AZ'
 ];
 
-// 2. Europe Region (VIP: GB is handled separately)
+// 2. Europe Region (VIP: GB handled separately)
+// ✅ ADDED: RS (Serbia), HR, SI, BA, MK, ME (Balkans), EE, LT, LV (Baltics), SK, BG
 const EUROPEAN_COUNTRIES = [
   'FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 
-  'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO', 'HU'
+  'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO', 'HU',
+  'RS', 'HR', 'SI', 'BA', 'MK', 'ME', 'AL', 'BG', 'SK', 'EE', 'LT', 'LV', 'CY', 'MT', 'IS'
 ]; 
 
 // 3. Africa Region
 const AFRICAN_COUNTRIES = [
   'ZA', 'EG', 'NG', 'KE', 'GH', 'MA', 'TZ', 'UG', 'ZW', 'ET', 
-  'DZ', 'SD', 'AO', 'MZ', 'CI', 'CM', 'SN'
+  'DZ', 'SD', 'AO', 'MZ', 'CI', 'CM', 'SN', 'NA', 'BW', 'RW'
 ];
 
 export function middleware(request) {
@@ -39,7 +41,7 @@ export function middleware(request) {
       searchParams.get('c') || 
       request.geo?.country || 
       request.headers.get('x-vercel-ip-country') || 
-      'NP'; // Testing Default
+      'NP'; 
     
     country = country ? country.toUpperCase().trim() : 'NP';
     
@@ -53,22 +55,23 @@ export function middleware(request) {
 
     // --- PRIORITY 2: DYNAMIC REGIONS (Country Code URL) ---
     
-    // A. EUROPE (Ab ye /eu par nahi, balki /fr, /de par bhejega) ✅ CHANGED
+    // A. EUROPE (Ab RS/Serbia bhi yahan pakda jayega aur /rs par bhejega)
     if (EUROPEAN_COUNTRIES.includes(country)) {
         return NextResponse.redirect(new URL(`/${country.toLowerCase()}`, request.url));
     }
 
-    // B. ASIA (Ye /np, /sg par bhejega)
+    // B. ASIA
     if (ASIA_CODES.includes(country)) {
         return NextResponse.redirect(new URL(`/${country.toLowerCase()}`, request.url));
     }
 
-    // --- PRIORITY 3: STATIC REGIONS ---
-    
-    // Africa (Abhi bhi /af par hi bhej rahe hain, agar dynamic chahiye to bata dena)
-    if (AFRICAN_COUNTRIES.includes(country)) return NextResponse.redirect(new URL(`/${country.toLowerCase()}`, request.url));
+    // C. AFRICA (Dynamic Redirect: ZA -> /za)
+    if (AFRICAN_COUNTRIES.includes(country)) {
+        return NextResponse.redirect(new URL(`/${country.toLowerCase()}`, request.url));
+    }
 
-    // C. FALLBACK
+    // --- PRIORITY 3: FALLBACK ---
+    // Agar country upar kisi list mein nahi mili (unknown), to /af par bhejo
     return NextResponse.redirect(new URL('/af', request.url));
   }
   
