@@ -13,20 +13,68 @@ import EuContent from '@/app/eu/EuContent';            // Europe (Ensure path is
 
 // --- 2. DEFINE REGION LISTS ---
 const ASIA_CODES = [
-    'asia', 'cn', 'jp', 'kr', 'kp', 'tw', 'hk', 'mo', 'mn',
-    'pk', 'lk', 'np', 'bt', 'mv', 'af',
-    'th', 'vn', 'my', 'sg', 'id', 'ph', 'kh', 'la', 'mm', 'bn', 'tl',
-    'kz', 'uz', 'tm', 'tj', 'kg','id',
-    'ae', 'sa', 'qa', 'kw', 'bh', 'om', 'ye',
-    'ir', 'iq', 'il', 'jo', 'lb', 'sy',
-    'tr', 'ge', 'am', 'az'
+  'asia',
+
+  // East Asia
+  'cn','jp','kr','kp','tw','hk','mo','mn',
+
+  // Southeast Asia
+  'th','vn','my','sg','id','ph','kh','la','mm','bn','tl',
+
+  // South Asia
+  'pk','lk','np','bt','mv','af','bd','in',
+
+  // Central Asia
+  'kz','uz','tm','tj','kg',
+
+  // West Asia / Middle East
+  'ae','sa','qa','kw','bh','om','ye',
+  'ir','iq','il','jo','lb','sy','ps',
+
+  // Transcontinental / Caucasus
+  'tr','ge','am','az'
 ];
 
+
 const EU_CODES = [
-    'eu', 'fr', 'de', 'it', 'es', 'nl', 'be', 'se', 'no', 'dk', 'fi', 
-    'pl', 'ie', 'ch', 'at', 'pt', 'ru', 'ua', 'gr', 'cz', 'ro', 'hu'
+  // Western Europe
+  'eu','nl','de','fr','be','lu','at','ch','li','mc','ie','gb',
+
+  // Northern Europe
+  'no','fi','se','dk','is','ee','lv','lt',
+
+  // Southern Europe
+  'it','es','pt','gr','cy','mt','sm','va','ad',
+
+  // Central / Eastern Europe
+  'pl','cz','sk','hu','ro','bg',
+
+  // Balkans
+  'hr','si','rs','ba','al','mk','me','xk',
+
+  // Eastern Europe / Eurasia
+  'md','ua','by','ru','tr'
 ];
-const AF_CODES = ['af', 'za', 'eg', 'ng', 'ke', 'gh', 'ma', 'tz', 'ug', 'zw', 'et', 'dz', 'sd', 'ao', 'mz', 'ci', 'cm', 'sn', 'na', 'bw', 'rw'];
+
+const AF_CODES = [
+  // North Africa
+  'dz','eg','ly','ma','tn','sd','ss','af',
+
+  // West Africa
+  'bj','bf','cv','ci','gm','gh','gn','gw',
+  'lr','ml','mr','ne','ng','sn','sl','tg',
+
+  // Central Africa
+  'cm','cf','td','cg','cd','gq','ga','st','ao',
+
+  // East Africa
+  'ke','tz','ug','rw','bi','et','er','so','dj',
+
+  // Southern Africa
+  'za','zw','zm','mz','bw','na','ls','sz',
+  'mg','mw','mu','sc','km'
+];
+
 
 export default async function CountryDynamicPage({ params }) {
     // Next.js 15+ mein params await karna padta hai
