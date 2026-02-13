@@ -13,16 +13,55 @@ import { languages } from '../lib/i18n';
 export default function Header() {
     const pathname = usePathname();
     const [open, setOpen] = useState(false);
+// Header.js के अंदर:
 
-    let country = pathname.split("/")[1] || "default";
-    const euCountries = ["nl", "de", "fr", "it", "es", "pl", "no", "fi", "se"];
-    let menuKey=country;
-    if (euCountries.includes(country)) {
-        menuKey = "eu"; // Agar country NL/DE hai, to menu 'eu' wala load karo
-    }
-    const menu = menuData[menuKey] || menuData.default;
+let country = pathname.split("/")[1] || "default";
+
+// 1. Europe Countries
+const euCountries = [
+    "nl", "de", "fr", "be", "at", "ch", "lu", "li", "mc", 
+    "no", "fi", "se", "dk", "is", "ee", "lv", "lt", 
+    "it", "es", "pt", "gr", "cy", "mt", "sm", "va", "ad", 
+    "pl", "cz", "sk", "hu", "ro", "bg", "hr", "si", 
+    "rs", "ba", "al", "mk", "me", "md", "ua", "by", "ru"
+];
+
+// 2. Asia Countries
+const asiaCountries = [
+    "th", "vn", "my", "sg", "id", "ph", "kh", "la", "mm", "bn",
+    "cn", "jp", "kr", "tw", "hk", "mo", 
+    "pk", "lk", "np", "mv", 
+    "ae", "sa", "qa", "kw", "bh", "om", "tr", "jo", "lb", "il", "iq", "ir", "sy", "ye",
+    "kz", "uz", "tm", "kg", "tj"
+];
+
+// 3. Africa Countries (New Added)
+const afCountries = [
+    // South & East Africa
+    "za", "ke", "ng", "gh", "tz", "ug", "et", "zw", "bw", "na", "mz", "zm", "rw",
+    
+    // North Africa
+    "eg", "ma", "dz", "tn", "ly", "sd", 
+    
+    // West & Central Africa
+    "sn", "ci", "cm", "ao", "bf", "ml", "ne", "bj", "tg", "lr", "sl", "gm"
+];
+
+let menuKey = country;
+
+// 🔥 Logic: Check Country and Set Menu Key
+if (euCountries.includes(country)) {
+    menuKey = "eu"; // Europe Menu
+} else if (asiaCountries.includes(country)) {
+    menuKey = "asia"; // Asia Menu
+} else if (afCountries.includes(country)) {
+    menuKey = "af"; // Africa Menu (Make sure 'af' exists in menuData)
+}
+
+// 4. Load Menu
+const menu = menuData[menuKey] || menuData.default;
     const { lang, setLang } = useLang();
-
+ 
     function changeLang(e) {
         console.log(e, 'eeeee');
         
