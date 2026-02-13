@@ -14,10 +14,13 @@ export default function Header() {
     const pathname = usePathname();
     const [open, setOpen] = useState(false);
 
-    const country = pathname.split("/")[1] || "default";
-
-    const menu = menuData[country] || menuData.default;
-
+    let country = pathname.split("/")[1] || "default";
+    const euCountries = ["nl", "de", "fr", "it", "es", "pl", "no", "fi", "se"];
+    let menuKey=country;
+    if (euCountries.includes(country)) {
+        menuKey = "eu"; // Agar country NL/DE hai, to menu 'eu' wala load karo
+    }
+    const menu = menuData[menuKey] || menuData.default;
     const { lang, setLang } = useLang();
 
     function changeLang(e) {
