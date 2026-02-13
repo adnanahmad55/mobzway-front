@@ -1,8 +1,9 @@
+"use client";
 import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 import { useEffect, useState } from "react";
 
-export const metadata = {
+/*export const metadata = {
     title: "Sportsbook Software Development Company in Asia | Mobzway",
     description:
         "Mobzway is a leading sportsbook software development company in Asia delivering secure betting platforms with real-time odds, advanced risk management, and scalable solutions.",
@@ -17,7 +18,7 @@ export const metadata = {
             "en-asia": "https://www.mobzway.com/asia/sportsbook-software-development-asia",
         },
     },
-};
+};*/
 
 const COUNTRY_CODE_TO_NAME = {
     // South Asia (Minus India & Bangladesh)
