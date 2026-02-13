@@ -24,6 +24,11 @@ const nextConfig = {
         destination: '/bd/slot-game-development-bd', // ✅ Naya URL
         permanent: true,
       },
+         {
+        source: '/bd/ludo-game-development', // ⚠️ Purana URL
+        destination: '/bd/ludo-game-development-bd', // ✅ Naya URL
+        permanent: true,
+      },
     ];
   },
 };
