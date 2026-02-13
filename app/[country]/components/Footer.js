@@ -315,8 +315,7 @@ export default function Footer() {
                                 <li>
                                     <a>
                                         <strong>LEGAL DISCLAIMER: </strong>
-                                        Mobzway Technologies does NOT provide real money gaming services
-                                        in India.
+                                        Mobzway Technologies provides gaming software development and technology solutions only. We do not operate or promote gambling or betting activities.
                                         {/* <span id="dots">...</span> */}
                                         {!showMore && <span id="dots">...</span>}
                                         {showMore && (
@@ -331,35 +330,11 @@ export default function Footer() {
                                                 Indian market.
                                                 <br />
                                                 <br />
-                                                We do not provide any development, maintenance, and support
-                                                services for illegal gaming and iGaming sectors, which are not
-                                                approved/authorized by the Government of India. This rule
-                                                completely applies for individuals/businesses established
-                                                outside of India and want to offer their services in India as
-                                                well.
+                                              Different jurisdictions create different gaming and iGaming laws that apply to their territory. Clients are solely responsible for obtaining required licenses, permissions, and ensuring compliance with all applicable laws before operating any gaming platform.
                                                 <br />
                                                 <br />
-                                                Our website does not offer/provide illegal or legal advice for
-                                                any gaming/gambling/iGaming activities. We provide information
-                                                solely for educational purposes without breaking any law.
-                                                <br />
-                                                <br />
-                                                We advise individuals/businesses to comply with all the legal
-                                                and regulatory laws and requirements before creating or starting
-                                                any type of website/app or software from Mobzway Technologies.
-                                                <br />
-                                                <br />
-                                                Obtaining an entire ownership and necessary permissions,
-                                                clearances, and license is solely the responsibility of the
-                                                client to run their business. Mobzway Technologies in any
-                                                condition or criteria doesn’t provide any legal/illegal license
-                                                or permission(s).
-                                                <br />
-                                                <br />
-                                                Mobzway does not hold any responsibility for any compliance
-                                                issue that clients may face with their requirements. Mobzway is
-                                                not liable for any special, incidental, indirect, or
-                                                consequential loss/damage.
+                                               The website content serves as informational material which does not provide legal guidance. Mobzway is not responsible for any regulatory compliance problems that result from client activities.
+                                               
                                             </span>
                                         )}
                                         <button
