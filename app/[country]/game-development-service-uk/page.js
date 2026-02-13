@@ -8,7 +8,7 @@ export const metadata = {
     alternates: {
         canonical: "https://www.mobzway.com/uk/game-development-service-uk",
         languages: {
-            "en-uk": "https://www.mobzway.com/uk/game-development-service-uk",
+            "en-uk": "https://www.mobzway.com/uk/game-development-service-uk", // ✅ Small letters & correct code (en-gb)
         },
     },
 };
