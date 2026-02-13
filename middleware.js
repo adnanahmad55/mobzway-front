@@ -3,26 +3,83 @@ import { NextResponse } from 'next/server';
 // 1. Asia Codes 
 // Note: IN, BD removed (VIP handled)
 const ASIA_CODES = [
-  'CN', 'JP', 'KR', 'KP', 'TW', 'HK', 'MO', 'MN',
-  'PK', 'LK', 'NP', 'BT', 'MV', // 'AF' (Afghanistan) removed to avoid conflict with /af (Africa page)
-  'TH', 'VN', 'MY', 'SG', 'ID', 'PH', 'KH', 'LA', 'MM', 'BN', 'TL',
-  'KZ', 'UZ', 'TM', 'TJ', 'KG',
-  'AE', 'SA', 'QA', 'KW', 'BH', 'OM', 'YE', 'IR', 'IQ', 'IL', 'JO', 'LB', 'SY', 'TR', 'GE', 'AM', 'AZ'
+  'CN','JP','KR','KP','TW','HK','MO','MN',
+  'TH','VN','MY','SG','ID','PH','KH','LA','MM','BN','TL',
+  'PK','LK','NP','BT','MV','AF',
+  'KZ','UZ','TM','TJ','KG',
+  'AE','SA','QA','KW','BH','OM','YE',
+  'IR','IQ','IL','JO','LB','SY',
+  'TR','GE','AM','AZ'
 ];
 
 // 2. Europe Region (VIP: GB handled separately)
 // ✅ ADDED: RS (Serbia), HR, SI, BA, MK, ME (Balkans), EE, LT, LV (Baltics), SK, BG
 const EUROPEAN_COUNTRIES = [
-  'FR', 'DE', 'IT', 'ES', 'NL', 'BE', 'SE', 'NO', 'DK', 'FI', 
-  'PL', 'IE', 'CH', 'AT', 'PT', 'RU', 'UA', 'GR', 'CZ', 'RO', 'HU',
-  'RS', 'HR', 'SI', 'BA', 'MK', 'ME', 'AL', 'BG', 'SK', 'EE', 'LT', 'LV', 'CY', 'MT', 'IS'
-]; 
+  'AL','AD','AT','BY','BE','BA','BG','HR','CY','CZ',
+  'DK','EE','FI','FR','DE','GB','GR','HU','IS','IE',
+  'IT','LV','LI','LT','LU','MT','MD','MC','ME','NL',
+  'MK','NO','PL','PT','RO','RU','SM','RS','SK','SI',
+  'ES','SE','CH','TR','UA','VA','XK'
+];
 
 // 3. Africa Region
 const AFRICAN_COUNTRIES = [
-  'ZA', 'EG', 'NG', 'KE', 'GH', 'MA', 'TZ', 'UG', 'ZW', 'ET', 
-  'DZ', 'SD', 'AO', 'MZ', 'CI', 'CM', 'SN', 'NA', 'BW', 'RW'
+  'DZ', // Algeria
+  'AO', // Angola
+  'BJ', // Benin
+  'BW', // Botswana
+  'BF', // Burkina Faso
+  'BI', // Burundi
+  'CV', // Cape Verde
+  'CM', // Cameroon
+  'CF', // Central African Republic
+  'TD', // Chad
+  'KM', // Comoros
+  'CG', // Congo (Republic)
+  'CD', // Congo (DRC)
+  'CI', // Côte d’Ivoire
+  'DJ', // Djibouti
+  'EG', // Egypt
+  'GQ', // Equatorial Guinea
+  'ER', // Eritrea
+  'SZ', // Eswatini (Swaziland)
+  'ET', // Ethiopia
+  'GA', // Gabon
+  'GM', // Gambia
+  'GH', // Ghana
+  'GN', // Guinea
+  'GW', // Guinea-Bissau
+  'KE', // Kenya
+  'LS', // Lesotho
+  'LR', // Liberia
+  'LY', // Libya
+  'MG', // Madagascar
+  'MW', // Malawi
+  'ML', // Mali
+  'MR', // Mauritania
+  'MU', // Mauritius
+  'MA', // Morocco
+  'MZ', // Mozambique
+  'NA', // Namibia
+  'NE', // Niger
+  'NG', // Nigeria
+  'RW', // Rwanda
+  'ST', // São Tomé & Príncipe
+  'SN', // Senegal
+  'SC', // Seychelles
+  'SL', // Sierra Leone
+  'SO', // Somalia
+  'ZA', // South Africa
+  'SS', // South Sudan
+  'SD', // Sudan
+  'TZ', // Tanzania
+  'TG', // Togo
+  'TN', // Tunisia
+  'UG', // Uganda
+  'ZM', // Zambia
+  'ZW'  // Zimbabwe
 ];
+
 
 export function middleware(request) {
   const { pathname, searchParams } = request.nextUrl;
