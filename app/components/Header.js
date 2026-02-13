@@ -19,32 +19,64 @@ let country = pathname.split("/")[1] || "default";
 
 // 1. Europe Countries
 const euCountries = [
-    "nl", "de", "fr", "be", "at", "ch", "lu", "li", "mc", 
-    "no", "fi", "se", "dk", "is", "ee", "lv", "lt", 
-    "it", "es", "pt", "gr", "cy", "mt", "sm", "va", "ad", 
-    "pl", "cz", "sk", "hu", "ro", "bg", "hr", "si", 
-    "rs", "ba", "al", "mk", "me", "md", "ua", "by", "ru"
+  // Western Europe
+  "nl","de","fr","be","lu","at","ch","li","mc","ie","gb",
+
+  // Northern Europe
+  "no","fi","se","dk","is","ee","lv","lt",
+
+  // Southern Europe
+  "it","es","pt","gr","cy","mt","sm","va","ad",
+
+  // Central / Eastern Europe
+  "pl","cz","sk","hu","ro","bg",
+
+  // Balkans
+  "hr","si","rs","ba","al","mk","me","xk",
+
+  // Eastern Europe / Eurasia
+  "md","ua","by","ru","tr"
 ];
+
 
 // 2. Asia Countries
 const asiaCountries = [
-    "th", "vn", "my", "sg", "id", "ph", "kh", "la", "mm", "bn",
-    "cn", "jp", "kr", "tw", "hk", "mo", 
-    "pk", "lk", "np", "mv", 
-    "ae", "sa", "qa", "kw", "bh", "om", "tr", "jo", "lb", "il", "iq", "ir", "sy", "ye",
-    "kz", "uz", "tm", "kg", "tj"
+  // East Asia
+  "cn","jp","kr","kp","tw","hk","mo","mn",
+
+  // Southeast Asia
+  "th","vn","my","sg","id","ph","kh","la","mm","bn","tl",
+
+  // South Asia
+  "pk","lk","np","bt","mv","af","bd","in",
+
+  // Central Asia
+  "kz","uz","tm","kg","tj",
+
+  // West Asia / Middle East
+  "ae","sa","qa","kw","bh","om","ye",
+  "ir","iq","il","jo","lb","sy","ps",
+  "tr","ge","am","az"
 ];
+
 
 // 3. Africa Countries (New Added)
 const afCountries = [
-    // South & East Africa
-    "za", "ke", "ng", "gh", "tz", "ug", "et", "zw", "bw", "na", "mz", "zm", "rw",
-    
-    // North Africa
-    "eg", "ma", "dz", "tn", "ly", "sd", 
-    
-    // West & Central Africa
-    "sn", "ci", "cm", "ao", "bf", "ml", "ne", "bj", "tg", "lr", "sl", "gm"
+  // North Africa
+  "dz","eg","ly","ma","tn","sd","ss",
+
+  // West Africa
+  "bj","bf","cv","ci","gm","gh","gn","gw",
+  "lr","ml","mr","ne","ng","sn","sl","tg",
+
+  // Central Africa
+  "cm","cf","td","cg","cd","gq","ga","st","ao",
+
+  // East Africa
+  "ke","tz","ug","rw","bi","et","er","so","dj",
+
+  // Southern Africa
+  "za","zw","zm","mz","bw","na","ls","sz","mg","mw","mu","sc","km"
 ];
 
 let menuKey = country;
