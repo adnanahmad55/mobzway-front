@@ -1,44 +1,55 @@
-import Image from "next/image";
-import BannerForm from "../components/BannerForm";
 import BDHomeClient from "./BDHomeClient";
 
 export const metadata = {
-  title: "Mobzway - Online Gaming Software Development Company",
-  description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-  keywords: "Gaming Software Development, Gaming Software Developers, Gaming Software Providers",
+  // ✅ 1. Title Change: Bangladesh Specific
+  title: "Best Game Development Company in Bangladesh | Mobzway",
+  
+  // ✅ 2. Description Change: Targeted for BD Audience
+  description: "Mobzway is a top gaming software development company in Bangladesh. We provide custom Poker, Casino, Rummy, Ludo, and Teen Patti game development services tailored for the BD market.",
+  
+  // ✅ 3. Keywords: Localized
+  keywords: "Game Development Bangladesh, Ludo Game Developer BD, Casino Software Bangladesh, Rummy Game Development BD, Poker Software Provider Bangladesh",
+  
   openGraph: {
-    title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-    description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
-    url: "https://www.mobzway.com/",
+    title: "Best Game Development Company in Bangladesh | Mobzway",
+    description: "Looking for game developers in Bangladesh? Mobzway offers certified Casino, Ludo, and Rummy game software solutions with local payment integration.",
+    url: "https://www.mobzway.com/bd", // ✅ Fixed URL
     siteName: "Mobzway Technologies",
     images: [
       {
-        url: "https://www.mobzway.com/assets/images/homepage_banner.avif",
+        url: "https://www.mobzway.com/assets/images/homepage_banner.avif", // Agar koi BD specific image hai to wo lagayein
         width: 815,
         height: 821,
-        alt: "mobzway",
+        alt: "Game Development Company Bangladesh",
         type: "image/jpg",
       },
     ],
+    locale: "en_US", // Ya 'en_BD' agar supported ho, par en_US safe hai
+    type: "website",
   },
+  
   twitter: {
     card: "summary_large_image",
-    title: "Mobzway - Online Gaming Software Development Company | Gaming Software Provider",
-    description: "Mobzway is one of the top gaming software development company in India. We are custom poker, casino, rummy, Ludo, and Teen Patti gaming software providers.",
+    title: "Game Development Services in Bangladesh | Mobzway",
+    description: "Top-rated Casino and Ludo game development company serving clients in Bangladesh.",
     site: "@mobzway",
     creator: "@mobzway",
     images: ["https://www.mobzway.com/assets/images/homepage_banner.avif"],
   },
+  
   alternates: {
-    canonical: "https://www.mobzway.com/",
+    // 🚨 4. MOST IMPORTANT: Canonical URL must be this page, NOT home page
+    canonical: "https://www.mobzway.com/bd",
+    languages: {
+        "en-BD": "https://www.mobzway.com/bd",
+    },
   },
 };
 
 export default function BDHome() {
   return (
-   <>
-   <BDHomeClient />
-   </>
-
+    <>
+      <BDHomeClient />
+    </>
   );
 }
