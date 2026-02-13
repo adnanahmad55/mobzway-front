@@ -11,25 +11,15 @@ import { languages } from '../lib/i18n';
 
 
 export default function Header() {
-   const pathname = usePathname();
+    const pathname = usePathname();
     const [open, setOpen] = useState(false);
-    const { lang, setLang } = useLang(); // Hook ko upar rakho
 
-    // 1. URL Country: Ye sirf Link banane mein kaam aayega (taaki '/sg' dikhe)
-    let urlCountry = pathname.split("/")[1] || "default";
+    const country = pathname.split("/")[1] || "default";
 
-    // 2. Menu Key: Ye decide karega ki Menu kaunsa dikhana hai (Asia, Default, etc.)
-    let menuKey = urlCountry;
+    const menu = menuData[country] || menuData.default;
 
-    const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
-    
-    // Agar country Asia list mein hai, to Menu Key 'asia' kar do (Par URL Country 'sg' hi rahega)
-    if (ASIA_CODES.includes(urlCountry)) {
-        menuKey = 'asia'; 
-    }
+    const { lang, setLang } = useLang();
 
-    // 3. Menu data fetch karo 'menuKey' ke hisaab se
-    const menu = menuData[menuKey] || menuData.default;
     function changeLang(e) {
         console.log(e, 'eeeee');
         
@@ -217,94 +207,41 @@ export default function Header() {
                         </button>
                     </div>
                     <div className="left_nav mt-3">
-<ul id="menu-header-menu" className="d-flex desktop_menu">
+                        <ul id="menu-header-menu" className="d-flex desktop_menu">
 
-    {menu.map((item, i) => {
-        
-        let finalPath = item.path;
-
-        // --- ASIA LOGIC (Menu Key check karo) ---
-        if (menuKey === 'asia') {
-            if (item.path?.includes('ludo-game-development')) {
-                finalPath = '/ludo-game-development-asia/';
-            }
-            if (item.path?.includes('slot-game-development')) {
-                finalPath = '/slot-game-development-asia/';
-            }
-        }
-
-        // --- USA LOGIC ---
-        if (menuKey === 'us') {
-            if (item.path?.includes('slot-game-development')) {
-                finalPath = '/slot-game-development-usa/';
-            }
-        }
-
-        // --- EU LOGIC ---
-        if (menuKey === 'eu' || menuKey === 'europe') {
-            if (item.path?.includes('sportsbook-software-development')) {
-                finalPath = '/sportsbook-software-development-eu/';
-            }
-        }
-
-        return (
-            <li key={i} className={item.children ? "has_child" : ""}>
-                {item.path ? (
-                    // 🔥 MAIN FIX: Yahan 'urlCountry' use karo taaki link '/sg' rahe
-                    <Link href={`/${urlCountry}${finalPath}`}>{item.label}</Link>
-                ) : (
-                    <a href="#">{item.label}</a>
-                )}
-
-                {/* --- SUB-MENU LOGIC (Dropdowns) --- */}
-                {item.children && (
-                    <ul className="sub-menu">
-                        {item.children.map((child, j) => {
-                            
-                            let childPath = child.path;
-
-                            // Child Logic Check (Same logic here)
-                            if (menuKey === 'asia') {
-                                if (child.path?.includes('ludo-game-development')) {
-                                    childPath = '/ludo-game-development-asia/';
-                                }
-                                if (child.path?.includes('slot-game-development')) {
-                                    childPath = '/slot-game-development-asia/';
-                                }
-                            }
-                            if (menuKey === 'us') {
-                                if (child.path?.includes('slot-game-development')) {
-                                    childPath = '/slot-game-development-usa/';
-                                }
-                            }
-
-                            return (
-                                <li key={j} className={child.children ? "has_child" : ""}>
-                                    {child.path ? (
-                                        // 🔥 FIX: Yahan bhi 'urlCountry' use karo
-                                        <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
+                            {menu.map((item, i) => (
+                                <li key={i} className={item.children ? "has_child" : ""}>
+                                    {item.path ? (
+                                        <Link href={`/${country}${item.path}`}>{item.label}</Link>
                                     ) : (
-                                        <a href="#">{child.label}</a>
+                                        <a href="#">{item.label}</a>
                                     )}
 
-                                    {/* Sub-Sub Menu */}
-                                    {child.children && (
+                                    {item.children && (
                                         <ul className="sub-menu">
-                                            {child.children.map((sub, k) => (
-                                                <li key={k}>
-                                                    <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
+                                            {item.children.map((child, j) => (
+                                                <li key={j} className={child.children ? "has_child" : ""}>
+                                                    {child.path ? (
+                                                        <Link href={`/${country}${child.path}`}>{child.label}</Link>
+                                                    ) : (
+                                                        <a href="#">{child.label}</a>
+                                                    )}
+
+                                                    {child.children && (
+                                                        <ul className="sub-menu">
+                                                            {child.children.map((sub, k) => (
+                                                                <li key={k}>
+                                                                    <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
                                                 </li>
                                             ))}
                                         </ul>
                                     )}
                                 </li>
-                            );
-                        })}
-                    </ul>
-                )}
-            </li>
-        );
-    })}
+                            ))}
 
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
@@ -364,7 +301,7 @@ export default function Header() {
                             </select> */}
                             {/* {country} */}
 
-                          {urlCountry === 'bd' &&  <div className="dropdown d-flex align-items-center">
+                          {country === 'bd' &&  <div className="dropdown d-flex align-items-center">
                                 <button
                                     className="border-0 p-0"
                                     type="button"
@@ -541,7 +478,7 @@ export default function Header() {
                             {menu.map((item, i) => (
                                 <li key={i} className={item.children ? "has_child" : ""}>
                                     {item.path ? (
-                                        <Link href={`/${urlCountry}${item.path}`}>{item.label}</Link>
+                                        <Link href={`/${country}${item.path}`}>{item.label}</Link>
                                     ) : (
                                         <a href="#">{item.label}</a>
                                     )}
@@ -551,7 +488,7 @@ export default function Header() {
                                             {item.children.map((child, j) => (
                                                 <li key={j} className={child.children ? "has_child" : ""}>
                                                     {child.path ? (
-                                                        <Link href={`/${urlCountry}${child.path}`}>{child.label}</Link>
+                                                        <Link href={`/${country}${child.path}`}>{child.label}</Link>
                                                     ) : (
                                                         <a href="#">{child.label}</a>
                                                     )}
@@ -560,7 +497,7 @@ export default function Header() {
                                                         <ul className="sub-menu">
                                                             {child.children.map((sub, k) => (
                                                                 <li key={k}>
-                                                                    <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
+                                                                    <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
                                                                 </li>
                                                             ))}
                                                         </ul>
