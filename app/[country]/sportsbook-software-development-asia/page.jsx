@@ -1,4 +1,3 @@
-"use client";
 import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 import { useEffect, useState } from "react";
