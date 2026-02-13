@@ -11,7 +11,7 @@ export const metadata = {
     alternates: {
         canonical: "https://www.mobzway.com/uk/sportsbook-software-development-company-in-uk",
         languages: {
-            "en-uk": "https://www.mobzway.com/uk/sportsbook-software-development-company-in-uk", // Jaisa aapne kaha, 'en-uk' hi rakha hai
+            "en-uk": "https://www.mobzway.com/uk/sportsbook-software-development-company-in-uk", 
         },
     },
 };
