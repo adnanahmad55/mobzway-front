@@ -3,18 +3,23 @@ import { getCountryName } from '@/app/lib/country';
 import React from 'react'
 import { useEffect, useState } from "react";
 
-// export const metadata = {
-//     title: "Sportsbook software development company Indonesia | Mobzway",
-//     description:
-//         "Mobzway is top sportsbook software development company in Indonesia delivering secure betting platforms with real-time odds and risk management tools.",
-//     keywords: ["Sportsbook software development company in Indonesia"],
-//     alternates: {
-//         canonical: "https://www.mobzway.com/id/",
-//         languages: {
-//             "en-IN": "https://www.mobzway.com/id/",
-//         },
-//     },
-// };
+export const metadata = {
+    title: "Sportsbook Software Development Company in Asia | Mobzway",
+    description:
+        "Mobzway is a leading sportsbook software development company in Asia delivering secure betting platforms with real-time odds, advanced risk management, and scalable solutions.",
+    keywords: [
+        "Sportsbook software development company in Asia",
+        "Sportsbook solutions Asia",
+        "Online betting platform Asia",
+    ],
+    alternates: {
+        canonical: "https://www.mobzway.com/asia/sportsbook-software-development-asia",
+        languages: {
+            "en-asia": "https://www.mobzway.com/asia/sportsbook-software-development-asia",
+        },
+    },
+};
+
 const COUNTRY_CODE_TO_NAME = {
     // South Asia (Minus India & Bangladesh)
     PK: "Pakistan",
@@ -78,15 +83,19 @@ const COUNTRY_CODE_TO_NAME = {
     GE: "Georgia"
 };
 
-/*export async function generateMetadata() {
-    const country = getCountryName();
-
+export async function generateMetadata() {
     return {
-        title: `Sportsbook software development company ${country} | Mobzway`,
-        description: `Mobzway is top sportsbook software development company in ${country} delivering secure betting platforms with real-time odds and risk management tools.`,
-        keywords: [`Sportsbook software development company in ${country}`],
+        title: "Sportsbook Software Development Company in Asia | Mobzway",
+        description:
+            "Mobzway is a leading sportsbook software development company in Asia delivering secure betting platforms with real-time odds, advanced risk management, and scalable solutions.",
+        keywords: [
+            "Sportsbook software development company in Asia",
+            "Sportsbook solutions Asia",
+            "Online betting platform Asia",
+        ],
     };
-}*/
+}
+
 
 export default function SportsbookSoftwareDevelopment() {
     //const country = getCountryName();
