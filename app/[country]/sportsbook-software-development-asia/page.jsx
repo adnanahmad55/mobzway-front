@@ -83,7 +83,7 @@ const COUNTRY_CODE_TO_NAME = {
     GE: "Georgia"
 };
 
-export async function generateMetadata() {
+/*export async function generateMetadata() {
     return {
         title: "Sportsbook Software Development Company in Asia | Mobzway",
         description:
@@ -95,7 +95,7 @@ export async function generateMetadata() {
         ],
     };
 }
-
+*/
 
 export default function SportsbookSoftwareDevelopment() {
     //const country = getCountryName();
