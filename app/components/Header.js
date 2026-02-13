@@ -11,54 +11,28 @@ import { languages } from '../lib/i18n';
 
 
 export default function Header() {
-    const pathname = usePathname();
+   const pathname = usePathname();
     const [open, setOpen] = useState(false);
-    const { lang, setLang } = useLang();
+    const { lang, setLang } = useLang(); // Hook ko upar rakho
 
-    // ==============================================================
-    // 1. SETUP VARIABLES (Logic Fix)
-    // ==============================================================
+    // 1. URL Country: Ye sirf Link banane mein kaam aayega (taaki '/sg' dikhe)
+    let urlCountry = pathname.split("/")[1] || "default";
 
-    // 'urlCountry': Ye URL banane ke liye use hoga (e.g. 'sg', 'pk', 'us')
-    // Isko hum change nahi karenge, taaki browser mein URL sahi dikhe.
-    let urlCountry = pathname?.split("/")[1] || "default";
-
-    // 'menuKey': Ye Menu Data fetch karne ke liye hai
+    // 2. Menu Key: Ye decide karega ki Menu kaunsa dikhana hai (Asia, Default, etc.)
     let menuKey = urlCountry;
 
-    // 🔥 LIST UPDATED: India ('in') and Bangladesh ('bd') REMOVED from this list.
-    // They will now fallback to their own specific menus if they exist in menuData, or default.
-const ASIA_CODES = [
-    // East Asia
-    'cn', 'jp', 'kr', 'kp', 'tw', 'hk', 'mo', 'mn',
-
-    // South Asia
-     'pk', 'lk', 'np', 'bt', 'mv', 'af',
-
-    // Southeast Asia
-    'th', 'vn', 'my', 'sg', 'id', 'ph', 'kh', 'la', 'mm', 'bn', 'tl',
-
-    // Central Asia
-    'kz', 'uz', 'tm', 'tj', 'kg',
-
-    // West Asia / Middle East
-    'ae', 'sa', 'qa', 'kw', 'bh', 'om', 'ye',
-    'ir', 'iq', 'il', 'jo', 'lb', 'sy',
-    'tr', 'ge', 'am', 'az'
-];
-    // Agar country Asia list mein hai, to Menu 'asia' wala load karo
+    const ASIA_CODES = ['sg', 'pk', 'am', 'in', 'th', 'vn', 'id', 'my'];
+    
+    // Agar country Asia list mein hai, to Menu Key 'asia' kar do (Par URL Country 'sg' hi rahega)
     if (ASIA_CODES.includes(urlCountry)) {
-        menuKey = 'asia';
+        menuKey = 'asia'; 
     }
 
-    // Data fetch karo based on menuKey
+    // 3. Menu data fetch karo 'menuKey' ke hisaab se
     const menu = menuData[menuKey] || menuData.default;
-
-    // ==============================================================
-
     function changeLang(e) {
         console.log(e, 'eeeee');
-
+        
         // const value = e.target.value;
         document.cookie = `lang=${e}; path=/`;
         setLang(e);
@@ -243,103 +217,94 @@ const ASIA_CODES = [
                         </button>
                     </div>
                     <div className="left_nav mt-3">
-                        <ul id="menu-header-menu" className="d-flex desktop_menu">
+<ul id="menu-header-menu" className="d-flex desktop_menu">
 
-                            {menu.map((item, i) => {
+    {menu.map((item, i) => {
+        
+        let finalPath = item.path;
 
-                                let finalPath = item.path;
+        // --- ASIA LOGIC (Menu Key check karo) ---
+        if (menuKey === 'asia') {
+            if (item.path?.includes('ludo-game-development')) {
+                finalPath = '/ludo-game-development-asia/';
+            }
+            if (item.path?.includes('slot-game-development')) {
+                finalPath = '/slot-game-development-asia/';
+            }
+        }
 
-                                // --- ASIA LOGIC (Check based on menuKey) ---
-                                if (menuKey === 'asia') {
-                                    if (item.path?.includes('ludo-game-development')) {
-                                        finalPath = '/ludo-game-development/';
-                                    }
-                                    if (item.path?.includes('slot-game-development')) {
-                                        finalPath = '/slot-game-development/';
-                                    }
+        // --- USA LOGIC ---
+        if (menuKey === 'us') {
+            if (item.path?.includes('slot-game-development')) {
+                finalPath = '/slot-game-development-usa/';
+            }
+        }
+
+        // --- EU LOGIC ---
+        if (menuKey === 'eu' || menuKey === 'europe') {
+            if (item.path?.includes('sportsbook-software-development')) {
+                finalPath = '/sportsbook-software-development-eu/';
+            }
+        }
+
+        return (
+            <li key={i} className={item.children ? "has_child" : ""}>
+                {item.path ? (
+                    // 🔥 MAIN FIX: Yahan 'urlCountry' use karo taaki link '/sg' rahe
+                    <Link href={`/${urlCountry}${finalPath}`}>{item.label}</Link>
+                ) : (
+                    <a href="#">{item.label}</a>
+                )}
+
+                {/* --- SUB-MENU LOGIC (Dropdowns) --- */}
+                {item.children && (
+                    <ul className="sub-menu">
+                        {item.children.map((child, j) => {
+                            
+                            let childPath = child.path;
+
+                            // Child Logic Check (Same logic here)
+                            if (menuKey === 'asia') {
+                                if (child.path?.includes('ludo-game-development')) {
+                                    childPath = '/ludo-game-development-asia/';
                                 }
-
-                                // --- USA LOGIC ---
-                                if (menuKey === 'us') {
-                                    if (item.path?.includes('slot-game-development')) {
-                                        finalPath = '/slot-game-development-company-in-usa/';
-                                    }
+                                if (child.path?.includes('slot-game-development')) {
+                                    childPath = '/slot-game-development-asia/';
                                 }
-
-                                // --- EU LOGIC ---
-                                if (menuKey === 'eu' || menuKey === 'europe') {
-                                    if (item.path?.includes('sportsbook-software-development')) {
-                                        finalPath = '/sportsbook-software-development-eu/';
-                                    }
+                            }
+                            if (menuKey === 'us') {
+                                if (child.path?.includes('slot-game-development')) {
+                                    childPath = '/slot-game-development-usa/';
                                 }
-                                if (menuKey === 'uk') {
-                                   if (item.path?.includes('casino-game-development')) {
-                                       finalPath = '/casino-game-development-company-in-uk/'; // Ya jo bhi tumhara UK wala URL ho
-                                   }
-                                   // Agar Ludo ke liye bhi chahiye:
-                                   if (item.path?.includes('ludo-game-development')) {
-                                       finalPath = '/ludo-game-development-uk/';
-                                   }
-                                 
-                               }                               
+                            }
 
-                                return (
-                                    <li key={i} className={item.children ? "has_child" : ""}>
-                                        {item.path ? (
-                                            // 🔥 Using urlCountry to keep URL /sg
-                                            <Link href={`/${urlCountry}${finalPath}`}>{item.label}</Link>
-                                        ) : (
-                                            <a href="#">{item.label}</a>
-                                        )}
+                            return (
+                                <li key={j} className={child.children ? "has_child" : ""}>
+                                    {child.path ? (
+                                        // 🔥 FIX: Yahan bhi 'urlCountry' use karo
+                                        <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
+                                    ) : (
+                                        <a href="#">{child.label}</a>
+                                    )}
 
-                                        {item.children && (
-                                            <ul className="sub-menu">
-                                                {item.children.map((child, j) => {
-
-                                                    let childPath = child.path;
-
-                                                    // --- ASIA CHILD LOGIC ---
-                                                    if (menuKey === 'asia') {
-                                                        if (child.path?.includes('ludo-game-development')) {
-                                                            childPath = '/ludo-game-development-asia/';
-                                                        }
-                                                        if (child.path?.includes('slot-game-development')) {
-                                                            childPath = '/slot-game-development-asia/';
-                                                        }
-                                                    }
-                                                    // --- USA CHILD LOGIC ---
-                                                    if (menuKey === 'us') {
-                                                        if (child.path?.includes('slot-game-development')) {
-                                                            childPath = '/slot-game-development-company-in-usa/';
-                                                        }
-                                                    }
-
-                                                    return (
-                                                        <li key={j} className={child.children ? "has_child" : ""}>
-                                                            {child.path ? (
-                                                                // 🔥 Using urlCountry here too
-                                                                <Link href={`/${urlCountry}${childPath}`}>{child.label}</Link>
-                                                            ) : (
-                                                                <a href="#">{child.label}</a>
-                                                            )}
-
-                                                            {child.children && (
-                                                                <ul className="sub-menu">
-                                                                    {child.children.map((sub, k) => (
-                                                                        <li key={k}>
-                                                                            <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            )}
-                                                        </li>
-                                                    );
-                                                })}
-                                            </ul>
-                                        )}
-                                    </li>
-                                );
-                            })}
+                                    {/* Sub-Sub Menu */}
+                                    {child.children && (
+                                        <ul className="sub-menu">
+                                            {child.children.map((sub, k) => (
+                                                <li key={k}>
+                                                    <Link href={`/${urlCountry}${sub.path}`}>{sub.label}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )}
+            </li>
+        );
+    })}
 
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
@@ -347,15 +312,15 @@ const ASIA_CODES = [
                                     className=""
                                 >
                                     {/* <span
-                                    className="typewrite"
-                                    data-period={4000}
-                                    data-type='["60+ Games", "Try Demo"]'
-                                >
-                                    <span className="wrap" />
-                                </span> */}
+                                        className="typewrite"
+                                        data-period={4000}
+                                        data-type='["60+ Games", "Try Demo"]'
+                                    >
+                                        <span className="wrap" />
+                                    </span> */}
                                     Blog
                                 </Link>
-                            </li>
+                                </li>
 
                             <li id="menu-item-7296" className=" border-0 mr-4">
                                 <Link
@@ -363,12 +328,12 @@ const ASIA_CODES = [
                                     className="contact_btn skill-games-contact-none"
                                 >
                                     {/* <span
-                                    className="typewrite"
-                                    data-period={4000}
-                                    data-type='["60+ Games", "Try Demo"]'
-                                >
-                                    <span className="wrap" />
-                                </span> */}
+                                        className="typewrite"
+                                        data-period={4000}
+                                        data-type='["60+ Games", "Try Demo"]'
+                                    >
+                                        <span className="wrap" />
+                                    </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </Link>
                                 <a
@@ -379,12 +344,12 @@ const ASIA_CODES = [
                                     style={{ display: "none" }}
                                 >
                                     {/* <span
-                                    className="typewrite"
-                                    data-period={4000}
-                                    data-type='["60+ Games", "Try Demo"]'
-                                >
-                                    <span className="wrap" />
-                                </span> */}
+                                        className="typewrite"
+                                        data-period={4000}
+                                        data-type='["60+ Games", "Try Demo"]'
+                                    >
+                                        <span className="wrap" />
+                                    </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </a>
                             </li>
@@ -399,7 +364,7 @@ const ASIA_CODES = [
                             </select> */}
                             {/* {country} */}
 
-                            {urlCountry === 'bd' && <div className="dropdown d-flex align-items-center">
+                          {urlCountry === 'bd' &&  <div className="dropdown d-flex align-items-center">
                                 <button
                                     className="border-0 p-0"
                                     type="button"
@@ -413,26 +378,26 @@ const ASIA_CODES = [
                                         alt={lang}
                                         width="20"
                                         className="me-2"
-                                        style={{ width: ' 22px' }}
+                                        style={{width:' 22px'}}
                                     />
                                     {/* {lang.toUpperCase()} */}
                                 </button>
 
                                 {open && <div className="dropdown-menu show dropdown-menu-end p-0 overflow-hidden bg-dark"
-                                    style={{ left: '-30px', width: '90px', minWidth: '90px', borderRadius: '2px' }}>
+                                style={{left:'-30px', width:'90px', minWidth:'90px', borderRadius:'2px'}}>
                                     {languages.map((l) => (
                                         <div key={l} className='m-0'>
                                             <button
                                                 className="dropdown-item px-2 d-flex align-items-center bg-dark"
                                                 onClick={() => changeLang(l)}
-                                                style={{ color: '#fff' }}
+                                                style={{color:'#fff'}}
                                             >
                                                 <img
                                                     src={`/assets/images/${l.toUpperCase()}.png`}
                                                     alt={l}
                                                     width="20"
                                                     className="mr-2"
-                                                    style={{ width: ' 25px' }}
+                                                    style={{width:' 25px'}}
                                                 />
                                                 {l.toUpperCase()}
                                             </button>
@@ -609,16 +574,16 @@ const ASIA_CODES = [
 
                             <li id="menu-item-7296" className=" border-0">
                                 <Link
-                                    href="https://www.mobzway.com/blog/"
+                                    href="/our-games/"
                                     className="contact_btn skill-games-contact-none"
                                 >
                                     {/* <span
-                                    className="typewrite"
-                                    data-period={4000}
-                                    data-type='["60+ Games", "Try Demo"]'
-                                >
-                                    <span className="wrap" />
-                                </span> */}
+                                        className="typewrite"
+                                        data-period={4000}
+                                        data-type='["60+ Games", "Try Demo"]'
+                                    >
+                                        <span className="wrap" />
+                                    </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </Link>
                                 <a
@@ -629,16 +594,15 @@ const ASIA_CODES = [
                                     style={{ display: "none" }}
                                 >
                                     {/* <span
-                                    className="typewrite"
-                                    data-period={4000}
-                                    data-type='["60+ Games", "Try Demo"]'
-                                >
-                                    <span className="wrap" />
-                                </span> */}
+                                        className="typewrite"
+                                        data-period={4000}
+                                        data-type='["60+ Games", "Try Demo"]'
+                                    >
+                                        <span className="wrap" />
+                                    </span> */}
                                     <Typewriter words={["60+ Games", "Try Demo"]} period={4000} />
                                 </a>
                             </li>
-
                             {/* <li id="menu-item-7296"
                           class="contact_btn_list_wrapper menu-item menu-item-type-custom menu-item-object-custom d-block d-md-none mt-3">
                           <a href="tel:+91-7878-044-044" class="contact_btn"><i class="fas fa-phone-alt"></i> 7878 044 044 CALL US NOW !</a>

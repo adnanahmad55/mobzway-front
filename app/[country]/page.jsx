@@ -16,7 +16,7 @@ const ASIA_CODES = [
     'asia', 'cn', 'jp', 'kr', 'kp', 'tw', 'hk', 'mo', 'mn',
     'pk', 'lk', 'np', 'bt', 'mv', 'af',
     'th', 'vn', 'my', 'sg', 'id', 'ph', 'kh', 'la', 'mm', 'bn', 'tl',
-    'kz', 'uz', 'tm', 'tj', 'kg',
+    'kz', 'uz', 'tm', 'tj', 'kg','id',
     'ae', 'sa', 'qa', 'kw', 'bh', 'om', 'ye',
     'ir', 'iq', 'il', 'jo', 'lb', 'sy',
     'tr', 'ge', 'am', 'az'
