@@ -6,7 +6,8 @@ import { dictionary } from '../lib/i18n';
 import BannerForm from '../components/BannerForm';
 
 export default function BDHomeClient() {
-
+    const { lang } = useLang();
+   
     return (
         <>
 
