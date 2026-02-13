@@ -734,6 +734,13 @@ export default function GameDevelopmentServiceUk() {
                         </div>
                     </div>
                 </div>
+                <div className="col-md-12 col1 wow" data-wow-duration="1s">
+                        <p className="hire-para col-md-12 para-plateform text-center">
+                            Additionally, we utilize cloud platforms (AWS and Azure) as well as Node.js.
+                            <br />
+                            <br />
+                        </p>
+                    </div>
             </section>
 
             {/* <section className="solutions">
@@ -1004,9 +1011,9 @@ export default function GameDevelopmentServiceUk() {
                             data-aos-once="true"
                         >
                             <h2 className="sub_title">
-                                <span className="black_bg_head_yellow">Additionally, we utilize cloud platforms (AWS and Azure) as well as Node.js.</span>{" "}
+                                <span className="black_bg_head_yellow">Partner with Game development company in</span>{" "}
                                 <span className="black_bg_head_white">
-                                    Partner with Game development company in London, UK - Mobzway
+                                     London, UK - Mobzway
                                 </span>
                             </h2>
                         </div>
