@@ -23,7 +23,7 @@ export default function UKHomeClient() {
     const [country, setCountry] = useState("United Kingdom"); // Default
     const [debugInfo, setDebugInfo] = useState("Loading...");
 
-    useEffect(() => {
+    /*useEffect(() => {
         const checkLocation = async () => {
             try {
                 console.log("🇬🇧 Checking IP for UK Page...");
@@ -87,7 +87,7 @@ export default function UKHomeClient() {
         };
 
         checkLocation();
-    }, []);
+    }, []);*/
      return (
             <>
     
