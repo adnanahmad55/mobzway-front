@@ -1,5 +1,20 @@
 import React from 'react'
-
+export const metadata = {
+    title: "Best Sportsbook Software Development Company in London, UK | Mobzway",
+    description:
+        "Mobzway is a leading sportsbook software development company in London, UK, offering secure betting platforms, real-time odds, and white-label solutions. Hire expert developers!",
+    keywords: [
+        "Sportsbook software development company in London",
+        "Sportsbook software development company in UK",
+        "Betting software developers London"
+    ],
+    alternates: {
+        canonical: "https://www.mobzway.com/uk/sportsbook-software-development-company-in-uk",
+        languages: {
+            "en-uk": "https://www.mobzway.com/uk/sportsbook-software-development-company-in-uk", // Jaisa aapne kaha, 'en-uk' hi rakha hai
+        },
+    },
+};
 export default function SportsbookSoftwareDevelopmentCompanyInUK() {
     return (
         <>

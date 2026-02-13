@@ -6,9 +6,9 @@ export const metadata = {
         "Mobzway is trusted casino game development company in London, UK, offering slots, live casino, and complete iGaming platform solutions. Hire game developers!",
     keywords: ["Casino Game development company in London, Casino Game development company in UK"],
     alternates: {
-        canonical: "https://www.mobzway.com/uk/",
+        canonical: "https://www.mobzway.com/uk/casino-game-development-company-in-uk",
         languages: {
-            "en-uk": "https://www.mobzway.com/uk/",
+            "en-uk": "https://www.mobzway.com/uk/casino-game-development-company-in-uk",
         },
     },
 };
