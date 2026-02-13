@@ -32,13 +32,13 @@ const ASIA_CODES = [
   'ir','iq','il','jo','lb','sy','ps',
 
   // Transcontinental / Caucasus
-  'tr','am','az'
+  'tr','am','az','ge'
 ];
 
 
 const EU_CODES = [
   // Western Europe
-  'eu','nl','de','fr','be','lu','at','ch','li','mc','ie','gb','ge',
+  'eu','nl','de','fr','be','lu','at','ch','li','mc','ie','gb',
 
   // Northern Europe
   'no','fi','se','dk','is','ee','lv','lt',
