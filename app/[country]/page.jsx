@@ -22,7 +22,7 @@ const ASIA_CODES = [
   'th','vn','my','sg','id','ph','kh','la','mm','bn','tl',
 
   // South Asia
-  'pk','lk','np','bt','mv','af',
+  'pk','lk','np','bt','mv',
 
   // Central Asia
   'kz','uz','tm','tj','kg',

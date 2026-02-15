@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 const ASIA_CODES = [
   'CN','JP','KR','KP','TW','HK','MO','MN',
   'TH','VN','MY','SG','ID','PH','KH','LA','MM','BN','TL',
-  'PK','LK','NP','BT','MV','AF',
+  'PK','LK','NP','BT','MV',
   'KZ','UZ','TM','TJ','KG',
   'AE','SA','QA','KW','BH','OM','YE',
   'IR','IQ','IL','JO','LB','SY',
