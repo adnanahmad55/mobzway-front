@@ -48,7 +48,7 @@ const asiaCountries = [
   "th","vn","my","sg","id","ph","kh","la","mm","bn","tl",
 
   // South Asia
-  "pk","lk","np","bt","mv","af","bd","in",
+  "pk","lk","np","bt","mv","af",
 
   // Central Asia
   "kz","uz","tm","kg","tj",
