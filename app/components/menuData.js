@@ -70,8 +70,8 @@ export const menuData = {
 
   ],
   bd: [
-    { label: "Sportsbook", path: "/sportsbook-software-development" },
-    { label: "Casino Platform", path: "/casino-software-development" },
+    { label: "Sportsbook", path: "/sportsbook-software-development-bd" },
+    { label: "Casino Platform", path: "/casino-software-development-bd" },
     { label: "Ludo", path: "/ludo-game-development-bd" },
     { label: "Slot Games", path: "/slot-game-development-bd" },
     { label: "About Us", path: "/about-us"},
