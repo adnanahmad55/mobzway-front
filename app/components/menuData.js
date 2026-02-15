@@ -83,8 +83,8 @@ export const menuData = {
   asia: [
     { label: "Sportsbook", path: "/sportsbook-software-development-asia" },
     { label: "Casino Platform", path: "/casino-software-development-asia" },
-    { label: "Ludo", path: "/ludo-game-development-bd" },
-    { label: "Slot Games", path: "/slot-game-development-bd" },
+    { label: "Ludo", path: "/ludo-game-development" },
+    { label: "Slot Games", path: "/slot-game-development" },
     { label: "About Us", path: "/about-us"},
     { label: "Awards", path: "/awards-and-recognition"},
     { label: "Contact Us", path: "/contact-us"},
