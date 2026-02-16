@@ -6,46 +6,53 @@ import RequestQoute from './RequestQoute';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+// ✅ STEP 1: Data ekdum CLEAN rakhein (bina 'in/' ya 'bd/' ke, bas shuru mein '/' lagayein)
 const footerSolutions = {
-        // 🇮🇳 INDIA (Specific Requirement)
-        in: [
-            { label: "Custom Games", path: "in/custom-game-development" },
-            { label: "Hire Developers", path: "in/hire-game-developers" }
-        ],
+    // 🇮🇳 INDIA
+    in: [
+        { label: "Custom Games", path: "/custom-game-development" },
+        { label: "Hire Developers", path: "/hire-game-developer" }
+    ],
 
-        // 🇧🇩 BANGLADESH (Promoted Services)
-        bd: [
-            { label: "Sportsbook", path: "bd/sportsbook-software-development-bd" },
-            { label: "Casino Platform", path: "bd/casino-software-development-bd" },
-            { label: "Ludo", path: "bd/ludo-game-development-bd" },
-            { label: "Slot Games", path: "bd/slot-game-development-bd" }
-        ],
+    // 🇧🇩 BANGLADESH
+    bd: [
+        { label: "Sportsbook", path: "/sportsbook-software-development-bd" },
+        { label: "Casino Platform", path: "/casino-software-development-bd" },
+        { label: "Ludo", path: "/ludo-game-development-bd" },
+        { label: "Slot Games", path: "/slot-game-development-bd" }
+    ],
 
-        // 🇪🇺 EUROPE (Example - Aap isme aur add kar sakte ho)
-        eu: [
-            { label: "Sportsbook Software", path: "/sportsbook-software" },
-            { label: "Casino Platform", path: "/casino-software" },
-            { label: "Odds API", path: "/sports-betting-odds-api" }
-        ],
+    // 🇪🇺 EUROPE
+    eu: [
+        { label: "Sportsbook Software", path: "/sportsbook-software" },
+        { label: "Casino Platform", path: "/casino-software" },
+        { label: "Odds API", path: "/sports-betting-odds-api" }
+    ],
 
-        // 🌍 DEFAULT (Global / Asia / Others)
-        default: [
-            { label: "Poker Software", path: "/poker-software/" },
-            { label: "Casino Software", path: "/casino-software/" },
-            { label: "Rummy Software", path: "/rummy-software/" },
-            { label: "Teen Patti Software", path: "/teen-patti-software/" },
-            { label: "Live Casino Software", path: "/live-casino-software/" },
-            { label: "White Label Casino", path: "/white-label-casino-software/" },
-            { label: "White Label Poker", path: "/white-label-poker-software/" },
-            { label: "iGaming Software", path: "/igaming-software-provider/" }
-        ]
-    };
+    // 🌍 DEFAULT
+    default: [
+        { label: "Poker Software", path: "/poker-software/" },
+        { label: "Casino Software", path: "/casino-software/" },
+        { label: "Rummy Software", path: "/rummy-software/" },
+        { label: "Teen Patti Software", path: "/teen-patti-software/" },
+        { label: "Live Casino Software", path: "/live-casino-software/" },
+        { label: "White Label Casino", path: "/white-label-casino-software/" },
+        { label: "White Label Poker", path: "/white-label-poker-software/" },
+        { label: "iGaming Software", path: "/igaming-software-provider/" }
+    ]
+};
+
 export default function Footer() {
+    const [showMore, setShowMore] = useState(false);
+    
+    // ✅ STEP 2: Country Detect karo
     const pathname = usePathname();
     const country = pathname?.split("/")[1] || "default";
-    const [showMore, setShowMore] = useState(false);
-const currentList = footerSolutions[country] || footerSolutions.default;
-    return (
+    
+    // ✅ STEP 3: Sahi List Select karo
+    // Note: Agar 'nl' ya 'za' jaisa koi country hai jo list me nahi hai, to wo 'default' lega.
+    // Agar aap chahte hain ki 'nl' bhi 'eu' wala dikhaye, to yahan logic laga sakte hain.
+    const currentList = footerSolutions[country] || footerSolutions.default;    return (
         <>
             <footer
                 style={{
