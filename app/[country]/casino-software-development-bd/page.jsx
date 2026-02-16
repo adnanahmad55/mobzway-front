@@ -1,10 +1,10 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Casino software development company in Bangladesh | Mobzway",
+    title:{absolute:"Casino software development company in Bangladesh | Mobzway"} ,
     description:
         "Mobzway is leading casino software development company in Bangladesh delivering slots, live casino, and RNG gaming platforms with advanced security. Contact Now",
-    keywords: ["Casino software development company in Bangladesh"],
+    keywords:{absolute:"Casino software development company in Bangladesh"} ,
     alternates: {
         canonical: "https://www.mobzway.com/bd/casino-software-development",
         languages: {
