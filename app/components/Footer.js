@@ -44,7 +44,7 @@ export default function Footer() {
     const pathname = usePathname();
     const country = pathname?.split("/")[1] || "default";
     const [showMore, setShowMore] = useState(false);
-
+const currentList = footerSolutions[country] || footerSolutions.default;
     return (
         <>
             <footer
