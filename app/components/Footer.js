@@ -107,34 +107,48 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                      <div className="col-xl-2 col-lg-2 col-md-6">
-            <div className="foot_info manps">
-                <div className="widget widget_text">
-                    <div className="widget-content">
-                        <div className="textwidget">
-                            <div className="footer_title">Solutions</div>
+<div className="col-xl-2 col-lg-2 col-md-6">
+    <div className="foot_info manps">
+        <div className="widget widget_text">
+            <div className="widget-content">
+                <div className="textwidget">
+                    <div className="footer_title">Solutions</div>
+                    <ul className="foot_navs">
+                        <li style={{ listStyleType: "none" }}>
                             <ul className="foot_navs">
-                                <li style={{ listStyleType: "none" }}>
-                                    <ul className="foot_navs">
-                                        
-                                        {/* 🔥 DYNAMIC MAPPING START */}
-                                        {currentList.map((item, index) => (
-                                            <li key={index}>
-                                                <Link href={item.path}>
-                                                    {item.label}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                        {/* 🔥 DYNAMIC MAPPING END */}
+                                
+                                {/* 👇 NEW LOGIC START */}
+                                {currentList && currentList.map((item, index) => {
+                                    
+                                    // 1. Link banane ka logic
+                                    let finalLink = item.path;
 
-                                    </ul>
-                                </li>
+                                    // Check: Agar hum 'default' country par nahi hain
+                                    // Aur link external (http) nahi hai
+                                    if (country !== "default" && !item.path.startsWith("http")) {
+                                        // To link ke aage country code jod do
+                                        finalLink = `/${country}${item.path}`;
+                                    }
+
+                                    return (
+                                        <li key={index}>
+                                            {/* Yahan 'finalLink' use karna hai, 'item.path' nahi */}
+                                            <Link href={finalLink}>
+                                                {item.label}
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
+                                {/* 👆 NEW LOGIC END */}
+
                             </ul>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
+</div>
                     
                         <div className="mnsprg col-xl-2 col-lg-3 col-md-6">
                             <div className="widget widget_text">

@@ -6,9 +6,9 @@ export const metadata = {
         "Hire the best custom game developers in India for 2D, 3D, mobile, and casual game solutions. Get scalable, secure and high-performance game development services.",
     keywords: ["Custom Game Development Services"],
     alternates: {
-        canonical: "https://www.mobzway.com/in/",
+        canonical: "https://www.mobzway.com/in/custom-game-development",
         languages: {
-            "en-in": "https://www.mobzway.com/in/",
+            "en-in": "https://www.mobzway.com/in/custom-game-development",
         },
     },
 };
