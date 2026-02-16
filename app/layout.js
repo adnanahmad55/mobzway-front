@@ -7,21 +7,18 @@ import '../public/assets/css/style_ra.css';
 import '../public/assets/css/aos.css';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-// import Script from "next/script"; // Unused in this file currently
+// import Script from "next/script"; 
 import SiteScripts from "./components/SiteScripts";
 import ZohoLoader from "./components/ZohoLoader";
 import { LanguageProvider } from "./components/LanguageProvider";
-// import { cookies } from "next/headers";
 
-// 1. Move Viewport settings here
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  // themeColor: 'black', // Optional: Add theme color if needed
+  
 };
 
-// 2. Move all Meta tags here
 export const metadata = {
   title: {
     default: 'Mobzway Technologies',
@@ -55,9 +52,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      {/* ❌ DO NOT add a <head> tag here. 
-        Next.js will automatically inject the head based on the metadata export above.
-      */}
+     
       
       <body className="">
         <LanguageProvider defaultLang={defaultLang}>
@@ -70,10 +65,7 @@ export default async function RootLayout({ children }) {
         <ZohoLoader />
         <SiteScripts />
         
-        {/* If you have specific scripts like Analytics that were commented out 
-           in your old head, they should be placed in your <SiteScripts /> 
-           component or using the <Script /> component here in the body.
-        */}
+       
       </body>
     </html>
   );

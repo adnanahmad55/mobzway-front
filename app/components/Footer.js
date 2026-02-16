@@ -5,7 +5,40 @@ import ChatQoute from './ChatQoute';
 import RequestQoute from './RequestQoute';
 import Link from 'next/link';
 
+const footerSolutions = {
+        // 🇮🇳 INDIA (Specific Requirement)
+        in: [
+            { label: "Custom Games", path: "/custom-game-development" },
+            { label: "Hire Developers", path: "/hire-dedicated-developer" }
+        ],
 
+        // 🇧🇩 BANGLADESH (Promoted Services)
+        bd: [
+            { label: "Sportsbook", path: "/sportsbook-software-development-bd" },
+            { label: "Casino Platform", path: "/casino-software-development-bd" },
+            { label: "Ludo", path: "/ludo-game-development-bd" },
+            { label: "Slot Games", path: "/slot-game-development-bd" }
+        ],
+
+        // 🇪🇺 EUROPE (Example - Aap isme aur add kar sakte ho)
+        eu: [
+            { label: "Sportsbook Software", path: "/sportsbook-software" },
+            { label: "Casino Platform", path: "/casino-software" },
+            { label: "Odds API", path: "/sports-betting-odds-api" }
+        ],
+
+        // 🌍 DEFAULT (Global / Asia / Others)
+        default: [
+            { label: "Poker Software", path: "/poker-software/" },
+            { label: "Casino Software", path: "/casino-software/" },
+            { label: "Rummy Software", path: "/rummy-software/" },
+            { label: "Teen Patti Software", path: "/teen-patti-software/" },
+            { label: "Live Casino Software", path: "/live-casino-software/" },
+            { label: "White Label Casino", path: "/white-label-casino-software/" },
+            { label: "White Label Poker", path: "/white-label-poker-software/" },
+            { label: "iGaming Software", path: "/igaming-software-provider/" }
+        ]
+    };
 export default function Footer() {
     const [showMore, setShowMore] = useState(false);
 
@@ -64,66 +97,34 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-2 col-lg-2 col-md-6">
-                            <div className="foot_info manps">
-                                <div className="widget widget_text">
-                                    <div className="widget-content">
-                                        <div className="textwidget">
-                                            <div className="footer_title">Solutions</div>
-                                            <ul className="foot_navs">
-                                                <li
-                                                    style={{
-                                                        listStyleType: "none",
-                                                    }}>
-                                                    <ul className="foot_navs">
-                                                        <li>
-                                                            <Link href="/poker-software/">
-                                                                Poker Software
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/casino-software/">
-                                                                Casino Software
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/rummy-software/">
-                                                                Rummy Software
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/teen-patti-software/">
-                                                                Teen Patti Software
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/live-casino-software/">
-                                                                Live Casino Software
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/white-label-casino-software/">
-                                                                White Label Casino
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/white-label-poker-software/">
-                                                                White Label Poker
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link href="/igaming-software-provider/">
-                                                                iGaming Software
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                      <div className="col-xl-2 col-lg-2 col-md-6">
+            <div className="foot_info manps">
+                <div className="widget widget_text">
+                    <div className="widget-content">
+                        <div className="textwidget">
+                            <div className="footer_title">Solutions</div>
+                            <ul className="foot_navs">
+                                <li style={{ listStyleType: "none" }}>
+                                    <ul className="foot_navs">
+                                        
+                                        {/* 🔥 DYNAMIC MAPPING START */}
+                                        {currentList.map((item, index) => (
+                                            <li key={index}>
+                                                <Link href={item.path}>
+                                                    {item.label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                        {/* 🔥 DYNAMIC MAPPING END */}
+
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
                     
                         <div className="mnsprg col-xl-2 col-lg-3 col-md-6">
                             <div className="widget widget_text">
