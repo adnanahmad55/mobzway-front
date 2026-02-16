@@ -9,8 +9,8 @@ import { usePathname } from 'next/navigation';
 const footerSolutions = {
         // 🇮🇳 INDIA (Specific Requirement)
         in: [
-            { label: "Custom Games", path: "/custom-game-development" },
-            { label: "Hire Developers", path: "/hire-game-developer" }
+            { label: "Custom Games", path: "in/custom-game-development" },
+            { label: "Hire Developers", path: "in/hire-game-developer" }
         ],
 
         // 🇧🇩 BANGLADESH (Promoted Services)
