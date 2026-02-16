@@ -10,15 +10,15 @@ const footerSolutions = {
         // 🇮🇳 INDIA (Specific Requirement)
         in: [
             { label: "Custom Games", path: "in/custom-game-development" },
-            { label: "Hire Developers", path: "in/hire-game-developer" }
+            { label: "Hire Developers", path: "in/hire-game-developers" }
         ],
 
         // 🇧🇩 BANGLADESH (Promoted Services)
         bd: [
-            { label: "Sportsbook", path: "/sportsbook-software-development-bd" },
-            { label: "Casino Platform", path: "/casino-software-development-bd" },
-            { label: "Ludo", path: "/ludo-game-development-bd" },
-            { label: "Slot Games", path: "/slot-game-development-bd" }
+            { label: "Sportsbook", path: "bd/sportsbook-software-development-bd" },
+            { label: "Casino Platform", path: "bd/casino-software-development-bd" },
+            { label: "Ludo", path: "bd/ludo-game-development-bd" },
+            { label: "Slot Games", path: "bd/slot-game-development-bd" }
         ],
 
         // 🇪🇺 EUROPE (Example - Aap isme aur add kar sakte ho)
