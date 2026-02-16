@@ -11,7 +11,7 @@ const footerSolutions = {
     // 🇮🇳 INDIA
     in: [
         { label: "Custom Games", path: "/custom-game-development" },
-        { label: "Hire Developers", path: "/hire-game-developer" }
+        { label: "Hire Developers", path: "/hire-game-developers" }
     ],
 
     // 🇧🇩 BANGLADESH
