@@ -4,6 +4,7 @@ import LiveChat from './LiveChat';
 import ChatQoute from './ChatQoute';
 import RequestQoute from './RequestQoute';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const footerSolutions = {
         // 🇮🇳 INDIA (Specific Requirement)
