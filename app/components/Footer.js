@@ -9,7 +9,7 @@ const footerSolutions = {
         // 🇮🇳 INDIA (Specific Requirement)
         in: [
             { label: "Custom Games", path: "/custom-game-development" },
-            { label: "Hire Developers", path: "/hire-dedicated-developer" }
+            { label: "Hire Developers", path: "/hire-game-developer" }
         ],
 
         // 🇧🇩 BANGLADESH (Promoted Services)
@@ -40,6 +40,8 @@ const footerSolutions = {
         ]
     };
 export default function Footer() {
+    const pathname = usePathname();
+    const country = pathname?.split("/")[1] || "default";
     const [showMore, setShowMore] = useState(false);
 
     return (
