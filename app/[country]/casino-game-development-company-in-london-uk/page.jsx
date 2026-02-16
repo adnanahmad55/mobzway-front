@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const metadata = {
-    title: "Casino Game development company in London, UK | Mobzway",
+    title: {absolute:"Casino Game development company in London, UK | Mobzway"},
     description:
         "Mobzway is trusted casino game development company in London, UK, offering slots, live casino, and complete iGaming platform solutions. Hire game developers!",
     keywords: ["Casino Game development company in London, Casino Game development company in UK"],

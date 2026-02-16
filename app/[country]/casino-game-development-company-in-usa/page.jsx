@@ -1,14 +1,14 @@
 import React from 'react'
 
 export const metadata = {
-  title: "Best casino game development company in USA | Casino Game US",
+  title:{ absolute:"casino game development company in usa"},
   description:
     "Mobzway is trusted casino game development company in the USA offering slots, live casino, card games, and custom iGaming platforms. Hire casino game developers",
   keywords: ["Best casino game development company in usa | casino game US"],
   alternates: {
-    canonical: "https://www.mobzway.com/us/",
+    canonical: "https://www.mobzway.com/us/casino-game-development-in-usa",
     languages: {
-      "en-us": "https://www.mobzway.com/us/",
+      "en-us": "https://www.mobzway.com/us/casino-game-development-in-usa",
     },
   },
 };

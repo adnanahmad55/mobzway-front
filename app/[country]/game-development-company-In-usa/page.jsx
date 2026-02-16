@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const metadata = {
-  title: "Game development company in USA | Game development Service",
+  title: {absolute:"Game development company in USA | Game development Service"},
   description:
     "Mobzway is top game development company in the USA offering custom mobile games, casual games and multiplayer game development services. Hire game developers!",
   keywords: ["Game development company in USA, Game development Service in USA"],

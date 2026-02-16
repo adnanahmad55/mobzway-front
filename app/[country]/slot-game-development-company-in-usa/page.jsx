@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const metadata = {
-  title: "Best slot game development company in USA | Mobzway",
+  title: {absolute:"Best slot game development company in USA | Mobzway"},
   description:
     "Mobzway is best slot game development company in the USA creating premium slot machines, RNG slots, and casino-ready slot engines. Hire game developers in USA!",
   keywords: ["slot game development company in USA"],

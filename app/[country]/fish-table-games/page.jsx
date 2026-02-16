@@ -1,7 +1,7 @@
 import React from 'react'
 export const dynamic = 'force-static';
 export const metadata = {
-  title: "Best Fish Table games development company in USA | Mobzway",
+  title: {absolute:"Best Fish Table games development company in USA | Mobzway"},
   description:
     "Mobzway is Leading Fish Table game development company in the USA delivering fast, engaging and secure fish arcade game solutions. Hire game developers in USA!",
   keywords: ["Fish Table games development company in USA"],
