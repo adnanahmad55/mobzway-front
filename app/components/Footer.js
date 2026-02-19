@@ -11,7 +11,7 @@ const footerSolutions = {
     // 🇮🇳 INDIA
     in: [
         { label: "Custom Games", path: "/custom-game-development" },
-        { label: "Hire Developers", path: "/hire-game-developers" }
+        { label: "Hire Developers", path: "/hire-game-developer" }
     ],
 
     // 🇧🇩 BANGLADESH
@@ -22,11 +22,19 @@ const footerSolutions = {
         { label: "Slot Games", path: "/slot-game-development-bd" }
     ],
 
-    // 🇪🇺 EUROPE
-    eu: [
-        { label: "Sportsbook Software", path: "/sportsbook-software" },
-        { label: "Casino Platform", path: "/casino-software" },
-        { label: "Odds API", path: "/sports-betting-odds-api" }
+    // 🇺🇸 USA (New added)
+    us: [
+        { label: "Custom Games", path: "/game-development-us" },
+        { label: "Slot Games", path: "/slot-game-development-us" },
+        { label: "Fish Table Games", path: "/fish-table-game-development" },
+        { label: "Casino Games", path: "/casino-game-development-us" }
+    ],
+
+    // 🇬🇧 UK (New added)
+    uk: [
+        { label: "Game Development UK", path: "/game-development-uk" },
+        { label: "Sportsbook Software", path: "/sportsbook-software-development-uk" },
+        { label: "Casino Games", path: "/casino-software-development-uk" }
     ],
 
     // 🌍 DEFAULT
@@ -41,7 +49,6 @@ const footerSolutions = {
         { label: "iGaming Software", path: "/igaming-software-provider/" }
     ]
 };
-
 export default function Footer() {
     const [showMore, setShowMore] = useState(false);
     
