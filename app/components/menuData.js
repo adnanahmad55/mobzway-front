@@ -19,10 +19,10 @@ export const menuData = {
   ],
 
   us: [
-    { label: "Custom Games", path: "/game-development-usa" },
-    { label: "Slot Games", path: "/slot-game-development-usa" },
-    { label: "Fish Table Games", path: "/fish-table-games" },
-    { label: "Casino Games", path: "/casino-game-development-usa" },
+    { label: "Custom Games", path: "/game-development-us" },
+    { label: "Slot Games", path: "/slot-game-development-us" },
+    { label: "Fish Table Games", path: "/fish-table-game-development" },
+    { label: "Casino Games", path: "/casino-game-development-us" },
     { label: "About Us", path: "/about-us"},
     { label: "Awards", path: "/awards-and-recognition"},
     { label: "Contact Us", path: "/contact-us"},
