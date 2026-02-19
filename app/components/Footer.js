@@ -237,12 +237,9 @@ export default function Footer() {
                                                 style={{
                                                     display: `${showMore ? 'block' : 'none'}`,
                                                 }}>
-                                                Access to such services is restricted by law under the IT Act,
-                                                2000 and the Promotion & Regulation of Online Gaming Bill, 2025.
-                                                We build games solely for fun and entertainment purposes for the
-                                                Indian market.
-                                                <br />
-                                                <br />
+                                         
+                                                
+                            
                                               Different jurisdictions create different gaming and iGaming laws that apply to their territory. Clients are solely responsible for obtaining required licenses, permissions, and ensuring compliance with all applicable laws before operating any gaming platform.
                                                 <br />
                                                 <br />
