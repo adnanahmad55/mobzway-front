@@ -4,7 +4,7 @@ export const metadata = {
     title:{absolute:"Ludo game development company in Bangladesh | Ludo Services"} ,
     description:
         "Mobzway is Best Ludo game development company in Bangladesh offering multiplayer Ludo apps with real-time gameplay, secure wallets, and custom features.",
-    keywords:{absolute:"Ludo game development company in Bangladesh, Ludo game development service in Bangladesh"} ,
+    keywords:"Ludo game development company in Bangladesh, Ludo game development service in Bangladesh" ,
     alternates: {
         canonical: "https://www.mobzway.com/bd/",
         languages: {
