@@ -239,7 +239,7 @@ export default function Footer() {
                                                 }}>
                                          
                                                 
-                                                <br />
+                                                
                                                 <br />
                                               Different jurisdictions create different gaming and iGaming laws that apply to their territory. Clients are solely responsible for obtaining required licenses, permissions, and ensuring compliance with all applicable laws before operating any gaming platform.
                                                 <br />
