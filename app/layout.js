@@ -22,7 +22,7 @@ export const viewport = {
 export const metadata = {
   title: {
     default: 'Mobzway Technologies',
-    template: '%s | Mobzway Technologies', // This allows child pages to just set their specific title
+    //template: '%s | Mobzway Technologies', // This allows child pages to just set their specific title
   },
   description: 'Mobzway is a top poker and casino game development company.',
   
