@@ -366,7 +366,7 @@ export default function AfHomeClient({ countryCode }) {
                         <div className="row justify-content-center">
                             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                                 <div className="overflow-hidden w-100 game_icon_sec">
-                                    <a href="javascript:void(0)" className="d-block">
+                                    <a href="af/bingo-game-development" className="d-block">
                                         <div className="overflow-hidden w-100">
                                             {/* <div class="overlay_item"></div>
                           <div class="ofr_title">
@@ -411,7 +411,7 @@ export default function AfHomeClient({ countryCode }) {
           </div> */}
                             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                                 <div className="overflow-hidden w-100 game_icon_sec">
-                                    <a href="javascript:void(0)" className="d-block">
+                                    <a href="af/keno-game-development" className="d-block">
                                         <div className="overflow-hidden w-100">
                                             <img
                                                 src="/assets/images/Products/af/game-2.webp"
@@ -426,7 +426,7 @@ export default function AfHomeClient({ countryCode }) {
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                                 <div className="overflow-hidden w-100 game_icon_sec">
-                                    <a href="javascript:void(0)" className="d-block">
+                                    <a href="af/sportsbook-software-development-af" className="d-block">
                                         <div className="overflow-hidden w-100">
                                             <img
                                                 src="/assets/images/Products/af/game-3.png"

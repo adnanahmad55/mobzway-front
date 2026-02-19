@@ -476,7 +476,7 @@ export default function AfHomepage({ countryCode }) {
                     <div className="row justify-content-center">
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="asia/sportsbook-software-development-asia" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         {/* <div class="overlay_item"></div>
                       <div class="ofr_title">
@@ -521,7 +521,7 @@ export default function AfHomepage({ countryCode }) {
       </div> */}
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="asia/casino-software-development-asia" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
                                             src="/assets/images/Products/bd/game-5.webp"
@@ -536,7 +536,7 @@ export default function AfHomepage({ countryCode }) {
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="asia/slot-game-development" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
                                             src="/assets/images/Products/bd/game-4.webp"
