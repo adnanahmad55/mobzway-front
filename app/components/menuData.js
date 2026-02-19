@@ -60,7 +60,7 @@ export const menuData = {
   ],
 
   af: [
-    { label: "Bingo", path: "/bingo-software" },
+    { label: "Bingo", path: "/bingo-game-development" },
     { label: "Keno", path: "/keno-game-development" },
     { label: "SportsBook", path: "/sportsbook-software-development" },
     { label: "About Us", path: "/about-us"},
