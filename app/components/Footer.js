@@ -17,7 +17,7 @@ const footerSolutions = {
     // 🇧🇩 BANGLADESH
     bd: [
         { label: "Sportsbook", path: "/sportsbook-software-development-bd" },
-        { label: "Casino Platform", path: "/casino-software-development-bd" },
+        { label: "Casino", path: "/casino-software-development-bd" },
         { label: "Ludo", path: "/ludo-game-development-bd" },
         { label: "Slot Games", path: "/slot-game-development-bd" }
     ],
@@ -26,15 +26,15 @@ const footerSolutions = {
     us: [
         { label: "Custom Games", path: "/game-development-us" },
         { label: "Slot Games", path: "/slot-game-development-us" },
-        { label: "Fish Table Games", path: "/fish-table-game-development" },
-        { label: "Casino Games", path: "/casino-game-development-us" }
+        { label: "Fish Tables", path: "/fish-table-game-development" },
+        { label: "Casino ", path: "/casino-game-development-us" }
     ],
 
     // 🇬🇧 UK (New added)
     uk: [
-        { label: "Game Development UK", path: "/game-development-uk" },
+        { label: "Game Development ", path: "/game-development-uk" },
         { label: "Sportsbook Software", path: "/sportsbook-software-development-uk" },
-        { label: "Casino Games", path: "/casino-software-development-uk" }
+        { label: "Casino ", path: "/casino-software-development-uk" }
     ],
       eu: [
         { label: "SPORTSBOOK", path: "/sportsbook-software-development" },

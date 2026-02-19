@@ -21,8 +21,8 @@ export const menuData = {
   us: [
     { label: "Custom Games", path: "/game-development-us" },
     { label: "Slot Games", path: "/slot-game-development-us" },
-    { label: "Fish Table Games", path: "/fish-table-game-development" },
-    { label: "Casino Games", path: "/casino-game-development-us" },
+    { label: "Fish Tables", path: "/fish-table-game-development" },
+    { label: "Casino ", path: "/casino-game-development-us" },
     { label: "About Us", path: "/about-us"},
     { label: "Awards", path: "/awards-and-recognition"},
     { label: "Contact Us", path: "/contact-us"},
@@ -38,10 +38,10 @@ export const menuData = {
   ],
 
   uk: [
-    { label: "Game Development Service", path: "/game-development-uk" },
+    { label: "Game Development", path: "/game-development-uk" },
     // { label: "Service", path: "/" },
     { label: "Sports Book", path: "/sportsbook-software-development-uk" },
-    { label: "Casino Games", path: "/casino-software-development-uk" },
+    { label: "Casino", path: "/casino-software-development-uk" },
     { label: "About Us", path: "/about-us"},
     { label: "Awards", path: "/awards-and-recognition"},
     { label: "Contact Us", path: "/contact-us"},
@@ -71,7 +71,7 @@ export const menuData = {
   ],
   bd: [
     { label: "Sportsbook", path: "/sportsbook-software-development-bd" },
-    { label: "Casino Platform", path: "/casino-software-development-bd" },
+    { label: "Casino", path: "/casino-software-development-bd" },
     { label: "Ludo", path: "/ludo-game-development-bd" },
     { label: "Slot Games", path: "/slot-game-development-bd" },
     { label: "About Us", path: "/about-us"},
