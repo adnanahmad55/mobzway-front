@@ -13,7 +13,7 @@ export const metadata = {
     },
 };
 
-export default function ludogameDevelopment() {
+export default function LudoGameDevelopment() {
     return (
         <>
 
