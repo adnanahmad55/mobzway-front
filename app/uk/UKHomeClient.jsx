@@ -437,7 +437,7 @@ export default function UKHomeClient() {
                             
                             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                                 <div className="overflow-hidden w-100 game_icon_sec">
-                                    <a href="javascript:void(0)" className="d-block">
+                                    <a href="uk/game-development-uk" className="d-block">
                                         <div className="overflow-hidden w-100">
                                             <img
                                                 src="/assets/images/Products/uk/game-1.webp"
@@ -452,7 +452,7 @@ export default function UKHomeClient() {
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                                 <div className="overflow-hidden w-100 game_icon_sec">
-                                    <a href="javascript:void(0)" className="d-block">
+                                    <a href="uk/sportsbook-software-development-uk" className="d-block">
                                         <div className="overflow-hidden w-100">
                                             <img
                                                 src="/assets/images/Products/bd/game-1.png"
@@ -467,7 +467,7 @@ export default function UKHomeClient() {
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                                 <div className="overflow-hidden w-100 game_icon_sec">
-                                    <a href="javascript:void(0)" className="d-block">
+                                    <a href="uk/casino-software-development-uk" className="d-block">
                                         <div className="overflow-hidden w-100">
                                             <img
                                                 src="/assets/images/Products/bd/game-2.png"

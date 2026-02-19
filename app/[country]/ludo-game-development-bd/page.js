@@ -538,7 +538,7 @@ export default function LudoGameDevelopment() {
                                             <h5 className="card-title cards text-center">
                                                Gameplay Features
                                             </h5>
-                                            <p className="list-style-position">
+                                            <ul className="list-style-position">
                                                  <li className='text-dark'>Multiplayer Real-Time</li>
                                                  <li className='text-dark'> Invitation only table creation</li>
                                                  <li className='text-dark'> Guests Can Play as Guests & Players Login with Social Media</li>
@@ -549,7 +549,7 @@ export default function LudoGameDevelopment() {
                                                  <li className='text-dark'> Avatar Design Options For Each Player</li>
                                                 
                                                
-                                            </p>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -571,7 +571,7 @@ export default function LudoGameDevelopment() {
                                             <h5 className="card-title cards text-center">
                                                 Our Admin Panel features
                                             </h5>
-                                            <p className="list-style-position">
+                                            <ul className="list-style-position">
                                                  <li className='text-dark'>Admin User Management</li>
                                                  <li className='text-dark'> Game Settings/Control Management</li>
                                                  <li className='text-dark'> Transaction Management via Wallet Management</li>
@@ -580,7 +580,7 @@ export default function LudoGameDevelopment() {
                                                  <li className='text-dark'> Analytics Reporting on Game Activity</li>
                                                 
                                                
-                                            </p>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -600,7 +600,7 @@ export default function LudoGameDevelopment() {
                                         </div>
                                         <div className="card-body">
                                             <h5 className="card-title cards text-center">Our Security features include the following</h5>
-                                            <p className="list-style-position">
+                                            <ul className="list-style-position">
                                                  <li className='text-dark'>RNG Certified</li>
                                                  <li className='text-dark'> Cheating Prevention Algorithm</li>
                                                  <li className='text-dark'> Restricted SSL Data</li>
@@ -609,7 +609,7 @@ export default function LudoGameDevelopment() {
                                                 
                                                 
                                                
-                                            </p>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>                                                               
@@ -831,7 +831,7 @@ export default function LudoGameDevelopment() {
                                 animationName: "none"
                             }}
                         >
-                            <p className="para-1">
+                            <ul className="para-1">
                                The majority of gamers in Bangladesh access their games through mobile devices; therefore, our Ludo applications introduce:
                                 <br />
                                 <br />
@@ -844,7 +844,7 @@ export default function LudoGameDevelopment() {
                                 <br/>
                                 <br/>
                              Our games work perfectly even on slow internet connections.
-                            </p>
+                            </ul>
 
                         </div>
                     </div>

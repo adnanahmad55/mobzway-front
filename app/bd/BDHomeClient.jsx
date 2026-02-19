@@ -385,7 +385,7 @@ export default function BDHomeClient() {
 
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="bd/sportsbook-software-development-bd" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
                                             src="/assets/images/Products/bd/game-1.png"
@@ -400,7 +400,7 @@ export default function BDHomeClient() {
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="bd/casino-software-development-bd" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
                                             src="/assets/images/Products/bd/game-2.png"
@@ -415,7 +415,7 @@ export default function BDHomeClient() {
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="bd/ludo-game-development-bd" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
                                             src="/assets/images/Products/bd/game-3.webp"
@@ -430,7 +430,7 @@ export default function BDHomeClient() {
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="bd/slot-game-development-bd" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
                                             src="/assets/images/Products/bd/game-4.webp"

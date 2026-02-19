@@ -346,7 +346,7 @@ export default function IndiaHome() {
                     <div className="row justify-content-center">
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="in/custom-game-development" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         
                                         <img
@@ -363,7 +363,7 @@ export default function IndiaHome() {
                         
                         <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                             <div className="overflow-hidden w-100 game_icon_sec">
-                                <a href="javascript:void(0)" className="d-block">
+                                <a href="in/hire-game-developers" className="d-block">
                                     <div className="overflow-hidden w-100">
                                         <img
                                             src="/assets/images/Products/india/game-2.webp"

@@ -525,7 +525,7 @@ export default function USHome() {
                      <div className="row justify-content-center">
                          <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                              <div className="overflow-hidden w-100 game_icon_sec">
-                                 <a href="javascript:void(0)" className="d-block">
+                                 <a href="us/game-development-us" className="d-block">
                                      <div className="overflow-hidden w-100">
                                          {/* <div class="overlay_item"></div>
                        <div class="ofr_title">
@@ -570,7 +570,7 @@ export default function USHome() {
        </div> */}
                          <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                              <div className="overflow-hidden w-100 game_icon_sec">
-                                 <a href="javascript:void(0)" className="d-block">
+                                 <a href="us/slot-game-development-us" className="d-block">
                                      <div className="overflow-hidden w-100">
                                          <img
                                              src="/assets/images/Products/us/game-2.jpg"
@@ -585,7 +585,7 @@ export default function USHome() {
                          </div>
                          <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                              <div className="overflow-hidden w-100 game_icon_sec">
-                                 <a href="javascript:void(0)" className="d-block">
+                                 <a href="us/fish-table-game-development" className="d-block">
                                      <div className="overflow-hidden w-100">
                                          <img
                                              src="/assets/images/Products/us/game-3.jpg"
@@ -600,7 +600,7 @@ export default function USHome() {
                          </div>
                          <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                              <div className="overflow-hidden w-100 game_icon_sec">
-                                 <a href="javascript:void(0)" className="d-block">
+                                 <a href="us/casino-game-development-us" className="d-block">
                                      <div className="overflow-hidden w-100">
                                          <img
                                              src="/assets/images/Products/us/game-4.jpg"
@@ -645,7 +645,7 @@ export default function USHome() {
                          </div>
                          <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                              <div className="overflow-hidden w-100 game_icon_sec">
-                                 <a href="javascript:void(0)" className="d-block">
+                                 <a href="us/blackjack-game-development" className="d-block">
                                      <div className="overflow-hidden w-100">
                                          <img
                                              src="/assets/images/Products/us/game-7.jpg"
@@ -660,7 +660,7 @@ export default function USHome() {
                          </div>
                          <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                              <div className="overflow-hidden w-100 game_icon_sec">
-                                 <a href="javascript:void(0)" className="d-block">
+                                 <a href="us/baccarat-game-development" className="d-block">
                                      <div className="overflow-hidden w-100">
                                          <img
                                              src="/assets/images/Products/us/game-8.jpg"
@@ -675,7 +675,7 @@ export default function USHome() {
                          </div>
                          <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-6 mb-3">
                              <div className="overflow-hidden w-100 game_icon_sec">
-                                 <a href="javascript:void(0)" className="d-block">
+                                 <a href="us/roulette-game-development" className="d-block">
                                      <div className="overflow-hidden w-100">
                                          <img
                                              src="/assets/images/Products/us/game-9.jpg"
