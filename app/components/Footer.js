@@ -44,7 +44,7 @@ const footerSolutions = {
     af: [
         { label: "BINGO", path: "/bingo-game-development" },
         { label: "KENO", path: "/keno-game-development" },
-        { label: "SPORTSBOOK", path: "/sportsbook-software-development" }
+        { label: "SPORTSBOOK", path: "/sportsbook-software-development-af" }
     ],
 
     // 🌍 DEFAULT
