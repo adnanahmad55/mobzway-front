@@ -6,9 +6,9 @@ export const metadata = {
         "Mobzway is the top slot game development company in Bangladesh delivering high-quality slot engines, engaging designs, and casino-grade security. Get in Touch!",
     keywords: ["slot game development company in bangladesh"],
     alternates: {
-        canonical: "https://www.mobzway.com/bd/slot-game-development-bd",
+        canonical: "https://www.mobzway.com/bd/",
         languages: {
-            "en-bd": "https://www.mobzway.com/bd/slot-game-development-bd",
+            "en-bd": "https://www.mobzway.com/bd/",
         },
     },
 };
