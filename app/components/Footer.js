@@ -36,6 +36,16 @@ const footerSolutions = {
         { label: "Sportsbook Software", path: "/sportsbook-software-development-uk" },
         { label: "Casino Games", path: "/casino-software-development-uk" }
     ],
+      eu: [
+        { label: "SPORTSBOOK", path: "/sportsbook-software-development" },
+        { label: "CASINO PLATFORM", path: "/casino-software-development-uk" },
+      
+    ],
+    af: [
+        { label: "BINGO", path: "/bingo-game-development" },
+        { label: "KENO", path: "/keno-game-development" },
+        { label: "SPORTSBOOK", path: "/sportsbook-software-development" }
+    ],
 
     // 🌍 DEFAULT
     default: [
