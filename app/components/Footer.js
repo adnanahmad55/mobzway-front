@@ -71,159 +71,123 @@ export default function Footer() {
     // Agar aap chahte hain ki 'nl' bhi 'eu' wala dikhaye, to yahan logic laga sakte hain.
     const currentList = footerSolutions[country] || footerSolutions.default;    return (
         <>
-            <footer
-                style={{
-                    backgroundColor: "#0f100f",
-                }}>
-                <div className="container">
-                    <div className="row pdbm justify-content-around">
-                        <div className="col-xl-2 col-lg-2 col-md-6">
-                            <div className="foot_info">
-                                <div className="widget widget_text">
-                                    <div className="widget-content">
-                                        <div className="textwidget">
-                                            <div className="footer_title">Company</div>
-                                            <ul className="foot_navs">
-                                                <li>
-                                                    <a href="https://www.mobzway.com/blog/">Blog</a>
-                                                </li>
-                                                <li>
-                                                    <Link href="/careers/">Careers</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/about-us/">About Us</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/contact-us/">Contact Us</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/portfolio/">Portfolio</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/company-brochure/">Brochure</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/work-culture/">Work Culture</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/write-for-us/">Write for Us</Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/our-specialization/">
-                                                        Our Specialization
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/awards-and-recognition/">
-                                                        Awards & Recognition
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+           <footer style={{ backgroundColor: "#0f100f" }}>
+    <div className="container">
+        <div className="row pdbm justify-content-around">
+            
+            {/* COLUMN 1: COMPANY */}
+            {/* Updated Classes: col-12 for mobile full width, mb-4 for bottom spacing */}
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                <div className="foot_info">
+                    <div className="widget widget_text">
+                        <div className="widget-content">
+                            <div className="textwidget">
+                                <div className="footer_title">Company</div>
+                                <ul className="foot_navs">
+                                    <li><a href="https://www.mobzway.com/blog/">Blog</a></li>
+                                    <li><Link href="/careers/">Careers</Link></li>
+                                    <li><Link href="/about-us/">About Us</Link></li>
+                                    <li><Link href="/contact-us/">Contact Us</Link></li>
+                                    <li><Link href="/portfolio/">Portfolio</Link></li>
+                                    <li><Link href="/company-brochure/">Brochure</Link></li>
+                                    <li><Link href="/work-culture/">Work Culture</Link></li>
+                                    <li><Link href="/write-for-us/">Write for Us</Link></li>
+                                    <li><Link href="/our-specialization/">Our Specialization</Link></li>
+                                    <li><Link href="/awards-and-recognition/">Awards & Recognition</Link></li>
+                                </ul>
                             </div>
                         </div>
-<div className="col-xl-2 col-lg-2 col-md-6">
-    <div className="foot_info manps">
-        <div className="widget widget_text">
-            <div className="widget-content">
-                <div className="textwidget">
-                    <div className="footer_title">Solutions</div>
-                    <ul className="foot_navs">
-                        <li style={{ listStyleType: "none" }}>
-                            <ul className="foot_navs">
-                                
-                                {/* 👇 NEW LOGIC START */}
-                                {currentList && currentList.map((item, index) => {
-                                    
-                                    // 1. Link banane ka logic
-                                    let finalLink = item.path;
-
-                                    // Check: Agar hum 'default' country par nahi hain
-                                    // Aur link external (http) nahi hai
-                                    if (country !== "default" && !item.path.startsWith("http")) {
-                                        // To link ke aage country code jod do
-                                        finalLink = `/${country}${item.path}`;
-                                    }
-
-                                    return (
-                                        <li key={index}>
-                                            {/* Yahan 'finalLink' use karna hai, 'item.path' nahi */}
-                                            <Link href={finalLink}>
-                                                {item.label}
-                                            </Link>
-                                        </li>
-                                    );
-                                })}
-                                {/* 👆 NEW LOGIC END */}
-
-                            </ul>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-                    
-                        <div className="mnsprg col-xl-2 col-lg-3 col-md-6">
-                            <div className="widget widget_text">
-                                <div className="widget-content">
-                                    <div className="textwidget">
-                                        <div className="footer_title">Get In Touch</div>
-                                        <div className="get_in_touch">
-                                            <ul className="foot_navs">
-                                                <li>
-                                                    <a className="telefooter" href="tel:+91 – (7878)-044-044">
-                                                        <i className="fas fa-phone-alt pr-2" />
-                                                        +91 – 7878044044
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="tel:+91 – (911)-600-5587">
-                                                        <i className="fas fa-phone-alt pr-2" />
-                                                        +91 – 9116005587(HR)
-                                                    </a>
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        color: "#fff !important",
-                                                        display: "inline-block !important",
-                                                        fontSize: "16px !important",
-                                                        fontWeight: "500 !important",
-                                                        transition: "ease .4s !important",
-                                                    }}>
-                                                    <i className="fab fa-skype pr-2" style={{}} />
-                                                    sales.mobzway
-                                                </li>
-                                                <li>
-                                                    <a href="mailto:sales@mobzway.com">
-                                                        <i className="far fa-envelope pr-2" />
-                                                        sales@mobzway.com
-                                                    </a>
-                                                </li>
 
-                                                <li>
-                                                    <a
-                                                        className="dmca-badge"
-                                                        href="//www.dmca.com/Protection/Status.aspx?ID=12720dd7-bc14-47a2-9623-c0ffd79c248f"
-                                                        title="DMCA.com Protection Status">
-                                                        <img
-                                                            alt="DMCA.com Protection Status"
-                                                            className="img-lazy"
-                                                            src="/assets/images/dmca.png"
-                                                            height="900"
-                                                            width="1600"
-                                                        />
-                                                    </a>{" "}
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+            {/* COLUMN 2: SOLUTIONS */}
+            {/* Updated Classes: col-12 for mobile full width, mb-4 for bottom spacing */}
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                <div className="foot_info manps">
+                    <div className="widget widget_text">
+                        <div className="widget-content">
+                            <div className="textwidget">
+                                <div className="footer_title">Solutions</div>
+                                <ul className="foot_navs">
+                                    <li style={{ listStyleType: "none" }}>
+                                        <ul className="foot_navs">
+                                            
+                                            {/* 👇 NEW LOGIC START (No changes made here) */}
+                                            {currentList && currentList.map((item, index) => {
+                                                let finalLink = item.path;
+                                                if (country !== "default" && !item.path.startsWith("http")) {
+                                                    finalLink = `/${country}${item.path}`;
+                                                }
+                                                return (
+                                                    <li key={index}>
+                                                        <Link href={finalLink}>
+                                                            {item.label}
+                                                        </Link>
+                                                    </li>
+                                                );
+                                            })}
+                                            {/* 👆 NEW LOGIC END */}
+
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* COLUMN 3: GET IN TOUCH */}
+            {/* Updated Classes: col-12 for mobile full width, mb-4 for bottom spacing */}
+            <div className="mnsprg col-12 col-md-4 col-lg-3 mb-4">
+                <div className="widget widget_text">
+                    <div className="widget-content">
+                        <div className="textwidget">
+                            <div className="footer_title">Get In Touch</div>
+                            <div className="get_in_touch">
+                                <ul className="foot_navs">
+                                    <li>
+                                        <a className="telefooter" href="tel:+91 – (7878)-044-044">
+                                            <i className="fas fa-phone-alt pr-2" />
+                                            +91 – 7878044044
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:+91 – (911)-600-5587">
+                                            <i className="fas fa-phone-alt pr-2" />
+                                            +91 – 9116005587(HR)
+                                        </a>
+                                    </li>
+                                    <li style={{ color: "#fff !important", display: "inline-block !important", fontSize: "16px !important", fontWeight: "500 !important", transition: "ease .4s !important" }}>
+                                        <i className="fab fa-skype pr-2" style={{}} />
+                                        sales.mobzway
+                                    </li>
+                                    <li>
+                                        <a href="mailto:sales@mobzway.com">
+                                            <i className="far fa-envelope pr-2" />
+                                            sales@mobzway.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dmca-badge" href="//www.dmca.com/Protection/Status.aspx?ID=12720dd7-bc14-47a2-9623-c0ffd79c248f" title="DMCA.com Protection Status">
+                                            <img
+                                                alt="DMCA.com Protection Status"
+                                                className="img-lazy"
+                                                src="/assets/images/dmca.png"
+                                                height="900"
+                                                width="1600"
+                                            />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+        </div>
                         <div className="col-md-12">
                             <ul className="foot_navs">
                                 <li>
