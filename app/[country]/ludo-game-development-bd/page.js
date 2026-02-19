@@ -13,7 +13,7 @@ export const metadata = {
     },
 };
 
-export default function CasinoSoftwareDevelopment() {
+export default function ludogameDevelopment() {
     return (
         <>
 

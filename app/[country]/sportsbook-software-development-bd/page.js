@@ -6,9 +6,9 @@ export const metadata = {
         "Top sportsbook software development company in Bangladesh offering secure betting platforms, odds engines, risk management, and real-time data solutions.",
     keywords: ["Sportsbook software development company in Bangladesh"],
     alternates: {
-        canonical: "https://www.mobzway.com/bd/sportsbook-software-development",
+        canonical: "https://www.mobzway.com/bd/",
         languages: {
-            "en-bd": "https://www.mobzway.com/bd/sportsbook-software-development",
+            "en-bd": "https://www.mobzway.com/bd/",
         },
     },
 };
