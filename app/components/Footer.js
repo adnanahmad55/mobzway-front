@@ -6,15 +6,14 @@ import RequestQoute from './RequestQoute';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-// ✅ STEP 1: Data ekdum CLEAN rakhein (bina 'in/' ya 'bd/' ke, bas shuru mein '/' lagayein)
 const footerSolutions = {
     // 🇮🇳 INDIA
     in: [
         { label: "Custom Game Development", path: "/custom-game-development" },
-        { label: "Unity Game Development", path: "/blog/unity-game-development-company-in-india" },
+        { label: "Unity Game Development", path: "https://www.mobzway.com/blog/unity-game-development-company-in-india" },
         { label: "Card Game Development", path: "/card-game-development" },
-        { label: "2D Game Development ", path: "/hire-game-developer" },
-        { label: "3D Game Development", path: "/hire-game-developer" }
+        { label: "2D Game Development ", path: "https://www.mobzway.com/blog/best-2d-game-development-company/" },
+        { label: "3D Game Development", path: "https://www.mobzway.com/blog/top-3d-game-development-company/" }
     ],
 
     // 🇧🇩 BANGLADESH
@@ -118,18 +117,29 @@ export default function Footer() {
                                             
                                             {/* 👇 NEW LOGIC START (No changes made here) */}
                                             {currentList && currentList.map((item, index) => {
-                                                let finalLink = item.path;
-                                                if (country !== "default" && !item.path.startsWith("http")) {
-                                                    finalLink = `/${country}${item.path}`;
-                                                }
-                                                return (
-                                                    <li key={index}>
-                                                        <Link href={finalLink}>
-                                                            {item.label}
-                                                        </Link>
-                                                    </li>
-                                                );
-                                            })}
+                                             const isExternal = item.path.startsWith("http");
+                                             let finalLink = item.path;
+                                             
+                                             if (country !== "default" && !isExternal) {
+                                                 finalLink = `/${country}${item.path}`;
+                                             }
+                                             
+                                             return (
+                                                 <li key={index}>
+                                                     {isExternal ? (
+                                                         // Agar external link hai toh normal <a> tag use karein
+                                                         <a href={finalLink} target="_blank" rel="noopener noreferrer">
+                                                             {item.label}
+                                                         </a>
+                                                     ) : (
+                                                         // Agar internal link hai toh Next.js ka <Link> use karein
+                                                         <Link href={finalLink}>
+                                                             {item.label}
+                                                         </Link>
+                                                     )}
+                                                 </li>
+                                             );
+                                         })}
                                             {/* 👆 NEW LOGIC END */}
 
                                         </ul>

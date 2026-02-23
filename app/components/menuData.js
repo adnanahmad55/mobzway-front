@@ -1,9 +1,9 @@
 export const menuData = {
   in: [
-    { label: "Industries", path: "/custom-game-development" },
+    { label: "Industries", path: "/industries" },
     { label: "Portfolio", path: "/portfolio" },
     { label: "Hire Us", path: "/hire-game-developers"},
-    { label: "Partner with Us", path: "/awards-and-recognition"},
+    { label: "Partner with Us", path: "/partner-with-us"},
     { label: "About Us", path: "/about-us"},
     // { label: "Blog", path: "/contact-us"}
 
