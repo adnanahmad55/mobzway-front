@@ -1,10 +1,10 @@
 export const menuData = {
   in: [
-    { label: "Custom Games", path: "/custom-game-development" },
-    { label: "Hire Developers", path: "/hire-game-developers" },
+    { label: "Industries", path: "/custom-game-development" },
+    { label: "Portfolio", path: "/portfolio" },
+    { label: "Hire Us", path: "/hire-game-developers"},
+    { label: "Partner with Us", path: "/awards-and-recognition"},
     { label: "About Us", path: "/about-us"},
-    { label: "Awards", path: "/awards-and-recognition"},
-    { label: "Contact Us", path: "/contact-us"},
     // { label: "Blog", path: "/contact-us"}
 
     // {

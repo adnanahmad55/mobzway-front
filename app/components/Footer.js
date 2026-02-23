@@ -10,8 +10,11 @@ import { usePathname } from 'next/navigation';
 const footerSolutions = {
     // 🇮🇳 INDIA
     in: [
-        { label: "Custom Games", path: "/custom-game-development" },
-        { label: "Hire Developers", path: "/hire-game-developer" }
+        { label: "Custom Game Development", path: "/custom-game-development" },
+        { label: "Unity Game Development", path: "/blog/unity-game-development-company-in-india" },
+        { label: "Card Game Development", path: "/card-game-development" },
+        { label: "2D Game Development ", path: "/hire-game-developer" },
+        { label: "3D Game Development", path: "/hire-game-developer" }
     ],
 
     // 🇧🇩 BANGLADESH
