@@ -2,8 +2,7 @@ export const menuData = {
   in: [
     {
       label: "Our Services",
-      path: "/services",
-  
+      
       children: [
         { label: "Custom Game Development", path: "/custom-game-development" },
         { label: "Unity Game Development", path: "https://www.mobzway.com/blog/unity-game-development-company-in-india" },
