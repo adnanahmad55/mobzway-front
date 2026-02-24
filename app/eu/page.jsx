@@ -24,7 +24,7 @@ export const metadata = {
                 type: "image/jpg",
             },
         ],
-        locale: "en_ie", // ✅ 'en_IE' (Ireland) is often used for neutral Euro-English, or stick to 'en_GB'
+        locale: "en_ie", 
         type: "website",
     },
     
@@ -39,16 +39,11 @@ export const metadata = {
     
     alternates: {
         canonical: "https://www.mobzway.com/eu",
-        // Hreflang tags agar multiple languages ho to:
-        // languages: {
-        //     'en-IE': 'https://www.mobzway.com/eu',
-        // },
+      
     },
 };
 
 export default function EuHomePage() {
-    // Ye generic '/eu' page hai.
-    // 'EuContent' client side pe IP check karke "Casino in Europe" dikhayega
-    // ya user ki specific country detect karega agar zarurat ho.
+   
     return <EuContent />;
 }

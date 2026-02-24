@@ -24,7 +24,7 @@ export const metadata = {
                 type: "image/jpg",
             },
         ],
-        locale: "en_GB", // ✅ Great Britain English (Standard for UK)
+        locale: "en_uk", 
         type: "website",
     },
     

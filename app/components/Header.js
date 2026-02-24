@@ -13,7 +13,7 @@ import { languages } from '../lib/i18n';
 export default function Header() {
     const pathname = usePathname();
     const [open, setOpen] = useState(false);
-// Header.js के अंदर:
+
 
 let country = pathname.split("/")[1] || "default";
 
@@ -60,7 +60,7 @@ const asiaCountries = [
 ];
 
 
-// 3. Africa Countries (New Added)
+// 3. Africa Countries 
 const afCountries = [
   // North Africa
   "dz","eg","ly","ma","tn","sd","ss",
@@ -81,13 +81,13 @@ const afCountries = [
 
 let menuKey = country;
 
-// 🔥 Logic: Check Country and Set Menu Key
+
 if (euCountries.includes(country)) {
     menuKey = "eu"; // Europe Menu
 } else if (asiaCountries.includes(country)) {
     menuKey = "asia"; // Asia Menu
 } else if (afCountries.includes(country)) {
-    menuKey = "af"; // Africa Menu (Make sure 'af' exists in menuData)
+    menuKey = "af"; // Africa Menu 
 }
 
 // 4. Load Menu
@@ -154,7 +154,7 @@ const menu = menuData[menuKey] || menuData.default;
 
     return (
         <header id="header">
-            {/* --- YE STYLE BLOCK ADD KAREIN --- */}
+         
  <style dangerouslySetInnerHTML={{__html: `
               @media (min-width: 992px) {
                  .desktop_menu {
@@ -188,7 +188,7 @@ const menu = menuData[menuKey] || menuData.default;
                  }
               }
             `}} />
-            {/* --- STYLE BLOCK END --- */}
+           
             <div className="container" style={{ maxWidth: 1250 }}>
                 <div className="top_header d-flex justify-content-between">
                     <div className="top_contact w-100">

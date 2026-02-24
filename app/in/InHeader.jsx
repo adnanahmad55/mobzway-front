@@ -11,26 +11,6 @@ export default function InHeader() {
     const pathname = usePathname();
 
 
-    // if (
-    //     pathname === "/in" ||
-    //     pathname === "/us" ||
-    //     pathname === "/uk" ||
-    //     pathname === "/eu" ||
-    //     pathname === "/bd" ||
-    //     pathname === "/af"
-    // ) {
-    //     return null;
-    // }
-
-    // useEffect(() => {
-    //     AOS.init({
-    //         duration: 800,
-    //         once: false,
-    //     })
-    // }, [])
-    // useEffect(() => {
-    //     new WOW.WOW().init();
-    // }, []);
 
     useEffect(() => {
         if (typeof window !== "undefined") {

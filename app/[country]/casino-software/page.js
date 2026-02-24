@@ -46,16 +46,7 @@ export default function CasinoSoftware() {
     return (
         <>
 
-            {/* Google Tag Manager */}
-            {/* <Script id="gtm-casino" strategy="afterInteractive">
-                {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id=GTM-MJ6ZG9R'+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MJ6ZG9R');`}
-            </Script> */}
-
-            {/* JSON-LD Schema */}
+           
             <Script type="application/ld+json" id="casino-schema">
                 {JSON.stringify({
                     "@context": "http://schema.org",
@@ -338,30 +329,7 @@ export default function CasinoSoftware() {
                     </div>
                 </div>
             </div>
-            {/* <section class="banner pokers position-relative"
-    style="background-image: url('/assets/images/banner_c01.jpg');">
-    <div class="overlay"></div>
-    <div class="wel_come_container">
-  <h1 class="welcome_text">
-      CASINO SOFTWARE<br> DEVELOPMENT COMPANY
-  </h1>
-  <p class="sml_text">
-      Are you searching for the best online casino software development company? If yes, your search for the top
-      casino software provider comes to a halt here! We’re Mobzway, one of the leading online casino game
-      developers in India and across the globe. Our online casino software solution gives you an excellent
-      opportunity to expand your casino business. We’re recognized for casino software development in India, USA & UK.
-      Hire talented casino app developers to upgrade or build game solutions. Connect with us for expert
-      consultation and request quotes right away.
-  </p>
-  <div class="btn_outer">
-      <a data-toggle="modal" data-target="#requestQoute" id="requestCasinosoftware1" class="contact_btn">Request a
-          Demo</a>
-  </div>
-
-    </div>
-    
-</section> */}
-            <section className="bg-light pb-2 bg-lightnew">
+                       <section className="bg-light pb-2 bg-lightnew">
                 <div className="container c-1">
                     <div className="row justify-content-center">
                         <div className="col-md-3 mt-3 text-center">

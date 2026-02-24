@@ -24,14 +24,13 @@ const EU_CODE_TO_NAME = {
 };
 export default function EuContent({ countryCode }) {
     
-    // 1. Check agar URL se code aaya hai (e.g. 'fr', 'de')
+    
     const codeUpper = countryCode ? countryCode.toUpperCase() : null;
     const urlCountryName = codeUpper ? EU_CODE_TO_NAME[codeUpper] : null;
 
-    // 2. State Initialize: URL country hai to wahi, nahi to Default "Europe"
     const [country, setCountry] = useState(urlCountryName || "Europe");
 
-    // Valid List for IP Detection Fallback
+    
     const validEuropeanCountries = [
         "France", "Germany", "Netherlands", "Belgium", "Luxembourg", "Switzerland", "Austria",
         "Italy", "Spain", "Portugal", "Greece", "Malta", "Cyprus",
@@ -41,14 +40,13 @@ export default function EuContent({ countryCode }) {
     ];
 
     useEffect(() => {
-        // 3. AGAR URL SE COUNTRY MIL GAYI, TO IP CHECK MAT KARO 🛑
-        if (urlCountryName) {
+               if (urlCountryName) {
             console.log("✅ Using URL Country for Europe:", urlCountryName);
             setCountry(urlCountryName);
-            return; // Stop here
+            return;
         }
 
-        // --- IP Fallback Logic (Sirf tab chalega jab URL generic /eu ho) ---
+       
         const getCountryByIP = async () => {
             try {
                 console.log("📡 Checking IP Location (EU Fallback)...");

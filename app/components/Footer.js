@@ -24,7 +24,7 @@ const footerSolutions = {
         { label: "Slot Games", path: "/slot-game-development-bd" }
     ],
 
-    // 🇺🇸 USA (New added)
+    // 🇺🇸 USA 
     us: [
         { label: "Custom Games", path: "/game-development-us" },
         { label: "Slot Games", path: "/slot-game-development-us" },
@@ -68,9 +68,7 @@ export default function Footer() {
     const pathname = usePathname();
     const country = pathname?.split("/")[1] || "default";
     
-    // ✅ STEP 3: Sahi List Select karo
-    // Note: Agar 'nl' ya 'za' jaisa koi country hai jo list me nahi hai, to wo 'default' lega.
-    // Agar aap chahte hain ki 'nl' bhi 'eu' wala dikhaye, to yahan logic laga sakte hain.
+   
     const currentList = footerSolutions[country] || footerSolutions.default;    return (
         <>
            <footer style={{ backgroundColor: "#0f100f" }}>
@@ -127,12 +125,12 @@ export default function Footer() {
                                              return (
                                                  <li key={index}>
                                                      {isExternal ? (
-                                                         // Agar external link hai toh normal <a> tag use karein
+                                                        
                                                          <a href={finalLink} target="_blank" rel="noopener noreferrer">
                                                              {item.label}
                                                          </a>
                                                      ) : (
-                                                         // Agar internal link hai toh Next.js ka <Link> use karein
+                                                       
                                                          <Link href={finalLink}>
                                                              {item.label}
                                                          </Link>
@@ -140,7 +138,7 @@ export default function Footer() {
                                                  </li>
                                              );
                                          })}
-                                            {/* 👆 NEW LOGIC END */}
+                                           
 
                                         </ul>
                                     </li>
@@ -151,8 +149,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* COLUMN 3: GET IN TOUCH */}
-            {/* Updated Classes: col-12 for mobile full width, mb-4 for bottom spacing */}
+          
             <div className="mnsprg col-12 col-md-4 col-lg-3 mb-4">
                 <div className="widget widget_text">
                     <div className="widget-content">
@@ -206,7 +203,7 @@ export default function Footer() {
                                 <li>
                                     <a><strong>LEGAL DISCLAIMER: </strong>
                                         Mobzway Technologies provides gaming software development and technology solutions only. We do not operate or promote gambling or betting activities.
-                                        {/* <span id="dots">...</span> */}
+                                     
                                         {!showMore && <span id="dots">...</span>}
                                         {showMore && (
                                             <span

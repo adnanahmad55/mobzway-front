@@ -176,16 +176,7 @@ export default function CustomGameDevelopment() {
                                             <p className="card-text text-center text-dark">
                                                 Our team based in India consists of Unity3D developers, Unreal Engine specialists, Java, Node.js, and HTML5 top guns who have been serving global clients with how-to scalable games for years.
                                             </p>
-                                            {/* <ul className='why_content why_content_dark p-0 my-2'>
-                                                <li className='text-dark'>Unity3D</li>
-                                                <li className='text-dark'>Unreal Engine</li>
-                                                <li className='text-dark'>Cocos2D</li>
-                                                <li className='text-dark'>JavaScript and TypeScript</li>
-                                                <li className='text-dark'>Node.js</li>
-                                                <li className='text-dark'>C#, C++, and Java</li>
-                                                <li className='text-dark'>Multiplayer game server development</li>
-                                            </ul>
-                                            <p className="card-text text-center text-dark">These qualities make India the best choice for companies seeking to outsource their game development.</p> */}
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -315,9 +306,7 @@ export default function CustomGameDevelopment() {
 
             <section className="features">
                 <div className="container c-1">
-                    {/* <div class="heading_title text-center">
-   <h1><span>FEATURES</span> OF POKER GAME DEVELOPED BY US</h1>
-   </div> */}
+                  
                     <div className="col-md-12 text-center">
                         <div
                             className="aos-init"
@@ -333,15 +322,7 @@ export default function CustomGameDevelopment() {
                             </h2>
                         </div>
                     </div>
-                    {/* <div
-                        className="col-md-12 col1 wow animated"
-                        data-wow-duration="2s"
-                        style={{ visibility: "visible", animationDuration: "2s" }}
-                    >
-                        <p className="hire-para col-md-12 text-center">
-                            We give different hiring structures depending on your business needs:
-                        </p>
-                    </div> */}
+                   
                     <div className="row row1 row1add">
                         <div className="col-lg-4 col-md-6 col1">
                             <div className="row">
@@ -484,16 +465,12 @@ export default function CustomGameDevelopment() {
                                     </span>
                                 </h2>
                             </div>
-                            {/* <p className="text-justify">
-                                
-                            </p> */}
+                         
                         </div>
                         <div className="col-md-6">
                             <br />
                             <br />
-                            {/* <h4 className="new-head">
-                                Benefits of Choosing Mobzway for Rummy Game Development Solutions{" "}
-                            </h4> */}
+                          
                             <ul
                                 style={{ listStyleType: "disc", lineHeight: '25px', margin: "0 18px" }}
                             >
@@ -534,9 +511,7 @@ export default function CustomGameDevelopment() {
 
             <section className="developer">
                 <div className="container c-1">
-                    {/* <div class="heading_title text-center">
-   <h1><span>HIRE</span> POKER GAME DEVELOPER</h1>
-   </div> */}
+                   
                     <div className="col-md-12 text-center">
                         <div
                             className="aos-init"
@@ -549,7 +524,7 @@ export default function CustomGameDevelopment() {
                                 <span className="black">Development Tech Stack</span>
                                 {/*2*/}
                             </h2>
-                            {/* <p>The way we hire is as easy as it is transparent!</p> */}
+                            
                         </div>
                     </div>
                     <div className="row row1">
@@ -609,9 +584,7 @@ export default function CustomGameDevelopment() {
 
             <section className="solutions">
                 <div className="container c-1">
-                    {/* <div class="heading_title text-center">
-   <h1><span>ONLINE</span> POKER GAME DEVELOPMENT SOLUTIONS</h1>
-   </div> */}
+                  
                     <div className="col-md-12 text-center">
                         <div
                             className="aos-init"
