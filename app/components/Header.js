@@ -282,56 +282,65 @@ const menu = menuData[menuKey] || menuData.default;
                     </div>
                     <div className="left_nav mt-3">
                         <ul id="menu-header-menu" className="d-flex desktop_menu">
+{menu.map((item, i) => (
+    <li key={i} className={item.children ? "has_child" : ""}>
+        {/* Main Menu Links */}
+        {item.path ? (
+            item.path.startsWith("http") ? (
+                <a href={item.path} target="_blank" rel="noopener noreferrer">{item.label}</a>
+            ) : (
+                <Link href={`/${country}${item.path}`}>{item.label}</Link>
+            )
+        ) : (
+            <a href="#">{item.label}</a>
+        )}
 
-                            {menu.map((item, i) => (
-                                <li key={i} className={item.children ? "has_child" : ""}>
-                                    {item.path ? (
-                                        <Link href={`/${country}${item.path}`}>{item.label}</Link>
-                                    ) : (
-                                        <a href="#">{item.label}</a>
-                                    )}
+        {/* Sub-menu (Dropdown) Links */}
+        {item.children && (
+            <ul className="sub-menu">
+                {item.children.map((child, j) => (
+                    <li key={j} className={child.children ? "has_child" : ""}>
+                        {child.path ? (
+                            child.path.startsWith("http") ? (
+                                <a href={child.path} target="_blank" rel="noopener noreferrer">{child.label}</a>
+                            ) : (
+                                <Link href={`/${country}${child.path}`}>{child.label}</Link>
+                            )
+                        ) : (
+                            <a href="#">{child.label}</a>
+                        )}
 
-                                    {item.children && (
-                                        <ul className="sub-menu">
-                                            {item.children.map((child, j) => (
-                                                <li key={j} className={child.children ? "has_child" : ""}>
-                                                    {child.path ? (
-                                                        <Link href={`/${country}${child.path}`}>{child.label}</Link>
-                                                    ) : (
-                                                        <a href="#">{child.label}</a>
-                                                    )}
+                        {/* Agar iske andar bhi aur nested children hain */}
+                        {child.children && (
+                            <ul className="sub-menu">
+                                {child.children.map((sub, k) => (
+                                    <li key={k}>
+                                        {sub.path && sub.path.startsWith("http") ? (
+                                            <a href={sub.path} target="_blank" rel="noopener noreferrer">{sub.label}</a>
+                                        ) : (
+                                            <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        )}
+    </li>
+))}
 
-                                                    {child.children && (
-                                                        <ul className="sub-menu">
-                                                            {child.children.map((sub, k) => (
-                                                                <li key={k}>
-                                                                    <Link href={`/${country}${sub.path}`}>{sub.label}</Link>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    )}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </li>
-                            ))}
-
-                            <li id="menu-item-7296" className=" border-0">
-                                <Link
-                                    href="https://www.mobzway.com/blog/"
-                                    className=""
-                                >
-                                    {/* <span
-                                        className="typewrite"
-                                        data-period={4000}
-                                        data-type='["60+ Games", "Try Demo"]'
-                                    >
-                                        <span className="wrap" />
-                                    </span> */}
-                                    Blog
-                                </Link>
-                                </li>
+                           {country !== 'in' && (
+    <li id="menu-item-7296" className=" border-0">
+        <Link
+            href="https://www.mobzway.com/blog/"
+            className=""
+        >
+            Blog
+        </Link>
+    </li>
+)}
 
                             <li id="menu-item-7296" className=" border-0 mr-4">
                                 <Link

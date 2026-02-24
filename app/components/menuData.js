@@ -1,10 +1,30 @@
 export const menuData = {
   in: [
+    {
+      label: "Our Services",
+      // path nahi diya taaki ye sirf click par dropdown khole
+      children: [
+        { label: "Custom Game Development", path: "/custom-game-development" },
+        { label: "Unity Game Development", path: "https://www.mobzway.com/blog/unity-game-development-company-in-india" },
+        { label: "Card Game Development", path: "/card-game-development" },
+        { label: "2D Game Development", path: "https://www.mobzway.com/blog/best-2d-game-development-company" },
+        { label: "3D Game Development", path: "https://www.mobzway.com/blog/top-3d-game-development-company" },
+      ],
+    },
     { label: "Industries", path: "/industries" },
     { label: "Portfolio", path: "/portfolio" },
     { label: "Hire Us", path: "/hire-game-developers"},
     { label: "Partner with Us", path: "/partner-with-us"},
-    { label: "About Us", path: "/about-us"},
+   
+    {label: "About Us", 
+      path: "/about-us", 
+      children: [
+        { label: "Awards", path: "/awards-and-recognition" },
+        { label: "Careers", path: "/careers" },
+        { label: "Contact Us", path: "/contact-us" },
+        { label: "Blog", path: "https://www.mobzway.com/blog/" }, 
+      ],
+    },
     // { label: "Blog", path: "/contact-us"}
 
     // {
