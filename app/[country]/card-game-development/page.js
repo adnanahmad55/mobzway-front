@@ -31,8 +31,64 @@ export const metadata = {
 export default function page() {
     return (
         <>
-            {/*?php include 'header.php' ?*/}
-            {/* Banner */}
+            {/* YEH STYLE TAG HAR TARAH KE OVERLAP KO KHATAM KAR DEGA */}
+            <style
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        /* 1. Main Banner ki height auto karo taaki wo chota na pade */
+                        .banner.pokers {
+                            min-height: 100vh !important;
+                            height: auto !important;
+                        }
+
+                        /* 2. Agar screen ki height kam hai (jaise aapke laptop mein), toh inko takrane se roko */
+                        @media (max-height: 850px), (max-width: 991px) {
+                            .banner.pokers {
+                                display: flex !important;
+                                flex-direction: column !important;
+                                justify-content: flex-end !important;
+                                padding-top: 120px !important;
+                                padding-bottom: 0 !important;
+                            }
+                            .wel_come_container {
+                                position: relative !important;
+                                top: auto !important;
+                                transform: none !important;
+                                margin-bottom: 40px !important; /* Button aur black patti ke beech gap */
+                            }
+                            .banner_bottom_info {
+                                position: relative !important;
+                                bottom: auto !important;
+                            }
+                        }
+
+                        /* 3. Black patti ke andar ka yellow/white text overlap fix */
+                        .banner_bottom_info {
+                            height: auto !important;
+                            padding: 20px 0 !important;
+                            z-index: 10 !important;
+                        }
+                        .bottom_header {
+                            display: flex !important;
+                            flex-direction: column !important;
+                            gap: 8px !important;
+                        }
+                        .bottom_head {
+                            height: auto !important;
+                            line-height: 1.4 !important;
+                            position: static !important;
+                            margin: 0 !important;
+                        }
+                        .bottom_text {
+                            height: auto !important;
+                            line-height: 1.5 !important;
+                            position: static !important;
+                            margin: 0 !important;
+                        }
+                    `
+                }}
+            />
+
             <section
                 className="banner pokers position-relative"
                 style={{
@@ -61,6 +117,7 @@ export default function page() {
                         </a>
                     </div>
                 </div>
+                
                 <div
                     className="banner_bottom_info"
                     style={{ backgroundColor: "rgba(15, 16, 15, 0.8)" }}
@@ -83,6 +140,8 @@ export default function page() {
                     </div>
                 </div>
             </section>
+            
+            {/* BAAKI KA CODE NEECHE SAME RAHEGA... */}
             <section className="bg-light pb-2 bg-lightnew">
                 <div className="container c-1">
                     <div className="row justify-content-center">
@@ -133,12 +192,10 @@ export default function page() {
                     </div>
                 </div>
             </section>
-            {/* features */}
+          
             <section className="features">
                 <div className="container">
-                    {/* <div class="heading_title text-center">
-              <h1><span>FEATURES</span> OF POKER GAME DEVELOPED BY US</h1>
-          </div> */}
+             
                     <div className="col-md-12 text-center">
                         <div
                             className=""
@@ -418,9 +475,7 @@ export default function page() {
             {/* solutions */}
             <section className="solutions">
                 <div className="container">
-                    {/* <div class="heading_title text-center">
-              <h1><span>ONLINE</span> POKER GAME DEVELOPMENT SOLUTIONS</h1>
-          </div> */}
+           
                     <div className="col-md-12 text-center">
                         <div
                             className=""

@@ -154,6 +154,41 @@ const menu = menuData[menuKey] || menuData.default;
 
     return (
         <header id="header">
+            {/* --- YE STYLE BLOCK ADD KAREIN --- */}
+ <style dangerouslySetInnerHTML={{__html: `
+              @media (min-width: 992px) {
+                 .desktop_menu {
+                    flex-wrap: nowrap !important;
+                    align-items: center;
+                 }
+                 .desktop_menu > li {
+                    margin: 0 12px !important; /* Gap wapas badha diya */
+                 }
+                 .desktop_menu > li > a {
+                    font-size: 15px !important; /* Font wapas bada aur readable kar diya */
+                    white-space: nowrap !important; /* Line break hone se rokega */
+                 }
+                 /* Dropdown wale arrows ko extra space di hai taaki agle word se overlap na ho */
+                 .desktop_menu > li.has_child > a {
+                    padding-right: 18px !important; 
+                 }
+              }
+              
+              /* Medium screens (14-inch laptops) ke liye halka sa adjustment */
+              @media (min-width: 992px) and (max-width: 1250px) {
+                 .desktop_menu > li {
+                    margin: 0 8px !important;
+                 }
+                 .desktop_menu > li > a {
+                    font-size: 14px !important;
+                 }
+                 .brand_wrapper img {
+                    width: 160px !important; /* Logo adjust taaki menu aaram se fit ho */
+                    height: auto !important;
+                 }
+              }
+            `}} />
+            {/* --- STYLE BLOCK END --- */}
             <div className="container" style={{ maxWidth: 1250 }}>
                 <div className="top_header d-flex justify-content-between">
                     <div className="top_contact w-100">

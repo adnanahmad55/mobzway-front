@@ -41,8 +41,93 @@ export default function careers() {
             {/*?php include 'header.php' ?*/}
             <style
                 dangerouslySetInnerHTML={{
-                    __html:
-                        "\n    \n    #apply_now_form form .blubtn{\n        margin-left: 0px !important;\n    }\n    #apply_now_form form .TD-twocol{\n        margin-bottom: 10px !important;\n    }\n    #apply_now_form .modal-body{\n        padding: 10px !important\n    }\n    @media(max-width:480px){\n        #apply_now_form .modal-body > div{\n            display: block !important;\n        }\n    }\n    .current-openings-list{\n    border-radius: 10px;\n    border: 1px solid rgba(0,0,0,.2);\n    color: rgba(0,0,0,.7);\n    font-size: 14px;\n    font-weight: 500;\n    margin-top: 25px;\n}\n .role {\n    font-size: 25px;\n    font-weight: 700;\n    line-height: 100px;\n    }\n     .exxperience {\n    font-size: 17px;\n    font-weight: 700;\n    line-height: 100px;\n    }\n     .knowmore {\n    font-size: 17px;\n    font-weight: 700;\n    margin-top: 33px;\n    }\n    .btn-primary{\n    \tbackground: #fcd10a !important;\n    color: #333 !important;\n    border: none !important;\n    font-weight: 800 !important;\n    }\n    @media (max-width: 992px){\n    .role {\n    text-align: center;\n    line-height: 0px;\n    line-height: 100px;\n}\n    .exxperience {\n    text-align: center;\n    line-height: 0px;\n    }\n    .knowme{\n    \tmargin-left: 100px;\n    }\n    }\n"
+                    __html: `
+                    #apply_now_form form .blubtn {
+                        margin-left: 0px !important;
+                    }
+                    #apply_now_form form .TD-twocol {
+                        margin-bottom: 10px !important;
+                    }
+                    #apply_now_form .modal-body {
+                        padding: 10px !important
+                    }
+                    @media(max-width:480px) {
+                        #apply_now_form .modal-body > div {
+                            display: block !important;
+                        }
+                    }
+                    .current-openings-list {
+                        border-radius: 10px;
+                        border: 1px solid rgba(0,0,0,.2);
+                        color: rgba(0,0,0,.7);
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-top: 25px;
+                    }
+                    .role {
+                        font-size: 25px;
+                        font-weight: 700;
+                        line-height: 100px;
+                    }
+                    .exxperience {
+                        font-size: 17px;
+                        font-weight: 700;
+                        line-height: 100px;
+                    }
+                    .knowmore {
+                        font-size: 17px;
+                        font-weight: 700;
+                        margin-top: 33px;
+                    }
+                    .btn-primary {
+                        background: #fcd10a !important;
+                        color: #333 !important;
+                        border: none !important;
+                        font-weight: 800 !important;
+                    }
+                    @media (max-width: 992px) {
+                        .role {
+                            text-align: center;
+                            line-height: 0px;
+                            line-height: 100px;
+                        }
+                        .exxperience {
+                            text-align: center;
+                            line-height: 0px;
+                        }
+                        .knowme {
+                            margin-left: 100px;
+                        }
+                    }
+
+                    /* --- MAIN FIX FOR OVERLAPPING IN CAREERS PAGE --- */
+                    .banner-car {
+                        min-height: 100vh !important;
+                        height: auto !important;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    
+                    @media (max-height: 850px), (max-width: 991px) {
+                        .banner-car {
+                            padding-top: 100px !important; /* Header se neeche rakhne ke liye */
+                            padding-bottom: 50px !important;
+                            justify-content: flex-start !important;
+                        }
+                        .banner-car .wel_come_container {
+                            position: relative !important;
+                            top: auto !important;
+                            transform: none !important;
+                            margin-bottom: 20px !important; 
+                        }
+                        .banner-car .share_cv_mail {
+                             position: relative !important; /* Isko bhi relative karein taaki ye bhi apni jagah na chode */
+                             bottom: auto !important;
+                             margin-top: 20px;
+                        }
+                    }
+                    `
                 }}
             />
             {/* Banner */}

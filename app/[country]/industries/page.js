@@ -34,28 +34,9 @@ export const metadata = {
 };
 export default function Industry() {
     return (
-        <>
-            {/* <script
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
-          new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
-          "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,"script","dataLayer","GTM-TNKJQBP");`,
-        }}
-      /> */}
-            {/* Google Analytics */}
+        <>  
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3GVZ3J32T"></script>
-            {/* <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag("js", new Date());
-          gtag("config", "G-B3GVZ3J32T");
-        `,
-        }}
-      /> */}
+            
            <style
                 dangerouslySetInnerHTML={{
                     __html:
@@ -70,19 +51,19 @@ export default function Industry() {
                     backgroundBlendMode: "overlay",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
-                    paddingTop: "80px", // Thoda top padding add kiya taaki clean lage
-                    paddingBottom: "80px" // Thoda bottom padding add kiya taaki clean lage
+                    paddingTop: "80px", 
+                    paddingBottom: "80px"
                 }}
             >
                 <div className="container position-relative">
                     <div className="w-100 position-relative heroslidebg-mb">
                         <div className="row align-items-center">
-                            {/* Left Side: Content */}
+                          
                             <div className="col-md-7">
                                 <h2 data-hk="s40-1-12" className="hero__title">
                                     Industries We Serve
                                 </h2>
-                                {/* Mobile Image */}
+                              
                                 <img
                                     className="d-block d-md-none mb-3 w-100"
                                     src="/assets/images/Poker.webp"
@@ -96,7 +77,7 @@ export default function Industry() {
                                 </div>
                             </div>
 
-                            {/* Right Side: Card Image (Desktop) */}
+                           
                             <div className="col-md-5 d-none d-md-block">
                                 <img
                                     src="/assets/images/Poker.webp"
