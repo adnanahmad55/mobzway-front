@@ -98,7 +98,7 @@ export function middleware(request) {
       searchParams.get('c') || 
       request.geo?.country || 
       request.headers.get('x-vercel-ip-country') || 
-      'NP'; 
+      'IN'; 
     
     country = country ? country.toUpperCase().trim() : 'NP';
     
