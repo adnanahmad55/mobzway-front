@@ -94,13 +94,15 @@ export function middleware(request) {
   if (pathname === '/') {
     
     // Country Detect (Priority: URL > Vercel > Default)
-    let country = 
-      searchParams.get('c') || 
-      request.geo?.country || 
-      request.headers.get('x-vercel-ip-country') || 
-      'IN'; 
+let country = 
+      searchParams.get('c') ||                                // 1. Manual Testing via URL (?c=US)
+      request.headers.get('cf-ipcountry') ||                  // 2. Cloudflare (Best for custom cloud servers)
+      request.headers.get('cloudfront-viewer-country') ||     // 3. AWS CloudFront
+      request.headers.get('x-vercel-ip-country') ||           // 4. Vercel
+      request.geo?.country ||                                 // 5. Next.js Default Geo
+      'IN';                                                  
     
-    country = country ? country.toUpperCase().trim() : 'NP';
+    country = country ? country.toUpperCase().trim() : 'IN';
     
     console.log(`🛡️ Middleware Detected: ${country}`);
 
