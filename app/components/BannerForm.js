@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react'
-
+import axios from 'axios';
 export default function BannerForm() {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState({
@@ -12,7 +12,7 @@ export default function BannerForm() {
     const [mobile, setMobile] = useState("");
     const [loading2, setLoading2] = useState(false);
     const [activeItem2, setActiveItem2] = useState('mobile');
-
+    const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
         // Fetch country codes
         fetch("/assets/data/CountryCodes.json")
@@ -34,7 +34,6 @@ export default function BannerForm() {
         const lead_source = Source_URL.split("//")[1]?.split(".")[0]; // domain extract
 
         const finalMobile = `${selectedCountry.dial_code}${mobile}`;
-
         const postData = {
             fname: name,
             mob_number: finalMobile,
@@ -83,10 +82,10 @@ export default function BannerForm() {
                     <button
                         className="btn btn-secondary dropdown-toggle"
                         type="button"
+                        onClick={() => setIsOpen(!isOpen)}
                         id="dropdownMenuButton"
                         data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
+                        aria-expanded={!isOpen}
                     >
 
                         {activeItem2 === "Whatsapp" ? (
@@ -119,9 +118,9 @@ export default function BannerForm() {
 
 
                     </button>
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                   <div className={`dropdown-menu ${isOpen ? 'show' : ''}`} aria-labelledby="dropdownMenuButton">
                         <a className="dropdown-item" href="javascript:void(0);"
-                            onClick={() => { setActiveItem2('mobile'); }}>
+                           onClick={() => { setActiveItem2('mobile'); setIsOpen(false); }}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                 <path d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM144 448c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160c-8.8 0-16 7.2-16 16zM304 64H80V384H304V64z" />
                             </svg>{" "}
@@ -136,7 +135,7 @@ export default function BannerForm() {
                             Email
                         </a>
                         <a className="dropdown-item" href="javascript:void(0);"
-                            onClick={() => { setActiveItem2('Telegram'); }}>
+                            onClick={() => { setActiveItem2('Telegram'); setIsOpen(false);}}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 496 512"
@@ -147,11 +146,11 @@ export default function BannerForm() {
                             Telegram
                         </a>
                         <a className="dropdown-item" href="javascript:void(0);"
-                            onClick={() => { setActiveItem2('Skype'); }}>
+                            onClick={() => { setActiveItem2('Skype');setIsOpen(false); }}>
                             <i className="fab fa-skype" style={{ color: "#00aff0" }} /> Skype
                         </a>
                         <a className="dropdown-item" href="javascript:void(0);"
-                            onClick={() => { setActiveItem2('Whatsapp'); }}>
+                            onClick={() => { setActiveItem2('Whatsapp');setIsOpen(false); }}>
                             <i className="fab fa-whatsapp" style={{ color: "#57bb63" }} />{" "}
                             Whatsapp
                         </a>
@@ -225,17 +224,14 @@ export default function BannerForm() {
                     defaultValue="mobile"
                 />
             </div>
-            <button
-                className="contact_btn contact_btn_hero"
-                type="button"
-            // onclick="freeConsultation()"
-            >
-                <p className="m-0 spinner-submit-btn" style={{ display: "none" }}
-                    onClick={handleSubmit2} disabled={loading2}>
-                    <span className="" />
-                </p>
-                {loading2 ? "Submitting..." : "Free consultation"}
-            </button>
+         <button
+    className="contact_btn contact_btn_hero"
+    type="button"
+    onClick={handleSubmit2} // <-- Ye yahan hona chahiye
+    disabled={loading2}     // <-- Taaki double click na ho
+>
+    {loading2 ? "Submitting..." : "Free consultation"}
+</button>
         </div>
 
     )
